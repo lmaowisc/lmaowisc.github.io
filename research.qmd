@@ -1,0 +1,65 @@
+---
+title: "Research"
+---
+
+## Funded Projects
+
+### Active
+
+:::::: columns
+::: {.column width="20%"}
+<!-- NHLBI logo -->
+
+![](nhlbi.png){width="100%"}
+:::
+
+::: {.column width="5%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="75%"}
+-   [R01HL149875](https://reporter.nih.gov/search/9aSu5u3xlE26GrjbF_4cBg/project-details/10734551){target="_blank"} (PI): Novel Statistical Methods for Complex Time-to-Event Data in Cardiovascular Clinical Trials (12/2019 – 07/2028; \$2,781,980)
+    -   Hierarchical composite endpoints
+    -   Estimand framework
+    -   Group sequential trials
+    -   Semiparametric regression
+    -   Machine learning for survival data
+:::
+::::::
+
+### Past
+
+:::::: columns
+::: {.column width="20%"}
+<!-- NSF logo -->
+
+![](nsf.png){width="100%"}
+:::
+
+::: {.column width="5%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="75%"}
+-   [DMS-2015526](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2015526){target="_blank"} (PI): Randomized Trials with Non-Compliance: Extending the Angrist-Imbens-Rubin Framework (07/2020 -- 06/2024; \$186,383)
+    -   Causal inference
+    -   Instrumental variables
+    -   Sensitivity analysis
+    -   Covariate adjustment and semiparametric efficiency
+:::
+::::::
+
+## Other projects
+
+-   UW Clinical Trials Program [Data Coordinating Center](https://dcc.wisc.edu/){target="_blank"}
+    -   [HIV/Cervical Cancer Prevention ‘CASCADE’ Clinical Trials Network](https://www.cascade-network.org){target="_blank"} (U24 07/2022 -- 06/2027)
+-   Lead biostatistical support for [UW Radiology](https://radiology.wisc.edu/){target="_blank"}
+    -   Quantitative imaging biomarkers
+    -   AI-assisted image analysis/interpreation
+    -   Breast imaging
+    -   Preclinical porcine models
+-   [UW Carbone Cancer Center](https://cancer.wisc.edu/){target="_blank"} [Biostatistics Shared Resource (BSR)](https://cancer.wisc.edu/research/resources/bsr/){target="_blank"}
+    -   Clinical trials & observational studies
+    -   Animal experiments
+    -   Basic science research
+    -   Meta analysis

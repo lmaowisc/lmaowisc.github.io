@@ -1,0 +1,125 @@
+---
+title: "How to do efficient simulations using Tidyverse"
+date: "12-20-2024"
+execute:
+  warning: false
+  cache: true
+---
+
+## General steps
+
+1.  **Generate multiple datasets**: Simulate $N$ datasets based on a defined data-generating process.
+2.  **Apply a statistical method**: For each dataset, apply the same statistical method (e.g., linear regression, hypothesis testing).
+3.  **Summarize the results**: Aggregate and summarize performance metrics (e.g., bias, MSE, coverage).
+
+## Example: linear regression
+
+Consider a simulation study for linear regression.
+
+```{r}
+# Load library
+library(tidyverse)
+```
+
+### Define the data-generating process
+
+Simulate a dataset for linear regression:
+
+```{r}
+generate_data <- function(n = 100, beta0 = 1, beta1 = 2, sigma = 1) {
+  tibble(
+    x = rnorm(n),
+    y = beta0 + beta1 * x + rnorm(n, sd = sigma)
+  )
+}
+```
+
+### Define the statistical method
+
+Fit a linear model and extract the coefficient estimates:
+
+```{r}
+fit_model <- function(data) {
+  model <- lm(y ~ x, data = data)
+  tibble(
+    beta0_hat = coef(model)[1],
+    beta1_hat = coef(model)[2]
+  )
+}
+```
+
+### Perform simulation
+
+Generate $N = 1000$ datasets, each with an id (`sim_id`) and stored in a list-valued column `data`.
+
+```{r}
+set.seed(123)
+
+# Number of simulations
+N <- 1000
+
+# Simulate data
+simulated_data <- tibble(
+  sim_id = 1:N
+) %>%
+  mutate(
+    data = map(sim_id, ~ generate_data(n = 100, beta0 = 1, beta1 = 2, sigma = 1)) # Generate datasets
+  )
+
+ ## Take a look
+simulated_data
+```
+
+Use `purrr::map()` to fit a linear model to each entry of `data` and store the results in a list-valued column `results`. Then unnest to combine all results into a single table.
+
+```{r}
+# Fit model to each simulated dataset
+simulation_results <- simulated_data %>%
+  mutate(
+   results = map(data, fit_model) # Apply the model
+  ) %>%
+  unnest(results) # Combine all results into a single table
+
+## Take a look
+simulation_results
+
+# Summarize the results
+summary_stats <- simulation_results %>%
+  summarize(
+    beta0_mean = mean(beta0_hat),
+    beta1_mean = mean(beta1_hat),
+    beta0_bias = mean(beta0_hat - 1),
+    beta1_bias = mean(beta1_hat - 2),
+    beta0_sd = sd(beta0_hat),
+    beta1_sd = sd(beta1_hat)
+  )
+
+summary_stats
+```
+
+### Visualize the results (optional)
+
+```{r}
+# Histogram of beta1 estimates
+ggplot(simulation_results, aes(x = beta1_hat)) +
+  geom_histogram(bins = 30, fill = "skyblue", color = "black") +
+  geom_vline(xintercept = 2, linetype = "dashed", color = "red") +
+  labs(
+    title = "Distribution of Beta1 Estimates",
+    x = "Beta1 Estimates",
+    y = "Frequency"
+  ) +
+  theme_minimal()
+
+```
+
+## Key features of workflow
+
+1.  Reproducibility:
+    -   Use `set.seed()` for consistent results.
+2.  Scalability:
+    -   Adjust `N` to increase or decrease the number of datasets.
+3.  Summarization:
+    -   `map()` and `unnest()` make it easy to handle multiple datasets and their outputs.
+4.  Customization:
+    -   Replace the data-generating process or statistical method to fit your needs.

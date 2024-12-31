@@ -1,0 +1,78 @@
+---
+title: "Lu Mao"
+subtitle: "Associate Professor of Biostatistics and Medical Informatics"
+# subtitle: "Wengo Analytics"
+image: dc.jpg
+about: 
+  id: heading
+  template: jolla
+  image-shape: round
+  image-width: 15em
+  links:
+    - text: Email
+      icon: envelope
+      href: mailto:lmao@biostat.wisc.edu 
+      target: _blank
+    - text: "{{< ai google-scholar size=2em >}} Google Scholar"
+      href: https://scholar.google.com/citations?user=zmeoWbUAAAAJ 
+      target: _blank
+    - text: "{{< ai researchgate size=2em >}} ResearchGate"
+      href: https://www.researchgate.net/profile/Lu-Mao-3
+      target: _blank
+    - text: GitHub
+      icon: github
+      href: https://github.com/lmaowisc
+      target: _blank
+    - text: "{{< iconify fa6-brands square-x-twitter >}} X"
+      href: https://x.com/LuMaoWisc
+      target: _blank
+    - text: LinkedIn
+      icon: linkedin
+      href: https://www.linkedin.com/in/lu-mao-63589b14
+      target: _blank
+    # - text: "Youtube"
+    #   icon: youtube
+    #   href: https://www.youtube.com/@lmaowisc
+---
+
+
+::: {#heading}
+School of Medicine and Public Health | University of Wisconsin-Madison \
+WARF Office Building | 610 Walnut St, Room 207A | Madison, WI 53726
+:::
+
+## Annoucements
+
+
+## Research Interests
+
+Time-to-event data \| causal inference \| clinical trials \| semiparametric theory \| statistical consulting & computing \| diagnostic radiology \| cardiovascular disease \| cancer \| behavioral health interventions
+
+[Request consultation/collaboration](https://ictr.wisc.edu/consults/biostatistics-2)
+
+## Education
+
+-   PhD in Biostatistics (2016) \| The University of North Carolina at Chapel Hill
+-   MS in Biostatistics (2010) \| Drexel University 
+-   BS in Biological Sciences (2008) \| Tsinghua University, China
+
+<!-- ## Awards -->
+
+<!-- -    IMS New Researcher Travel Award, 2019 -->
+<!-- -    Larry Kupper Doctoral Dissertation Publication Award, UNC Chapel Hill, 2017 -->
+<!-- -    ENAR RAB Poster Award, 2016 -->
+<!-- -    ASA Biometrics Section Travel Award, 2016 -->
+<!-- -    ASA Biopharmaceutical Section Student Paper Award, 2015 -->
+<!-- -    ENAR Distinguished Student Paper Award,  2015 -->
+<!-- -    Delta Omega Award for Academic Excellence, UNC Chapel Hill, 2012 -->
+<!-- -    Special Commendations for PhD Qualifying Exams, UNC Chapel Hill, 2011 -->
+<!-- -    Mohberg Scholarship, Department of Biostatistics, UNC Chapel Hill, 2010 -->
+<!-- -    Merit-Based Graduate School Scholarship, UNC Chapel Hill, 2010 -->
+
+## Editorial Service
+
+-   Associate Editor \|				[Statistics in Biopharmaceutical Research](https://www.tandfonline.com/journals/usbr20/about-this-journal#editorial-board){target="_blank"} \|		01/2023 -- Now
+-   Statistical Editor \|				[JACC Journals](https://www.jacc.org/journal/heart-failure/editorial-board){target="_blank"} \|								12/2022 -- Now
+
+
+

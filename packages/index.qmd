@@ -1,0 +1,8 @@
+---
+title: "R Packages"
+css: packages.css
+listing:
+  contents: packages.yml
+  type: table
+  image-height: 120px
+---

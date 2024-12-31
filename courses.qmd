@@ -1,0 +1,64 @@
+---
+title: "Courses"
+css: courses.css
+---
+
+
+## University Courses
+
+### Applied Survival Analysis
+:::::: columns
+::: {.column width="15%" .text-center}
+<!-- profile pic -->
+
+[![](images/surv_hex.png){width="100%"}](https://lmaowisc.github.io/BMI741){target="_blank"}\
+[Spring 2020 -- 2025]{style="font-size: 0.85em"} 
+:::
+
+::: {.column width="5%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="80%"}
+Provides a survey of statistical methods for time-to-event data arising in medical and industrial settings.
+
+-   Kaplan-Meier estimator, log-rank test, Cox proportional hazards model
+-   Multiple failures, recurrent events, competing risks, joint analysis with longitudinal data, multistate processes, composite endpoints
+-   Causal inference, machine learning
+
+Emphasizes case studies and data analysis (using R)
+:::
+::::::
+
+
+### Applied Longitudinal Analysis
+:::::: columns
+::: {.column width="15%" .text-center}
+<!-- profile pic -->
+
+![](images/longit_hex.png){width="100%"}\
+[Spring 2019 ]{style="font-size: 0.85em"} 
+:::
+
+::: {.column width="5%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="80%"}
+Introduces modern statistical methods for longitudinal data, with applications in health sciences, behavioral studies, and beyond.
+
+<!-- -   Response profiles of repeated measurements, cluster data -->
+-   Linear mixed-effects models,  mean and variance structure
+-   Marginal models, generalized estimating equations (GEE)
+-   Generalized linear mixed effects models, growth curve analysis
+-   Missing data, sample size calculation
+
+Emphasizes modeling and analyzing real-world datasets (using SAS)
+:::
+::::::
+
+
+## Workshops
+
+
+

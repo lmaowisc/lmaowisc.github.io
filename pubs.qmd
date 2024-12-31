@@ -1,0 +1,268 @@
+---
+title: "Publications"
+css: pubs.css
+format:
+  html:
+    toc: true
+---
+
+\
+\
+
+\* Corresponding author; † Student
+
+## Working manuscripts
+
+## 2025
+
+::: {style="font-size: 92%;"}
+-   **Mao, L.**\* (2025). [Win ratio for partially ordered data](http://doi.org/10.5705/ss.202023.0321){target="_blank"}. [*Statistica Sinica*](https://www3.stat.sinica.edu.tw/statistica/){target="_blank"}, 10.5705/ss.202023.0321. \[R-package poset\]
+-   Buelo, C.J., Velikina, J., **Mao, L.**, Zhao, R., Yuan, Q., Ghasabeh, M.A., Ruschke, S., Karampinos, D.C., Harris, D.T., Mattison, R.J., Jeng, M.R., Pedrosa, I., Kamel, I.R., Vasanawala, S., Yokoo, T., Reeder, S.B., and Hernando, D. (2025). [Multi-center, multi-vendor validation of liver quantitative susceptibility mapping in patients with iron overload at 1.5T and 3T](https://doi.org/10.1002/mrm.30251){target="_blank"}. [*Magnetic Resonance in Medicine*](https://onlinelibrary.wiley.com/journal/15222594){target="_blank"}, 93, 330-340.
+:::
+
+## 2024
+
+::: {style="font-size: 92%;"}
+-   Rahafrooz, M., Elbers, D.C., Gopal, J.R., Ren, J., et al., Vardeny, O., **Mao, L.**, Kim, K., Gagnon, D.R., Solomon, S.D., and Joseph, J. (2024). [Effectiveness of electronic medical record-based strategies for death and hospital admission endpoint capture in pragmatic clinical trials](https://doi.org/10.1093/jamia/ocae303){target="_blank"}. [*Journal of the American Medical Informatics Association*](https://academic.oup.com/jamia){target="_blank"}, 10.1093/jamia/ocae303.\
+-   Kisting, A.L., Zlevor, A.M., Falk, K.L., Kisting, M.A., et al., **Mao, L.**, Minesinger, G.M., Laeseke, P.F., Ziemlewicz, T.J., and Lee, F.T. (2024). [Histotripsy of the proximal ureter and renal pelvis: evaluation of urothelial injury in a porcine survival model](https://doi.org/10.1016/j.jvir.2024.11.028){target="_blank"}. [*Journal of Vascular and Interventional Radiology*](https://www.jvir.org/){target="_blank"}, 10.1016/j.jvir.2024.11.028.
+-   van der Heijden, R.A., Tamada, D., **Mao, L.**, Rice, J., and Reeder, S.B. (2024). [Relaxivity and in vivo human performance of brand name versus generic ferumoxytol](https://doi.org/10.1097/RLI.0000000000001130){target="_blank"}. [*Investigative Radiology*](https://journals.lww.com/investigativeradiology/pages/default.aspx){target="_blank"}, 10.1097/RLI.0000000000001130.
+-   Jain, V.S., Johnstad, C., Ferrer, S., Koepsel, E.K., **Mao, L.**, Kleedehn, M. (2024). [Thrombus burden, caval thrombosis, and retrieval of the Denali inferior vena cava filter](https://doi.org/10.1016/j.jvir.2024.09.013){target="_blank"}. [*Journal of Vascular and Interventional Radiology*](https://www.jvir.org/){target="_blank"}, 10.1016/j.jvir.2024.09.013.
+-   **Mao, L.**\* (2024). [Robust improvement of efficiency using information on covariate distribution](https://doi.org/10.1214/24-EJS2311){target="_blank"}. [*Electronic Journal of Statistics*](https://projecteuclid.org/euclid.ejs){target="_blank"}, 18, 4640-4666.
+-   **Mao, L.**\* (2024). [Defining estimand for the win ratio: separate the true effect from censoring](https://journals.sagepub.com/doi/10.1177/17407745241259356){target="_blank"}. [*Clinical Trials*](https://journals.sagepub.com/home/ctj){target="_blank"}, 21, 584-594. \[Full text pdf; Slides html\]
+-   Cui, Y., Huang, B., **Mao, L.**, Uno, H., Wei, L.-J., and Tian, L. (2024). [Inferences for the distribution of the duration of response in a comparative clinical study](https://doi.org/10.1177/17407745211068207){target="_blank"}. [*Clinical Trials*](https://journals.sagepub.com/home/ctj){target="_blank"}, 21, 541-552.
+-   Carpenter, S.M., Shetty, A., Hetzel, S.J., Garza, K., Porter, L.S., Gray, K.E., Shaw, R.J., Lewis, M.A., **Mao, L.**, Pabich, S., Johnson, H.M., Yancy, W.S., Elwert, F., and Voils, C.I. (2024). [A non‐randomized comparison of engagement and outcomes for in‐person versus virtual delivery of the Partner2Lose weight management trial](https://doi.org/10.1002/osp4.778){target="_blank"}. [*Obesity Science & Practice*](https://onlinelibrary.wiley.com/journal/osp4){target="_blank"}, 10, e778.
+-   Voils, C.I., Shaw, R.J., Gavin, K.L., Hetzel, S.J., Lewis, M.A., Pabich, S., Johnson, H.M., Elwert, F., **Mao, L.**, Gray, K.E., Yuroff, A., Garza, K., Yancy, W.S., and Porter, L.S. (2024). [Outcomes from Partner2Lose: a randomized controlled trial to evaluate 24-month weight loss in a partner-assisted intervention](https://doi.org/10.1186/s12889-022-13207-7){target="_blank"}. [*BMC Public Health*](https://bmcpublichealth.biomedcentral.com/){target="_blank"}, 24, 1948.
+-   Kisting, M.A., White, J.K., Periyasamy, S., Kutlu, A.Z., Kisting, A.L., Zhang, X., **Mao, L.**, Laeseke, P.F., Wagner, M.G., Vlaisavljevich, E., Lee, F.T., and Ziemlewicz, T. J. (2024). [Safety and efficacy of histotripsy delivery through overlying gas-filled small bowel in an ex vivo swine model](https://doi.org/10.1080/02656736.2021.1936905){target="_blank"}. [*International Journal of Hyperthermia*](https://www.tandfonline.com/loi/ijht20){target="_blank"}, 41, 2369305.
+-   Elezaby, M., Al-Jabbari, E., **Mao, L.**, Legha, R., Schacht, D., Whitman, G., Dodelzon, K., and Omofoye, T. (2024). [Virtual visiting professorship program as an opportunity for academic and clinical advancement beyond the COVID-19 pandemic: a survey of participants](https://doi.org/10.2214/AJR.21.27100){target="_blank"}. [*Journal of Breast Imaging*](https://www.ajronline.org/journal/jbi){target="_blank"}, 6, 304-310.
+-   Peikert, A., Claggett, B.L., Udell, J.A., Joseph, J., Hegde, S.M., Kim,K., **Mao, L.**, Wang, T.†, Havighurst, T.C., Farkouh, M.E., Bhatt, D.L., Tattersall,M.C., Cooper, L.S., Solomon, S.D., and Vardeny, O. (2024). [Influenza vaccine immune response in patients with high-risk cardiovascular disease: a secondary analysis of the INVESTED randomized clinical trial](https://doi.org/10.1001/jamacardio.2023.6257){target="_blank"}. [*JAMA Cardiology*](https://jamanetwork.com/journals/jamacardiology){target="_blank"}, 9, 574-581.
+-   Markhardt, B.K., Hund, S., Rosas, H.G., Symanski, J.S., **Mao, L.**, Spiker, A.M., and Blankenbaker, D.G. (2024). [Comparison of MRI and arthroscopy findings for transitional zone cartilage damage in the acetabulum of the hip joint](https://doi.org/10.1007/s00256-022-04207-4){target="_blank"}. [*Skeletal Radiology*](https://link.springer.com/journal/256){target="_blank"}, 53, 1303-1312.
+-   **Mao, L.**\* (2024). [Editorial for “Relationship between patient-friendly audiovisual systems and MRI contrast agent to adverse reactions”](https://doi.org/10.1002/jmri.27500){target="_blank"}. [*Journal of Magnetic Resonance Imaging*](https://onlinelibrary.wiley.com/journal/15222594){target="_blank"}, 59, 2021-2022. \[Full text pdf\]
+-   Rossebo, A.E., Zlevor, A.M., Knott, E.A., **Mao, L.**, Couillard, A.B., Ziemlewicz, T.J., Hinshaw, J.L., Abel, E.J., Lubner, M.G., Knavel-Koepsel, E.M., Wells, S.A., Stratchko, L.M., Laeseke, P.F., and Lee, F.T. (2024). [Percutaneous microwave ablation for treatment of retroperitoneal tumors](https://doi.org/10.1148/rycan.2022230080){target="_blank"}. [*Radiology: Imaging Cancer*](https://pubs.rsna.org/journal/rycan){target="_blank"}, 6, e230080.
+-   Stratchko, L.M., Rossebo, A.E., Kisting, M.A., Hinshaw, J.L., **Mao, L.**, Meyer, C.A., Robbins, J.B., Tuite, M.J., Grist, T.M., and Lee, F.T. (2024). [Unreimbursed costs of multidisciplinary conferences to a radiology department: A prospective analysis at an academic medical center](https://doi.org/10.1016/j.jacr.2023.11.013){target="_blank"}. [*Journal of the American College of Radiology*](https://www.jacr.org/){target="_blank"}, 21, 668-675. \[Journal discussion; News report: Radiology Business; The Image Wire\]
+-   **Mao, L.**\* (2024). [Wilcoxon–Mann–Whitney statistics in randomized trials with non-compliance](https://doi.org/10.1214/21-EJS1947){target="_blank"}. [*Electronic Journal of Statistics*](https://projecteuclid.org/euclid.ejs){target="_blank"}, 18, 465-489. \[An earlier version of this manuscript won the 2019 IMS New Researcher Travel Award\]
+-   **Mao, L.**\* and Wang, T.† (2024). [Dissecting the restricted mean time in favor of treatment](https://doi.org/10.1080/10543406.2022.2030737){target="_blank"}. [*Journal of Biopharmaceutical Statistics*](https://www.tandfonline.com/toc/gbps20/current){target="_blank"}, 34, 111-126. \[Slides pdf\]
+-   Massa'a, R.N., Wawrzyn, P., **Mao, L.**, Reeder, S.B., Kelcz, F., and Wentland, A.L. (2024). [Apparent variation in measurement size of colorectal cancer metastases to the liver on dual contrast MRI](https://doi.org/10.1097/RCT.0000000000001234){target="_blank"}. [*Journal of Computer Assisted Tomography*](https://journals.lww.com/jcat/pages/default.aspx){target="_blank"}, 48, 12-18.
+-   Wang, T.†, **Mao, L.**, Cocco, A., and Kim, K. (2024). [Statistical inference for time-to-event data in non-randomized cohorts with selective attrition](https://doi.org/10.1002/sim.9952){target="_blank"}. [*Statistics in Medicine*](https://onlinelibrary.wiley.com/journal/10970258){target="_blank"}, 43, 216-232.
+:::
+
+## 2023
+
+::: {style="font-size: 92%;"}
+-   **Mao, L.**\* (2023). [Study design for restricted mean time analysis of recurrent events and death](https://doi.org/10.1111/biom.13923){target="_blank"}. [*Biometrics*](http://onlinelibrary.wiley.com/journal/10.1111/%28ISSN%291541-0420){target="_blank"}, 79, 3701-3714. \[Full text pdf; R-package rmt URL\]
+-   Couillard, A.B., Zlevor, A.M., Ziemlewicz T.J., Kisting, M.A., et al., **Mao, L.**, et al., Lee F.T., and Laeseke, P.F. (2023). [A comparison of histotripsy and percutaneous cryoablation in a chronic healthy swine kidney model](https://doi.org/10.1016/j.jvir.2023.07.013){target="_blank"}. [*Journal of Vascular and Interventional Radiology*](https://www.jvir.org/){target="_blank"}, 34, 1986-1996.
+-   **Mao, L.**\* (2023). [Nonparametric inference of general while-alive estimands for recurrent events](https://doi.org/10.1111/biom.13923){target="_blank"}. [*Biometrics*](http://onlinelibrary.wiley.com/journal/10.1111/%28ISSN%291541-0420){target="_blank"}, 79, 1749-1760. \[Full text pdf; Sides URL; R-package WA URL; Vignette URL\]
+-   Zacharias, N.A., Lubner, M.G., Richards, E.S., **Mao, L.**, and Pickhardt, P.J. (2023). [Stercoral colitis: CT imaging findings and clinical risk factors](https://doi.org/10.1007/s00261-022-03456-7){target="_blank"}. [*Abdominal Radiology*](https://link.springer.com/journal/261){target="_blank"}, 8, 3050-3062.
+-   **Mao, L.**\* (2023). [Power and sample size calculations for the restricted mean time analysis of prioritized composite endpoints](https://doi.org/10.1080/19466315.2022.2030737){target="_blank"}. [*Statistics in Biopharmaceutical Research*](https://www.tandfonline.com/journals/usbr20){target="_blank"}, 15, 540-548.
+-   Wood, E.J., Stabo, N., Garret, J.W., Rose, S., Bartels, C.R.T., Szczykutowicz, T.P., Avey, G., **Mao, L.**, and Lubner, M.G. (2023). [Factors contributing to computed tomography trauma scan times at a tertiary center: improving emergency department trauma imaging workflow through targeted interventions](https://doi.org/10.1097/RCT.0000000000001234){target="_blank"}. [*Journal of Computer Assisted Tomography*](https://journals.lww.com/jcat/pages/default.aspx){target="_blank"}, 47, 621-628.
+-   Zlevor, A.M., Kisting, M.A., Couillard, A.B., Rossebo, A.E., Szczykutowicz, T.P., **Mao, L.**, White, J.K., Hartung, M.P., Gettle, L.M., Hinshaw, J.L., Pickhardt, P.J., Ziemlewicz, T.J., Foltz, M.L., and Lee, F.T. (2023). [Percutaneous CT-guided abdominal and pelvic biopsies: Comparison of an electromagnetic navigation system and CT-fluoroscopy](https://doi.org/10.1016/j.jvir.2023.07.013){target="_blank"}. [*Journal of Vascular and Interventional Radiology*](https://www.jvir.org/){target="_blank"}, 34, 910-918.
+-   **Mao, L.**\* (2023). [On restricted mean time in favor of treatment](https://doi.org/10.1111/biom.13923){target="_blank"}. [*Biometrics*](http://onlinelibrary.wiley.com/journal/10.1111/%28ISSN%291541-0420){target="_blank"}, 79, 61-72. \[Full text URL; Slides pdf; R-package rmt URL\]
+-   Hernando, D., Zhao, R., Yuan, Q., Ghasabeh, M.A., Ruschke, S., Miao, X.†, Karampinos, D.C., **Mao, L.**, Harris, D.T., Mattison, R.J., Jeng, M.R., Pedrosa, I., Kamel, I.R., Vasanawala, S., Yokoo, T., and Reeder, S.B. (2023). [Multicenter reproducibility of liver iron quantification with 1.5-T and 3.0-T MRI](https://doi.org/10.1148/radiol.2023213256){target="_blank"}. [*Radiology*](https://pubs.rsna.org/journal/radiology){target="_blank"}, 306, e213256.
+-   Peikert, A., Claggett, B.L., Kim, K., et al., **Mao, L.**, Cooper, L.S., Solomon, S.D., and Vardeny, O. (2023). [Association of post-vaccination adverse reactions after influenza vaccine with mortality and cardiopulmonary outcomes in patients with high-risk cardiovascular disease: the INVESTED trial](https://doi.org/10.1001/jamacardio.2023.6257){target="_blank"}. [*European Journal of Heart Failure*](https://onlinelibrary.wiley.com/journal/18790844){target="_blank"}, 25, 299-310.
+:::
+
+<!-- 2022 -->
+
+<!--     Mao, L.* (2022). Nonparametric inference of complier quantile treatment effects in randomized trials with imperfect compliance. Biostatistics & Epidemiology, 6, 249-265. -->
+
+<!--     Seiter, D.P., Nguyen, S.M., Morgan, T.K., Mao, L., Dudley, D.M., O’Connor, D.H., Murphy, M.E., Ludwig, K.D., Chen, R., Dhyani, A., Zhu, A., Schotzko, M.L., Brunner, K.G., Shah, D.M., Johnson, K.M., Golos, T.G., and Wieben, O. (2022). Ferumoxytol dynamic contrast enhanced magnetic resonance imaging identifies altered placental cotyledon perfusion in rhesus macaques. Biology of Reproduction, 107, 1517-1527. -->
+
+<!--     Pirasteh, A., Periyasamy, S., Meudt, J.J., Lui, Y., Lee, L.M., Schachtschneider, K.M., Schook, L.B., Gaba, R.C., Mao, L., Said, A., McMillan, A.B., Laeseke, P.F., and Shanmuganayagam, D. (2022). Staging liver fibrosis by fibroblast activation protein inhibitor positron emission tomography in a human-sized swine model. Journal of Nuclear Medicine, 63, 1956-1961. -->
+
+<!--     He, Y., Kim S., Mao, L., and Ahn, K.W. (2022). Marginal semiparametric transformation models for clustered multivariate competing risks data.  Statistics in Medicine, 41, 5349-5364. -->
+
+<!--     Wang, T.† and Mao, L.* (2022). Stratified proportional win-fractions regression analysis. Statistics in Medicine, 41, 5305-5318. [Full text URL pdf; R-package WR URL; Vignette URL] -->
+
+<!--     Mao, L.*, Kim, K., and Miao, X.† (2022). Sample size formula for general win ratio analysis. Biometrics, 78, 1257-1268. [Full text URL; Slides pdf; R-package WR URL; Vignette URL] -->
+
+<!--     Triche, B.L., Annamalai, A., Pooler, B.D., Glazer, J.M., Zadra, J.D., Barclay-Buchanan, C.J., Hekman, D.J., Mao, L., Pickhardt, P.J., and Lubner, M.G. (2022). Positive oral contrast material for CT evaluation of non-traumatic abdominal pain in the ED: prospective assessment of diagnostic confidence and throughput metrics. Abdominal Radiology, 47, 2956–2967  -->
+
+<!--     Massa’a, R.N., Stoeckl, E.M., Lubner, M.G., Smith, D., Mao, L., Shapiro, D.D., Abel, E.J., and Wentland, A.L. (2022). Differentiation of benign from malignant solid renal lesions with MRI-based radiomics and machine learning. Abdominal Radiology, 47, 2896-2904. -->
+
+<!--     Mao, L.* (2022). Identification of the outcome distribution and sensitivity analysis under weak confounder-instrument interaction. Statistics & Probability Letters, 189, 109590. [Full text URL pdf] -->
+
+<!--     Mao, L.* (2022). On the relative efficiency of intent-to-treat Wilcoxon–Mann–Whitney test in the presence of non-compliance. Biometrika, 109, 873-880. [Full text URL] -->
+
+<!--     Schulz, K., Mao, L., and Kanne, J. (2022). Computed tomography pulmonary angiography utilization in the emergency department during the COVID-19 pandemic. Journal of Thoracic Imaging, 37, 225-230. -->
+
+<!--     Mao, L.*, Kim, K., and Li, Y.† (2022). On recurrent-event win ratio.  Statistical Methods in Medical Research, 31, 1120-1134. [Slides pdf; R-package WR URL; Vignette URL] -->
+
+<!--     Roldán-Alzate, A., Campo, C.A., Mao, L., Said, A., Wieben, O., and Reeder, S.B. (2022). Characterization of mesenteric and portal hemodynamics using 4D flow MRI: the effects of meals and diurnal variation. Abdominal Radiology, 47, 2106-2114. -->
+
+<!--     Elezaby, M.A., Mao, L., Burnside, E., Zuley, M.L., Berg, W.A., Bhargavan-Chatfield A., and Lee, C.S. (2022). Utilization and cancer yield of probably benign assessment category in the national mammography database: 2009 to 2018. Journal of the American College of Radiology, 19, 604-614. -->
+
+<!--     Wentland, A.L., Nystrom, J., Lubner, M.G., Mao, L., Abel, E.J., and Pickhardt, P.J. (2022). Natural history of simple renal cysts: longitudinal CT-based evaluation. Abdominal Radiology, 47, 1124-1132. -->
+
+<!--     Tannenbaum, A.P., Grimes, M.D., Brace, C.L., Johnson, C.J., Koebe, S.D., Anzia, L.E., Mao, L., Ricke, W.A., Hernando, D., Roldán-Alzate, A., Wells, S.A. (2022). Effect of metabolic syndrome on anatomy and function of the lower urinary tract assessed on MRI. Urology, 159, 176-181. -->
+
+<!-- 2021 -->
+
+<!--     Mao, L.* and Wang, T.† (2021). A class of proportional win-fractions regression models for composite outcomes. Biometrics, 77, 1265-1275. [Full text URL; Slides pdf; R-package WR URL].  -->
+
+<!--     Zlevor, A.M., Mauch, S.C., Knott, E.A., Pickhardt, P.J., Gettle, L.M., Mao, L., et al., Lee, F.T. (2021). Percutaneous lung biopsy with pleural & parenchymal blood patching: Results and complications from 1112 core biopsies. Journal of Vascular and Interventional Radiology, 32, 1319-1327. [Awarded Editor’s Recognition for Most Downloaded Article.] -->
+
+<!--     Mao, L.* and Kim, K. (2021). Statistical models for composite endpoints of death and non-fatal events: a review. Statistics in Biopharmaceutical Research, 13, 260-269. -->
+
+<!--     Li, Y.†, Liang, M., Mao, L.*, and Wang, S. (2021). Robust estimation and variable selection for the accelerated failure time model. Statistics in Medicine, 40, 4473-4491. -->
+
+<!--     Kliewer, M.A., Mao, L., Brinkman, M.R., Bruce, R. J., and Hinshaw, J. L. (2021). Diurnal variation of major error rates in the interpretation of abdominal/pelvic CT studies. Abdominal Radiology, 46, 1746-1751. -->
+
+<!--     Anzia, L.E., Johnson, C.J., Mao, L. Hernando, D., Bushman, W.A., Wells, S.A., and Roldán-Alzate, A. (2021). Comprehensive non-invasive analysis of lower urinary tract anatomy using MRI. Abdominal Radiology, 46, 1670-1676. -->
+
+<!--     Kliewer, M.A., Mao, L., Weigman, B.J., Walker, D.C., Gettle, L.M., and Corliss, R.F. (2021). Ultrasound elastographic measurement of rigor mortis in an animal model: a feasibility study for improved time-of-death estimates in forensic investigations. American Journal of Roentgenology, 216, 1126-1133.  -->
+
+<!--     Louwagie, E.M., Carlson, L., Over, V., Mao, L., Fang, S., Westervelt, A., Vink, J., Hall, T., Feltovich, T., and Myers, K. (2021). Longitudinal ultrasonic dimensions and parametric solid models of the gravid uterus and cervix. PLoS ONE, 16, e0242118.  -->
+
+<!--     Vardeny, O., Kim, K., Udell, J.A., Joseph, J., et al., Mao, L., Havighurst, T.C.; Lawton, S.C., Solomon, S.D. (2021). Effect of high-dose trivalent vs standard-dose quadrivalent influenza vaccine on mortality or cardiopulmonary hospitalization in patients with high-risk cardiovascular disease: A randomized clinical trial. Journal of the American Medical Association, 325, 39-49. -->
+
+<!-- 2020 -->
+
+<!--     Lawrence, E.M., Roberts, N.T., Hernando, D., Mao, L., and Reeder, S.B. (2020). Effect of noise and estimator type on bias for analysis of liver proton density fat fraction. Magnetic Resonance Imaging, 74, 244-249 . -->
+
+<!--     Longo, K., Zlevor, A., Laeseke, P., Swietlik, J., Knott, E., Rodgers, A., Mao, L., Zhang, X., Xu, Z., Wagner, M., Periyasamy, S., Lee, F.T., and Ziemlewicz , T. (2020). Histotripsy ablations in a porcine liver model: feasibility of respiratory motion compensation by alteration of the ablation zone prescription shape. CardioVascular and Interventional Radiology, 43, 1695-1701.  -->
+
+<!--     Mao, L.* (2020). A unified approach to the calculation of information operators in semiparametric models. Biometrika, 107, 983-995 . -->
+
+<!--     Voils, C.I., Shaw, R., Adler, R., Jeanes, E., Lewis, M.A., Sharp, W., Cronin, K.A., Hetzel, S., Mao, L., Johnson, H.M., Elwert, F., Pabich, S., Gavin, K.L., Yancy, W.S., and Porter, L. (2020). Protocol for Partner2Lose: A randomized controlled trial to evaluate partner involvement on long-term weight loss. Contemporary Clinical Trials, 96, 106092. -->
+
+<!--     Dong, G., Mao, L., Huang, B., Gamalo-Siebers, M., Wang, J., Yu, G., and Hoaglin, D. (2020). The inverse-probability-of-censoring weighting (IPCW) adjusted win ratio statistic: an unbiased estimator in the presence of independent censoring. Journal of Biopharmaceutical Statistics, 30, 882-899. -->
+
+<!--     Colgan, T.J., Van Pay, A.J., Sharma, S.D., Mao, L., and Reeder, S.B. (2020). Diurnal variation of proton density fat fraction in the liver using quantitative chemical shift encoded MRI.  Journal of Magnetic Resonance Imaging, 51, 407-414.  -->
+
+<!-- 2019 -->
+
+<!--     Harringa, J.B., Bracken, R.L., Davis, J.C., Mao, L., Kitchin, D.R., Robbins, J.B., Ziemlewicz, T.J., Pickhardt, P.J., Reeder, S.B., and Repplinger, M.D. (2019). Prospective evaluation of MRI compared with CT for the etiology of abdominal pain in emergency department patients with concern for appendicitis.  Journal of Magnetic Resonance Imaging, 50, 1651-1658. -->
+
+<!--     Carlson, L.C., Hall, T.J., Rosado-Mendez, I.M., Mao, L., and Feltovich, H. (2019). Quantitative assessment of cervical softening during pregnancy with shear wave elasticity imaging: an in vivo longitudinal study. Interface Focus, 9, 20190030. -->
+
+<!--     Mao, L.* (2019). Proportional hazards regression of survival-sacrifice data with cause-of-death information in animal carcinogenicity studies. Statistics in Medicine, 38, 3628-3641. -->
+
+<!--     Mao, L.* (2019). Nonparametric inference on tumor incidence with partially identified cause-of-death data. In: L. Zhang et al. (eds) Contemporary Biostatistics with Biopharmaceutical Applications, pp 3-18, Springer: Cham.  -->
+
+<!--     Mao, L.* (2019). Nonparametric identification and estimation of current status data in the presence of death. Statistica Neerlandica, 73, 395-413. -->
+
+<!--     Longo, K., Knott, E., Watson, R., Sweitlik, J., Vlaisavljevich, E., Smolock, A. R., Xu, Z., Cho, C.,  Mao, L., Lee, F. T., and Ziemlewicz, T. (2019). Robotically assisted sonic therapy (RAST) for hepatic ablation in a porcine model: Mitigation of body wall damage with an optimized pulse sequence. CardioVascular and Interventional Radiology, 42, 1016-1023. -->
+
+<!--     Mao, L.* (2019). On the alternative hypotheses for the win ratio. Biometrics, 75, 347-351. -->
+
+<!-- 2018 -->
+
+<!--     Mao, L.* (2018). On causal estimation using U-statistics. Biometrika, 105, 215-220. [Slides pdf]  -->
+
+<!-- 2017 -->
+
+<!--     Mao, L., Lin, D.Y., and Zeng, D. (2017). Semiparametric regression analysis of interval-censored competing risks data. Biometrics, 73, 857–865. [An earlier version of this manuscript won the 2016 ASA Biometrics Section Travel Award and the 2016 ENAR RAB Poster Award] -->
+
+<!--     Mao, L. and Lin, D.Y. (2017). Efficient estimation in semiparametric transformation models for the cumulative incidence of competing risks.  Journal of the Royal Statistical Society, Series B, 79, 573–587. [An earlier version of this manuscript won the 2015 ENAR Distinguished Student Paper Award] -->
+
+<!-- 2016 -->
+
+<!--     Zeng, D., Mao, L., and Lin, D.Y. (2016).  Maximum likelihood estimation for semiparametric transformation models with interval-censored data. Biometrika, 103, 253-271.  -->
+
+<!--     Mao, L. and Lin, D.Y. (2016). Semiparametric regression for the weighted composite endpoint of recurrent and terminal events. Biostatistics, 17, 390-403. [An earlier version of this manuscript won the 2015 ASA Biopharmaceutical Section Student Paper Award] -->
+
+<!--     Oramasionwu, C.U., Kashuba, A.D., Napravnik, S., Wohl, D.A., Mao, L., and Adimora, A.A. (2016). Non-initiation of hepatitis C virus antiviral therapy in patients with human immunodeficiency virus/hepatitis C virus co-infection. World Journal of Hepatology, 8, 368-375. -->
+
+<!-- 2015 and before -->
+
+<!--     Moore, H.N.,  Mao, L., and Oramasionwu, C.U. (2015). Factors associated with polypharmacy and the prescription of multiple medications among persons living with HIV (PLWH) compared with non-PLWH.  AIDS Care, 1143-1148. -->
+
+<!--     Firnhaber, C.,  Mao, L., Levin, S., Faesen, M., Lewis, D.A., Goeieman, B.J., Swarts, A.J., Rakhombe, N., Michelow, P.M., Williams, S., and Smith, J.S. (2015). Evaluation of a cervicography-based program to ensure quality of visual inspection of the cervix in HIV-infected women in Johannesburg, South Africa.  Journal of Lower Genital Tract Disease, 19, 7-11. -->
+
+<!--     Gallo, P.,  Mao, L., and Shih, V.H. (2014). Alternative views on setting clinical trial futility criteria.  Journal of Biopharmaceutical Statistics,  24, 976-993. -->
+
+<!--     Oramasionwu, C., Bailey, S.c., Johnson, T.L., and Mao, L. (2014). Engagement in outpatient care for persons living with HIV in the United States. AIDS Research and Human Retroviruses, 31, 177-182. -->
+
+<!--     Johnson, T.L., Toliver, J.C., Mao, L., and Oramasionwu, C.U. (2014). Differences in outpatient care and treatment utilization for patients with HIV/HCV coinfection, HIV, and HCV monoinfection, a cross-sectional study. BMC Infectious Diseases, 14, 217. -->
+
+<!--     Rositch, A.F., Mao, L., Hudgens, M.G., Moses, S., Agot, K., Backes, D.M., Nyagaya, E., Snijders, P.J., Meijer, C.J., Bailey, R.C., and Smith, J.S. (2014). Risk of HIV acquisition among circumcised and uncircumcised young men with penile HPV infection. AIDS, 28, 745-752. -->
+
+<!--     Firnhaber, C., Mayisela, N., Mao, L., Williams, S., Swarts, A., Faesen, M., Levin, S., Michelow, P., Omar, T., Hudgens, M.G., Williamson, A.L., Allan, B., Lewis, D.A., and Smith, J.S. (2013). Validation of cervical cancer screening methods in HIV positive women from Johannesburg South Africa. PloS One, 8, e53494. -->
+
+<!-- Taylor, J.A., Pandian, R.S., Mao, L., and Michael, Y.L. (2013). Using inpatient hospital discharge data to monitor patient safety events.  Journal of Healthcare Risk Management, 32, 26-33.-->
+
+## 2022
+
+::: {style="font-size: 92%;"}
+-   **Mao, L.**\* (2022). [Nonparametric inference of complier quantile treatment effects in randomized trials with imperfect compliance](https://doi.org/10.1002/bimj.202100174){target="_blank"}. [*Biostatistics & Epidemiology*](https://onlinelibrary.wiley.com/journal/23991417){target="_blank"}, 6, 249-265.
+-   Seiter, D.P., Nguyen, S.M., Morgan, T.K., **Mao, L.**, Dudley, D.M., O’Connor, D.H., Murphy, M.E., Ludwig, K.D., Chen, R., Dhyani, A., Zhu, A., Schotzko, M.L., Brunner, K.G., Shah, D.M., Johnson, K.M., Golos, T.G., and Wieben, O. (2022). [Ferumoxytol dynamic contrast enhanced magnetic resonance imaging identifies altered placental cotyledon perfusion in rhesus macaques](https://doi.org/10.1093/biolre/ioab073){target="_blank"}. [*Biology of Reproduction*](https://academic.oup.com/biolreprod){target="_blank"}, 107, 1517-1527.
+-   Pirasteh, A., Periyasamy, S., Meudt, J.J., Lui, Y., Lee, L.M., Schachtschneider, K.M., Schook, L.B., Gaba, R.C., **Mao, L.**, Said, A., McMillan, A.B., Laeseke, P.F., and Shanmuganayagam, D. (2022). [Staging liver fibrosis by fibroblast activation protein inhibitor positron emission tomography in a human-sized swine model](https://doi.org/10.2967/jnumed.121.262194){target="_blank"}. [*Journal of Nuclear Medicine*](https://jnm.snmjournals.org/){target="\"_blank"}, 63, 1956-1961.
+-   He, Y., Kim S., **Mao, L.**, and Ahn, K.W. (2022). [Marginal semiparametric transformation models for clustered multivariate competing risks data](https://doi.org/10.1002/sim.9952){target="_blank"}. [*Statistics in Medicine*](https://onlinelibrary.wiley.com/journal/10970258){target="\"_blank"}, 41, 5349-5364.
+-   Wang, T.† and **Mao, L.**\* (2022). [Stratified proportional win-fractions regression analysis](https://doi.org/10.1002/sim.9952){target="_blank"}. [*Statistics in Medicine*](https://onlinelibrary.wiley.com/journal/10970258){target="\"_blank"}, 41, 5305-5318.
+-   **Mao, L.**\*, Kim, K., and Miao, X.† (2022). [Sample size formula for general win ratio analysis](https://doi.org/10.1002/bimj.202100174){target="_blank"}. [*Biometrics*](https://onlinelibrary.wiley.com/journal/15410420){target="\"_blank"}, 78, 1257-1268.
+-   Triche, B.L., Annamalai, A., Pooler, B.D., Glazer, J.M., Zadra, J.D., Barclay-Buchanan, C.J., Hekman, D.J., **Mao, L.**, Pickhardt, P.J., and Lubner, M.G. (2022). [Positive oral contrast material for CT evaluation of non-traumatic abdominal pain in the ED: prospective assessment of diagnostic confidence and throughput metrics](https://doi.org/10.1007/s00261-022-03456-7){target="_blank"}. [*Abdominal Radiology*](https://link.springer.com/journal/261){target="\"_blank"}, 47, 2956–2967
+-   Massa’a, R.N., Stoeckl, E.M., Lubner, M.G., Smith, D., **Mao, L.**, Shapiro, D.D., Abel, E.J., and Wentland, A.L. (2022). [Differentiation of benign from malignant solid renal lesions with MRI-based radiomics and machine learning](https://doi.org/10.1007/s00261-022-03456-7){target="_blank"}. [*Abdominal Radiology*](https://link.springer.com/journal/261){target="\"_blank"}, 47, 2896-2904.
+-   **Mao, L.**\* (2022). [Identification of the outcome distribution and sensitivity analysis under weak confounder-instrument interaction](https://doi.org/10.1016/j.spl.2022.109590){target="_blank"}. [*Statistics & Probability Letters*](https://www.journals.elsevier.com/statistics-and-probability-letters){target="\"_blank"}, 189, 109590.
+-   **Mao, L.**\* (2022). [On the relative efficiency of intent-to-treat Wilcoxon–Mann–Whitney test in the presence of non-compliance](https://doi.org/10.1111/biom.13923){target="_blank"}. [*Biometrika*](https://academic.oup.com/biomet){target="\"_blank"}, 109, 873-880.
+-   Schulz, K., **Mao, L.**, and Kanne, J. (2022). [Computed tomography pulmonary angiography utilization in the emergency department during the COVID-19 pandemic](https://doi.org/10.1097/RTI.0000000000000547){target="_blank"}. [*Journal of Thoracic Imaging*](https://journals.lww.com/thoracicimaging/pages/default.aspx){target="\"_blank"}, 37, 225-230.
+-   **Mao, L.**\*, Kim, K., and Li, Y.† (2022). [On recurrent-event win ratio](https://doi.org/10.1177/0272989X21101334){target="_blank"}. [*Statistical Methods in Medical Research*](https://journals.sagepub.com/home/smm){target="\"_blank"}, 31, 1120-1134.
+-   Roldán-Alzate, A., Campo, C.A., **Mao, L.**, Said, A., Wieben, O., and Reeder, S.B. (2022). [Characterization of mesenteric and portal hemodynamics using 4D flow MRI: the effects of meals and diurnal variation](https://doi.org/10.1007/s00261-021-03256-7){target="_blank"}. [*Abdominal Radiology*](https://link.springer.com/journal/261){target="\"_blank"}, 47, 2106-2114.
+-   Elezaby, M.A., **Mao, L.**, Burnside, E., Zuley, M.L., Berg, W.A., Bhargavan-Chatfield A., and Lee, C.S. (2022). [Utilization and cancer yield of probably benign assessment category in the national mammography database: 2009 to 2018](https://doi.org/10.1016/j.jacr.2021.11.013){target="_blank"}. [*Journal of the American College of Radiology*](https://www.jacr.org/){target="\"_blank"}, 19, 604-614.
+-   Wentland, A.L., Nystrom, J., Lubner, M.G., **Mao, L.**, Abel, E.J., and Pickhardt, P.J. (2022). [Natural history of simple renal cysts: longitudinal CT-based evaluation](https://doi.org/10.1007/s00261-021-03256-7){target="_blank"}. [*Abdominal Radiology*](https://link.springer.com/journal/261){target="\"_blank"}, 47, 1124-1132.
+-   Tannenbaum, A.P., Grimes, M.D., Brace, C.L., Johnson, C.J., Koebe, S.D., Anzia, L.E., **Mao, L.**, Ricke, W.A., Hernando, D., Roldán-Alzate, A., Wells, S.A. (2022). [Effect of metabolic syndrome on anatomy and function of the lower urinary tract assessed on MRI](https://doi.org/10.1016/j.urology.2021.10.013){target="_blank"}. [*Urology*](https://www.goldjournal.net/){target="\"_blank"}, 159, 176-181.
+:::
+
+## 2021
+
+::: {style="font-size: 92%;"}
+-   Lawrence, E.M., Roberts, N.T., Hernando, D., **Mao, L.**, and Reeder, S.B. (2021). [Effect of noise and estimator type on bias for analysis of liver proton density fat fraction](https://doi.org/10.1016/j.mri.2021.07.013){target="_blank"}. [*Magnetic Resonance Imaging*](https://www.journals.elsevier.com/magnetic-resonance-imaging){target="\"_blank"}, 74, 244-249.
+-   Longo, K., Zlevor, A., Laeseke, P., Swietlik, J., Knott, E., Rodgers, A., **Mao, L.**, Zhang, X., Xu, Z., Wagner, M., Periyasamy, S., Lee, F.T., and Ziemlewicz , T. (2021). [Histotripsy ablations in a porcine liver model: feasibility of respiratory motion compensation by alteration of the ablation zone prescription shape](https://doi.org/10.1007/s00270-021-02947-7){target="_blank"}. [*CardioVascular and Interventional Radiology*](https://www.springer.com/journal/267){target="\"_blank"}, 43, 1695-1701.
+-   **Mao, L.**\* (2021). [A unified approach to the calculation of information operators in semiparametric models](https://doi.org/10.1093/biomet/asab046){target="_blank"}. [*Biometrika*](https://academic.oup.com/biomet){target="\"_blank"}, 107, 983-995.
+-   Voils, C.I., Shaw, R., Adler, R., Jeanes, E., Lewis, M.A., Sharp, W., Cronin, K.A., Hetzel, S., **Mao, L.**, Johnson, H.M., Elwert, F., Pabich, S., Gavin, K.L., Yancy, W.S., and Porter, L. (2021). [Protocol for Partner2Lose: A randomized controlled trial to evaluate partner involvement on long-term weight loss](https://doi.org/10.1016/j.conctc.2021.100692){target="_blank"}. [*Contemporary Clinical Trials*](https://www.journals.elsevier.com/contemporary-clinical-trials-communications){target="\"_blank"}, 96, 106092.
+-   Dong, G., **Mao, L.**, Huang, B., Gamalo-Siebers, M., Wang, J., Yu, G., and Hoaglin, D. (2021). [The inverse-probability-of-censoring weighting (IPCW) adjusted win ratio statistic: an unbiased estimator in the presence of independent censoring](https://doi.org/10.1080/10543406.2020.1850731){target="_blank"}. [*Journal of Biopharmaceutical Statistics*](https://www.tandfonline.com/journals/gbps20){target="\"_blank"}, 30, 882-899.
+-   Colgan, T.J., Van Pay, A.J., Sharma, S.D., **Mao, L.**, and Reeder, S.B. (2021). [Diurnal variation of proton density fat fraction in the liver using quantitative chemical shift encoded MRI](https://doi.org/10.1002/jmri.27507){target="_blank"}. [*Journal of Magnetic Resonance Imaging*](https://onlinelibrary.wiley.com/journal/15222586){target="\"_blank"}, 51, 407-414.
+:::
+
+## 2020
+
+::: {style="font-size: 92%;"}
+-   Harringa, J.B., Bracken, R.L., Davis, J.C., **Mao, L.**, Kitchin, D.R., Robbins, J.B., Ziemlewicz, T.J., Pickhardt, P.J., Reeder, S.B., and Repplinger, M.D. (2020). [Prospective evaluation of MRI compared with CT for the etiology of abdominal pain in emergency department patients with concern for appendicitis](https://doi.org/10.1002/jmri.26900){target="_blank"}. [*Journal of Magnetic Resonance Imaging*](https://onlinelibrary.wiley.com/journal/15222586){target="\"_blank"}, 50, 1651-1658.
+-   Carlson, L.C., Hall, T.J., Rosado-Mendez, I.M., **Mao, L.**, and Feltovich, H. (2020). [Quantitative assessment of cervical softening during pregnancy with shear wave elasticity imaging: an in vivo longitudinal study](https://doi.org/10.1098/rsfs.2019.0030){target="_blank"}. [*Interface Focus*](https://royalsocietypublishing.org/journal/rsfs){target="\"_blank"}, 9, 20190030.
+-   **Mao, L.**\* (2020). [A unified approach to the calculation of information operators in semiparametric models](https://doi.org/10.1093/biomet/asab046){target="_blank"}. [*Biometrika*](https://academic.oup.com/biomet){target="\"_blank"}, 107, 983-995.
+-   Voils, C.I., Shaw, R., Adler, R., Jeanes, E., Lewis, M.A., Sharp, W., Cronin, K.A., Hetzel, S., **Mao, L.**, Johnson, H.M., Elwert, F., Pabich, S., Gavin, K.L., Yancy, W.S., and Porter, L. (2020). [Protocol for Partner2Lose: A randomized controlled trial to evaluate partner involvement on long-term weight loss](https://doi.org/10.1016/j.conctc.2021.100692){target="_blank"}. [*Contemporary Clinical Trials*](https://www.journals.elsevier.com/contemporary-clinical-trials-communications){target="\"_blank"}, 96, 106092.
+-   Dong, G., **Mao, L.**, Huang, B., Gamalo-Siebers, M., Wang, J., Yu, G., and Hoaglin, D. (2020). [The inverse-probability-of-censoring weighting (IPCW) adjusted win ratio statistic: an unbiased estimator in the presence of independent censoring](https://doi.org/10.1080/10543406.2020.1850731){target="_blank"}. [*Journal of Biopharmaceutical Statistics*](https://www.tandfonline.com/journals/gbps20){target="\"_blank"}, 30, 882-899.
+-   Colgan, T.J., Van Pay, A.J., Sharma, S.D., **Mao, L.**, and Reeder, S.B. (2020). [Diurnal variation of proton density fat fraction in the liver using quantitative chemical shift encoded MRI](https://doi.org/10.1002/jmri.27507){target="_blank"}. [*Journal of Magnetic Resonance Imaging*](https://onlinelibrary.wiley.com/journal/15222586){target="\"_blank"}, 51, 407-414.
+:::
+
+## 2019
+
+::: {style="font-size: 92%;"}
+-   **Mao, L.**\* (2019). [Proportional hazards regression of survival-sacrifice data with cause-of-death information in animal carcinogenicity studies](https://doi.org/10.1002/sim.8084){target="_blank"}. [*Statistics in Medicine*](https://onlinelibrary.wiley.com/journal/10970258){target="\"_blank"}, 38, 3628-3641.
+-   **Mao, L.**\* (2019). [Nonparametric inference on tumor incidence with partially identified cause-of-death data](https://doi.org/10.1002/sta4.191){target="_blank"}. In: L. Zhang et al. (eds) *Contemporary Biostatistics with Biopharmaceutical Applications*, pp 3-18, [*Springer*](https://www.springer.com/gp){target="_blank"}.
+-   **Mao, L.**\* (2019). [Nonparametric identification and estimation of current status data in the presence of death](https://doi.org/10.1111/stan.12152){target="_blank"}. [*Statistica Neerlandica*](https://onlinelibrary.wiley.com/journal/14679651){target="\"_blank"}, 73, 395-413.
+-   Longo, K., Knott, E., Watson, R., Sweitlik, J., Vlaisavljevich, E., Smolock, A. R., Xu, Z., Cho, C., **Mao, L.**, Lee, F. T., and Ziemlewicz, T. (2019). [Robotically assisted sonic therapy (RAST) for hepatic ablation in a porcine model: Mitigation of body wall damage with an optimized pulse sequence](https://doi.org/10.1007/s00270-019-02299-1){target="_blank"}. [*CardioVascular and Interventional Radiology*](https://www.springer.com/journal/267){target="\"_blank"}, 42, 1016-1023.
+-   **Mao, L.**\* (2019). [On the alternative hypotheses for the win ratio](https://doi.org/10.1111/biom.13007){target="_blank"}. [*Biometrics*](https://onlinelibrary.wiley.com/journal/15410420){target="\"_blank"}, 75, 347-351.
+:::
+
+## 2018
+
+::: {style="font-size: 92%;"}
+-   **Mao, L.**\* (2018). [On causal estimation using U-statistics](https://doi.org/10.1093/biomet/asx073){target="_blank"}. [*Biometrika*](https://academic.oup.com/biomet){target="\"_blank"}, 105, 215-220.
+:::
+
+## 2017
+
+::: {style="font-size: 92%;"}
+-   **Mao, L.**, Lin, D.Y., and Zeng, D. (2017). [Semiparametric regression analysis of interval-censored competing risks data](https://doi.org/10.1111/biom.12647){target="_blank"}. [*Biometrics*](https://onlinelibrary.wiley.com/journal/15410420){target="\"_blank"}, 73, 857–865.
+-   **Mao, L.** and Lin, D.Y. (2017). [Efficient estimation in semiparametric transformation models for the cumulative incidence of competing risks](https://doi.org/10.1111/rssb.12167){target="_blank"}. [*Journal of the Royal Statistical Society, Series B*](https://rss.onlinelibrary.wiley.com/journal/14679868){target="\"_blank"}, 79, 573–587.
+:::
+
+## 2016
+
+::: {style="font-size: 92%;"}
+-   Zeng, D., **Mao, L.**, and Lin, D.Y. (2016). [Maximum likelihood estimation for semiparametric transformation models with interval-censored data](https://doi.org/10.1093/biomet/asw001){target="_blank"}. [*Biometrika*](https://academic.oup.com/biomet){target="\"_blank"}, 103, 253-271.
+-   **Mao, L.** and Lin, D.Y. (2016). [Semiparametric regression for the weighted composite endpoint of recurrent and terminal events](https://doi.org/10.1093/biostatistics/kxv045){target="_blank"}. [*Biostatistics*](https://academic.oup.com/biostatistics){target="\"_blank"}, 17, 390-403.
+-   Oramasionwu, C.U., Kashuba, A.D., Napravnik, S., Wohl, D.A., **Mao, L.**, and Adimora, A.A. (2016). [Non-initiation of hepatitis C virus antiviral therapy in patients with human immunodeficiency virus/hepatitis C virus co-infection](https://doi.org/10.4254/wjh.v8.i7.368){target="_blank"}. [*World Journal of Hepatology*](https://www.wjgnet.com/1948-5182/index.htm){target="\"_blank"}, 8, 368-375.
+:::
+
+## 2015 and before
+
+::: {style="font-size: 92%;"}
+-   Moore, H.N., **Mao, L.**, and Oramasionwu, C.U. (2015). [Factors associated with polypharmacy and the prescription of multiple medications among persons living with HIV (PLWH) compared with non-PLWH](https://doi.org/10.1080/09540121.2015.1018841){target="_blank"}. [*AIDS Care*](https://www.tandfonline.com/journals/caic20){target="\"_blank"}, 1143-1148.
+-   Firnhaber, C., **Mao, L.**, Levin, S., Faesen, M., Lewis, D.A., Goeieman, B.J., Swarts, A.J., Rakhombe, N., Michelow, P.M., Williams, S., and Smith, J.S. (2015). [Evaluation of a cervicography-based program to ensure quality of visual inspection of the cervix in HIV-infected women in Johannesburg, South Africa](https://doi.org/10.1097%2FLGT.0000000000000040){target="_blank"}. [*Journal of Lower Genital Tract Disease*](https://journals.lww.com/jlgtd/pages/default.aspx){target="\"_blank"}, 19, 7-11
+-   Gallo, P., **Mao, L.**, and Shih, V.H. (2014). [Alternative views on setting clinical trial futility criteria](https://doi.org/10.1080/10543406.2014.886682){target="_blank"}. [*Journal of Biopharmaceutical Statistics*](https://www.tandfonline.com/journals/gbps20){target="\"_blank"}, 24, 976-993.
+-   Oramasionwu, C., Bailey, S.c., Johnson, T.L., and **Mao, L.** (2014). [Engagement in outpatient care for persons living with HIV in the United States](https://doi.org/10.1089/aid.2014.0003){target="_blank"}. [*AIDS Research and Human Retroviruses*](https://www.liebertpub.com/aid){target="\"_blank"}, 31, 177-182.
+-   Johnson, T.L., Toliver, J.C., **Mao, L.**, and Oramasionwu, C.U. (2014). [Differences in outpatient care and treatment utilization for patients with HIV/HCV coinfection, HIV, and HCV monoinfection, a cross-sectional study](https://doi.org/10.1186/1471-2334-14-217){target="_blank"}. [*BMC Infectious Diseases*](https://bmcinfectdis.biomedcentral.com/){target="\"_blank"}, 14, 217.
+-   Rositch, A.F., **Mao, L.**, Hudgens, M.G., Moses, S., Agot, K., Backes, D.M., Nyagaya, E., Snijders, P.J., Meijer, C.J., Bailey, R.C., and Smith, J.S. (2014). [Risk of HIV acquisition among circumcised and uncircumcised young men with penile HPV infection](http://doi.org/10.1097/QAD.0000000000000092){target="_blank"}. [*AIDS*](https://journals.lww.com/aidsonline/pages/default.aspx){target="\"_blank"}, 28, 745-752.
+-   Firnhaber, C., Mayisela, N., **Mao, L.**, Williams, S., Swarts, A., Faesen, M., Levin, S., Michelow, P., Omar, T., Hudgens, M.G., Williamson, A.L., Allan, B., Lewis, D.A., and Smith, J.S. (2013). [Validation of cervical cancer screening methods in HIV positive women from Johannesburg South Africa](https://doi.org/10.1371/journal.pone.0053494){target="_blank"}. [*PloS One*](http://www.plosone.org/){target="\"_blank"}, 8, e53494.
+-   Taylor, J.A., Pandian, R.S., **Mao, L.**, and Michael, Y.L. (2013). [Using inpatient hospital discharge data to monitor patient safety events](https://doi.org/10.1002/jhrm.21047){target="_blank"}. [*Journal of Healthcare Risk Management*](https://onlinelibrary.wiley.com/journal/1542474X){target="\"_blank"}, 32, 26-33.
+:::

@@ -1,0 +1,47 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Lu Mao"
+  image: dc.jpg
+  navbar:
+    background: "#C5050C"
+    left:
+      - href: index.qmd
+        text: Home
+      - people.qmd
+      - research.qmd
+      - text: Publications
+        menu:
+          - text: All
+            href: pubs/index.qmd
+          - text: Methods
+            href: pubs/methods.qmd
+          - text: Applications
+            href: pubs/applications.qmd
+      - text: R Packages
+        href: packages/index.qmd
+      - courses.qmd
+      - text: Blog
+        href: blog/index.qmd
+
+
+format:
+  html:
+    theme: cosmos
+    css: styles.css
+    toc: true
+    linkcolor: "#C5050C"
+    backgroundcolor: "#FFFFFF"
+    grid:
+      sidebar-width: 300px
+      body-width: 1000px
+      margin-width: 300px
+      gutter-width: 1.5rem
+    filters:
+      - newpagelink.lua
+
+
+editor: visual
+

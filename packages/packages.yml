@@ -1,0 +1,23 @@
+
+- title: WR Package
+  path: https://lmaowisc.github.io/WR/
+  image: images/wr_logo.png
+  description: >
+    A comprehensive package for the win ratio approach, including
+    two-sample analysis and regression modeling (with model diagnostics
+    and prediction), sample size calculation,
+    customized win function and visualization techniques.
+  Version: 1.01
+  categories: [Survival Analysis, Clinical Trials, Hierarchical Endpoints]
+  Tags: [GitHub, CRAN]
+- title: rmt Package
+  path: https://lmaowisc.github.io/rmt/
+  image: images/rmt_logo.png
+  description: >
+    A package for the estimation and inference of the restricted mean time
+    in favor (RMT-IF) of treatment, i.e., the (nonparametric) net average
+    time in a more favorable state gained by the treatment up to a certain point.
+    The package also implements sample size calculation routines.
+  Version: 1.0
+  categories: [Survival Analysis, Clinical Trials, Hierarchical Endpoints]
+  Tags: [GitHub, CRAN]
