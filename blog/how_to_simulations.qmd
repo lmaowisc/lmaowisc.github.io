@@ -4,7 +4,6 @@ subtitle: "Use purrr::map() for element-wise operations"
 date: "12-20-2024"
 execute:
   warning: false
-  cache: true
   eval: false
 ---
 
@@ -99,7 +98,25 @@ simulation_results <- simulated_data %>%
 
 ## Take a look
 simulation_results
+#> # A tibble: 1,000 × 4
+#>    sim_id data               beta0_hat beta1_hat
+#>     <int> <list>                 <dbl>     <dbl>
+#>  1      1 <tibble [100 × 2]>     0.897      1.95
+#>  2      2 <tibble [100 × 2]>     0.970      1.95
+#>  3      3 <tibble [100 × 2]>     0.937      2.20
+#>  4      4 <tibble [100 × 2]>     1.11       2.00
+#>  5      5 <tibble [100 × 2]>     0.983      1.98
+#>  6      6 <tibble [100 × 2]>     0.979      2.02
+#>  7      7 <tibble [100 × 2]>     0.940      1.99
+#>  8      8 <tibble [100 × 2]>     1.04       1.96
+#>  9      9 <tibble [100 × 2]>     1.03       1.98
+#> 10     10 <tibble [100 × 2]>     1.08       1.94
+#> # ℹ 990 more rows
+#> # ℹ Use `print(n = ...)` to see more rows
+```
 
+### Summarize the results
+```{r}
 # Summarize the results
 summary_stats <- simulation_results %>%
   summarize(
@@ -137,10 +154,10 @@ ggplot(simulation_results, aes(x = beta1_hat)) +
 
 ```{r}
 #| echo: false
-ggsave("blog/images/beta1_estimates.png")
+ggsave("blog/images/beta1_estimates.png", width = 6, height = 4)
 ```
 
-![](images/beta1_estimates.png)
+![](images/beta1_estimates.png){fig-align="center" width="80%"}
 
 <!-- Insert the image -->
 
