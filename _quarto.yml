@@ -8,8 +8,8 @@ website:
   navbar:
     background: "#C5050C"
     left:
-      # - href: index.qmd
-      #   text: Home
+      - href: index.qmd
+        text: Home
       - people.qmd
       - research.qmd
       - text: Publications
