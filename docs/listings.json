@@ -4,6 +4,12 @@
     "items": []
   },
   {
+    "listing": "/index.html",
+    "items": [
+      "/blog/how_to_simulations.html"
+    ]
+  },
+  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/how_to_simulations.html"

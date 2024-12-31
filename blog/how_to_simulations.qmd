@@ -1,9 +1,11 @@
 ---
-title: "How to do efficient simulations using Tidyverse"
+title: "How to do efficient simulations in Tidyverse"
+subtitle: "Use purrr::map() for element-wise operations"
 date: "12-20-2024"
 execute:
   warning: false
   cache: true
+  eval: false
 ---
 
 ## General steps
@@ -66,8 +68,23 @@ simulated_data <- tibble(
     data = map(sim_id, ~ generate_data(n = 100, beta0 = 1, beta1 = 2, sigma = 1)) # Generate datasets
   )
 
- ## Take a look
+# Take a look
 simulated_data
+#> # A tibble: 1,000 × 2
+#>     sim_id data              
+#>      <int> <list>            
+#>   1      1 <tibble [100 × 2]>
+#>   2      2 <tibble [100 × 2]>
+#>   3      3 <tibble [100 × 2]>
+#>   4      4 <tibble [100 × 2]>
+#>   5      5 <tibble [100 × 2]>
+#>   6      6 <tibble [100 × 2]>
+#>   7      7 <tibble [100 × 2]>
+#>   8      8 <tibble [100 × 2]>
+#>   9      9 <tibble [100 × 2]>
+#>  10     10 <tibble [100 × 2]>
+#>  # ℹ 990 more rows
+#>  # ℹ Use `print(n = ...)` to see more rows
 ```
 
 Use `purrr::map()` to fit a linear model to each entry of `data` and store the results in a list-valued column `results`. Then unnest to combine all results into a single table.
@@ -95,6 +112,10 @@ summary_stats <- simulation_results %>%
   )
 
 summary_stats
+#> # A tibble: 1 × 6
+#>   beta0_mean beta1_mean beta0_bias beta1_bias beta0_sd beta1_sd
+#>        <dbl>      <dbl>      <dbl>      <dbl>    <dbl>    <dbl>
+#> 1       1.00       2.00    0.00336    0.00357    0.102    0.103
 ```
 
 ### Visualize the results (optional)
@@ -111,7 +132,17 @@ ggplot(simulation_results, aes(x = beta1_hat)) +
   ) +
   theme_minimal()
 
+
 ```
+
+```{r}
+#| echo: false
+ggsave("blog/images/beta1_estimates.png")
+```
+
+![](images/beta1_estimates.png)
+
+<!-- Insert the image -->
 
 ## Key features of workflow
 

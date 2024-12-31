@@ -33,6 +33,10 @@ about:
     # - text: "Youtube"
     #   icon: youtube
     #   href: https://www.youtube.com/@lmaowisc
+listing: 
+  - id: posts
+    contents: "blog/how_to_simulations.qmd"
+    type: default
 ---
 
 
@@ -56,23 +60,14 @@ Time-to-event data \| causal inference \| clinical trials \| semiparametric theo
 -   MS in Biostatistics (2010) \| Drexel University 
 -   BS in Biological Sciences (2008) \| Tsinghua University, China
 
-<!-- ## Awards -->
-
-<!-- -    IMS New Researcher Travel Award, 2019 -->
-<!-- -    Larry Kupper Doctoral Dissertation Publication Award, UNC Chapel Hill, 2017 -->
-<!-- -    ENAR RAB Poster Award, 2016 -->
-<!-- -    ASA Biometrics Section Travel Award, 2016 -->
-<!-- -    ASA Biopharmaceutical Section Student Paper Award, 2015 -->
-<!-- -    ENAR Distinguished Student Paper Award,  2015 -->
-<!-- -    Delta Omega Award for Academic Excellence, UNC Chapel Hill, 2012 -->
-<!-- -    Special Commendations for PhD Qualifying Exams, UNC Chapel Hill, 2011 -->
-<!-- -    Mohberg Scholarship, Department of Biostatistics, UNC Chapel Hill, 2010 -->
-<!-- -    Merit-Based Graduate School Scholarship, UNC Chapel Hill, 2010 -->
 
 ## Editorial Service
 
--   Associate Editor \|				[Statistics in Biopharmaceutical Research](https://www.tandfonline.com/journals/usbr20/about-this-journal#editorial-board){target="_blank"} \|		01/2023 -- Now
--   Statistical Editor \|				[JACC Journals](https://www.jacc.org/journal/heart-failure/editorial-board){target="_blank"} \|								12/2022 -- Now
+-   Associate Editor \|				[*Statistics in Biopharmaceutical Research*](https://www.tandfonline.com/journals/usbr20/about-this-journal#editorial-board){target="_blank"} \|		01/2023 -- Now
+-   Statistical Editor \|				[*JACC Journals*](https://www.jacc.org/journal/heart-failure/editorial-board){target="_blank"} \|								12/2022 -- Now
 
 
+## Recent blog posts
 
+:::{#posts}
+:::

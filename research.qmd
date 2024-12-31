@@ -10,7 +10,7 @@ title: "Research"
 ::: {.column width="20%"}
 <!-- NHLBI logo -->
 
-![](nhlbi.png){width="100%"}
+[![](nhlbi.png){width="100%"}](https://www.nhlbi.nih.gov/)
 :::
 
 ::: {.column width="5%"}
@@ -33,7 +33,7 @@ title: "Research"
 ::: {.column width="20%"}
 <!-- NSF logo -->
 
-![](nsf.png){width="100%"}
+[![](nsf.png){width="100%"}](https://new.nsf.gov/mps/dms)
 :::
 
 ::: {.column width="5%"}
