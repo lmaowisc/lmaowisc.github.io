@@ -2,6 +2,10 @@
 title: "How to do efficient simulations in Tidyverse"
 subtitle: "Use purrr::map() for element-wise operations"
 date: "12-20-2024"
+twitter-card:
+  creator: "@lmaowisc"
+  image: images/beta1_estimates.png
+  card-style: summary
 execute:
   warning: false
   eval: false
