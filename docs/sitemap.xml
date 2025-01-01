@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lmaowisc.github.io/pubs/applications.html</loc>
-    <lastmod>2025-01-01T13:13:02.463Z</lastmod>
-  </url>
-  <url>
     <loc>https://lmaowisc.github.io/research.html</loc>
     <lastmod>2024-12-31T08:11:46.829Z</lastmod>
   </url>
@@ -13,12 +9,16 @@
     <lastmod>2024-12-23T05:52:15.228Z</lastmod>
   </url>
   <url>
-    <loc>https://lmaowisc.github.io/people.html</loc>
-    <lastmod>2024-12-21T16:27:38.002Z</lastmod>
+    <loc>https://lmaowisc.github.io/pubs/applications.html</loc>
+    <lastmod>2025-01-01T13:13:02.463Z</lastmod>
   </url>
   <url>
-    <loc>https://lmaowisc.github.io/methods.html</loc>
-    <lastmod>2024-12-21T02:34:36.929Z</lastmod>
+    <loc>https://lmaowisc.github.io/packages/index.html</loc>
+    <lastmod>2024-12-29T08:53:55.940Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmaowisc.github.io/index.html</loc>
+    <lastmod>2025-01-01T13:20:29.245Z</lastmod>
   </url>
   <url>
     <loc>https://lmaowisc.github.io/construction/how_to_simulations.html</loc>
@@ -29,10 +29,6 @@
     <lastmod>2025-01-01T04:48:17.251Z</lastmod>
   </url>
   <url>
-    <loc>https://lmaowisc.github.io/about.html</loc>
-    <lastmod>2024-12-18T12:32:17.505Z</lastmod>
-  </url>
-  <url>
     <loc>https://lmaowisc.github.io/blog/index.html</loc>
     <lastmod>2024-12-23T04:32:36.132Z</lastmod>
   </url>
@@ -41,8 +37,12 @@
     <lastmod>2024-12-23T02:08:13.533Z</lastmod>
   </url>
   <url>
-    <loc>https://lmaowisc.github.io/packages/index.html</loc>
-    <lastmod>2024-12-29T08:53:55.940Z</lastmod>
+    <loc>https://lmaowisc.github.io/methods.html</loc>
+    <lastmod>2024-12-21T02:34:36.929Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmaowisc.github.io/people.html</loc>
+    <lastmod>2024-12-21T16:27:38.002Z</lastmod>
   </url>
   <url>
     <loc>https://lmaowisc.github.io/pubs/index.html</loc>
@@ -51,9 +51,5 @@
   <url>
     <loc>https://lmaowisc.github.io/pubs.html</loc>
     <lastmod>2024-12-21T14:59:53.533Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmaowisc.github.io/index.html</loc>
-    <lastmod>2024-12-31T12:20:09.037Z</lastmod>
   </url>
 </urlset>

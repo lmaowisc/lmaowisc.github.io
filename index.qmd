@@ -1,7 +1,6 @@
 ---
 title: "Lu Mao"
 subtitle: "Associate Professor of Biostatistics and Medical Informatics"
-# subtitle: "Wengo Analytics"
 image: dc.jpg
 about: 
   id: heading
