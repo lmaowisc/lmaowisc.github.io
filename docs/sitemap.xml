@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://lmaowisc.github.io/pubs/applications.html</loc>
+    <lastmod>2025-01-01T13:13:02.463Z</lastmod>
+  </url>
+  <url>
     <loc>https://lmaowisc.github.io/research.html</loc>
     <lastmod>2024-12-31T08:11:46.829Z</lastmod>
   </url>
@@ -9,16 +13,12 @@
     <lastmod>2024-12-23T05:52:15.228Z</lastmod>
   </url>
   <url>
-    <loc>https://lmaowisc.github.io/pubs/applications.html</loc>
-    <lastmod>2024-12-25T07:09:16.703Z</lastmod>
+    <loc>https://lmaowisc.github.io/people.html</loc>
+    <lastmod>2024-12-21T16:27:38.002Z</lastmod>
   </url>
   <url>
-    <loc>https://lmaowisc.github.io/packages/index.html</loc>
-    <lastmod>2024-12-29T08:53:55.940Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmaowisc.github.io/index.html</loc>
-    <lastmod>2024-12-31T12:20:09.037Z</lastmod>
+    <loc>https://lmaowisc.github.io/methods.html</loc>
+    <lastmod>2024-12-21T02:34:36.929Z</lastmod>
   </url>
   <url>
     <loc>https://lmaowisc.github.io/construction/how_to_simulations.html</loc>
@@ -41,16 +41,12 @@
     <lastmod>2024-12-23T02:08:13.533Z</lastmod>
   </url>
   <url>
-    <loc>https://lmaowisc.github.io/methods.html</loc>
-    <lastmod>2024-12-21T02:34:36.929Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lmaowisc.github.io/people.html</loc>
-    <lastmod>2024-12-21T16:27:38.002Z</lastmod>
+    <loc>https://lmaowisc.github.io/packages/index.html</loc>
+    <lastmod>2024-12-29T08:53:55.940Z</lastmod>
   </url>
   <url>
     <loc>https://lmaowisc.github.io/pubs/index.html</loc>
-    <lastmod>2024-12-23T05:50:26.566Z</lastmod>
+    <lastmod>2025-01-01T13:12:30.060Z</lastmod>
   </url>
   <url>
     <loc>https://lmaowisc.github.io/pubs.html</loc>
