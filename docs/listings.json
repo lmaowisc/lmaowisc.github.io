@@ -8,5 +8,11 @@
   {
     "listing": "/packages/index.html",
     "items": []
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/blog/how_to_simulations.html"
+    ]
   }
 ]
