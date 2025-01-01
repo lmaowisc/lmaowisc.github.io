@@ -7,10 +7,10 @@ website:
   site-url: https://lmaowisc.github.io/
   image: dc.jpg
   open-graph: true
-  twitter-card:
-    creator: "@lmaowisc"
-    image: dc.jpg
-    card-style: summary
+  # twitter-card:
+  #   creator: "@lmaowisc"
+  #   image: dc.jpg
+  #   card-style: summary
   navbar:
     background: "#C5050C"
     left:
