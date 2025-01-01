@@ -1,7 +1,6 @@
 ---
-title: "How to do efficient simulations in Tidyverse"
+title: "How to perform efficient simulations in Tidyverse"
 subtitle: "Use purrr::map() for element-wise operations"
-descruption: "Learn how to perform efficient simulations in R using the Tidyverse package, purrr::map()."
 date: "12-20-2024"
 image: images/beta1_estimates.png
 twitter:
