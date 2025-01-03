@@ -2,11 +2,12 @@
 title: "How to perform efficient simulations in Tidyverse"
 subtitle: "Use purrr::map() for element-wise operations"
 date: "12-20-2024"
-image: images/beta1_estimates.png
+categories: [R, tidyverse, simulations]
 twitter:
-  card: "summary" # Choose "summary" or "summary_large_image"
+  card: summary # Choose "summary" or "summary_large_image"
   site: "@lmaowisc"  # Your Twitter username
   creator: "@lmaowisc" # Optional, for page author
+  image: images/beta1_estimates.png
 execute:
   warning: false
   eval: false
@@ -121,6 +122,7 @@ simulation_results
 ```
 
 ### Summarize the results
+
 ```{r}
 # Summarize the results
 summary_stats <- simulation_results %>%
