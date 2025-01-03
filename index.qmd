@@ -36,7 +36,7 @@ listing:
   - id: posts
     contents: 
       - blog/how_to_simulations.qmd
-      - blog/how_to_bland_altman.qmd
+      # - blog/how_to_bland_altman.qmd
     type: default
 ---
 
