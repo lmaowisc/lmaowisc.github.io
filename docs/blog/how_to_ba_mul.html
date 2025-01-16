@@ -288,38 +288,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Display ICC results as a formatted table</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a> <span class="fu">kable</span>(icc_results)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a> <span class="co"># saveRDS(kable(icc_results), "blog/dat/icc_results.rds")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a> <span class="fu">kable</span>(icc_results, <span class="at">align =</span> <span class="st">"c"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
-<th style="text-align: left;">Biomarker</th>
-<th style="text-align: right;">ICC</th>
-<th style="text-align: right;">LowerCI</th>
-<th style="text-align: right;">UpperCI</th>
+<th style="text-align: center;">Biomarker</th>
+<th style="text-align: center;">ICC</th>
+<th style="text-align: center;">LowerCI</th>
+<th style="text-align: center;">UpperCI</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">A</td>
-<td style="text-align: right;">-0.125</td>
-<td style="text-align: right;">-0.396</td>
-<td style="text-align: right;">0.162</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">-0.125</td>
+<td style="text-align: center;">-0.396</td>
+<td style="text-align: center;">0.162</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">B</td>
-<td style="text-align: right;">-0.129</td>
-<td style="text-align: right;">-0.395</td>
-<td style="text-align: right;">0.154</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">-0.129</td>
+<td style="text-align: center;">-0.395</td>
+<td style="text-align: center;">0.154</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">C</td>
-<td style="text-align: right;">-0.168</td>
-<td style="text-align: right;">-0.400</td>
-<td style="text-align: right;">0.097</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">-0.168</td>
+<td style="text-align: center;">-0.400</td>
+<td style="text-align: center;">0.097</td>
 </tr>
 </tbody>
 </table>

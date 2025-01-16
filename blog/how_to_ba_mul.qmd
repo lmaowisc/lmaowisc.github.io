@@ -60,8 +60,7 @@ icc_results <- data %>%
   )
 
 # Display ICC results as a formatted table
- kable(icc_results)
- # saveRDS(kable(icc_results), "blog/dat/icc_results.rds")
+ kable(icc_results, align = "c")
 ```
 
 ```{r}
