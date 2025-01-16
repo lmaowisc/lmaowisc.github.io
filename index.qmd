@@ -35,7 +35,8 @@ about:
 listing: 
   - id: posts
     contents: 
-      - blog/*.qmd
+      - blog/how_to_ba_mul.qmd
+      - blog/how_to_simulations.qmd
     type: default
 ---
 

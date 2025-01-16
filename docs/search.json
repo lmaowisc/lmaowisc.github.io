@@ -102,7 +102,7 @@
     "href": "index.html#recent-blog-posts",
     "title": "Lu Mao",
     "section": "Recent blog posts",
-    "text": "Recent blog posts\n\n\n\n\n\n\n\n\n\n\nBlog\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to create Bland-Altman analysis for multiple biomarkers\n\n\nUse group_by() for agreement statistics and facet_wrap() for plots\n\n\n\n\n\n\n\n\nJan 16, 2025\n\n\nLu Mao\n\n\n\n\n\n\n\n\n\n\n\n\nHow to perform efficient simulations in Tidyverse\n\n\nUse purrr::map() for element-wise operations\n\n\n\n\n\n\n\n\nDec 20, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Recent blog posts\n\n\n\n\n\n\n\n\n\n\nHow to create Bland-Altman analysis for multiple biomarkers\n\n\nUse group_by() for agreement statistics and facet_wrap() for plots\n\n\n\n\n\n\n\n\nJan 16, 2025\n\n\nLu Mao\n\n\n\n\n\n\n\n\n\n\n\n\nHow to perform efficient simulations in Tidyverse\n\n\nUse purrr::map() for element-wise operations\n\n\n\n\n\n\n\n\nDec 20, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "construction/how_to_simulations.html",
@@ -508,7 +508,7 @@
     "href": "blog/how_to_ba_mul.html",
     "title": "How to create Bland-Altman analysis for multiple biomarkers",
     "section": "",
-    "text": "Bland-Altman analysis is a popular method to assess agreement between two measurement methods. When dealing with multiple biomarkers, it’s essential to analyze each biomarker separately while ensuring the results are both clear and comprehensive. In this post, I’ll show you how to:\nLet’s dive in using a simulated dataset for clarity."
+    "text": "Bland-Altman analysis is a popular method to assess agreement between two measurement methods. When dealing with multiple biomarkers, it’s essential to analyze each biomarker separately while ensuring a consistent set of statistics and visualizations are applied. In this post, I’ll show you how to:\nLet’s dive in using a simulated dataset for clarity."
   },
   {
     "objectID": "blog/how_to_ba_mul.html#simulated-data-example",

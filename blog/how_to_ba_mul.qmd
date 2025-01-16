@@ -10,7 +10,8 @@ execute:
   eval: false
 ---
 
-Bland-Altman analysis is a popular method to assess agreement between two measurement methods. When dealing with multiple biomarkers, it’s essential to analyze each biomarker separately while ensuring the results are both clear and comprehensive. In this post, I’ll show you how to:
+Bland-Altman analysis is a popular method to assess agreement between two measurement methods. When dealing with multiple biomarkers, it’s essential to analyze each biomarker separately while ensuring a consistent set of statistics and 
+visualizations are applied. In this post, I’ll show you how to:
 
 1.  Use `dplyr` to calculate the Intraclass Correlation Coefficient (ICC) or Concordance Correlation Coefficient (CCC) with their 95% confidence intervals.
 2.  Create faceted Bland-Altman plots with key statistics (bias, limits of agreement) labeled on each panel.
