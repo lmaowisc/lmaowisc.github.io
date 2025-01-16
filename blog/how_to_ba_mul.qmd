@@ -53,7 +53,7 @@ Using `dplyr`’s `group_by()` function, we can calculate the ICC for each bioma
 # Calculate ICC for each biomarker
 icc_results <- data %>%
   group_by(Biomarker) %>%
-  summarise(
+  summarize(
     ICC = round(icc(cbind(Method1, Method2), model = "twoway", type = "agreement")$value, 3),
     LowerCI = round(icc(cbind(Method1, Method2), model = "twoway", type = "agreement")$lbound, 3),
     UpperCI = round(icc(cbind(Method1, Method2), model = "twoway", type = "agreement")$ubound, 3)
@@ -88,12 +88,12 @@ data <- data %>%
 plot_bland_altman <- function(data) {
   data %>%
     group_by(Biomarker) %>% # Group data by each biomarker
-    summarise(
+    summarize(
       # Calculate the bias (mean difference) for each biomarker
       Bias = mean(Difference),
-      # Calculate the lower limit of agreement (LoA) as Bias - 1.96 * standard deviation
+      # Calculate the lower limit of agreement (LoA) 
       LoA_Lower = Bias - 1.96 * sd(Difference),
-      # Calculate the upper limit of agreement (LoA) as Bias + 1.96 * standard deviation
+      # Calculate the upper limit of agreement (LoA) 
       LoA_Upper = Bias + 1.96 * sd(Difference)
     ) %>%
     # Merge the summary statistics (Bias, LoA) back into the original data for plotting
@@ -103,9 +103,9 @@ plot_bland_altman <- function(data) {
     geom_hline(aes(yintercept = Bias), color = "#0479A8", linetype = "dashed") + 
     # Add a horizontal dashed line for the bias (mean difference)
     geom_hline(aes(yintercept = LoA_Lower), color = "#C5050C", linetype = "dotted") +
-    # Add a dotted horizontal line for the lower limit of agreement (LoA_Lower)
+    # Add a dotted horizontal line for the lower limit of agreement
     geom_hline(aes(yintercept = LoA_Upper), color = "#C5050C", linetype = "dotted") +
-    # Add a dotted horizontal line for the upper limit of agreement (LoA_Upper)
+    # Add a dotted horizontal line for the upper limit of agreement 
     facet_wrap(~ Biomarker) + # Create separate panels for each biomarker
     labs(
       title = "Bland-Altman Plots for Multiple Biomarkers", # Set plot title
