@@ -74,7 +74,7 @@
     "href": "index.html#annoucements",
     "title": "Lu Mao",
     "section": "Annoucements",
-    "text": "Annoucements"
+    "text": "Annoucements\nVisit the course site of BMI/STAT 741: Applied Survival Analysis for Spring 2025."
   },
   {
     "objectID": "index.html#research-interests",
@@ -102,7 +102,7 @@
     "href": "index.html#recent-blog-posts",
     "title": "Lu Mao",
     "section": "Recent blog posts",
-    "text": "Recent blog posts\n\n\n\n\n\n\n\n\n\n\nHow to perform efficient simulations in Tidyverse\n\n\nUse purrr::map() for element-wise operations\n\n\n\n\n\n\n\n\nDec 20, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Recent blog posts\n\n\n\n\n\n\n\n\n\n\nBlog\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to create Bland-Altman analysis for multiple biomarkers\n\n\nUse group_by() for agreement statistics and facet_wrap() for plots\n\n\n\n\n\n\n\n\nJan 16, 2025\n\n\nLu Mao\n\n\n\n\n\n\n\n\n\n\n\n\nHow to perform efficient simulations in Tidyverse\n\n\nUse purrr::map() for element-wise operations\n\n\n\n\n\n\n\n\nDec 20, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "construction/how_to_simulations.html",
@@ -165,7 +165,7 @@
     "href": "blog/index.html",
     "title": "Blog",
     "section": "",
-    "text": "How to perform efficient simulations in Tidyverse\n\n\nUse purrr::map() for element-wise operations\n\n\n\n\n\n\n\n\nDec 20, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "How to create Bland-Altman analysis for multiple biomarkers\n\n\nUse group_by() for agreement statistics and facet_wrap() for plots\n\n\n\n\n\n\n\n\nJan 16, 2025\n\n\nLu Mao\n\n\n\n\n\n\n\n\n\n\n\n\nHow to perform efficient simulations in Tidyverse\n\n\nUse purrr::map() for element-wise operations\n\n\n\n\n\n\n\n\nDec 20, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "courses.html",
@@ -453,5 +453,89 @@
     "title": "Bland-Altman Analysis with tidyverse and ggplot2",
     "section": "Full Code",
     "text": "Full Code\nHere is the complete code for your reference:\n```r # Load tidyverse library(tidyverse)"
+  },
+  {
+    "objectID": "how_to_ba_mul.html",
+    "href": "how_to_ba_mul.html",
+    "title": "How to Create Bland-Altman Analysis for Multiple Biomarkers",
+    "section": "",
+    "text": "Bland-Altman analysis is a popular method to assess agreement between two measurement methods. When dealing with multiple biomarkers, it’s essential to analyze each biomarker separately while ensuring the results are both clear and comprehensive. In this post, I’ll show you how to:\nLet’s dive in using a simulated dataset for clarity."
+  },
+  {
+    "objectID": "how_to_ba_mul.html#simulated-data-example",
+    "href": "how_to_ba_mul.html#simulated-data-example",
+    "title": "How to Create Bland-Altman Analysis for Multiple Biomarkers",
+    "section": "Simulated data example",
+    "text": "Simulated data example\n\n# Load required packages\nlibrary(tidyverse)\nlibrary(irr)  # For ICC calculation\nlibrary(knitr)  # For table formatting\n\n# Simulating data\nset.seed(123)\ndata &lt;- tibble(\n  Biomarker = rep(c(\"A\", \"B\", \"C\"), each = 50),\n  Method1 = rnorm(150, mean = 10, sd = 2),\n  Method2 = rnorm(150, mean = 10, sd = 2)\n)\nhead(data)\n#&gt; # A tibble: 6 × 3\n#&gt;   Biomarker Method1 Method2\n#&gt;   &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt;\n#&gt; 1 A            8.88   11.6 \n#&gt; 2 A            9.54   11.5 \n#&gt; 3 A           13.1    10.7 \n#&gt; 4 A           10.1     7.98\n#&gt; 5 A           10.3     9.76\n#&gt; 6 A           13.4     9.44"
+  },
+  {
+    "objectID": "how_to_ba_mul.html#step-1-calculate-icc-for-each-biomarker",
+    "href": "how_to_ba_mul.html#step-1-calculate-icc-for-each-biomarker",
+    "title": "How to Create Bland-Altman Analysis for Multiple Biomarkers",
+    "section": "Step 1: Calculate ICC for Each Biomarker",
+    "text": "Step 1: Calculate ICC for Each Biomarker\nUsing dplyr’s group_by() function, we can calculate the ICC for each biomarker and extract 95% confidence intervals.\n\n# Calculate ICC for each biomarker\nicc_results &lt;- data %&gt;%\n  group_by(Biomarker) %&gt;%\n  summarise(\n    ICC = icc(cbind(Method1, Method2), model = \"twoway\", type = \"agreement\")$value,\n    LowerCI = icc(cbind(Method1, Method2), model = \"twoway\", type = \"agreement\")$lbound,\n    UpperCI = icc(cbind(Method1, Method2), model = \"twoway\", type = \"agreement\")$ubound\n  )\nicc_results\n\n# A tibble: 3 × 4\n  Biomarker    ICC LowerCI UpperCI\n  &lt;chr&gt;      &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;\n1 A         -0.125  -0.396  0.162 \n2 B         -0.129  -0.395  0.154 \n3 C         -0.168  -0.400  0.0969"
+  },
+  {
+    "objectID": "how_to_ba_mul.html#step-2-create-bland-altman-plots",
+    "href": "how_to_ba_mul.html#step-2-create-bland-altman-plots",
+    "title": "How to Create Bland-Altman Analysis for Multiple Biomarkers",
+    "section": "Step 2: Create Bland-Altman Plots",
+    "text": "Step 2: Create Bland-Altman Plots\nWe’ll calculate the mean and difference of the two methods for each biomarker, then use facet_wrap() to create individual plots for each biomarker. Key statistics like bias and limits of agreement (LoA) will be annotated on each panel.\n\n# Add Bland-Altman calculations to the data\ndata &lt;- data %&gt;%\n  mutate(\n    Mean = (Method1 + Method2) / 2,\n    Difference = Method1 - Method2\n  )\n\n# Bland-Altman plot function\nplot_bland_altman &lt;- function(data) {\n  data %&gt;%\n    group_by(Biomarker) %&gt;%\n    summarise(\n      Bias = mean(Difference),\n      LoA_Lower = Bias - 1.96 * sd(Difference),\n      LoA_Upper = Bias + 1.96 * sd(Difference)\n    ) %&gt;%\n    left_join(data, by = \"Biomarker\") %&gt;%\n    ggplot(aes(x = Mean, y = Difference)) +\n    geom_point(alpha = 0.6) +\n    geom_hline(aes(yintercept = Bias), color = \"blue\", linetype = \"dashed\") +\n    geom_hline(aes(yintercept = LoA_Lower), color = \"red\", linetype = \"dotted\") +\n    geom_hline(aes(yintercept = LoA_Upper), color = \"red\", linetype = \"dotted\") +\n    facet_wrap(~ Biomarker) +\n    labs(\n      title = \"Bland-Altman Plots for Multiple Biomarkers\",\n      x = \"Mean of Two Methods\",\n      y = \"Difference Between Methods\"\n    ) +\n    theme_minimal()\n}\n\n# Create Bland-Altman plots\nplot_bland_altman(data)"
+  },
+  {
+    "objectID": "how_to_ba_mul.html#summary",
+    "href": "how_to_ba_mul.html#summary",
+    "title": "How to Create Bland-Altman Analysis for Multiple Biomarkers",
+    "section": "Summary",
+    "text": "Summary\nWith just a few lines of code, we’ve:\n\nCalculated the ICC (or CCC) for each marker, complete with confidence intervals.\nCreated a clear and concise Bland-Altman plot using facet_wrap() for each marker.\n\nThese steps provide a straightforward way to analyze agreements for multiple biomarkers simultaneously, saving a lot for effort."
+  },
+  {
+    "objectID": "how_to_ba_mul.html#calculate-icc-for-each-biomarker",
+    "href": "how_to_ba_mul.html#calculate-icc-for-each-biomarker",
+    "title": "How to Create Bland-Altman Analysis for Multiple Biomarkers",
+    "section": "Calculate ICC for each biomarker",
+    "text": "Calculate ICC for each biomarker\nUsing dplyr’s group_by() function, we can calculate the ICC for each biomarker and extract 95% confidence intervals.\n\n# Calculate ICC for each biomarker\nicc_results &lt;- data %&gt;%\n  group_by(Biomarker) %&gt;%\n  summarise(\n    ICC = icc(cbind(Method1, Method2), model = \"twoway\", type = \"agreement\")$value,\n    LowerCI = icc(cbind(Method1, Method2), model = \"twoway\", type = \"agreement\")$lbound,\n    UpperCI = icc(cbind(Method1, Method2), model = \"twoway\", type = \"agreement\")$ubound\n  )\n\n# Display ICC results as a formatted table\n kable(icc_results)\n\n\n\n  Biomarker        ICC    LowerCI    UpperCI\n1         A -0.1252016 -0.3962906 0.16162858\n2         B -0.1293977 -0.3952181 0.15447267\n3         C -0.1675558 -0.4000906 0.09685759"
+  },
+  {
+    "objectID": "how_to_ba_mul.html#create-bland-altman-plots",
+    "href": "how_to_ba_mul.html#create-bland-altman-plots",
+    "title": "How to Create Bland-Altman Analysis for Multiple Biomarkers",
+    "section": "Create Bland-Altman plots",
+    "text": "Create Bland-Altman plots\nWe’ll calculate the mean and difference of the two methods for each biomarker, then use facet_wrap() to create individual plots for each biomarker. Key statistics like bias and limits of agreement (LoA) will be annotated on each panel.\n\n# Add Bland-Altman calculations to the data\ndata &lt;- data %&gt;%\n  mutate(\n    Mean = (Method1 + Method2) / 2,\n    Difference = Method1 - Method2\n  )\n\n# Bland-Altman plot function\nplot_bland_altman &lt;- function(data) {\n  data %&gt;%\n    group_by(Biomarker) %&gt;%\n    summarise(\n      Bias = mean(Difference),\n      LoA_Lower = Bias - 1.96 * sd(Difference),\n      LoA_Upper = Bias + 1.96 * sd(Difference)\n    ) %&gt;%\n    left_join(data, by = \"Biomarker\") %&gt;%\n    ggplot(aes(x = Mean, y = Difference)) +\n    geom_point(alpha = 0.6) +\n    geom_hline(aes(yintercept = Bias), color = \"#0479A8\", linetype = \"dashed\") +\n    geom_hline(aes(yintercept = LoA_Lower), color = \"#C5050C\", linetype = \"dotted\") +\n    geom_hline(aes(yintercept = LoA_Upper), color = \"#C5050C\", linetype = \"dotted\") +\n    facet_wrap(~ Biomarker) +\n    labs(\n      title = \"Bland-Altman Plots for Multiple Biomarkers\",\n      x = \"Mean of Two Methods\",\n      y = \"Difference Between Methods\"\n    ) +\n    theme_minimal()\n}\n\n# Create Bland-Altman plots\nplot_bland_altman(data)"
+  },
+  {
+    "objectID": "blog/how_to_ba_mul.html",
+    "href": "blog/how_to_ba_mul.html",
+    "title": "How to create Bland-Altman analysis for multiple biomarkers",
+    "section": "",
+    "text": "Bland-Altman analysis is a popular method to assess agreement between two measurement methods. When dealing with multiple biomarkers, it’s essential to analyze each biomarker separately while ensuring the results are both clear and comprehensive. In this post, I’ll show you how to:\nLet’s dive in using a simulated dataset for clarity."
+  },
+  {
+    "objectID": "blog/how_to_ba_mul.html#simulated-data-example",
+    "href": "blog/how_to_ba_mul.html#simulated-data-example",
+    "title": "How to create Bland-Altman analysis for multiple biomarkers",
+    "section": "Simulated data example",
+    "text": "Simulated data example\n\n# Load required packages\nlibrary(tidyverse)\nlibrary(irr)  # For ICC calculation\nlibrary(knitr)  # For table formatting\n\n# Simulating data\nset.seed(123)\ndata &lt;- tibble(\n  Biomarker = rep(c(\"A\", \"B\", \"C\"), each = 50),\n  Method1 = rnorm(150, mean = 10, sd = 2),\n  Method2 = rnorm(150, mean = 10, sd = 2)\n)\nhead(data)\n#&gt; # A tibble: 6 × 3\n#&gt;   Biomarker Method1 Method2\n#&gt;   &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt;\n#&gt; 1 A            8.88   11.6 \n#&gt; 2 A            9.54   11.5 \n#&gt; 3 A           13.1    10.7 \n#&gt; 4 A           10.1     7.98\n#&gt; 5 A           10.3     9.76\n#&gt; 6 A           13.4     9.44"
+  },
+  {
+    "objectID": "blog/how_to_ba_mul.html#calculate-icc-for-each-biomarker",
+    "href": "blog/how_to_ba_mul.html#calculate-icc-for-each-biomarker",
+    "title": "How to create Bland-Altman analysis for multiple biomarkers",
+    "section": "Calculate ICC for each biomarker",
+    "text": "Calculate ICC for each biomarker\nUsing dplyr’s group_by() function, we can calculate the ICC for each biomarker and extract 95% confidence intervals.\n\n# Calculate ICC for each biomarker\nicc_results &lt;- data %&gt;%\n  group_by(Biomarker) %&gt;%\n  summarise(\n    ICC = round(icc(cbind(Method1, Method2), model = \"twoway\", type = \"agreement\")$value, 3),\n    LowerCI = round(icc(cbind(Method1, Method2), model = \"twoway\", type = \"agreement\")$lbound, 3),\n    UpperCI = round(icc(cbind(Method1, Method2), model = \"twoway\", type = \"agreement\")$ubound, 3)\n  )\n\n# Display ICC results as a formatted table\n kable(icc_results)\n # saveRDS(kable(icc_results), \"blog/dat/icc_results.rds\")\n\n\n\n\n\n\nBiomarker\nICC\nLowerCI\nUpperCI\n\n\n\n\nA\n-0.125\n-0.396\n0.162\n\n\nB\n-0.129\n-0.395\n0.154\n\n\nC\n-0.168\n-0.400\n0.097"
+  },
+  {
+    "objectID": "blog/how_to_ba_mul.html#create-bland-altman-plots",
+    "href": "blog/how_to_ba_mul.html#create-bland-altman-plots",
+    "title": "How to create Bland-Altman analysis for multiple biomarkers",
+    "section": "Create Bland-Altman plots",
+    "text": "Create Bland-Altman plots\nWe’ll calculate the mean and difference of the two methods for each biomarker, then use facet_wrap() to create individual plots for each biomarker. Key statistics like bias and limits of agreement (LoA) will be annotated on each panel.\n\n# Add Bland-Altman calculations to the data\ndata &lt;- data %&gt;%\n  mutate(\n    Mean = (Method1 + Method2) / 2,\n    Difference = Method1 - Method2\n  )\n\n# Bland-Altman plot function\nplot_bland_altman &lt;- function(data) {\n  data %&gt;%\n    group_by(Biomarker) %&gt;%\n    summarise(\n      Bias = mean(Difference),\n      LoA_Lower = Bias - 1.96 * sd(Difference),\n      LoA_Upper = Bias + 1.96 * sd(Difference)\n    ) %&gt;%\n    left_join(data, by = \"Biomarker\") %&gt;%\n    ggplot(aes(x = Mean, y = Difference)) +\n    geom_point(alpha = 0.6) +\n    geom_hline(aes(yintercept = Bias), color = \"#0479A8\", linetype = \"dashed\") +\n    geom_hline(aes(yintercept = LoA_Lower), color = \"#C5050C\", linetype = \"dotted\") +\n    geom_hline(aes(yintercept = LoA_Upper), color = \"#C5050C\", linetype = \"dotted\") +\n    facet_wrap(~ Biomarker) +\n    labs(\n      title = \"Bland-Altman Plots for Multiple Biomarkers\",\n      x = \"Mean of Two Methods\",\n      y = \"Difference Between Methods\"\n    ) +\n    theme_minimal()\n}\n\n# Create Bland-Altman plots\nplot_bland_altman(data)"
+  },
+  {
+    "objectID": "blog/how_to_ba_mul.html#summary",
+    "href": "blog/how_to_ba_mul.html#summary",
+    "title": "How to create Bland-Altman analysis for multiple biomarkers",
+    "section": "Summary",
+    "text": "Summary\nWith just a few lines of code, we’ve:\n\nCalculated the ICC (or CCC) for each marker, complete with confidence intervals.\nCreated a clear and concise Bland-Altman plot using facet_wrap() for each marker.\n\nThese steps provide a straightforward way to analyze agreements for multiple biomarkers simultaneously, saving a lot for effort."
   }
 ]

@@ -35,8 +35,7 @@ about:
 listing: 
   - id: posts
     contents: 
-      - blog/how_to_simulations.qmd
-      # - blog/how_to_bland_altman.qmd
+      - blog/*.qmd
     type: default
 ---
 
@@ -48,6 +47,8 @@ WARF Office Building | 610 Walnut St, Room 207A | Madison, WI 53726
 
 ## Annoucements
 
+Visit the course site of BMI/STAT 741: Applied Survival Analysis
+for [Spring 2025](https://lmaowisc.github.io/BMI741).
 
 ## Research Interests
 

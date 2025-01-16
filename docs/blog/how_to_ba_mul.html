@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Lu Mao">
+<meta name="dcterms.date" content="2025-01-16">
 
-<title>Blog – Lu Mao</title>
+<title>How to create Bland-Altman analysis for multiple biomarkers – Lu Mao</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +66,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -68,71 +102,17 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Blog – Lu Mao">
-<meta property="og:image" content="https://lmaowisc.github.io/blog/dc.jpg">
+<meta property="og:title" content="How to Create Bland-Altman Analysis for Multiple Biomarkers – Lu Mao">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://lmaowisc.github.io/blog/images/ba_mul.png">
 <meta property="og:site_name" content="Lu Mao">
-<meta name="twitter:title" content="Blog – Lu Mao">
+<meta property="og:image:height" content="388">
+<meta property="og:image:width" content="952">
+<meta name="twitter:title" content="How to Create Bland-Altman Analysis for Multiple Biomarkers – Lu Mao">
+<meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://lmaowisc.github.io/blog/dc.jpg">
 <meta name="twitter:creator" content="@lmaowisc">
 <meta name="twitter:card" content="summary">
@@ -195,7 +175,7 @@ window.Quarto = {
 <span class="menu-text">Courses</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
+    <a class="nav-link" href="../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -209,22 +189,49 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#simulated-data-example" id="toc-simulated-data-example" class="nav-link active" data-scroll-target="#simulated-data-example">Simulated data example</a></li>
+  <li><a href="#calculate-icc-for-each-biomarker" id="toc-calculate-icc-for-each-biomarker" class="nav-link" data-scroll-target="#calculate-icc-for-each-biomarker">Calculate ICC for each biomarker</a></li>
+  <li><a href="#create-bland-altman-plots" id="toc-create-bland-altman-plots" class="nav-link" data-scroll-target="#create-bland-altman-plots">Create Bland-Altman plots</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blog</h1>
-</div>
+<h1 class="title">How to create Bland-Altman analysis for multiple biomarkers</h1>
+<p class="subtitle lead">Use <code>group_by()</code> for agreement statistics and facet_wrap() for plots</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Biostatistics</div>
+    <div class="quarto-category">Data Visualization</div>
+    <div class="quarto-category">R Programming</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Lu Mao </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 16, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -234,70 +241,144 @@ window.Quarto = {
 </header>
 
 
+<p>Bland-Altman analysis is a popular method to assess agreement between two measurement methods. When dealing with multiple biomarkers, it’s essential to analyze each biomarker separately while ensuring the results are both clear and comprehensive. In this post, I’ll show you how to:</p>
+<ol type="1">
+<li>Use <code>dplyr</code> to calculate the Intraclass Correlation Coefficient (ICC) or Concordance Correlation Coefficient (CCC) with their 95% confidence intervals.</li>
+<li>Create faceted Bland-Altman plots with key statistics (bias, limits of agreement) labeled on each panel.</li>
+</ol>
+<p>Let’s dive in using a simulated dataset for clarity.</p>
+<section id="simulated-data-example" class="level2">
+<h2 class="anchored" data-anchor-id="simulated-data-example">Simulated data example</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load required packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(irr)  <span class="co"># For ICC calculation</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)  <span class="co"># For table formatting</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulating data</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">Biomarker =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>), <span class="at">each =</span> <span class="dv">50</span>),</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">Method1 =</span> <span class="fu">rnorm</span>(<span class="dv">150</span>, <span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">2</span>),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">Method2 =</span> <span class="fu">rnorm</span>(<span class="dv">150</span>, <span class="at">mean =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">2</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 6 × 3</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   Biomarker Method1 Method2</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 A            8.88   11.6 </span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 A            9.54   11.5 </span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 A           13.1    10.7 </span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 A           10.1     7.98</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 A           10.3     9.76</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6 A           13.4     9.44</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="calculate-icc-for-each-biomarker" class="level2">
+<h2 class="anchored" data-anchor-id="calculate-icc-for-each-biomarker">Calculate ICC for each biomarker</h2>
+<p>Using <code>dplyr</code>’s <code>group_by()</code> function, we can calculate the ICC for each biomarker and extract 95% confidence intervals.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate ICC for each biomarker</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>icc_results <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Biomarker) <span class="sc">%&gt;%</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">ICC =</span> <span class="fu">round</span>(<span class="fu">icc</span>(<span class="fu">cbind</span>(Method1, Method2), <span class="at">model =</span> <span class="st">"twoway"</span>, <span class="at">type =</span> <span class="st">"agreement"</span>)<span class="sc">$</span>value, <span class="dv">3</span>),</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">LowerCI =</span> <span class="fu">round</span>(<span class="fu">icc</span>(<span class="fu">cbind</span>(Method1, Method2), <span class="at">model =</span> <span class="st">"twoway"</span>, <span class="at">type =</span> <span class="st">"agreement"</span>)<span class="sc">$</span>lbound, <span class="dv">3</span>),</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">UpperCI =</span> <span class="fu">round</span>(<span class="fu">icc</span>(<span class="fu">cbind</span>(Method1, Method2), <span class="at">model =</span> <span class="st">"twoway"</span>, <span class="at">type =</span> <span class="st">"agreement"</span>)<span class="sc">$</span>ubound, <span class="dv">3</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Display ICC results as a formatted table</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a> <span class="fu">kable</span>(icc_results)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a> <span class="co"># saveRDS(kable(icc_results), "blog/dat/icc_results.rds")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Biomarker</th>
+<th style="text-align: right;">ICC</th>
+<th style="text-align: right;">LowerCI</th>
+<th style="text-align: right;">UpperCI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">-0.125</td>
+<td style="text-align: right;">-0.396</td>
+<td style="text-align: right;">0.162</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">-0.129</td>
+<td style="text-align: right;">-0.395</td>
+<td style="text-align: right;">0.154</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">-0.168</td>
+<td style="text-align: right;">-0.400</td>
+<td style="text-align: right;">0.097</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="create-bland-altman-plots" class="level2">
+<h2 class="anchored" data-anchor-id="create-bland-altman-plots">Create Bland-Altman plots</h2>
+<p>We’ll calculate the mean and difference of the two methods for each biomarker, then use <code>facet_wrap()</code> to create individual plots for each biomarker. Key statistics like bias and limits of agreement (LoA) will be annotated on each panel.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add Bland-Altman calculations to the data</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">Mean =</span> (Method1 <span class="sc">+</span> Method2) <span class="sc">/</span> <span class="dv">2</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Difference =</span> Method1 <span class="sc">-</span> Method2</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Bland-Altman plot function</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>plot_bland_altman <span class="ot">&lt;-</span> <span class="cf">function</span>(data) {</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">%&gt;%</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(Biomarker) <span class="sc">%&gt;%</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">Bias =</span> <span class="fu">mean</span>(Difference),</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">LoA_Lower =</span> Bias <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> <span class="fu">sd</span>(Difference),</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>      <span class="at">LoA_Upper =</span> Bias <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> <span class="fu">sd</span>(Difference)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">left_join</span>(data, <span class="at">by =</span> <span class="st">"Biomarker"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Mean, <span class="at">y =</span> Difference)) <span class="sc">+</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="fu">aes</span>(<span class="at">yintercept =</span> Bias), <span class="at">color =</span> <span class="st">"#0479A8"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="fu">aes</span>(<span class="at">yintercept =</span> LoA_Lower), <span class="at">color =</span> <span class="st">"#C5050C"</span>, <span class="at">linetype =</span> <span class="st">"dotted"</span>) <span class="sc">+</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="fu">aes</span>(<span class="at">yintercept =</span> LoA_Upper), <span class="at">color =</span> <span class="st">"#C5050C"</span>, <span class="at">linetype =</span> <span class="st">"dotted"</span>) <span class="sc">+</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span> Biomarker) <span class="sc">+</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span> <span class="st">"Bland-Altman Plots for Multiple Biomarkers"</span>,</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="st">"Mean of Two Methods"</span>,</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> <span class="st">"Difference Between Methods"</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>()</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Create Bland-Altman plots</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_bland_altman</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="images/ba_mul.png" class="img-fluid"></p>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>With just a few lines of code, we’ve:</p>
+<ol type="1">
+<li>Calculated the ICC (or CCC) for each marker, complete with confidence intervals.</li>
+<li>Created a clear and concise Bland-Altman plot using <code>facet_wrap()</code> for each marker.</li>
+</ol>
+<p>These steps provide a straightforward way to analyze agreements for multiple biomarkers simultaneously, saving a lot for effort.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Qmlvc3RhdGlzdGljcyUyQ0RhdGElMjBWaXN1YWxpemF0aW9uJTJDUiUyMFByb2dyYW1taW5n" data-listing-date-sort="1737007200000" data-listing-file-modified-sort="1737052877843" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="654">
-<div class="thumbnail">
-<p><a href="../blog/how_to_ba_mul.html" class="no-external"></a></p><a href="../blog/how_to_ba_mul.html" class="no-external">
-<p class="card-img-top"><img src="images\ba_mul.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="../blog/how_to_ba_mul.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/how_to_ba_mul.html" class="no-external">How to create Bland-Altman analysis for multiple biomarkers</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/how_to_ba_mul.html" class="no-external">Use <code>group_by()</code> for agreement statistics and facet_wrap() for plots</a>
-</div>
-<div class="listing-description">
-<a href="../blog/how_to_ba_mul.html" class="no-external">Bland-Altman analysis is a popular method to assess agreement between two measurement methods. When dealing with multiple biomarkers, it’s essential to analyze each…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../blog/how_to_ba_mul.html" class="no-external">
-<div class="listing-date">
-Jan 16, 2025
-</div>
-<div class="listing-author">
-Lu Mao
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UiUyMFByb2dyYW1taW5nJTJDVGlkeXZlcnNlJTJDU2ltdWxhdGlvbnM=" data-listing-date-sort="1734674400000" data-listing-file-modified-sort="1737052861025" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1047">
-<div class="thumbnail">
-<p><a href="../blog/how_to_simulations.html" class="no-external"></a></p><a href="../blog/how_to_simulations.html" class="no-external">
-<p class="card-img-top"><img src="images\beta1_estimates.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="../blog/how_to_simulations.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/how_to_simulations.html" class="no-external">How to perform efficient simulations in Tidyverse</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/how_to_simulations.html" class="no-external">Use purrr::map() for element-wise operations</a>
-</div>
-<div class="listing-description">
-<a href="../blog/how_to_simulations.html" class="no-external">Consider a simulation study for linear regression.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../blog/how_to_simulations.html" class="no-external">
-<div class="listing-date">
-Dec 20, 2024
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
