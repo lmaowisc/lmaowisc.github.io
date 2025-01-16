@@ -119,4 +119,4 @@ With just a few lines of code, we’ve:
 1.  Calculated the ICC (or CCC) for each marker, complete with confidence intervals.
 2.  Created a clear and concise Bland-Altman plot using `facet_wrap()` for each marker.
 
-These steps provide a straightforward way to analyze agreements for multiple biomarkers simultaneously, saving a lot for effort.
+These steps provide a straightforward way to analyze agreement for multiple biomarkers simultaneously, saving a lot of effort.

@@ -536,6 +536,6 @@
     "href": "blog/how_to_ba_mul.html#summary",
     "title": "How to create Bland-Altman analysis for multiple biomarkers",
     "section": "Summary",
-    "text": "Summary\nWith just a few lines of code, we’ve:\n\nCalculated the ICC (or CCC) for each marker, complete with confidence intervals.\nCreated a clear and concise Bland-Altman plot using facet_wrap() for each marker.\n\nThese steps provide a straightforward way to analyze agreements for multiple biomarkers simultaneously, saving a lot for effort."
+    "text": "Summary\nWith just a few lines of code, we’ve:\n\nCalculated the ICC (or CCC) for each marker, complete with confidence intervals.\nCreated a clear and concise Bland-Altman plot using facet_wrap() for each marker.\n\nThese steps provide a straightforward way to analyze agreement for multiple biomarkers simultaneously, saving a lot of effort."
   }
 ]
