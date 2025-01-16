@@ -78,36 +78,45 @@ We’ll calculate the mean and difference of the two methods for each biomarker,
 # Add Bland-Altman calculations to the data
 data <- data %>%
   mutate(
+    # Calculate the mean of the two methods for each observation
     Mean = (Method1 + Method2) / 2,
+    # Calculate the difference between the two methods for each observation
     Difference = Method1 - Method2
   )
 
 # Bland-Altman plot function
 plot_bland_altman <- function(data) {
   data %>%
-    group_by(Biomarker) %>%
+    group_by(Biomarker) %>% # Group data by each biomarker
     summarise(
+      # Calculate the bias (mean difference) for each biomarker
       Bias = mean(Difference),
+      # Calculate the lower limit of agreement (LoA) as Bias - 1.96 * standard deviation
       LoA_Lower = Bias - 1.96 * sd(Difference),
+      # Calculate the upper limit of agreement (LoA) as Bias + 1.96 * standard deviation
       LoA_Upper = Bias + 1.96 * sd(Difference)
     ) %>%
+    # Merge the summary statistics (Bias, LoA) back into the original data for plotting
     left_join(data, by = "Biomarker") %>%
-    ggplot(aes(x = Mean, y = Difference)) +
-    geom_point(alpha = 0.6) +
-    geom_hline(aes(yintercept = Bias), color = "#0479A8", linetype = "dashed") +
+    ggplot(aes(x = Mean, y = Difference)) + # Plot mean (x) vs. difference (y)
+    geom_point(alpha = 0.6) + # Add scatter points with slight transparency
+    geom_hline(aes(yintercept = Bias), color = "#0479A8", linetype = "dashed") + 
+    # Add a horizontal dashed line for the bias (mean difference)
     geom_hline(aes(yintercept = LoA_Lower), color = "#C5050C", linetype = "dotted") +
+    # Add a dotted horizontal line for the lower limit of agreement (LoA_Lower)
     geom_hline(aes(yintercept = LoA_Upper), color = "#C5050C", linetype = "dotted") +
-    facet_wrap(~ Biomarker) +
+    # Add a dotted horizontal line for the upper limit of agreement (LoA_Upper)
+    facet_wrap(~ Biomarker) + # Create separate panels for each biomarker
     labs(
-      title = "Bland-Altman Plots for Multiple Biomarkers",
-      x = "Mean of Two Methods",
-      y = "Difference Between Methods"
+      title = "Bland-Altman Plots for Multiple Biomarkers", # Set plot title
+      x = "Mean of Two Methods", # Label for the x-axis
+      y = "Difference Between Methods" # Label for the y-axis
     ) +
-    theme_minimal()
+    theme_minimal() # Use a clean, minimal theme for the plot
 }
 
 # Create Bland-Altman plots
-plot_bland_altman(data)
+plot_bland_altman(data) # Call the function to generate and display the plots
 ```
 
 ![](images/ba_mul.png)
