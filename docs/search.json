@@ -74,7 +74,7 @@
     "href": "index.html#annoucements",
     "title": "Lu Mao",
     "section": "Annoucements",
-    "text": "Annoucements\nVisit the course site of BMI/STAT 741: Applied Survival Analysis for Spring 2025."
+    "text": "Annoucements\n\nVisit the course site of BMI/STAT 741: Applied Survival Analysis for Spring 2025.\nCheck out WRNet: a regularized win ratio regression approach through the elastic net."
   },
   {
     "objectID": "index.html#research-interests",
@@ -102,7 +102,7 @@
     "href": "index.html#recent-blog-posts",
     "title": "Lu Mao",
     "section": "Recent blog posts",
-    "text": "Recent blog posts\n\n\n\n\n\n\n\n\n\n\nHow to create Bland-Altman analysis for multiple biomarkers\n\n\nUse group_by() for agreement statistics and facet_wrap() for plots\n\n\n\n\n\n\n\n\nJan 16, 2025\n\n\nLu Mao\n\n\n\n\n\n\n\n\n\n\n\n\nHow to perform efficient simulations in Tidyverse\n\n\nUse purrr::map() for element-wise operations\n\n\n\n\n\n\n\n\nDec 20, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Recent blog posts\n\n\n\n\n\n\n\n\n\n\nHow to create Bland-Altman analysis for multiple biomarkers\n\n\nUse group_by() for agreement statistics and facet_wrap() for plots\n\n\n\n\n\n\n\n\nJan 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nHow to perform efficient simulations in Tidyverse\n\n\nUse purrr::map() for element-wise operations\n\n\n\n\n\n\n\n\nDec 20, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "construction/how_to_simulations.html",

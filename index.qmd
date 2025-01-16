@@ -48,8 +48,10 @@ WARF Office Building | 610 Walnut St, Room 207A | Madison, WI 53726
 
 ## Annoucements
 
-Visit the course site of BMI/STAT 741: Applied Survival Analysis
+-   Visit the course site of BMI/STAT 741: Applied Survival Analysis
 for [Spring 2025](https://lmaowisc.github.io/BMI741).
+-   Check out WRNet: a regularized win ratio regression approach through
+the elastic net.
 
 ## Research Interests
 
