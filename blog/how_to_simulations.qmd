@@ -3,6 +3,7 @@ title: "How to perform efficient simulations in Tidyverse"
 subtitle: "Use purrr::map() for element-wise operations"
 date: "12-20-2024"
 categories: [R Programming, Tidyverse, Simulations]
+open-graph: true
 twitter:
   card: summary # Choose "summary" or "summary_large_image"
   site: "@lmaowisc"  # Your Twitter username
