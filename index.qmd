@@ -34,7 +34,9 @@ about:
     #   href: https://www.youtube.com/@lmaowisc
 listing: 
   - id: posts
+    sort: "date desc"
     contents: 
+      - blog/cess.qmd
       - blog/how_to_ba_mul.qmd
       - blog/how_to_simulations.qmd
     type: default
@@ -51,7 +53,7 @@ WARF Office Building | 610 Walnut St, Room 207A | Madison, WI 53726
 -   Visit the course site of BMI/STAT 741: Applied Survival Analysis
 for [Spring 2025](https://lmaowisc.github.io/BMI741).
 -   Check out [WRNet](https://lmaowisc.github.io/wrnet): a new approach to *regularized* win ratio regression through
-the elastic net.
+the elastic net ([paper preprint](https://www.researchsquare.com/article/rs-5836301/v1)).
 
 ## Research Interests
 
