@@ -1,5 +1,5 @@
 ---
-title: "The chance of erring on the same side (CESS): A practical way to elicit correlation"
+title: "The chance of erring on the same side (CESS): A way to elicit correlation"
 subtitle: "Useful for power analysis with repeated measurements"
 date: "2025-02-10"
 format: html
@@ -8,7 +8,6 @@ image: images/cess_visual.png
 open-graph: true
 editor: visual
 execute:
-  warning: false
   eval: false
 bibliography: references.bib
 ---

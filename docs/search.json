@@ -102,7 +102,7 @@
     "href": "index.html#recent-blog-posts",
     "title": "Lu Mao",
     "section": "Recent blog posts",
-    "text": "Recent blog posts\n\n\n\n\n\n\n\n\n\n\nThe chance of erring on the same side (CESS): A practical way to elicit correlation\n\n\nUseful for power analysis with repeated measurements\n\n\n\n\n\n\n\n\nFeb 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nHow to create Bland-Altman analysis for multiple biomarkers\n\n\nUse group_by() for agreement statistics and facet_wrap() for plots\n\n\n\n\n\n\n\n\nJan 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nHow to perform efficient simulations in Tidyverse\n\n\nUse purrr::map() for element-wise operations\n\n\n\n\n\n\n\n\nDec 20, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Recent blog posts\n\n\n\n\n\n\n\n\n\n\nThe chance of erring on the same side (CESS): A way to elicit correlation\n\n\nUseful for power analysis with repeated measurements\n\n\n\n\n\n\n\n\nFeb 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nHow to create Bland-Altman analysis for multiple biomarkers\n\n\nUse group_by() for agreement statistics and facet_wrap() for plots\n\n\n\n\n\n\n\n\nJan 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nHow to perform efficient simulations in Tidyverse\n\n\nUse purrr::map() for element-wise operations\n\n\n\n\n\n\n\n\nDec 20, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "construction/how_to_simulations.html",
@@ -429,7 +429,7 @@
   {
     "objectID": "blog/cess.html",
     "href": "blog/cess.html",
-    "title": "The chance of erring on the same side (CESS): A practical way to elicit correlation",
+    "title": "The chance of erring on the same side (CESS): A way to elicit correlation",
     "section": "",
     "text": "Collaborators always come to me for help with power analysis. More often than not, their studies involve repeated measurements—multiple observations per subject over time or under different conditions. And inevitably, the power of their study depends on a crucial, yet elusive, parameter: the correlation between repeated measurements.\nThis is where things get frustrating. When I ask, “What do you think the correlation between measurements should be?” I usually get blank stares or vague responses like “Umm, maybe like 0.5?” or “I have no idea, what do you think?”—which, of course, is the whole reason they’re asking me for help in the first place.\nBut what if there were a better way? Instead of asking investigators to pluck a correlation coefficient out of thin air, we could ask them a question they can actually answer."
   },
@@ -450,21 +450,21 @@
   {
     "objectID": "blog/cess.html#converting-cess-to-correlation",
     "href": "blog/cess.html#converting-cess-to-correlation",
-    "title": "The chance of erring on the same side (CESS): A practical way to elicit correlation",
+    "title": "The chance of erring on the same side (CESS): A way to elicit correlation",
     "section": "Converting CESS to correlation",
     "text": "Converting CESS to correlation\nGraphically, CESS represents the probability mass in the first and third quadrants of a bivariate coordinate system. If the two measurements are positively correlated, this probability mass will be greater than 0.5 (see figure below). The stronger the correlation, the greater the mass.\n\n\n\n\n\nA precise formula exists for a bivariate normal distribution with correlation \\(\\rho\\):\n\\[\n\\text{CESS} = \\frac{1}{2} + \\frac{\\arcsin(\\rho)}{\\pi}.\n\\]\nTo solve for \\(\\rho\\):\n\\[\n\\rho = \\sin\\left( \\pi \\cdot \\text{CESS} - \\frac{\\pi}{2} \\right).\n\\]\nThis formula can be found in, e.g., Mardia, Kent, and Taylor (2024). It gives us a direct way to translate an intuitive probability estimate into the correlation parameter needed for power analysis."
   },
   {
     "objectID": "blog/cess.html#example-from-investigator-input-to-power-calculation",
     "href": "blog/cess.html#example-from-investigator-input-to-power-calculation",
-    "title": "The chance of erring on the same side (CESS): A practical way to elicit correlation",
+    "title": "The chance of erring on the same side (CESS): A way to elicit correlation",
     "section": "Example: from investigator input to power calculation",
     "text": "Example: from investigator input to power calculation\nLet’s say an investigator tells us:\n\n“I think there’s about a 75% chance that two measurements from the same subject will be on the same side of their means.”\n\nThen, plugging into the formula:\ncess &lt;- 0.75\nrho &lt;- sin(pi * cess - pi / 2)\nrho\nThis returns:\n[1] 0.707\nSo, instead of awkwardly guessing, we now have a data-informed estimate: \\((\\rho \\approx 0.707)\\). This can be used directly in power calculations for mixed models, repeated measures ANOVA, or longitudinal analyses."
   },
   {
     "objectID": "blog/cess.html#conclusion",
     "href": "blog/cess.html#conclusion",
-    "title": "The chance of erring on the same side (CESS): A practical way to elicit correlation",
+    "title": "The chance of erring on the same side (CESS): A way to elicit correlation",
     "section": "Conclusion",
     "text": "Conclusion\nNext time someone asks for a power analysis but has no idea about their correlation structure, try the CESS approach. It replaces guesswork with an intuitive probability that investigators can actually reason about."
   },
@@ -485,7 +485,7 @@
   {
     "objectID": "blog/cess.html#introducing-the-cess",
     "href": "blog/cess.html#introducing-the-cess",
-    "title": "The chance of erring on the same side (CESS): A practical way to elicit correlation",
+    "title": "The chance of erring on the same side (CESS): A way to elicit correlation",
     "section": "Introducing the CESS",
     "text": "Introducing the CESS\nThe Chance of Erring on the Same Side (CESS) is a simple yet intuitive measure: it’s the probability that two repeated measurements for the same subject fall on the same side of their respective means. In other words, if you measure a subject twice, what’s the chance that both measurements are above (or both below) their respective averages?\nMost investigators can make a reasonable guess for this: “About 70% of the time, I expect that if the first measurement is above average, the second one will be too.” That’s an answer we can work with!"
   }
