@@ -5,6 +5,8 @@ date: "2025-02-10"
 format: html
 categories: [Biostatistics, Power Analysis, Sample Size]
 image: images/cess_visual.png
+open-graph: true
+editor: visual
 execute:
   warning: false
   eval: false
