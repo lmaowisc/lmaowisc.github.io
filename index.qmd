@@ -36,6 +36,7 @@ listing:
   - id: posts
     sort: "date desc"
     contents: 
+      - blog/cox_partial.qmd
       - blog/cess.qmd
       - blog/how_to_ba_mul.qmd
       - blog/how_to_simulations.qmd

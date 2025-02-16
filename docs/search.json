@@ -102,7 +102,7 @@
     "href": "index.html#recent-blog-posts",
     "title": "Lu Mao",
     "section": "Recent blog posts",
-    "text": "Recent blog posts\n\n\n\n\n\n\n\n\n\n\nThe chance of erring on the same side (CESS): A way to elicit correlation\n\n\nUseful for power analysis with repeated measurements\n\n\n\n\n\n\n\n\nFeb 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nHow to create Bland-Altman analysis for multiple biomarkers\n\n\nUse group_by() for agreement statistics and facet_wrap() for plots\n\n\n\n\n\n\n\n\nJan 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nHow to perform efficient simulations in Tidyverse\n\n\nUse purrr::map() for element-wise operations\n\n\n\n\n\n\n\n\nDec 20, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Recent blog posts\n\n\n\n\n\n\n\n\n\n\nCox partial likelihood re-derived as normal equation of GLM\n\n\nBypassing risk-set construction and event conditioning arguments\n\n\n\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nThe chance of erring on the same side (CESS): A way to elicit correlation\n\n\nUseful for power analysis with repeated measurements\n\n\n\n\n\n\n\n\nFeb 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nHow to create Bland-Altman analysis for multiple biomarkers\n\n\nUse group_by() for agreement statistics and facet_wrap() for plots\n\n\n\n\n\n\n\n\nJan 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nHow to perform efficient simulations in Tidyverse\n\n\nUse purrr::map() for element-wise operations\n\n\n\n\n\n\n\n\nDec 20, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "construction/how_to_simulations.html",
@@ -200,7 +200,7 @@
     "href": "blog/index.html",
     "title": "Blog",
     "section": "",
-    "text": "The chance of erring on the same side (CESS): A way to elicit correlation\n\n\nUseful for power analysis with repeated measurements\n\n\n\n\n\n\n\n\nFeb 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nHow to create Bland-Altman analysis for multiple biomarkers\n\n\nUse group_by() for agreement statistics and facet_wrap() for plots\n\n\n\n\n\n\n\n\nJan 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nHow to perform efficient simulations in Tidyverse\n\n\nUse purrr::map() for element-wise operations\n\n\n\n\n\n\n\n\nDec 20, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Cox partial likelihood re-derived as normal equation of GLM\n\n\nBypassing risk-set construction and event conditioning arguments\n\n\n\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nThe chance of erring on the same side (CESS): A way to elicit correlation\n\n\nUseful for power analysis with repeated measurements\n\n\n\n\n\n\n\n\nFeb 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nHow to create Bland-Altman analysis for multiple biomarkers\n\n\nUse group_by() for agreement statistics and facet_wrap() for plots\n\n\n\n\n\n\n\n\nJan 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nHow to perform efficient simulations in Tidyverse\n\n\nUse purrr::map() for element-wise operations\n\n\n\n\n\n\n\n\nDec 20, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "courses.html",
@@ -488,5 +488,40 @@
     "title": "The chance of erring on the same side (CESS): A way to elicit correlation",
     "section": "Introducing the CESS",
     "text": "Introducing the CESS\nThe Chance of Erring on the Same Side (CESS) is a simple yet intuitive measure: it’s the probability that two repeated measurements for the same subject fall on the same side of their respective means. In other words, if you measure a subject twice, what’s the chance that both measurements are above (or both below) their respective averages?\nMost investigators can make a reasonable guess for this: “About 70% of the time, I expect that if the first measurement is above average, the second one will be too.” That’s an answer we can work with!"
+  },
+  {
+    "objectID": "blog/cox_partial.html",
+    "href": "blog/cox_partial.html",
+    "title": "Cox partial likelihood re-derived as normal equation of GLM",
+    "section": "",
+    "text": "The Cox proportional hazards model is a popular semiparametric regression model in survival analysis. Its partial likelihood offers a clever way to filter out the nonparametric baseline function while keeping focus on the regression coefficients (log-hazard ratios).\nThe partial likelihood was originally derived through careful construction of risk sets and conditioning arguments specific to the survival context. However, with a bit of handwaving, I’ll show that it can be re-derived, mechanically, as the “normal equation” of a generalized linear model (GLM)."
+  },
+  {
+    "objectID": "blog/cox_partial.html#normal-equation-of-glms",
+    "href": "blog/cox_partial.html#normal-equation-of-glms",
+    "title": "Cox partial likelihood re-derived as normal equation of GLM",
+    "section": "Normal equation of GLMs",
+    "text": "Normal equation of GLMs"
+  },
+  {
+    "objectID": "blog/cox_partial.html#normal-equations-of-glms",
+    "href": "blog/cox_partial.html#normal-equations-of-glms",
+    "title": "Cox partial likelihood re-derived as normal equation of GLM",
+    "section": "Normal equations of GLMs",
+    "text": "Normal equations of GLMs\nConsider a GLM for response \\(Y\\) against covariates \\(Z\\): \\[\\begin{equation}\\label{eq:mean_mod}\nE(Y\\mid Z) = \\mu(\\beta_0 + \\beta^\\mathrm{T} Z) \\tag{1}\n\\end{equation}\\] through some mean function \\(\\mu(\\cdot)\\). The normal equation is defined as \\[\\begin{equation}\\label{eq:normal}\n\\sum_{i=1}^n \\left(\\begin{array}{c}\n1\\\\\nZ_i\\\\\n\\end{array}\\right)\n\\left\\{Y_i - \\mu(\\beta_0 + \\beta^\\mathrm{T} Z_i)\\right\\} =0. \\tag{2}\n\\end{equation}\\]   This is also the score equation for a GLM with a canonical link function. Solving \\(\\eqref{eq:normal}\\) gives estimates of \\(\\beta_0\\) and \\(\\beta\\).\n\nLinear regression: \\(\\mu(x) = x\\), with \\(\\eqref{eq:normal}\\) leading to standard least squares.\nLogistic regression: \\(\\mu(x) = \\exp(x)/\\{1+\\exp(x)\\}\\), with \\(\\eqref{eq:normal}\\) corresponding to score equation for MLE."
+  },
+  {
+    "objectID": "blog/cox_partial.html#cox-model-as-a-glm",
+    "href": "blog/cox_partial.html#cox-model-as-a-glm",
+    "title": "Cox partial likelihood re-derived as normal equation of GLM",
+    "section": "Cox model as a GLM",
+    "text": "Cox model as a GLM\n\nModel specification\nLet \\(T\\) be the survival time of interest. The Cox model specifies \\[\\begin{equation}\\label{eq:cox}\n\\lambda(t\\mid Z) = \\lambda_0(t)\\exp(\\beta^\\mathrm{T} Z), \\tag{3}\n\\end{equation}\\] where \\(\\lambda(t\\mid Z)\\) is the conditional hazard of \\(T\\) given \\(Z\\). However, this seems a bit far from the mean model formulation of \\(\\eqref{eq:mean_mod}\\).\n\n\nReformulation as a mean model\nLet’s find a mean model implied by \\(\\eqref{eq:cox}\\). With censoring time \\(C\\), we observe \\(X = \\min(T, C)\\) and \\(\\delta = I(T\\leq C)\\). Write \\(N(t) = I(T\\leq t, \\delta = 1)\\).\nConsider \\(\\mathrm{d} N(t)=N(t)-N(t-)\\) as a binary response indicating an event observed at \\(t\\). Then \\(\\eqref{eq:cox}\\) implies \\[\\begin{align*}\nE\\{\\mathrm{d} N(t)\\mid X\\geq t, Z\\} &= I(X\\geq t)\\exp(\\beta^\\mathrm{T} Z)\\lambda_0(t)\\mathrm{d} t\\\\\n&=I(X\\geq t)\\exp\\{\\beta_0(t)+\\beta^\\mathrm{T} Z\\}.\n\\end{align*}\\] where \\(\\exp\\{\\beta_0(t)\\}= \\lambda_0(t)\\mathrm{d} t\\).\nNow, we have a formulation similar to \\(\\eqref{eq:mean_mod}\\) with \\(\\mu(x) = I(X\\geq t)\\exp(x)\\), though the intercept \\(\\beta_0(t)\\) is time-varying.\n\n\nNormal equation with time-varying intercept\nTherefore, \\(\\eqref{eq:normal}\\) becomes \\[\\begin{equation}\\label{eq:normal_cox}\n\\sum_{i=1}^n\\left(\\begin{array}{c}\n1\\\\\nZ_i\\\\\n\\end{array}\\right)\n\\big[\\mathrm{d} N_i(t) - I(X_i\\geq t)\\exp\\{\\beta_0(t)+\\beta^\\mathrm{T} Z_i\\}\\big] =0.  \\tag{4}\n\\end{equation}\\]\nUse the first-line equation in \\(\\eqref{eq:normal_cox}\\) to solve for the “intercept” \\[\n\\exp\\{\\hat\\beta_0(t)\\} = \\frac{\\sum_{i=1}^n \\mathrm{d} N_i(t)}{\\sum_{i=1}^n I(X_i\\geq t)\\exp(\\beta^\\mathrm{T} Z_i)}.\n\\] Plugging it back to the left-hand side of \\(\\eqref{eq:normal_cox}\\):\n\\[\\begin{align*}\n&\\sum_{i=1}^n Z_i\\mathrm{d} N_i(t) - \\exp\\{\\hat\\beta_0(t)\\}\\sum_{i=1}^n  Z_iI(X_i\\geq t)\\exp(\\beta^\\mathrm{T} Z_i) \\notag\\\\\n=&\\sum_{i=1}^n Z_i\\mathrm{d} N_i(t) - \\frac{\\sum_{i=1}^n \\mathrm{d} N_i(t)}{\\sum_{i=1}^n I(X_i\\geq t)\\exp(\\beta^\\mathrm{T} Z_i)}\\sum_{i=1}^n  Z_iI(X_i\\geq t)\\exp(\\beta^\\mathrm{T} Z_i) \\notag\\\\\n=& \\sum_{i=1}^n \\left\\{Z_i - \\frac{\\sum_{j=1}^n  I(X_j\\geq t)\\exp(\\beta^\\mathrm{T} Z_j)Z_j}{\\sum_{j=1}^n I(X_j\\geq t)\\exp(\\beta^\\mathrm{T} Z_j)}\\right\\}\\mathrm{d} N_i(t)\n\\end{align*}\\] Integrating this over \\(t\\) yields precisely the partial-likelihood score function."
+  },
+  {
+    "objectID": "blog/cox_partial.html#conclusion",
+    "href": "blog/cox_partial.html#conclusion",
+    "title": "Cox partial likelihood re-derived as normal equation of GLM",
+    "section": "Conclusion",
+    "text": "Conclusion\nThe Cox model can be reframed as a GLM for a binary event-indicator against an exponentially linked linear predictor with a time-dependent intercept. In this view, the partial likelihood score function aligns exactly with the normal equation of the GLM. This connection offers a new perspective on the Cox model and its estimation."
   }
 ]

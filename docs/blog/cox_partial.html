@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-02-10">
+<meta name="dcterms.date" content="2025-02-16">
 
-<title>The chance of erring on the same side (CESS): A way to elicit correlation – Lu Mao</title>
+<title>Cox partial likelihood re-derived as normal equation of GLM – Lu Mao</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,61 +21,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -153,12 +99,12 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="The chance of erring on the same side (CESS): A way to elicit correlation – Lu Mao">
-<meta property="og:description" content="Useful for power analysis with repeated measurements">
-<meta property="og:image" content="https://lmaowisc.github.io/blog/images/cess_visual.png">
+<meta property="og:title" content="Cox partial likelihood re-derived as normal equation of GLM – Lu Mao">
+<meta property="og:description" content="Bypassing risk-set construction and event conditioning arguments">
+<meta property="og:image" content="https://lmaowisc.github.io/blog/images/cox_normal.png">
 <meta property="og:site_name" content="Lu Mao">
-<meta property="og:image:height" content="1800">
-<meta property="og:image:width" content="1800">
+<meta property="og:image:height" content="576">
+<meta property="og:image:width" content="978">
 </head>
 
 <body class="nav-fixed">
@@ -237,9 +183,13 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introducing-the-cess" id="toc-introducing-the-cess" class="nav-link active" data-scroll-target="#introducing-the-cess">Introducing the CESS</a></li>
-  <li><a href="#converting-cess-to-correlation" id="toc-converting-cess-to-correlation" class="nav-link" data-scroll-target="#converting-cess-to-correlation">Converting CESS to correlation</a></li>
-  <li><a href="#example-from-investigator-input-to-power-calculation" id="toc-example-from-investigator-input-to-power-calculation" class="nav-link" data-scroll-target="#example-from-investigator-input-to-power-calculation">Example: from investigator input to power calculation</a></li>
+  <li><a href="#normal-equations-of-glms" id="toc-normal-equations-of-glms" class="nav-link active" data-scroll-target="#normal-equations-of-glms">Normal equations of GLMs</a></li>
+  <li><a href="#cox-model-as-a-glm" id="toc-cox-model-as-a-glm" class="nav-link" data-scroll-target="#cox-model-as-a-glm">Cox model as a GLM</a>
+  <ul class="collapse">
+  <li><a href="#model-specification" id="toc-model-specification" class="nav-link" data-scroll-target="#model-specification">Model specification</a></li>
+  <li><a href="#reformulation-as-a-mean-model" id="toc-reformulation-as-a-mean-model" class="nav-link" data-scroll-target="#reformulation-as-a-mean-model">Reformulation as a mean model</a></li>
+  <li><a href="#normal-equation-with-time-varying-intercept" id="toc-normal-equation-with-time-varying-intercept" class="nav-link" data-scroll-target="#normal-equation-with-time-varying-intercept">Normal equation with time-varying intercept</a></li>
+  </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
@@ -249,12 +199,13 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The chance of erring on the same side (CESS): A way to elicit correlation</h1>
-<p class="subtitle lead">Useful for power analysis with repeated measurements</p>
+<h1 class="title">Cox partial likelihood re-derived as normal equation of GLM</h1>
+<p class="subtitle lead">Bypassing risk-set construction and event conditioning arguments</p>
   <div class="quarto-categories">
     <div class="quarto-category">Biostatistics</div>
-    <div class="quarto-category">Power Analysis</div>
-    <div class="quarto-category">Sample Size</div>
+    <div class="quarto-category">Generalized Linear Models</div>
+    <div class="quarto-category">Survival Analysis</div>
+    <div class="quarto-category">Partial Likelihood</div>
   </div>
   </div>
 
@@ -266,7 +217,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 10, 2025</p>
+      <p class="date">February 16, 2025</p>
     </div>
   </div>
   
@@ -278,59 +229,68 @@ window.Quarto = {
 </header>
 
 
-<p>Collaborators always come to me for help with power analysis. More often than not, their studies involve <em>repeated measurements</em>—multiple observations per subject over time or under different conditions. And inevitably, the power of their study depends on a crucial, yet elusive, parameter: the <em>correlation</em> between repeated measurements.</p>
-<p>This is where things get frustrating. When I ask, <em>“What do you think the correlation between measurements should be?”</em> I usually get blank stares or vague responses like <em>“Umm, maybe like 0.5?”</em> or <em>“I have no idea, what do you think?”</em>—which, of course, is the whole reason they’re asking me for help in the first place.</p>
-<p>But what if there were a better way? Instead of asking investigators to pluck a correlation coefficient out of thin air, we could ask them a question they can actually answer.</p>
-<section id="introducing-the-cess" class="level2">
-<h2 class="anchored" data-anchor-id="introducing-the-cess">Introducing the CESS</h2>
-<p>The <strong>Chance of Erring on the Same Side (CESS)</strong> is a simple yet intuitive measure: it’s the probability that two repeated measurements for the same subject fall on the same side of their respective means. In other words, if you measure a subject twice, what’s the chance that both measurements are above (or both below) their respective averages?</p>
-<p>Most investigators can make a reasonable guess for this: <em>“About 70% of the time, I expect that if the first measurement is above average, the second one will be too.”</em> That’s an answer we can work with!</p>
+<p>The Cox proportional hazards model is a popular <em>semiparametric</em> regression model in survival analysis. Its partial likelihood offers a clever way to filter out the nonparametric baseline function while keeping focus on the regression coefficients (log-hazard ratios).</p>
+<p>The partial likelihood was originally derived through careful construction of risk sets and conditioning arguments specific to the survival context. However, with a bit of handwaving, I’ll show that it can be re-derived, mechanically, as the “normal equation” of a generalized linear model (GLM).</p>
+<section id="normal-equations-of-glms" class="level2">
+<h2 class="anchored" data-anchor-id="normal-equations-of-glms">Normal equations of GLMs</h2>
+<p>Consider a GLM for response <span class="math inline">\(Y\)</span> against covariates <span class="math inline">\(Z\)</span>: <span class="math display">\[\begin{equation}\label{eq:mean_mod}
+E(Y\mid Z) = \mu(\beta_0 + \beta^\mathrm{T} Z) \tag{1}
+\end{equation}\]</span> through some mean function <span class="math inline">\(\mu(\cdot)\)</span>. The normal equation is defined as <span class="math display">\[\begin{equation}\label{eq:normal}
+\sum_{i=1}^n \left(\begin{array}{c}
+1\\
+Z_i\\
+\end{array}\right)
+\left\{Y_i - \mu(\beta_0 + \beta^\mathrm{T} Z_i)\right\} =0. \tag{2}
+\end{equation}\]</span> <!-- -   $\dot\mu(Z)=\d\mu(x)/\mathrm{d} x |_{x = \beta_0 + \beta^\mathrm{T} Z}$: differential of mean function;  --> <!-- -   $\sigma^2(Z) = {\rm var}(Y\mid Z)$: variance function. --> This is also the score equation for a GLM with a <em>canonical</em> link function. Solving <span class="math inline">\(\eqref{eq:normal}\)</span> gives estimates of <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta\)</span>.</p>
+<ul>
+<li><strong>Linear regression</strong>: <span class="math inline">\(\mu(x) = x\)</span>, with <span class="math inline">\(\eqref{eq:normal}\)</span> leading to standard least squares.</li>
+<li><strong>Logistic regression</strong>: <span class="math inline">\(\mu(x) = \exp(x)/\{1+\exp(x)\}\)</span>, with <span class="math inline">\(\eqref{eq:normal}\)</span> corresponding to score equation for MLE.</li>
+</ul>
 </section>
-<section id="converting-cess-to-correlation" class="level2">
-<h2 class="anchored" data-anchor-id="converting-cess-to-correlation">Converting CESS to correlation</h2>
-<p>Graphically, CESS represents the probability mass in the first and third quadrants of a bivariate coordinate system. If the two measurements are positively correlated, this probability mass will be greater than 0.5 (see figure below). The stronger the correlation, the greater the mass.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/cess_visual.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="580"></p>
-</figure>
-</div>
-<p>A precise formula exists for a bivariate normal distribution with correlation <span class="math inline">\(\rho\)</span>:</p>
-<p><span class="math display">\[
-\text{CESS} = \frac{1}{2} + \frac{\arcsin(\rho)}{\pi}.
-\]</span></p>
-<p>To solve for <span class="math inline">\(\rho\)</span>:</p>
-<p><span class="math display">\[
-\rho = \sin\left( \pi \cdot \text{CESS} - \frac{\pi}{2} \right).
-\]</span></p>
-<p>This formula can be found in, e.g., <span class="citation" data-cites="mardia2024">Mardia, Kent, and Taylor (<a href="#ref-mardia2024" role="doc-biblioref">2024</a>)</span>. It gives us a direct way to translate an intuitive probability estimate into the correlation parameter needed for power analysis.</p>
+<section id="cox-model-as-a-glm" class="level2">
+<h2 class="anchored" data-anchor-id="cox-model-as-a-glm">Cox model as a GLM</h2>
+<section id="model-specification" class="level3">
+<h3 class="anchored" data-anchor-id="model-specification">Model specification</h3>
+<p>Let <span class="math inline">\(T\)</span> be the survival time of interest. The Cox model specifies <span class="math display">\[\begin{equation}\label{eq:cox}
+\lambda(t\mid Z) = \lambda_0(t)\exp(\beta^\mathrm{T} Z), \tag{3}
+\end{equation}\]</span> where <span class="math inline">\(\lambda(t\mid Z)\)</span> is the conditional hazard of <span class="math inline">\(T\)</span> given <span class="math inline">\(Z\)</span>. However, this seems a bit far from the mean model formulation of <span class="math inline">\(\eqref{eq:mean_mod}\)</span>.</p>
 </section>
-<section id="example-from-investigator-input-to-power-calculation" class="level2">
-<h2 class="anchored" data-anchor-id="example-from-investigator-input-to-power-calculation">Example: from investigator input to power calculation</h2>
-<p>Let’s say an investigator tells us:</p>
-<blockquote class="blockquote">
-<p><em>“I think there’s about a 75% chance that two measurements from the same subject will be on the same side of their means.”</em></p>
-</blockquote>
-<p>Then, plugging into the formula:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>cess <span class="ot">&lt;-</span> <span class="fl">0.75</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>rho <span class="ot">&lt;-</span> <span class="fu">sin</span>(pi <span class="sc">*</span> cess <span class="sc">-</span> pi <span class="sc">/</span> <span class="dv">2</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rho</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This returns:</p>
-<pre class="output"><code>[1] 0.707</code></pre>
-<p>So, instead of awkwardly guessing, we now have a data-informed estimate: <span class="math inline">\((\rho \approx 0.707)\)</span>. This can be used directly in power calculations for mixed models, repeated measures ANOVA, or longitudinal analyses.</p>
+<section id="reformulation-as-a-mean-model" class="level3">
+<h3 class="anchored" data-anchor-id="reformulation-as-a-mean-model">Reformulation as a mean model</h3>
+<p>Let’s find a mean model implied by <span class="math inline">\(\eqref{eq:cox}\)</span>. With censoring time <span class="math inline">\(C\)</span>, we observe <span class="math inline">\(X = \min(T, C)\)</span> and <span class="math inline">\(\delta = I(T\leq C)\)</span>. Write <span class="math inline">\(N(t) = I(T\leq t, \delta = 1)\)</span>.</p>
+<p>Consider <span class="math inline">\(\mathrm{d} N(t)=N(t)-N(t-)\)</span> as a binary response indicating an event observed at <span class="math inline">\(t\)</span>. Then <span class="math inline">\(\eqref{eq:cox}\)</span> implies <span class="math display">\[\begin{align*}
+E\{\mathrm{d} N(t)\mid X\geq t, Z\} &amp;= I(X\geq t)\exp(\beta^\mathrm{T} Z)\lambda_0(t)\mathrm{d} t\\
+&amp;=I(X\geq t)\exp\{\beta_0(t)+\beta^\mathrm{T} Z\}.
+\end{align*}\]</span> where <span class="math inline">\(\exp\{\beta_0(t)\}= \lambda_0(t)\mathrm{d} t\)</span>.</p>
+<p>Now, we have a formulation similar to <span class="math inline">\(\eqref{eq:mean_mod}\)</span> with <span class="math inline">\(\mu(x) = I(X\geq t)\exp(x)\)</span>, though the intercept <span class="math inline">\(\beta_0(t)\)</span> is time-varying.</p>
+</section>
+<section id="normal-equation-with-time-varying-intercept" class="level3">
+<h3 class="anchored" data-anchor-id="normal-equation-with-time-varying-intercept">Normal equation with time-varying intercept</h3>
+<p>Therefore, <span class="math inline">\(\eqref{eq:normal}\)</span> becomes <span class="math display">\[\begin{equation}\label{eq:normal_cox}
+\sum_{i=1}^n\left(\begin{array}{c}
+1\\
+Z_i\\
+\end{array}\right)
+\big[\mathrm{d} N_i(t) - I(X_i\geq t)\exp\{\beta_0(t)+\beta^\mathrm{T} Z_i\}\big] =0.  \tag{4}
+\end{equation}\]</span></p>
+<p>Use the first-line equation in <span class="math inline">\(\eqref{eq:normal_cox}\)</span> to solve for the “intercept” <span class="math display">\[
+\exp\{\hat\beta_0(t)\} = \frac{\sum_{i=1}^n \mathrm{d} N_i(t)}{\sum_{i=1}^n I(X_i\geq t)\exp(\beta^\mathrm{T} Z_i)}.
+\]</span> Plugging it back to the left-hand side of <span class="math inline">\(\eqref{eq:normal_cox}\)</span>:</p>
+<p><span class="math display">\[\begin{align*}
+&amp;\sum_{i=1}^n Z_i\mathrm{d} N_i(t) - \exp\{\hat\beta_0(t)\}\sum_{i=1}^n  Z_iI(X_i\geq t)\exp(\beta^\mathrm{T} Z_i) \notag\\
+=&amp;\sum_{i=1}^n Z_i\mathrm{d} N_i(t) - \frac{\sum_{i=1}^n \mathrm{d} N_i(t)}{\sum_{i=1}^n I(X_i\geq t)\exp(\beta^\mathrm{T} Z_i)}\sum_{i=1}^n  Z_iI(X_i\geq t)\exp(\beta^\mathrm{T} Z_i) \notag\\
+=&amp; \sum_{i=1}^n \left\{Z_i - \frac{\sum_{j=1}^n  I(X_j\geq t)\exp(\beta^\mathrm{T} Z_j)Z_j}{\sum_{j=1}^n I(X_j\geq t)\exp(\beta^\mathrm{T} Z_j)}\right\}\mathrm{d} N_i(t)
+\end{align*}\]</span> Integrating this over <span class="math inline">\(t\)</span> yields precisely the <em>partial-likelihood score</em> function.</p>
+</section>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Next time someone asks for a power analysis but has no idea about their correlation structure, try the CESS approach. It replaces guesswork with an intuitive probability that investigators can actually reason about.</p>
-
+<p>The Cox model can be reframed as a GLM for a binary event-indicator against an exponentially linked linear predictor with a time-dependent intercept. In this view, the partial likelihood score function aligns exactly with the normal equation of the GLM. This connection offers a new perspective on the Cox model and its estimation.</p>
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-mardia2024" class="csl-entry" role="listitem">
-Mardia, Kanti V, John T Kent, and Charles C Taylor. 2024. <em>Multivariate Analysis</em>. John Wiley &amp; Sons.
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
