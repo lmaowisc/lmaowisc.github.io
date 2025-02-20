@@ -103,8 +103,8 @@ window.Quarto = {
 <meta property="og:description" content="Bypassing risk-set construction and event conditioning arguments">
 <meta property="og:image" content="https://lmaowisc.github.io/blog/images/cox_normal.png">
 <meta property="og:site_name" content="Lu Mao">
-<meta property="og:image:height" content="576">
-<meta property="og:image:width" content="978">
+<meta property="og:image:height" content="574">
+<meta property="og:image:width" content="975">
 </head>
 
 <body class="nav-fixed">
@@ -230,7 +230,7 @@ window.Quarto = {
 
 
 <p>The Cox proportional hazards model is a popular <em>semiparametric</em> regression model in survival analysis. Its partial likelihood offers a clever way to filter out the nonparametric baseline function while keeping focus on the regression coefficients (log-hazard ratios).</p>
-<p>The partial likelihood was originally derived through careful construction of risk sets and conditioning arguments specific to the survival context. However, with a bit of handwaving, I’ll show that it can be re-derived, mechanically, as the “normal equation” of a generalized linear model (GLM).</p>
+<p>The partial likelihood was originally derived through careful construction of risk sets and conditioning arguments specific to the survival context. However, with a bit of handwaving, I’ll show that it can be re-derived, mechanically, as the “normal equation” of a generalized linear model (GLM).<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <section id="normal-equations-of-glms" class="level2">
 <h2 class="anchored" data-anchor-id="normal-equations-of-glms">Normal equations of GLMs</h2>
 <p>Consider a GLM for response <span class="math inline">\(Y\)</span> against covariates <span class="math inline">\(Z\)</span>: <span class="math display">\[\begin{equation}\label{eq:mean_mod}
@@ -290,7 +290,13 @@ Z_i\\
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p><strong>Whitehead (1980)</strong> presented a similar derivation (Whitehead, J. “Fitting Cox’s Regression Model to Survival Data Using GLIM.” <em>Journal of the Royal Statistical Society Series C: Applied Statistics</em> 29 (3): 268. <a href="https://doi.org/10.2307/2346901" target="_blank">https://doi.org/10.2307/2346901</a>.)<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

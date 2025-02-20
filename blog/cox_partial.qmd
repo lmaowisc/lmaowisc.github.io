@@ -9,71 +9,50 @@ open-graph: true
 editor: visual
 execute:
   eval: false
+bibliography: references.bib
 ---
 
+The Cox proportional hazards model is a popular *semiparametric* regression model in survival analysis. Its partial likelihood offers a clever way to filter out the nonparametric baseline function while keeping focus on the regression coefficients (log-hazard ratios).
 
-The Cox proportional hazards model is a popular *semiparametric* regression model 
-in survival analysis. Its partial likelihood offers a clever way to filter out the nonparametric baseline function while keeping focus on the regression coefficients (log-hazard ratios).
-
-The partial likelihood was originally derived through careful construction of risk sets and conditioning arguments specific to the survival context. 
-However, with a bit of handwaving, I'll show that it can be re-derived,
-mechanically, as the "normal equation" of a generalized linear model (GLM).
+The partial likelihood was originally derived through careful construction of risk sets and conditioning arguments specific to the survival context. However, with a bit of handwaving, I'll show that it can be re-derived, mechanically, as the "normal equation" of a generalized linear model (GLM).[^1]
 
 ## Normal equations of GLMs
 
-Consider a GLM for response $Y$ against covariates $Z$:
-\begin{equation}\label{eq:mean_mod}
+Consider a GLM for response $Y$ against covariates $Z$: \begin{equation}\label{eq:mean_mod}
 E(Y\mid Z) = \mu(\beta_0 + \beta^\mathrm{T} Z) \tag{1}
-\end{equation}
-through some mean function $\mu(\cdot)$. The normal equation is defined as
-\begin{equation}\label{eq:normal}
+\end{equation} through some mean function $\mu(\cdot)$. The normal equation is defined as \begin{equation}\label{eq:normal}
 \sum_{i=1}^n \left(\begin{array}{c}
 1\\
 Z_i\\
 \end{array}\right)
 \left\{Y_i - \mu(\beta_0 + \beta^\mathrm{T} Z_i)\right\} =0. \tag{2}
-\end{equation}
-<!-- -   $\dot\mu(Z)=\d\mu(x)/\mathrm{d} x |_{x = \beta_0 + \beta^\mathrm{T} Z}$: differential of mean function;  -->
-<!-- -   $\sigma^2(Z) = {\rm var}(Y\mid Z)$: variance function. -->
-This is also the score equation for a GLM with a *canonical* link function.
-Solving \eqref{eq:normal} gives estimates of $\beta_0$ and $\beta$.
-
+\end{equation} <!-- -   $\dot\mu(Z)=\d\mu(x)/\mathrm{d} x |_{x = \beta_0 + \beta^\mathrm{T} Z}$: differential of mean function;  --> <!-- -   $\sigma^2(Z) = {\rm var}(Y\mid Z)$: variance function. --> This is also the score equation for a GLM with a *canonical* link function. Solving \eqref{eq:normal} gives estimates of $\beta_0$ and $\beta$.
 
 -   **Linear regression**: $\mu(x) = x$, with \eqref{eq:normal} leading to standard least squares.
 -   **Logistic regression**: $\mu(x) = \exp(x)/\{1+\exp(x)\}$, with \eqref{eq:normal} corresponding to score equation for MLE.
 
-    
-
 ## Cox model as a GLM
 
 ### Model specification
-Let $T$ be the survival time of interest.
-The Cox model specifies 
-\begin{equation}\label{eq:cox}
+
+Let $T$ be the survival time of interest. The Cox model specifies \begin{equation}\label{eq:cox}
 \lambda(t\mid Z) = \lambda_0(t)\exp(\beta^\mathrm{T} Z), \tag{3}
-\end{equation}
-where $\lambda(t\mid Z)$ is the conditional hazard of $T$ given $Z$. However, this 
-seems a bit far from the mean model formulation of \eqref{eq:mean_mod}. 
+\end{equation} where $\lambda(t\mid Z)$ is the conditional hazard of $T$ given $Z$. However, this seems a bit far from the mean model formulation of \eqref{eq:mean_mod}.
 
 ### Reformulation as a mean model
-Let's find a mean model implied by \eqref{eq:cox}.
-With censoring time $C$, we observe $X = \min(T, C)$ and $\delta = I(T\leq C)$.
-Write $N(t) = I(T\leq t, \delta = 1)$. 
 
-Consider $\mathrm{d} N(t)=N(t)-N(t-)$ as a binary response indicating an event observed at $t$. Then
-\eqref{eq:cox} implies
-\begin{align*}
+Let's find a mean model implied by \eqref{eq:cox}. With censoring time $C$, we observe $X = \min(T, C)$ and $\delta = I(T\leq C)$. Write $N(t) = I(T\leq t, \delta = 1)$.
+
+Consider $\mathrm{d} N(t)=N(t)-N(t-)$ as a binary response indicating an event observed at $t$. Then \eqref{eq:cox} implies \begin{align*}
 E\{\mathrm{d} N(t)\mid X\geq t, Z\} &= I(X\geq t)\exp(\beta^\mathrm{T} Z)\lambda_0(t)\mathrm{d} t\\
 &=I(X\geq t)\exp\{\beta_0(t)+\beta^\mathrm{T} Z\}.
-\end{align*}
-where $\exp\{\beta_0(t)\}= \lambda_0(t)\mathrm{d} t$.
+\end{align*} where $\exp\{\beta_0(t)\}= \lambda_0(t)\mathrm{d} t$.
 
 Now, we have a formulation similar to \eqref{eq:mean_mod} with $\mu(x) = I(X\geq t)\exp(x)$, though the intercept $\beta_0(t)$ is time-varying.
 
 ### Normal equation with time-varying intercept
 
-Therefore, \eqref{eq:normal} becomes
-\begin{equation}\label{eq:normal_cox}
+Therefore, \eqref{eq:normal} becomes \begin{equation}\label{eq:normal_cox}
 \sum_{i=1}^n\left(\begin{array}{c}
 1\\
 Z_i\\
@@ -81,19 +60,22 @@ Z_i\\
 \big[\mathrm{d} N_i(t) - I(X_i\geq t)\exp\{\beta_0(t)+\beta^\mathrm{T} Z_i\}\big] =0.  \tag{4}
 \end{equation}
 
-Use the first-line equation in \eqref{eq:normal_cox} to solve for the "intercept"
-$$
+Use the first-line equation in \eqref{eq:normal_cox} to solve for the "intercept" $$
 \exp\{\hat\beta_0(t)\} = \frac{\sum_{i=1}^n \mathrm{d} N_i(t)}{\sum_{i=1}^n I(X_i\geq t)\exp(\beta^\mathrm{T} Z_i)}.
-$$
-Plugging it back to the left-hand side of \eqref{eq:normal_cox}:
+$$ Plugging it back to the left-hand side of \eqref{eq:normal_cox}:
 
 \begin{align*}
 &\sum_{i=1}^n Z_i\mathrm{d} N_i(t) - \exp\{\hat\beta_0(t)\}\sum_{i=1}^n  Z_iI(X_i\geq t)\exp(\beta^\mathrm{T} Z_i) \notag\\
 =&\sum_{i=1}^n Z_i\mathrm{d} N_i(t) - \frac{\sum_{i=1}^n \mathrm{d} N_i(t)}{\sum_{i=1}^n I(X_i\geq t)\exp(\beta^\mathrm{T} Z_i)}\sum_{i=1}^n  Z_iI(X_i\geq t)\exp(\beta^\mathrm{T} Z_i) \notag\\
 =& \sum_{i=1}^n \left\{Z_i - \frac{\sum_{j=1}^n  I(X_j\geq t)\exp(\beta^\mathrm{T} Z_j)Z_j}{\sum_{j=1}^n I(X_j\geq t)\exp(\beta^\mathrm{T} Z_j)}\right\}\mathrm{d} N_i(t) 
-\end{align*}
-Integrating this over $t$ yields precisely the *partial-likelihood score* function.
+\end{align*} Integrating this over $t$ yields precisely the *partial-likelihood score* function.
 
 ## Conclusion
 
 The Cox model can be reframed as a GLM for a binary event-indicator against an exponentially linked linear predictor with a time-dependent intercept. In this view, the partial likelihood score function aligns exactly with the normal equation of the GLM. This connection offers a new perspective on the Cox model and its estimation.
+
+[^1]: **Whitehead (1980)** presented a similar derivation (Whitehead, J. “Fitting Cox’s Regression Model to Survival Data Using GLIM.” *Journal of the Royal Statistical Society Series C: Applied Statistics* 29 (3): 268. [https://doi.org/10.2307/2346901](https://doi.org/10.2307/2346901).)
+
+
+
+

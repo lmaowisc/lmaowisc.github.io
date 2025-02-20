@@ -74,7 +74,7 @@
     "href": "index.html#annoucements",
     "title": "Lu Mao",
     "section": "Annoucements",
-    "text": "Annoucements\n\nVisit the course site of BMI/STAT 741: Applied Survival Analysis for Spring 2025.\nCheck out WRNet: a new approach to regularized win ratio regression through the elastic net (paper preprint)."
+    "text": "Annoucements\n\nVisit the course site of BMI/STAT 741: Applied Survival Analysis for Spring 2025.\nCheck out WRNet: a new approach to regularized win ratio regression through the elastic net (paper preprint).\nCheck out WinKM: a simple tool for extracting win-loss measures from published Kaplan-Meier curves and summary data for meta-analysis (paper preprint)."
   },
   {
     "objectID": "index.html#research-interests",
@@ -494,7 +494,7 @@
     "href": "blog/cox_partial.html",
     "title": "Cox partial likelihood re-derived as normal equation of GLM",
     "section": "",
-    "text": "The Cox proportional hazards model is a popular semiparametric regression model in survival analysis. Its partial likelihood offers a clever way to filter out the nonparametric baseline function while keeping focus on the regression coefficients (log-hazard ratios).\nThe partial likelihood was originally derived through careful construction of risk sets and conditioning arguments specific to the survival context. However, with a bit of handwaving, I’ll show that it can be re-derived, mechanically, as the “normal equation” of a generalized linear model (GLM)."
+    "text": "The Cox proportional hazards model is a popular semiparametric regression model in survival analysis. Its partial likelihood offers a clever way to filter out the nonparametric baseline function while keeping focus on the regression coefficients (log-hazard ratios).\nThe partial likelihood was originally derived through careful construction of risk sets and conditioning arguments specific to the survival context. However, with a bit of handwaving, I’ll show that it can be re-derived, mechanically, as the “normal equation” of a generalized linear model (GLM).1"
   },
   {
     "objectID": "blog/cox_partial.html#normal-equation-of-glms",
@@ -523,5 +523,12 @@
     "title": "Cox partial likelihood re-derived as normal equation of GLM",
     "section": "Conclusion",
     "text": "Conclusion\nThe Cox model can be reframed as a GLM for a binary event-indicator against an exponentially linked linear predictor with a time-dependent intercept. In this view, the partial likelihood score function aligns exactly with the normal equation of the GLM. This connection offers a new perspective on the Cox model and its estimation."
+  },
+  {
+    "objectID": "blog/cox_partial.html#footnotes",
+    "href": "blog/cox_partial.html#footnotes",
+    "title": "Cox partial likelihood re-derived as normal equation of GLM",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nWhitehead (1980) presented a similar derivation (Whitehead, J. “Fitting Cox’s Regression Model to Survival Data Using GLIM.” Journal of the Royal Statistical Society Series C: Applied Statistics 29 (3): 268. https://doi.org/10.2307/2346901.)↩︎"
   }
 ]
