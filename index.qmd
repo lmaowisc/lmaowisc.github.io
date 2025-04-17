@@ -54,7 +54,7 @@ WARF Office Building | 610 Walnut St, Room 207A | Madison, WI 53726
 -   Visit the course site of BMI/STAT 741: Applied Survival Analysis
 for [Spring 2025](https://lmaowisc.github.io/BMI741).
 -   Check out [WRNet](https://lmaowisc.github.io/wrnet): a new approach to *regularized* win ratio regression through
-the elastic net ([paper preprint](https://www.researchsquare.com/article/rs-5836301/v1)).
+the elastic net ([paper](https://doi.org/10.1186/s12874-025-02554-w)).
 -   Check out [WinKM](https://lmaowisc.github.io/winkm): a simple tool for extracting
 win-loss measures from published Kaplan-Meier curves and summary data for meta-analysis
 ([paper preprint](http://dx.doi.org/10.2139/ssrn.5142445)).
