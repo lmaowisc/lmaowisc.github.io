@@ -15,7 +15,7 @@ css: pubs.css
 
 ::: {style="font-size: 92%;"}
 -   Winterholler, J.E., Kisting, M.A., Falk, K.L. et al., **Mao, L.**, McCormick, T., Cui, M., 
- Lee, F.T., and Ziemlewicz, T.J. (2025). [Hepatichistotripsy: jet ventilation decreases the effect of respiratory motion in a porcine liver model](https://doi.org/10.1007/s00270-025-04060-4). [*CardioVascular and Interventional Radiology*](https://link.springer.com/journal/270), 10.1007/s00270-025-04060-4.
+ Lee, F.T., and Ziemlewicz, T.J. (2025). [Hepatic histotripsy: jet ventilation decreases the effect of respiratory motion in a porcine liver model](https://doi.org/10.1007/s00270-025-04060-4). [*CardioVascular and Interventional Radiology*](https://link.springer.com/journal/270), 10.1007/s00270-025-04060-4.
 -   Weber, B.W., **Mao, L.**, Salem, K., Hitchcock, M., Keller, A.H., Elezaby, M.A., Salkowski, L.R., Bozzuto, L.M., and Fowler, A.M. (2025). [Performance of diagnostic breast imaging in symptomatic pregnant and lactating patients: systematic review and meta-analysis](https://doi.org/10.1148/rycan.240281). [*Radiology: Imaging Cancer*](https://pubs.rsna.org/journal/imaging-cancer){target="_blank"},
 7, e240281.
 -   van der Heijden, R.A., Tamada, D., **Mao, L.**, Rice, J., and Reeder, S.B. (2025). [Relaxivity and in vivo human performance of brand name versus generic ferumoxytol](https://doi.org/10.1097/RLI.0000000000001130){target="_blank"}. [*Investigative Radiology*](https://journals.lww.com/investigativeradiology/pages/default.aspx){target="_blank"}, 60, 319-327.
