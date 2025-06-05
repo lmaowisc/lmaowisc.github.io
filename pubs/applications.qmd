@@ -14,8 +14,10 @@ css: pubs.css
 ## Radiology and diagnostic medicine
 
 ::: {style="font-size: 92%;"}
+-   Winterholler, J.E., Kisting, M.A., Falk, K.L. et al., **Mao, L.**, McCormick, T., Cui, M., 
+ Lee, F.T., and Ziemlewicz, T.J. (2025). [Hepatichistotripsy: jet ventilation decreases the effect of respiratory motion in a porcine liver model](https://doi.org/10.1007/s00270-025-04060-4). [*CardioVascular and Interventional Radiology*](https://link.springer.com/journal/270), 10.1007/s00270-025-04060-4.
 -   Weber, B.W., **Mao, L.**, Salem, K., Hitchcock, M., Keller, A.H., Elezaby, M.A., Salkowski, L.R., Bozzuto, L.M., and Fowler, A.M. (2025). [Performance of diagnostic breast imaging in symptomatic pregnant and lactating patients: systematic review and meta-analysis](https://doi.org/10.1148/rycan.240281). [*Radiology: Imaging Cancer*](https://pubs.rsna.org/journal/imaging-cancer){target="_blank"},
-10.1148/rycan.240281.
+7, e240281.
 -   van der Heijden, R.A., Tamada, D., **Mao, L.**, Rice, J., and Reeder, S.B. (2025). [Relaxivity and in vivo human performance of brand name versus generic ferumoxytol](https://doi.org/10.1097/RLI.0000000000001130){target="_blank"}. [*Investigative Radiology*](https://journals.lww.com/investigativeradiology/pages/default.aspx){target="_blank"}, 60, 319-327.
 -   Kisting, A.L., Zlevor, A.M., Falk, K.L., Kisting, M.A., et al., **Mao, L.**, Minesinger, G.M., Laeseke, P.F., Ziemlewicz, T.J., and Lee, F.T. (2025). [Histotripsy of the proximal ureter and renal pelvis: evaluation of urothelial injury in a porcine survival model](https://doi.org/10.1016/j.jvir.2024.11.028){target="_blank"}. [*Journal of Vascular and Interventional Radiology*](https://www.jvir.org/){target="_blank"}, 36, 512-520.
 -   Jain, V.S., Johnstad, C., Ferrer, S., Koepsel, E.K., **Mao, L.**, Kleedehn, M. (2025). [Thrombus burden, caval thrombosis, and retrieval of the Denali inferior vena cava filter](https://doi.org/10.1016/j.jvir.2024.09.013){target="_blank"}. [*Journal of Vascular and Interventional Radiology*](https://www.jvir.org/){target="_blank"}, 36, 152-157.

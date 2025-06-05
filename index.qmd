@@ -53,6 +53,7 @@ WARF Office Building | 610 Walnut St, Room 207A | Madison, WI 53726
 
 -   Visit the course site of BMI/STAT 741: Applied Survival Analysis
 for [Spring 2025](https://lmaowisc.github.io/BMI741).
+-   Visit the short course site for [*Statistical Methods for Composite Endpoints: Win Ratio and Beyond*](https://lmaowisc.github.io/ce).
 -   Check out [WRNet](https://lmaowisc.github.io/wrnet): a new approach to *regularized* win ratio regression through
 the elastic net ([paper](https://doi.org/10.1186/s12874-025-02554-w)).
 -   Check out [WinKM](https://lmaowisc.github.io/winkm): a simple tool for extracting
