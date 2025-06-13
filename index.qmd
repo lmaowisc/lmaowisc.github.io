@@ -58,7 +58,7 @@ for [Spring 2025](https://lmaowisc.github.io/BMI741).
 the elastic net ([paper](https://doi.org/10.1186/s12874-025-02554-w)).
 -   Check out [WinKM](https://lmaowisc.github.io/winkm): a simple tool for extracting
 win-loss measures from published Kaplan-Meier curves and summary data for meta-analysis
-([paper preprint](http://dx.doi.org/10.2139/ssrn.5142445)).
+([paper](https://doi.org/10.1016/j.spl.2025.110478)).
 
 
 ## Research Interests
