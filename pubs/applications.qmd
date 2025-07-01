@@ -14,6 +14,8 @@ css: pubs.css
 ## Radiology and diagnostic medicine
 
 ::: {style="font-size: 92%;"}
+-   Zlevor, A.M., Versaggi, L.M., Kisting, M.A., Couillard, A.B., Wagner, M.G., Kisting, A.L., Falk, K.L., White, J.K., Kutlu, A.Z., Minesinger, G.M., **Mao, L.**, Hinshaw, J.L., Szczykutowicz, T.P., 
+Lee, F.T. (2025). [CT-guided percutaneous intervention: Reduction of metal needle artifact with low atomic number materials in phantom and porcine models](https://doi.org/10.1016/j.jvir.2025.06.013). [*Journal of Vascular and Interventional Radiology*](https://www.jvir.org/), 10.1016/j.jvir.2025.06.013.
 -   Winterholler, J.E., Kisting, M.A., Falk, K.L. et al., **Mao, L.**, McCormick, T., Cui, M., 
  Lee, F.T., and Ziemlewicz, T.J. (2025). [Hepatic histotripsy: jet ventilation decreases the effect of respiratory motion in a porcine liver model](https://doi.org/10.1007/s00270-025-04060-4). [*CardioVascular and Interventional Radiology*](https://link.springer.com/journal/270), 10.1007/s00270-025-04060-4.
 -   Weber, B.W., **Mao, L.**, Salem, K., Hitchcock, M., Keller, A.H., Elezaby, M.A., Salkowski, L.R., Bozzuto, L.M., and Fowler, A.M. (2025). [Performance of diagnostic breast imaging in symptomatic pregnant and lactating patients: systematic review and meta-analysis](https://doi.org/10.1148/rycan.240281). [*Radiology: Imaging Cancer*](https://pubs.rsna.org/journal/imaging-cancer){target="_blank"},
