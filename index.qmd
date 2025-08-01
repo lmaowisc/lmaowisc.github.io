@@ -51,6 +51,7 @@ WARF Office Building | 610 Walnut St, Room 207A | Madison, WI 53726
 
 ## Annoucements
 
+-   Visit the short course site for [*Tidy Survival Analysis: Applying R’s Tidyverse to Survival Data*](https://lmaowisc.github.io/tidysurv).
 -   Visit the course site of BMI/STAT 741: Applied Survival Analysis
 for [Spring 2025](https://lmaowisc.github.io/BMI741).
 -   Visit the short course site for [*Statistical Methods for Composite Endpoints: Win Ratio and Beyond*](https://lmaowisc.github.io/ce).

@@ -74,7 +74,7 @@
     "href": "index.html#annoucements",
     "title": "Lu Mao",
     "section": "Annoucements",
-    "text": "Annoucements\n\nVisit the course site of BMI/STAT 741: Applied Survival Analysis for Spring 2025.\nVisit the short course site for Statistical Methods for Composite Endpoints: Win Ratio and Beyond.\nCheck out WRNet: a new approach to regularized win ratio regression through the elastic net (paper).\nCheck out WinKM: a simple tool for extracting win-loss measures from published Kaplan-Meier curves and summary data for meta-analysis (paper)."
+    "text": "Annoucements\n\nVisit the short course site for Tidy Survival Analysis: Applying R’s Tidyverse to Survival Data.\nVisit the course site of BMI/STAT 741: Applied Survival Analysis for Spring 2025.\nVisit the short course site for Statistical Methods for Composite Endpoints: Win Ratio and Beyond.\nCheck out WRNet: a new approach to regularized win ratio regression through the elastic net (paper).\nCheck out WinKM: a simple tool for extracting win-loss measures from published Kaplan-Meier curves and summary data for meta-analysis (paper)."
   },
   {
     "objectID": "index.html#research-interests",
