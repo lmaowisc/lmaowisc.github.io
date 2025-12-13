@@ -17,7 +17,15 @@ css: pubs.css
 
 ::: {style="font-size: 92%;"}
 -   **Mao, L.** {{< fa envelope size=xs >}} (2025). [Win ratio for partially ordered data](http://doi.org/10.5705/ss.202023.0321){target="_blank"}. [*Statistica Sinica*](https://www3.stat.sinica.edu.tw/statistica/){target="_blank"}, 10.5705/ss.202023.0321. {{< ai open-access size=lg >}} \[R-package [`poset`](https://lmaowisc.github.io/poset){target="_blank"}\]
+-   Tang, J., Tamada, D., Nielsen, J.-F., Starekova, J., Heidenreich, J.F., Schön, F.,
+    Anagnostopoulos, A.A., Roshanshad, A., **Mao, L.**, et al., and Hernando, D. (2025).
+    [Highly reproducible, vendor-agnostic, motion-insensitive liver PDFF mapping at 0.55T, 1.5T, and 3T](https://doi.org/10.1002/mrm.70223). [*Magnetic Resonance in Medicine*](https://onlinelibrary.wiley.com/journal/15222594){target="_blank"}. 10.1002/mrm.70223.
 - van der Heijden, R.A., Schmidt, T.M., **Mao, L.**, Callander, N.S., Hernando, D., Reeder, S.B., and Pirasteh, A. (2025). [Rapid PET/MRI to assess multiple myeloma using T2-weighted imaging with uniform fat suppression](http://doi.org/10.1097/RCT.0000000000001811). [*Journal of Computer Assisted Tomography*](https://journals.lww.com/jcat/pages/default.aspx){target="_blank"}, 10.1097/RCT.0000000000001811.
+-   Rahman, M.M., Pennati, A., Atajanova, T., Debnath, T., Allawi, R.H., Meyers, R.O.,
+    Berg, T.J., Gurel, Z., Uboha, N.V., Bassetti, M.F., **Mao, L.**, Sondel, P.M.,
+    Kimple, R.J., Capitini, C.M., Sodji, Q.H., Galipeau, J., and Morris, Z.S. (2025).
+    [Combined innate immune cell therapy, tumor-specific antibody, and radiation prompt antitumor response in pancreatic cancer models](https://doi.org/10.1126/sciadv.adx2984).
+    [*Science Advances*](https://www.science.org/journal/sciadv){target="_blank"}, 11, eadx2984. {{< ai open-access size=lg >}} 
 - **Mao, L.**, Tian, L., Huang, B., Richardson, P.G., Ludmir, E.B., Hughes, M.D., and Wei, L.-J., (2025).
 [Evaluating treatment effects with patient-response--related outcomes in comparative clinical trials](http://doi.org/10.1056/EVIDctw2400349). 
 [*NEJM Evidence*](https://evidence.nejm.org/), 4, 10.1056/EVIDctw2400349.
