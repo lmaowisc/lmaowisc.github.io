@@ -17,6 +17,10 @@ css: pubs.css
 
 ::: {style="font-size: 92%;"}
 -   **Mao, L.** {{< fa envelope size=xs >}} (2025). [Win ratio for partially ordered data](http://doi.org/10.5705/ss.202023.0321){target="_blank"}. [*Statistica Sinica*](https://www3.stat.sinica.edu.tw/statistica/){target="_blank"}, 10.5705/ss.202023.0321. {{< ai open-access size=lg >}} \[R-package [`poset`](https://lmaowisc.github.io/poset){target="_blank"}\]
+-   Chu, S.Y., Briel, E., **Mao, L.**, Garrett, J.W., Reeder, S.B., and Pirasteh, A. (2025).
+    [Impact of online safety screening on outpatient MRI workflow](https://doi.org/10.1016/j.jacr.2025.12.021).
+    [*Journal of the American College of Radiology*](https://www.jacr.org/){target="_blank"}.
+    10.1016/j.jacr.2025.12.021.
 -   Tang, J., Tamada, D., Nielsen, J.-F., Starekova, J., Heidenreich, J.F., Schön, F.,
     Anagnostopoulos, A.A., Roshanshad, A., **Mao, L.**, et al., and Hernando, D. (2025).
     [Highly reproducible, vendor-agnostic, motion-insensitive liver PDFF mapping at 0.55T, 1.5T, and 3T](https://doi.org/10.1002/mrm.70223). [*Magnetic Resonance in Medicine*](https://onlinelibrary.wiley.com/journal/15222594){target="_blank"}. 10.1002/mrm.70223.
