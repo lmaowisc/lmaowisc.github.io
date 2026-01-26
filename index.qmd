@@ -43,24 +43,18 @@ listing:
     type: default
 ---
 
-
 ::: {#heading}
-School of Medicine and Public Health | University of Wisconsin-Madison \
-WARF Office Building | 610 Walnut St, Room 207A | Madison, WI 53726
+School of Medicine and Public Health \| University of Wisconsin-Madison\
+WARF Office Building \| 610 Walnut St, Room 207A \| Madison, WI 53726
 :::
 
 ## Annoucements
 
+-   Visit the course site of BMI/STAT 741: Applied Survival Analysis for [Spring 2026](https://lmaowisc.github.io/BMI741).
 -   Visit the short course site for [*Tidy Survival Analysis: Applying R’s Tidyverse to Survival Data*](https://lmaowisc.github.io/tidysurv).
--   Visit the course site of BMI/STAT 741: Applied Survival Analysis
-for [Spring 2025](https://lmaowisc.github.io/BMI741).
 -   Visit the short course site for [*Statistical Methods for Composite Endpoints: Win Ratio and Beyond*](https://lmaowisc.github.io/ce).
--   Check out [WRNet](https://lmaowisc.github.io/wrnet): a new approach to *regularized* win ratio regression through
-the elastic net ([paper](https://doi.org/10.1186/s12874-025-02554-w)).
--   Check out [WinKM](https://lmaowisc.github.io/winkm): a simple tool for extracting
-win-loss measures from published Kaplan-Meier curves and summary data for meta-analysis
-([paper](https://doi.org/10.1016/j.spl.2025.110478)).
-
+-   Check out [WRNet](https://lmaowisc.github.io/wrnet): a new approach to *regularized* win ratio regression through the elastic net ([paper](https://doi.org/10.1186/s12874-025-02554-w)).
+-   Check out [WinKM](https://lmaowisc.github.io/winkm): a simple tool for extracting win-loss measures from published Kaplan-Meier curves and summary data for meta-analysis ([paper](https://doi.org/10.1016/j.spl.2025.110478)).
 
 ## Research Interests
 
@@ -71,17 +65,15 @@ Time-to-event data \| causal inference \| clinical trials \| semiparametric theo
 ## Education
 
 -   PhD in Biostatistics (2016) \| The University of North Carolina at Chapel Hill
--   MS in Biostatistics (2010) \| Drexel University 
+-   MS in Biostatistics (2010) \| Drexel University
 -   BS in Biological Sciences (2005) \| Tsinghua University, China
-
 
 ## Editorial Service
 
--   Associate Editor \|				[*Statistics in Biopharmaceutical Research*](https://www.tandfonline.com/journals/usbr20/about-this-journal#editorial-board){target="_blank"} \|		01/2023 -- Now
--   Statistical Editor \|				[*JACC Journals*](https://www.jacc.org/journal/heart-failure/editorial-board){target="_blank"} \|								12/2022 -- Now
-
+-   Associate Editor \| [*Statistics in Biopharmaceutical Research*](https://www.tandfonline.com/journals/usbr20/about-this-journal#editorial-board){target="_blank"} \| 01/2023 -- Now
+-   Statistical Editor \| [*JACC Journals*](https://www.jacc.org/journal/heart-failure/editorial-board){target="_blank"} \| 12/2022 -- Now
 
 ## Recent blog posts
 
-:::{#posts}
+::: {#posts}
 :::

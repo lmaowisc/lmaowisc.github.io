@@ -20,31 +20,43 @@ title: "People"
 :::
 ::::::
 
+
+:::::: columns
+::: {.column width="20%"}
+<!-- profile pic -->
+
+![](images/Heeyeong Jung_Profile.jpg){width="100%"}
+:::
+
+::: {.column width="5%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="75%"}
+-   Heeyeong Jung, PhD student in Statistics (Biostatistics Option)
+:::
+::::::
+
+
+:::::: columns
+::: {.column width="20%"}
+<!-- profile pic -->
+
+![](images/Jenna_Pan_Profile.jpg){width="100%"}
+:::
+
+::: {.column width="5%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="75%"}
+-   Jenna Pan, PhD student in Biomedical Data Science
+:::
+::::::
+
+
 ## Alumni
 
-<!-- Li Ge                PhD in Biomedical Data Science, University of Wisconsin-Madison, 2024 -->
-
-<!-- First placement: Senior Scientist - Biostatistics, Merck, PA -->
-
-<!-- Dissertation: Addressing unmeasured confounding in randomized trials or observational studies -->
-
-<!-- Tuo Wang           Ph.D. in Biomedical Data Science, University of Wisconsin-Madison, 2023 -->
-
-<!--                            First placement: Research Advisor, Eli Lilly & Company, Indianapolis, IN  -->
-
-<!-- Dissertation: Novel statistical methods for composite endpoints -->
-
-<!-- Chengning Zhang        Ph.D. in Statistics (Biostatistics Option), University of Wisconsin-Madison, 2021 -->
-
-<!-- First placement: Applied Scientist, Amazon, Seattle, WA -->
-
-<!-- Dissertation: Statistical methods for combining diagnostic tests and performance evaluation metrics -->
-
-<!-- Yi Li                  Ph.D. in Statistics (Biostatistics Option), University of Wisconsin-Madison, 2020 -->
-
-<!-- First placement: Quantitative Associate, JP Morgan Chase & Company, Dallas, TX  -->
-
-<!-- Dissertation: Variable selection and estimation with censored data -->
 
 :::::: columns
 ::: {.column width="15%"}
