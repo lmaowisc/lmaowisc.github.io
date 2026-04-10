@@ -13,10 +13,18 @@ format:
 
 ## Working manuscripts
 
+
+## 2027
+
+::: {style="font-size: 92%;"}
+-   **Mao, L.**\* (2027). [Win ratio for partially ordered data](https://www3.stat.sinica.edu.tw/preprint/SS-2023-0321_Preprint.pdf){target="_blank"}. [*Statistica Sinica*](https://www3.stat.sinica.edu.tw/statistica/){target="_blank"}, 10.5705/ss.202023.0321. \[R-package poset\]
+:::
+
+
 ## 2025
 
 ::: {style="font-size: 92%;"}
--   **Mao, L.**\* (2025). [Win ratio for partially ordered data](http://doi.org/10.5705/ss.202023.0321){target="_blank"}. [*Statistica Sinica*](https://www3.stat.sinica.edu.tw/statistica/){target="_blank"}, 10.5705/ss.202023.0321. \[R-package poset\]
+
 -   Buelo, C.J., Velikina, J., **Mao, L.**, Zhao, R., Yuan, Q., Ghasabeh, M.A., Ruschke, S., Karampinos, D.C., Harris, D.T., Mattison, R.J., Jeng, M.R., Pedrosa, I., Kamel, I.R., Vasanawala, S., Yokoo, T., Reeder, S.B., and Hernando, D. (2025). [Multi-center, multi-vendor validation of liver quantitative susceptibility mapping in patients with iron overload at 1.5T and 3T](https://doi.org/10.1002/mrm.30251){target="_blank"}. [*Magnetic Resonance in Medicine*](https://onlinelibrary.wiley.com/journal/15222594){target="_blank"}, 93, 330-340.
 :::
 

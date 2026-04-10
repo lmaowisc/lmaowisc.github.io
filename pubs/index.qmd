@@ -13,33 +13,33 @@ css: pubs.css
 
 ## Working manuscripts
 
+## 2027
+
+::: {style="font-size: 92%;"}
+-   **Mao, L.**\* (2027). [Win ratio for partially ordered data](https://www3.stat.sinica.edu.tw/preprint/SS-2023-0321_Preprint.pdf){target="_blank"}. [*Statistica Sinica*](https://www3.stat.sinica.edu.tw/statistica/){target="_blank"}, 10.5705/ss.202023.0321. {{< ai open-access size=lg >}} \[R-package [`poset`](https://lmaowisc.github.io/poset){target="_blank"}\]
+:::
+
+## 2026
+
+::: {style="font-size: 92%;"}
+-   Johnson, C., Gonzalez-Pereira, J.P., Grimes, M., **Mao, L.**, Ricke, W., Wei, J., Brace, C., and Wells, S. (2026). [Transperineal 3D vector magnetic resonance elastography of the prostate is feasible in men with benign prostatic hyperplasia and lower urinary tract symptoms](https://doi.org/10.1007/s00261-026-05407-2). [*Abdominal Radiology*](https://link.springer.com/journal/261){target="_blank"}, 10.1007/s00261-026-05407-2. {{< ai open-access size=lg >}}
+-   **Mao, L.** (2025). [Book Review: Likelihood Methods in Survival Analysis: With R Examples](https://doi.org/10.1080/01621459.2025.2605106). [*JASA Book Review*](https://www.tandfonline.com/toc/uasa20/current){target="_blank"}, 10.1080/01621459.2025.2605106. {{< ai open-access size=lg >}}
+-   Tang, J., Tamada, D., Nielsen, J.-F., Starekova, J., Heidenreich, J.F., Schön, F., Anagnostopoulos, A.A., Roshanshad, A., **Mao, L.**, et al., and Hernando, D. (2025). [Highly reproducible, vendor-agnostic, motion-insensitive liver PDFF mapping at 0.55T, 1.5T, and 3T](https://doi.org/10.1002/mrm.70223). [*Magnetic Resonance in Medicine*](https://onlinelibrary.wiley.com/journal/15222594){target="_blank"},
+95, 2797-2813. {{< ai open-access size=lg >}}
+:::
+
+
 ## 2025
 
 ::: {style="font-size: 92%;"}
--   **Mao, L.** {{< fa envelope size=xs >}} (2025). [Win ratio for partially ordered data](http://doi.org/10.5705/ss.202023.0321){target="_blank"}. [*Statistica Sinica*](https://www3.stat.sinica.edu.tw/statistica/){target="_blank"}, 10.5705/ss.202023.0321. {{< ai open-access size=lg >}} \[R-package [`poset`](https://lmaowisc.github.io/poset){target="_blank"}\]
--   Chu, S.Y., Briel, E., **Mao, L.**, Garrett, J.W., Reeder, S.B., and Pirasteh, A. (2025).
-    [Impact of online safety screening on outpatient MRI workflow](https://doi.org/10.1016/j.jacr.2025.12.021).
-    [*Journal of the American College of Radiology*](https://www.jacr.org/){target="_blank"}.
-    10.1016/j.jacr.2025.12.021.
--   Tang, J., Tamada, D., Nielsen, J.-F., Starekova, J., Heidenreich, J.F., Schön, F.,
-    Anagnostopoulos, A.A., Roshanshad, A., **Mao, L.**, et al., and Hernando, D. (2025).
-    [Highly reproducible, vendor-agnostic, motion-insensitive liver PDFF mapping at 0.55T, 1.5T, and 3T](https://doi.org/10.1002/mrm.70223). [*Magnetic Resonance in Medicine*](https://onlinelibrary.wiley.com/journal/15222594){target="_blank"}. 10.1002/mrm.70223.
-- van der Heijden, R.A., Schmidt, T.M., **Mao, L.**, Callander, N.S., Hernando, D., Reeder, S.B., and Pirasteh, A. (2025). [Rapid PET/MRI to assess multiple myeloma using T2-weighted imaging with uniform fat suppression](http://doi.org/10.1097/RCT.0000000000001811). [*Journal of Computer Assisted Tomography*](https://journals.lww.com/jcat/pages/default.aspx){target="_blank"}, 10.1097/RCT.0000000000001811.
--   Rahman, M.M., Pennati, A., Atajanova, T., Debnath, T., Allawi, R.H., Meyers, R.O.,
-    Berg, T.J., Gurel, Z., Uboha, N.V., Bassetti, M.F., **Mao, L.**, Sondel, P.M.,
-    Kimple, R.J., Capitini, C.M., Sodji, Q.H., Galipeau, J., and Morris, Z.S. (2025).
-    [Combined innate immune cell therapy, tumor-specific antibody, and radiation prompt antitumor response in pancreatic cancer models](https://doi.org/10.1126/sciadv.adx2984).
-    [*Science Advances*](https://www.science.org/journal/sciadv){target="_blank"}, 11, eadx2984. {{< ai open-access size=lg >}} 
-- **Mao, L.**, Tian, L., Huang, B., Richardson, P.G., Ludmir, E.B., Hughes, M.D., and Wei, L.-J., (2025).
-[Evaluating treatment effects with patient-response--related outcomes in comparative clinical trials](http://doi.org/10.1056/EVIDctw2400349). 
-[*NEJM Evidence*](https://evidence.nejm.org/), 4, 10.1056/EVIDctw2400349.
--   Zlevor, A.M., Versaggi, L.M., Kisting, M.A., Couillard, A.B., Wagner, M.G., Kisting, A.L., Falk, K.L., White, J.K., Kutlu, A.Z., Minesinger, G.M., **Mao, L.**, Hinshaw, J.L., Szczykutowicz, T.P., and
-Lee, F.T. (2025). [CT-guided percutaneous intervention: Reduction of metal needle artifact with low atomic number materials in phantom and porcine models](https://doi.org/10.1016/j.jvir.2025.06.013). [*Journal of Vascular and Interventional Radiology*](https://www.jvir.org/), 36, 1613-1620.
--   Winterholler, J.E., Kisting, M.A., Falk, K.L. et al., **Mao, L.**, McCormick, T., Cui, M., 
- Lee, F.T., and Ziemlewicz, T.J. (2025). [Hepatic histotripsy: jet ventilation decreases the effect of respiratory motion in a porcine liver model](https://doi.org/10.1007/s00270-025-04060-4). [*CardioVascular and Interventional Radiology*](https://link.springer.com/journal/270), 48, 1164-1173.
-- **Mao, L.** {{< fa envelope size=xs >}} (2025). [Approximating win-loss probabilities based on the overall and event-free survival functions](https://doi.org/10.1016/j.spl.2025.110478).  [*Statistics & Probability Letters*](https://www.sciencedirect.com/journal/statistics-and-probability-letters), 226, 110478. {{< ai open-access size=lg >}} \[Website [WinKM](https://lmaowisc.github.io/winkm/); [Presentation](https://lmaowisc.github.io/winkm/presentation.html)\]
--   Weber, B.W., **Mao, L.**, Salem, K., Hitchcock, M., Keller, A.H., Elezaby, M.A., Salkowski, L.R., Bozzuto, L.M., and Fowler, A.M. (2025). [Performance of diagnostic breast imaging in symptomatic pregnant and lactating patients: systematic review and meta-analysis](https://doi.org/10.1148/rycan.240281). [*Radiology: Imaging Cancer*](https://pubs.rsna.org/journal/imaging-cancer){target="_blank"},
-7, e240281.
+-   Chu, S.Y., Briel, E., **Mao, L.**, Garrett, J.W., Reeder, S.B., and Pirasteh, A. (2025). [Impact of online safety screening on outpatient MRI workflow](https://doi.org/10.1016/j.jacr.2025.12.021). [*Journal of the American College of Radiology*](https://www.jacr.org/){target="_blank"}. 10.1016/j.jacr.2025.12.021.
+-   van der Heijden, R.A., Schmidt, T.M., **Mao, L.**, Callander, N.S., Hernando, D., Reeder, S.B., and Pirasteh, A. (2025). [Rapid PET/MRI to assess multiple myeloma using T2-weighted imaging with uniform fat suppression](http://doi.org/10.1097/RCT.0000000000001811). [*Journal of Computer Assisted Tomography*](https://journals.lww.com/jcat/pages/default.aspx){target="_blank"}, 10.1097/RCT.0000000000001811.
+-   Rahman, M.M., Pennati, A., Atajanova, T., Debnath, T., Allawi, R.H., Meyers, R.O., Berg, T.J., Gurel, Z., Uboha, N.V., Bassetti, M.F., **Mao, L.**, Sondel, P.M., Kimple, R.J., Capitini, C.M., Sodji, Q.H., Galipeau, J., and Morris, Z.S. (2025). [Combined innate immune cell therapy, tumor-specific antibody, and radiation prompt antitumor response in pancreatic cancer models](https://doi.org/10.1126/sciadv.adx2984). [*Science Advances*](https://www.science.org/journal/sciadv){target="_blank"}, 11, eadx2984. {{< ai open-access size=lg >}}
+-   **Mao, L.**, Tian, L., Huang, B., Richardson, P.G., Ludmir, E.B., Hughes, M.D., and Wei, L.-J., (2025). [Evaluating treatment effects with patient-response--related outcomes in comparative clinical trials](http://doi.org/10.1056/EVIDctw2400349). [*NEJM Evidence*](https://evidence.nejm.org/), 4, 10.1056/EVIDctw2400349.
+-   Zlevor, A.M., Versaggi, L.M., Kisting, M.A., Couillard, A.B., Wagner, M.G., Kisting, A.L., Falk, K.L., White, J.K., Kutlu, A.Z., Minesinger, G.M., **Mao, L.**, Hinshaw, J.L., Szczykutowicz, T.P., and Lee, F.T. (2025). [CT-guided percutaneous intervention: Reduction of metal needle artifact with low atomic number materials in phantom and porcine models](https://doi.org/10.1016/j.jvir.2025.06.013). [*Journal of Vascular and Interventional Radiology*](https://www.jvir.org/), 36, 1613-1620.
+-   Winterholler, J.E., Kisting, M.A., Falk, K.L. et al., **Mao, L.**, McCormick, T., Cui, M., Lee, F.T., and Ziemlewicz, T.J. (2025). [Hepatic histotripsy: jet ventilation decreases the effect of respiratory motion in a porcine liver model](https://doi.org/10.1007/s00270-025-04060-4). [*CardioVascular and Interventional Radiology*](https://link.springer.com/journal/270), 48, 1164-1173.
+-   **Mao, L.** {{< fa envelope size=xs >}} (2025). [Approximating win-loss probabilities based on the overall and event-free survival functions](https://doi.org/10.1016/j.spl.2025.110478). [*Statistics & Probability Letters*](https://www.sciencedirect.com/journal/statistics-and-probability-letters), 226, 110478. {{< ai open-access size=lg >}} \[Website [WinKM](https://lmaowisc.github.io/winkm/); [Presentation](https://lmaowisc.github.io/winkm/presentation.html)\]
+-   Weber, B.W., **Mao, L.**, Salem, K., Hitchcock, M., Keller, A.H., Elezaby, M.A., Salkowski, L.R., Bozzuto, L.M., and Fowler, A.M. (2025). [Performance of diagnostic breast imaging in symptomatic pregnant and lactating patients: systematic review and meta-analysis](https://doi.org/10.1148/rycan.240281). [*Radiology: Imaging Cancer*](https://pubs.rsna.org/journal/imaging-cancer){target="_blank"}, 7, e240281.
 -   **Mao, L.** {{< fa envelope size=xs >}} (2025). [Regularized win ratio regression for variable selection and risk prediction, with an application to a cardiovascular trial](https://doi.org/10.1186/s12874-025-02554-w). [*BMC Medical Research Methodology*](https://bmcmedresmethodol.biomedcentral.com/), 25, 102. {{< ai open-access size=lg >}} \[Website [WRNet](https://lmaowisc.github.io/wrnet/); [Presentation](https://lmaowisc.github.io/wrnet/presentation.html)\]
 -   van der Heijden, R.A., Tamada, D., **Mao, L.**, Rice, J., and Reeder, S.B. (2025). [Relaxivity and in vivo human performance of brand name versus generic ferumoxytol](https://doi.org/10.1097/RLI.0000000000001130){target="_blank"}. [*Investigative Radiology*](https://journals.lww.com/investigativeradiology/pages/default.aspx){target="_blank"}, 60, 319-327.
 -   Rahafrooz, M., Elbers, D.C., Gopal, J.R., Ren, J., et al., Vardeny, O., **Mao, L.**, Kim, K., Gagnon, D.R., Solomon, S.D., and Joseph, J. (2025). [Effectiveness of electronic medical record-based strategies for death and hospital admission endpoint capture in pragmatic clinical trials](https://doi.org/10.1093/jamia/ocae303){target="_blank"}. [*Journal of the American Medical Informatics Association*](https://academic.oup.com/jamia){target="_blank"}, 32, 349-356.
