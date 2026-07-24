@@ -32,6 +32,7 @@ about:
     - text: "Youtube"
       icon: youtube
       href: https://www.youtube.com/@lmaowisc
+      target: _blank
 listing: 
   - id: posts
     sort: "date desc"
