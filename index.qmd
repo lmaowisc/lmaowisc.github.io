@@ -29,9 +29,9 @@ about:
       icon: linkedin
       href: https://www.linkedin.com/in/lu-mao-63589b14
       target: _blank
-    # - text: "Youtube"
-    #   icon: youtube
-    #   href: https://www.youtube.com/@lmaowisc
+    - text: "Youtube"
+      icon: youtube
+      href: https://www.youtube.com/@lmaowisc
 listing: 
   - id: posts
     sort: "date desc"

@@ -14,16 +14,24 @@ css: pubs.css
 ## Radiology and diagnostic medicine
 
 ::: {style="font-size: 92%;"}
+-   Keigley, Q.J., Henze Bancroft, L.C., Salem, K., Su, K.-H., Mehranian, A.,
+    Spangler-Bickell, M.G., McMillan, A.B., Perlman, S.B., Strigel, R.M.,
+    Bradshaw, T.J., Hurley, S.A., **Mao, L.**, and Fowler, A.M. (2026).
+    [Image optimization for low-dose <sup>18</sup>F-FDG breast PET/MRI using deep learning: a pilot study](https://doi.org/10.1186/s40658-026-00918-9).
+    [*EJNMMI Physics*](https://ejnmmiphys.springeropen.com/){target="_blank"}, 10.1186/s40658-026-00918-9. {{< ai open-access size=lg >}}
+-   Johnson, C., Gonzalez-Pereira, J.P., Grimes, M., **Mao, L.**, Ricke, W., Wei, J., Brace, C., and Wells, S. (2026). [Transperineal 3D vector magnetic resonance elastography of the prostate is feasible in men with benign prostatic hyperplasia and lower urinary tract symptoms](https://doi.org/10.1007/s00261-026-05407-2). [*Abdominal Radiology*](https://link.springer.com/journal/261){target="_blank"}, 10.1007/s00261-026-05407-2. {{< ai open-access size=lg >}}
+-   Oo, T.T., Grega, S.D., Smith, N.J., Deaton, T.K., Ciantar, K.G., Territo, W.,
+    **Mao, L.**, et al., and Larson, M.E. (2026).
+    [Multi-threshold volumetric <sup>18</sup>F-FET PET for tumor detection and prognosis in primary glioma](https://doi.org/10.1093/noajnl/vdag159).
+    [*Neuro-Oncology Advances*](https://academic.oup.com/noa){target="_blank"}, 8, vdag159.
 -   Yu, H., Gardezi, S.J.S., Abel, E.J., Shapiro, D.D., Lubner, M.G., Warner, J.D.,
     Smith, M.R., Toia, G.V., **Mao, L.**, Tiwari, P., and Wentland, A.L. (2026).
     [Toward protocol simplification: deep learning-based image synthesis in three-phase CT urography](https://doi.org/10.1016/j.compbiomed.2026.111746).
-    [*Computers in Biology and Medicine*](https://www.sciencedirect.com/journal/computers-in-biology-and-medicine){target="_blank"}.
-    10.1016/j.compbiomed.2026.111746. {{< ai open-access size=lg >}}
--   Johnson, C., Gonzalez-Pereira, J.P., Grimes, M., **Mao, L.**, Ricke, W., Wei, J., Brace, C., and Wells, S. (2026). [Transperineal 3D vector magnetic resonance elastography of the prostate is feasible in men with benign prostatic hyperplasia and lower urinary tract symptoms](https://doi.org/10.1007/s00261-026-05407-2). [*Abdominal Radiology*](https://link.springer.com/journal/261){target="_blank"}, 10.1007/s00261-026-05407-2. {{< ai open-access size=lg >}}
+    [*Computers in Biology and Medicine*](https://www.sciencedirect.com/journal/computers-in-biology-and-medicine){target="_blank"}, 211, 111746. {{< ai open-access size=lg >}}
 -   Tang, J., Tamada, D., Nielsen, J.-F., Starekova, J., Heidenreich, J.F., Schön, F., Anagnostopoulos, A.A., Roshanshad, A., **Mao, L.**, et al., and Hernando, D. (2026). [Highly reproducible, vendor-agnostic, motion-insensitive liver PDFF mapping at 0.55T, 1.5T, and 3T](https://doi.org/10.1002/mrm.70223). [*Magnetic Resonance in Medicine*](https://onlinelibrary.wiley.com/journal/15222594){target="_blank"},
 95, 2797-2813. {{< ai open-access size=lg >}}
--   Chu, S.Y., Briel, E., **Mao, L.**, Garrett, J.W., Reeder, S.B., and Pirasteh, A. (2025). [Impact of online safety screening on outpatient MRI workflow](https://doi.org/10.1016/j.jacr.2025.12.021). [*Journal of the American College of Radiology*](https://www.jacr.org/){target="_blank"}, 10.1016/j.jacr.2025.12.021.
--   van der Heijden, R.A., Schmidt, T.M., **Mao, L.**, Callander, N.S., Hernando, D., Reeder, S.B., and Pirasteh, A. (2025). [Rapid PET/MRI to assess multiple myeloma using T2-weighted imaging with uniform fat suppression](http://doi.org/10.1097/RCT.0000000000001811). [*Journal of Computer Assisted Tomography*](https://journals.lww.com/jcat/pages/default.aspx){target="_blank"}, 10.1097/RCT.0000000000001811.
+-   Chu, S.Y., Briel, E., **Mao, L.**, Garrett, J.W., Reeder, S.B., and Pirasteh, A. (2026). [Impact of online safety screening on outpatient MRI workflow](https://doi.org/10.1016/j.jacr.2025.12.021). [*Journal of the American College of Radiology*](https://www.jacr.org/){target="_blank"}, 23, 1008-1012.
+-   van der Heijden, R.A., Schmidt, T.M., **Mao, L.**, Callander, N.S., Hernando, D., Reeder, S.B., and Pirasteh, A. (2026). [Rapid PET/MRI to assess multiple myeloma using T2-weighted imaging with uniform fat suppression](http://doi.org/10.1097/RCT.0000000000001811). [*Journal of Computer Assisted Tomography*](https://journals.lww.com/jcat/pages/default.aspx){target="_blank"}, 50, 493-500.
 -   Zlevor, A.M., Versaggi, L.M., Kisting, M.A., Couillard, A.B., Wagner, M.G., Kisting, A.L., Falk, K.L., White, J.K., Kutlu, A.Z., Minesinger, G.M., **Mao, L.**, Hinshaw, J.L., Szczykutowicz, T.P., and Lee, F.T. (2025). [CT-guided percutaneous intervention: Reduction of metal needle artifact with low atomic number materials in phantom and porcine models](https://doi.org/10.1016/j.jvir.2025.06.013). [*Journal of Vascular and Interventional Radiology*](https://www.jvir.org/), 36, 1613-1620.
 -   Winterholler, J.E., Kisting, M.A., Falk, K.L. et al., **Mao, L.**, McCormick, T., Cui, M., Lee, F.T., and Ziemlewicz, T.J. (2025). [Hepatic histotripsy: jet ventilation decreases the effect of respiratory motion in a porcine liver model](https://doi.org/10.1007/s00270-025-04060-4). [*CardioVascular and Interventional Radiology*](https://link.springer.com/journal/270), 48, 1164-1173.
 -   Weber, B.W., **Mao, L.**, Salem, K., Hitchcock, M., Keller, A.H., Elezaby, M.A., Salkowski, L.R., Bozzuto, L.M., and Fowler, A.M. (2025). [Performance of diagnostic breast imaging in symptomatic pregnant and lactating patients: systematic review and meta-analysis](https://doi.org/10.1148/rycan.240281). [*Radiology: Imaging Cancer*](https://pubs.rsna.org/journal/imaging-cancer){target="_blank"}, 7, e240281.

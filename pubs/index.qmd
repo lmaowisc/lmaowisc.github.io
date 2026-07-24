@@ -13,25 +13,30 @@ css: pubs.css
 
 ## Working manuscripts
 
-## 2027
-
-::: {style="font-size: 92%;"}
--   **Mao, L.**\* (2027). [Win ratio for partially ordered data](https://www3.stat.sinica.edu.tw/preprint/SS-2023-0321_Preprint.pdf){target="_blank"}. [*Statistica Sinica*](https://www3.stat.sinica.edu.tw/statistica/){target="_blank"}, 10.5705/ss.202023.0321. {{< ai open-access size=lg >}} \[R-package [`poset`](https://lmaowisc.github.io/poset){target="_blank"}\]
-:::
 
 ## 2026
 
 ::: {style="font-size: 92%;"}
+-   Keigley, Q.J., Henze Bancroft, L.C., Salem, K., Su, K.-H., Mehranian, A.,
+    Spangler-Bickell, M.G., McMillan, A.B., Perlman, S.B., Strigel, R.M.,
+    Bradshaw, T.J., Hurley, S.A., **Mao, L.**, and Fowler, A.M. (2026).
+    [Image optimization for low-dose <sup>18</sup>F-FDG breast PET/MRI using deep learning: a pilot study](https://doi.org/10.1186/s40658-026-00918-9).
+    [*EJNMMI Physics*](https://ejnmmiphys.springeropen.com/){target="_blank"}, 10.1186/s40658-026-00918-9. {{< ai open-access size=lg >}}
+-   **Mao, L.** {{< fa envelope size=xs >}} (2026). [Win ratio for partially ordered data](https://www3.stat.sinica.edu.tw/statistica/passwordnew.asp?file=SS-2023-0321){target="_blank"}. [*Statistica Sinica*](https://www3.stat.sinica.edu.tw/statistica/){target="_blank"}, 10.5705/ss.202023.0321. {{< ai open-access size=lg >}} \[R-package [`poset`](https://lmaowisc.github.io/poset){target="_blank"}\]
+-   Johnson, C., Gonzalez-Pereira, J.P., Grimes, M., **Mao, L.**, Ricke, W., Wei, J., Brace, C., and Wells, S. (2026). [Transperineal 3D vector magnetic resonance elastography of the prostate is feasible in men with benign prostatic hyperplasia and lower urinary tract symptoms](https://doi.org/10.1007/s00261-026-05407-2). [*Abdominal Radiology*](https://link.springer.com/journal/261){target="_blank"}, 10.1007/s00261-026-05407-2. {{< ai open-access size=lg >}}
+-   Oo, T.T., Grega, S.D., Smith, N.J., Deaton, T.K., Ciantar, K.G., Territo, W.,
+    **Mao, L.**, et al., and Larson, M.E. (2026).
+    [Multi-threshold volumetric <sup>18</sup>F-FET PET for tumor detection and prognosis in primary glioma](https://doi.org/10.1093/noajnl/vdag159).
+    [*Neuro-Oncology Advances*](https://academic.oup.com/noa){target="_blank"}, 8, vdag159.
 -   Yu, H., Gardezi, S.J.S., Abel, E.J., Shapiro, D.D., Lubner, M.G., Warner, J.D.,
     Smith, M.R., Toia, G.V., **Mao, L.**, Tiwari, P., and Wentland, A.L. (2026).
     [Toward protocol simplification: deep learning-based image synthesis in three-phase CT urography](https://doi.org/10.1016/j.compbiomed.2026.111746).
-    [*Computers in Biology and Medicine*](https://www.sciencedirect.com/journal/computers-in-biology-and-medicine){target="_blank"}.
-    10.1016/j.compbiomed.2026.111746. {{< ai open-access size=lg >}}
+    [*Computers in Biology and Medicine*](https://www.sciencedirect.com/journal/computers-in-biology-and-medicine){target="_blank"}, 211, 111746. {{< ai open-access size=lg >}}
 -   **Mao, L.** {{< fa envelope size=xs >}} (2026).
     [Predicting win-loss probabilities for composite time-to-event outcomes under the proportional win-fractions regression model](https://doi.org/10.1002/sim.70569).
-    [*Statistics in Medicine*](https://onlinelibrary.wiley.com/journal/10970258){target="_blank"}.
-    10.1002/sim.70569. {{< ai open-access size=lg >}} 
--   Johnson, C., Gonzalez-Pereira, J.P., Grimes, M., **Mao, L.**, Ricke, W., Wei, J., Brace, C., and Wells, S. (2026). [Transperineal 3D vector magnetic resonance elastography of the prostate is feasible in men with benign prostatic hyperplasia and lower urinary tract symptoms](https://doi.org/10.1007/s00261-026-05407-2). [*Abdominal Radiology*](https://link.springer.com/journal/261){target="_blank"}, 10.1007/s00261-026-05407-2. {{< ai open-access size=lg >}}
+    [*Statistics in Medicine*](https://onlinelibrary.wiley.com/journal/10970258){target="_blank"}, 45, e70569. {{< ai open-access size=lg >}} 
+-   Chu, S.Y., Briel, E., **Mao, L.**, Garrett, J.W., Reeder, S.B., and Pirasteh, A. (2026). [Impact of online safety screening on outpatient MRI workflow](https://doi.org/10.1016/j.jacr.2025.12.021). [*Journal of the American College of Radiology*](https://www.jacr.org/){target="_blank"}, 23, 1008-1012.
+-   van der Heijden, R.A., Schmidt, T.M., **Mao, L.**, Callander, N.S., Hernando, D., Reeder, S.B., and Pirasteh, A. (2026). [Rapid PET/MRI to assess multiple myeloma using T2-weighted imaging with uniform fat suppression](http://doi.org/10.1097/RCT.0000000000001811). [*Journal of Computer Assisted Tomography*](https://journals.lww.com/jcat/pages/default.aspx){target="_blank"}, 50, 493-500.
 -   **Mao, L.** (2025). [Book Review: Likelihood Methods in Survival Analysis: With R Examples](https://doi.org/10.1080/01621459.2025.2605106). [*JASA Book Review*](https://www.tandfonline.com/toc/uasa20/current){target="_blank"}, 10.1080/01621459.2025.2605106. {{< ai open-access size=lg >}}
 -   Tang, J., Tamada, D., Nielsen, J.-F., Starekova, J., Heidenreich, J.F., Schön, F., Anagnostopoulos, A.A., Roshanshad, A., **Mao, L.**, et al., and Hernando, D. (2025). [Highly reproducible, vendor-agnostic, motion-insensitive liver PDFF mapping at 0.55T, 1.5T, and 3T](https://doi.org/10.1002/mrm.70223). [*Magnetic Resonance in Medicine*](https://onlinelibrary.wiley.com/journal/15222594){target="_blank"},
 95, 2797-2813. {{< ai open-access size=lg >}}
@@ -39,10 +44,7 @@ css: pubs.css
 
 
 ## 2025
-
 ::: {style="font-size: 92%;"}
--   Chu, S.Y., Briel, E., **Mao, L.**, Garrett, J.W., Reeder, S.B., and Pirasteh, A. (2025). [Impact of online safety screening on outpatient MRI workflow](https://doi.org/10.1016/j.jacr.2025.12.021). [*Journal of the American College of Radiology*](https://www.jacr.org/){target="_blank"}. 10.1016/j.jacr.2025.12.021.
--   van der Heijden, R.A., Schmidt, T.M., **Mao, L.**, Callander, N.S., Hernando, D., Reeder, S.B., and Pirasteh, A. (2025). [Rapid PET/MRI to assess multiple myeloma using T2-weighted imaging with uniform fat suppression](http://doi.org/10.1097/RCT.0000000000001811). [*Journal of Computer Assisted Tomography*](https://journals.lww.com/jcat/pages/default.aspx){target="_blank"}, 10.1097/RCT.0000000000001811.
 -   Rahman, M.M., Pennati, A., Atajanova, T., Debnath, T., Allawi, R.H., Meyers, R.O., Berg, T.J., Gurel, Z., Uboha, N.V., Bassetti, M.F., **Mao, L.**, Sondel, P.M., Kimple, R.J., Capitini, C.M., Sodji, Q.H., Galipeau, J., and Morris, Z.S. (2025). [Combined innate immune cell therapy, tumor-specific antibody, and radiation prompt antitumor response in pancreatic cancer models](https://doi.org/10.1126/sciadv.adx2984). [*Science Advances*](https://www.science.org/journal/sciadv){target="_blank"}, 11, eadx2984. {{< ai open-access size=lg >}}
 -   **Mao, L.**, Tian, L., Huang, B., Richardson, P.G., Ludmir, E.B., Hughes, M.D., and Wei, L.-J., (2025). [Evaluating treatment effects with patient-response--related outcomes in comparative clinical trials](http://doi.org/10.1056/EVIDctw2400349). [*NEJM Evidence*](https://evidence.nejm.org/), 4, 10.1056/EVIDctw2400349.
 -   Zlevor, A.M., Versaggi, L.M., Kisting, M.A., Couillard, A.B., Wagner, M.G., Kisting, A.L., Falk, K.L., White, J.K., Kutlu, A.Z., Minesinger, G.M., **Mao, L.**, Hinshaw, J.L., Szczykutowicz, T.P., and Lee, F.T. (2025). [CT-guided percutaneous intervention: Reduction of metal needle artifact with low atomic number materials in phantom and porcine models](https://doi.org/10.1016/j.jvir.2025.06.013). [*Journal of Vascular and Interventional Radiology*](https://www.jvir.org/), 36, 1613-1620.
