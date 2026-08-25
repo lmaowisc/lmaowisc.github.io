@@ -17,6 +17,10 @@ css: pubs.css
 ## 2026
 
 ::: {style="font-size: 92%;"}
+-   Anagnostopoulos, A.A., Heidenreich, J.F., Roshanshad, A., Tamada, D.,
+    Panagiotopoulos, N., **Mao, L.**, Hernando, D., Reeder, S.B., and Starekova, J. (2026).
+    [Normative values for quantitative MRI biomarkers of the liver in collegiate athletes](https://doi.org/10.1016/j.mri.2026.110772).
+    [*Magnetic Resonance Imaging*](https://www.sciencedirect.com/journal/magnetic-resonance-imaging){target="_blank"}, 10.1016/j.mri.2026.110772.
 -   Keigley, Q.J., Henze Bancroft, L.C., Salem, K., Su, K.-H., Mehranian, A.,
     Spangler-Bickell, M.G., McMillan, A.B., Perlman, S.B., Strigel, R.M.,
     Bradshaw, T.J., Hurley, S.A., **Mao, L.**, and Fowler, A.M. (2026).
@@ -24,6 +28,9 @@ css: pubs.css
     [*EJNMMI Physics*](https://ejnmmiphys.springeropen.com/){target="_blank"}, 10.1186/s40658-026-00918-9. {{< ai open-access size=lg >}}
 -   **Mao, L.** {{< fa envelope size=xs >}} (2026). [Win ratio for partially ordered data](https://www3.stat.sinica.edu.tw/statistica/passwordnew.asp?file=SS-2023-0321){target="_blank"}. [*Statistica Sinica*](https://www3.stat.sinica.edu.tw/statistica/){target="_blank"}, 10.5705/ss.202023.0321. {{< ai open-access size=lg >}} \[R-package [`poset`](https://lmaowisc.github.io/poset){target="_blank"}\]
 -   Johnson, C., Gonzalez-Pereira, J.P., Grimes, M., **Mao, L.**, Ricke, W., Wei, J., Brace, C., and Wells, S. (2026). [Transperineal 3D vector magnetic resonance elastography of the prostate is feasible in men with benign prostatic hyperplasia and lower urinary tract symptoms](https://doi.org/10.1007/s00261-026-05407-2). [*Abdominal Radiology*](https://link.springer.com/journal/261){target="_blank"}, 10.1007/s00261-026-05407-2. {{< ai open-access size=lg >}}
+-   Gray, K.E., Porter, L.S., Shaw, R.J., Gavin, K.L., [Hetzel, S.J.]{.underline}†, Lewis, M.A., Pabich, S., Johnson, H.M., Elwert, F., **Mao, L.**, et al., and Voils, C.I. (2026).
+    [Partner weight loss and diet outcomes at 24 months in a randomized controlled trial of a dyadic versus individual weight management intervention](https://doi.org/10.1002/osp4.70178).
+    [*Obesity Science & Practice*](https://onlinelibrary.wiley.com/journal/20552238){target="_blank"}, 12, e70178. {{< ai open-access size=lg >}} 
 -   Oo, T.T., Grega, S.D., Smith, N.J., Deaton, T.K., Ciantar, K.G., Territo, W.,
     **Mao, L.**, et al., and Larson, M.E. (2026).
     [Multi-threshold volumetric <sup>18</sup>F-FET PET for tumor detection and prognosis in primary glioma](https://doi.org/10.1093/noajnl/vdag159).

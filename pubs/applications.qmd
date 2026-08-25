@@ -14,6 +14,10 @@ css: pubs.css
 ## Radiology and diagnostic medicine
 
 ::: {style="font-size: 92%;"}
+-   Anagnostopoulos, A.A., Heidenreich, J.F., Roshanshad, A., Tamada, D.,
+    Panagiotopoulos, N., **Mao, L.**, Hernando, D., Reeder, S.B., and Starekova, J. (2026).
+    [Normative values for quantitative MRI biomarkers of the liver in collegiate athletes](https://doi.org/10.1016/j.mri.2026.110772).
+    [*Magnetic Resonance Imaging*](https://www.sciencedirect.com/journal/magnetic-resonance-imaging){target="_blank"}, 10.1016/j.mri.2026.110772.
 -   Keigley, Q.J., Henze Bancroft, L.C., Salem, K., Su, K.-H., Mehranian, A.,
     Spangler-Bickell, M.G., McMillan, A.B., Perlman, S.B., Strigel, R.M.,
     Bradshaw, T.J., Hurley, S.A., **Mao, L.**, and Fowler, A.M. (2026).
@@ -91,6 +95,9 @@ css: pubs.css
 ## Behavorial health interventions
 
 ::: {style="font-size: 92%;"}
+-   Gray, K.E., Porter, L.S., Shaw, R.J., Gavin, K.L., [Hetzel, S.J.]{.underline}†, Lewis, M.A., Pabich, S., Johnson, H.M., Elwert, F., **Mao, L.**, et al., and Voils, C.I. (2026).
+    [Partner weight loss and diet outcomes at 24 months in a randomized controlled trial of a dyadic versus individual weight management intervention](https://doi.org/10.1002/osp4.70178).
+    [*Obesity Science & Practice*](https://onlinelibrary.wiley.com/journal/20552238){target="_blank"}, 12, e70178. {{< ai open-access size=lg >}} 
 -   Carpenter, S.M., Shetty, A., [Hetzel, S.J.]{.underline}, Garza, K., Porter, L.S., Gray, K.E., Shaw, R.J., Lewis, M.A., **Mao, L.**, Pabich, S., Johnson, H.M., Yancy, W.S., Elwert, F., and Voils, C.I. (2024). [A non‐randomized comparison of engagement and outcomes for in‐person versus virtual delivery of the Partner2Lose weight management trial](https://doi.org/10.1002/osp4.778){target="_blank"}. [*Obesity Science & Practice*](https://onlinelibrary.wiley.com/journal/20552238){target="_blank"}, 10, e778. {{< ai open-access size=lg >}}
 -   Voils, C.I., Shaw, R.J., Gavin, K.L., [Hetzel, S.J.]{.underline}, Lewis, M.A., Pabich, S., Johnson, H.M., Elwert, F., **Mao, L.**, Gray, K.E., Yuroff, A., Garza, K., Yancy, W.S., and Porter, L.S. (2024). [Outcomes from Partner2Lose: a randomized controlled trial to evaluate 24-month weight loss in a partner-assisted intervention](https://doi.org/10.1186/s12889-024-19464-z){target="_blank"}. [*BMC Public Health*](https://bmcpublichealth.biomedcentral.com/){target="_blank"}, 24, 1948. {{< ai open-access size=lg >}}
 -   Voils, C.I., Shaw, R., Adler, R., Jeanes, E., Lewis, M.A., Sharp, W., Cronin, K.A., [Hetzel, S.J.]{.underline}, **Mao, L.**, Johnson, H.M., Elwert, F., Pabich, S., Gavin, K.L., Yancy, W.S., and Porter, L. (2020). [Protocol for Partner2Lose: A randomized controlled trial to evaluate partner involvement on long-term weight loss](https://doi.org/10.1016/j.cct.2020.106092){target="_blank"}. [*Contemporary Clinical Trials*](https://www.sciencedirect.com/journal/contemporary-clinical-trials){target="\"_blank"}, 96, 106092.
