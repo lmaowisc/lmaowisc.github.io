@@ -2,7 +2,7 @@
 title: "Lu Mao"
 subtitle: "Associate Professor of Biostatistics and Medical Informatics"
 image: dc.jpg
-css: home.css
+css: home.css?v=2
 toc: false
 about: 
   id: heading
