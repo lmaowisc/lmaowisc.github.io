@@ -1,7 +1,7 @@
 /* Homepage content and teaching highlights. */
 .home-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(290px, 1fr);
+  grid-template-columns: minmax(0, 1.65fr) minmax(232px, 0.8fr);
   gap: 2.5rem;
   align-items: start;
   margin-top: 1rem;
