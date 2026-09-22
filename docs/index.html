@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-418f164fabd16f6c06c5a4db6fcc0c48.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-28b900b5a6c183bcbb47a652d89bcc7c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script src="site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
+
       searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
     };
 
@@ -131,13 +131,14 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="home.css">
 <meta property="og:title" content="Lu Mao">
 <meta property="og:description" content="Associate Professor of Biostatistics and Medical Informatics">
 <meta property="og:image" content="https://lmaowisc.github.io/dc.jpg">
 <meta property="og:site_name" content="Lu Mao">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -208,19 +209,7 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#annoucements" id="toc-annoucements" class="nav-link active" data-scroll-target="#annoucements">Announcements</a></li>
-  <li><a href="#research-interests" id="toc-research-interests" class="nav-link" data-scroll-target="#research-interests">Research Interests</a></li>
-  <li><a href="#education" id="toc-education" class="nav-link" data-scroll-target="#education">Education</a></li>
-  <li><a href="#editorial-service" id="toc-editorial-service" class="nav-link" data-scroll-target="#editorial-service">Editorial Service</a></li>
-  <li><a href="#recent-blog-posts" id="toc-recent-blog-posts" class="nav-link" data-scroll-target="#recent-blog-posts">Recent blog posts</a></li>
-  </ul>
-</nav>
-    </div>
+
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -271,16 +260,15 @@ WARF Office Building | 610 Walnut St, Room 207A | Madison, WI 53726</p>
 </div>
 </div>
 
+<div class="home-layout">
+<div class="home-main">
 <section id="annoucements" class="level2">
 <h2 data-anchor-id="annoucements">Announcements</h2>
 <ul>
-<li><strong>September 21, 2026:</strong> The new <a href="https://lmaowisc.github.io/WR/" target="_blank">WR package website</a> is now live, with an overview of win ratio methods, R examples, and links to documentation and vignettes.
+<li><strong>September 21, 2026:</strong> The new <a href="https://lmaowisc.github.io/WR/" target="_blank">WR package website</a> is now live.
 <ul>
 <li>Major updates to the WR package on the way.</li>
 </ul></li>
-<li>Visit the course site of BMI/STAT 741: Applied Survival Analysis for <a href="https://lmaowisc.github.io/BMI741" target="_blank">Spring 2026</a>.</li>
-<li>Visit the short course site for <a href="https://lmaowisc.github.io/tidysurv" target="_blank"><em>Tidy Survival Analysis: Applying R’s Tidyverse to Survival Data</em></a>.</li>
-<li>Visit the short course site for <a href="https://lmaowisc.github.io/ce" target="_blank"><em>Statistical Methods for Composite Endpoints: Win Ratio and Beyond</em></a>.</li>
 </ul>
 </section>
 <section id="research-interests" class="level2">
@@ -306,6 +294,30 @@ WARF Office Building | 610 Walnut St, Room 207A | Madison, WI 53726</p>
 <li>Statistical Editor | <a href="https://www.jacc.org/journal/heart-failure/editorial-board" target="_blank"><em>JACC Journals</em></a> | 12/2022 – Now</li>
 </ul>
 </section>
+</div>
+<section id="highlights" class="level2 home-highlights" role="complementary" aria-label="Teaching highlights">
+<h2 data-anchor-id="highlights">Highlights</h2>
+<div class="highlight-list">
+  <a class="highlight-card" href="https://lmaowisc.github.io/BMI741/" target="_blank" rel="noopener noreferrer">
+    <img src="images/surv_hex.png" alt="" width="96" height="111">
+    <span class="highlight-copy"><span class="highlight-kind">University course</span><span class="highlight-title">Applied Survival Analysis</span></span>
+  </a>
+  <a class="highlight-card" href="https://lmaowisc.github.io/longitudinal-analysis/" target="_blank" rel="noopener noreferrer">
+    <img src="images/longitudinal-course.svg" alt="" width="96" height="111">
+    <span class="highlight-copy"><span class="highlight-kind">University course</span><span class="highlight-title">Applied Longitudinal Analysis</span></span>
+  </a>
+  <a class="highlight-card" href="https://lmaowisc.github.io/tidysurv/" target="_blank" rel="noopener noreferrer">
+    <img src="images/tidy-survival-workshop.svg" alt="" width="96" height="111">
+    <span class="highlight-copy"><span class="highlight-kind">R workshop</span><span class="highlight-title">Tidy Survival Analysis</span><span class="highlight-subtitle">Applying R’s Tidyverse to Survival Data</span></span>
+  </a>
+  <a class="highlight-card" href="https://lmaowisc.github.io/ce/" target="_blank" rel="noopener noreferrer">
+    <img src="images/composite-endpoints-workshop.svg" alt="" width="96" height="111">
+    <span class="highlight-copy"><span class="highlight-kind">Biostatistics workshop</span><span class="highlight-title">Statistical Methods for Composite Endpoints</span><span class="highlight-subtitle">Win Ratio and Beyond</span></span>
+  </a>
+</div>
+<p><a href="./courses.html" class="highlight-more" target="_blank">Course and workshop outlines →</a></p>
+</section>
+</div>
 <section id="recent-blog-posts" class="level2">
 <h2 data-anchor-id="recent-blog-posts">Recent blog posts</h2>
 <div id="listing-posts" class="quarto-listing quarto-listing-container-default">

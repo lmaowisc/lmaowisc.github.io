@@ -2,6 +2,8 @@
 title: "Lu Mao"
 subtitle: "Associate Professor of Biostatistics and Medical Informatics"
 image: dc.jpg
+css: home.css
+toc: false
 about: 
   id: heading
   template: jolla
@@ -49,13 +51,13 @@ School of Medicine and Public Health \| University of Wisconsin-Madison\
 WARF Office Building \| 610 Walnut St, Room 207A \| Madison, WI 53726
 :::
 
+::::: {.home-layout}
+:::: {.home-main}
+
 ## Announcements {#annoucements}
 
--   **September 21, 2026:** The new [WR package website](https://lmaowisc.github.io/WR/) is now live, with an overview of win ratio methods, R examples, and links to documentation and vignettes.
+-   **September 21, 2026:** The new [WR package website](https://lmaowisc.github.io/WR/) is now live.
     -   Major updates to the WR package on the way.
--   Visit the course site of BMI/STAT 741: Applied Survival Analysis for [Spring 2026](https://lmaowisc.github.io/BMI741).
--   Visit the short course site for [*Tidy Survival Analysis: Applying R’s Tidyverse to Survival Data*](https://lmaowisc.github.io/tidysurv).
--   Visit the short course site for [*Statistical Methods for Composite Endpoints: Win Ratio and Beyond*](https://lmaowisc.github.io/ce).
 
 ## Research Interests
 
@@ -76,6 +78,38 @@ Time-to-event data \| causal inference \| clinical trials \| semiparametric theo
 -   Associate Editor \| [*Biometric Bulletin*](https://www.biometricsociety.org/publications/biometric-bulletin){target="_blank"} \| 12/2025 -- Now
 -   Associate Editor \| [*Statistics in Biopharmaceutical Research*](https://www.tandfonline.com/journals/usbr20/about-this-journal#editorial-board){target="_blank"} \| 01/2023 -- Now
 -   Statistical Editor \| [*JACC Journals*](https://www.jacc.org/journal/heart-failure/editorial-board){target="_blank"} \| 12/2022 -- Now
+
+::::
+
+:::: {.home-highlights role="complementary" aria-label="Teaching highlights"}
+
+## Highlights {#highlights}
+
+```{=html}
+<div class="highlight-list">
+  <a class="highlight-card" href="https://lmaowisc.github.io/BMI741/" target="_blank" rel="noopener noreferrer">
+    <img src="images/surv_hex.png" alt="" width="96" height="111">
+    <span class="highlight-copy"><span class="highlight-kind">University course</span><span class="highlight-title">Applied Survival Analysis</span></span>
+  </a>
+  <a class="highlight-card" href="https://lmaowisc.github.io/longitudinal-analysis/" target="_blank" rel="noopener noreferrer">
+    <img src="images/longitudinal-course.svg" alt="" width="96" height="111">
+    <span class="highlight-copy"><span class="highlight-kind">University course</span><span class="highlight-title">Applied Longitudinal Analysis</span></span>
+  </a>
+  <a class="highlight-card" href="https://lmaowisc.github.io/tidysurv/" target="_blank" rel="noopener noreferrer">
+    <img src="images/tidy-survival-workshop.svg" alt="" width="96" height="111">
+    <span class="highlight-copy"><span class="highlight-kind">R workshop</span><span class="highlight-title">Tidy Survival Analysis</span><span class="highlight-subtitle">Applying R’s Tidyverse to Survival Data</span></span>
+  </a>
+  <a class="highlight-card" href="https://lmaowisc.github.io/ce/" target="_blank" rel="noopener noreferrer">
+    <img src="images/composite-endpoints-workshop.svg" alt="" width="96" height="111">
+    <span class="highlight-copy"><span class="highlight-kind">Biostatistics workshop</span><span class="highlight-title">Statistical Methods for Composite Endpoints</span><span class="highlight-subtitle">Win Ratio and Beyond</span></span>
+  </a>
+</div>
+```
+
+[Course and workshop outlines →](courses.qmd){.highlight-more}
+
+::::
+:::::
 
 ## Recent blog posts
 

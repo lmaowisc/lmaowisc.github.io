@@ -55,15 +55,11 @@ Includes 24 lectures, SAS examples, and datasets for practice
 :::
 
 ::: {.course-outline}
-Develops a reproducible R workflow for preparing, analyzing, and visualizing survival data through five modules.
+Applies tidy R workflows to survival analysis.
 
--   Survival concepts and censoring, illustrated with breast cancer data
--   Data preparation, follow-up plots, and descriptive tables with the Tidyverse
--   Survival curves and competing-risk estimates, with tables and graphics
--   Cox and Fine-Gray regression, model summaries, and diagnostics
+-   Data preparation, visualization, and summary tables
+-   Survival and competing-risk analysis; Cox regression and diagnostics
 -   Machine learning for survival outcomes with `tidymodels`
-
-Emphasizes worked examples and consistent data workflows in R
 :::
 ::::
 
@@ -75,14 +71,10 @@ Emphasizes worked examples and consistent data workflows in R
 :::
 
 ::: {.course-outline}
-Examines methods for combining outcomes in clinical trials, progressing from foundational concepts to estimation, regression, and open questions.
+Focuses on statistical methods for composite endpoints in clinical trials.
 
--   Composite endpoint choices, traditional approaches, and win ratio methods
--   Testing and sample size planning, including recurrent events
+-   Win ratio testing and sample size calculation
 -   Restricted win ratio, average win time, and while-alive loss rate
--   Proportional win-fractions regression, diagnostics, and risk prediction
--   Further topics: covariate adjustment, interim monitoring, and meta-analysis
-
-Includes practical R examples for analysis and interpretation
+-   Proportional win-fractions regression and risk prediction
 :::
 ::::
