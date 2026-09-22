@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 600" role="img" aria-labelledby="title desc">
+  <title id="title">Statistical Methods for Composite Endpoints</title>
+  <desc id="desc">A burgundy hexagonal workshop badge with three ranked outcome rows, representing prioritized composite endpoints.</desc>
+  <path d="M260 8 512 154v292L260 592 8 446V154Z" fill="#fff8f4" stroke="#922c42" stroke-width="10"/>
+  <path d="M260 31 492 166v268L260 569 28 434V166Z" fill="none" stroke="#922c42" stroke-opacity=".2" stroke-width="2"/>
+  <text x="260" y="119" text-anchor="middle" fill="#922c42" font-family="Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="4">R WORKSHOP</text>
+  <g fill="#512837" text-anchor="middle" font-family="Georgia, serif">
+    <text x="260" y="180" font-size="45">Composite</text>
+    <text x="260" y="231" font-size="45">endpoints</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle">
+    <rect x="104" y="290" width="312" height="47" rx="9" fill="#922c42"/>
+    <circle cx="130" cy="313.5" r="15" fill="#fff8f4"/><text x="130" y="321" fill="#922c42">1</text>
+    <rect x="104" y="354" width="258" height="47" rx="9" fill="#c06473"/>
+    <circle cx="130" cy="377.5" r="15" fill="#fff8f4"/><text x="130" y="385" fill="#922c42">2</text>
+    <rect x="104" y="418" width="204" height="47" rx="9" fill="#e2a69c"/>
+    <circle cx="130" cy="441.5" r="15" fill="#fff8f4"/><text x="130" y="449" fill="#922c42">3</text>
+  </g>
+  <path d="M175 313h200m-200 65h146m-146 64h92" fill="none" stroke="#fff8f4" stroke-width="5" stroke-linecap="round"/>
+  <text x="260" y="507" text-anchor="middle" fill="#922c42" font-family="Arial, sans-serif" font-size="19" letter-spacing="1">WIN RATIO &amp; BEYOND</text>
+</svg>

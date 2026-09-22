@@ -6,20 +6,14 @@ css: courses.css
 
 ## University Courses
 
-### Applied Survival Analysis
-:::::: columns
-::: {.column width="15%" .text-center}
-<!-- profile pic -->
-
-[![](images/surv_hex.png){width="100%"}](https://lmaowisc.github.io/BMI741){target="_blank"}\
-[Spring 2020 -- 2025]{style="font-size: 0.85em"} 
+### [Applied Survival Analysis](https://lmaowisc.github.io/BMI741/) {#applied-survival-analysis}
+:::: {.course-entry}
+::: {.course-avatar}
+[![Applied Survival Analysis course site](images/surv_hex.png)](https://lmaowisc.github.io/BMI741/){.course-image-link}\
+[Spring 2020 -- 2025]{.course-date}
 :::
 
-::: {.column width="5%"}
-<!-- empty column to create gap -->
-:::
-
-::: {.column width="80%"}
+::: {.course-outline}
 Provides a survey of statistical methods for time-to-event data arising in medical and industrial settings.
 
 -   Kaplan-Meier estimator, log-rank test, Cox proportional hazards model
@@ -28,37 +22,67 @@ Provides a survey of statistical methods for time-to-event data arising in medic
 
 Emphasizes case studies and data analysis (using R)
 :::
-::::::
+::::
 
 
-### Applied Longitudinal Analysis
-:::::: columns
-::: {.column width="15%" .text-center}
-<!-- profile pic -->
-
-![](images/longit_hex.png){width="100%"}\
-[Spring 2019 ]{style="font-size: 0.85em"} 
+### [Applied Longitudinal Analysis](https://lmaowisc.github.io/longitudinal-analysis/) {#applied-longitudinal-analysis}
+:::: {.course-entry}
+::: {.course-avatar}
+[![Applied Longitudinal Analysis course site](images/longitudinal-course.svg)](https://lmaowisc.github.io/longitudinal-analysis/){.course-image-link}\
+[Spring 2019]{.course-date}
 :::
 
-::: {.column width="5%"}
-<!-- empty column to create gap -->
+::: {.course-outline}
+Introduces statistical methods for repeated measurements and correlated outcomes, with applications in the health and behavioral sciences.
+
+-   Response profiles, mean and covariance structures
+-   Linear mixed-effects models and growth curves
+-   Marginal models, generalized estimating equations (GEE), and generalized linear mixed-effects models
+-   Missing data, smoothing, and multilevel models
+
+Includes 24 lectures, SAS examples, and datasets for practice
 :::
-
-::: {.column width="80%"}
-Introduces modern statistical methods for longitudinal data, with applications in health sciences, behavioral studies, and beyond.
-
-<!-- -   Response profiles of repeated measurements, cluster data -->
--   Linear mixed-effects models,  mean and variance structure
--   Marginal models, generalized estimating equations (GEE)
--   Generalized linear mixed effects models, growth curve analysis
--   Missing data, sample size calculation
-
-Emphasizes modeling and analyzing real-world datasets (using SAS)
-:::
-::::::
+::::
 
 
 ## Workshops
 
+### [Tidy Survival Analysis: Applying R's Tidyverse to Survival Data](https://lmaowisc.github.io/tidysurv/) {#tidy-survival-analysis}
+:::: {.course-entry}
+::: {.course-avatar}
+[![Tidy Survival Analysis workshop site](images/tidy-survival-workshop.svg)](https://lmaowisc.github.io/tidysurv/){.course-image-link}\
+[JSM 2025]{.course-date}
+:::
 
+::: {.course-outline}
+Develops a reproducible R workflow for preparing, analyzing, and visualizing survival data through five modules.
 
+-   Survival concepts and censoring, illustrated with breast cancer data
+-   Data preparation, follow-up plots, and descriptive tables with the Tidyverse
+-   Survival curves and competing-risk estimates, with tables and graphics
+-   Cox and Fine-Gray regression, model summaries, and diagnostics
+-   Machine learning for survival outcomes with `tidymodels`
+
+Emphasizes worked examples and consistent data workflows in R
+:::
+::::
+
+### [Statistical Methods for Composite Endpoints: Win Ratio and Beyond](https://lmaowisc.github.io/ce/) {#composite-endpoints}
+:::: {.course-entry}
+::: {.course-avatar}
+[![Statistical Methods for Composite Endpoints workshop site](images/composite-endpoints-workshop.svg)](https://lmaowisc.github.io/ce/){.course-image-link}\
+[NESS 2025]{.course-date}
+:::
+
+::: {.course-outline}
+Examines methods for combining outcomes in clinical trials, progressing from foundational concepts to estimation, regression, and open questions.
+
+-   Composite endpoint choices, traditional approaches, and win ratio methods
+-   Testing and sample size planning, including recurrent events
+-   Restricted win ratio, average win time, and while-alive loss rate
+-   Proportional win-fractions regression, diagnostics, and risk prediction
+-   Further topics: covariate adjustment, interim monitoring, and meta-analysis
+
+Includes practical R examples for analysis and interpretation
+:::
+::::

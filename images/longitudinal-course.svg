@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 600" role="img" aria-labelledby="title desc">
+  <title id="title">Applied Longitudinal Analysis</title>
+  <desc id="desc">A dark teal hexagon with amber and mint repeated-measurement trajectories, matching the PHS 651 course site.</desc>
+  <path d="M260 8 512 154v292L260 592 8 446V154Z" fill="#102a35" stroke="#0d5f62" stroke-width="10"/>
+  <path d="M260 31 492 166v268L260 569 28 434V166Z" fill="none" stroke="#d7ece7" stroke-opacity=".22" stroke-width="2"/>
+  <text x="260" y="119" text-anchor="middle" fill="#f3b33d" font-family="Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="4">PHS 651</text>
+  <g fill="#fffdf8" text-anchor="middle" font-family="Georgia, serif">
+    <text x="260" y="180" font-size="45">Longitudinal</text>
+    <text x="260" y="231" font-size="45">analysis</text>
+  </g>
+  <g fill="none" stroke="#d7ece7" stroke-opacity=".18" stroke-width="2">
+    <path d="M92 290v153h341M92 340h341M92 390h341"/>
+    <path d="M174 290v153m82-153v153m82-153v153m82-153v153"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
+    <path d="m100 410 80-38 80 8 80-62 80-13" stroke="#f3b33d"/>
+    <path d="m100 365 80-19 80-34 80 22 80-44" stroke="#d7ece7"/>
+    <path d="m100 434 80-16 80 2 80-33 80-22" stroke="#70aaa7"/>
+  </g>
+  <g fill="#f3b33d"><circle cx="100" cy="410" r="7"/><circle cx="180" cy="372" r="7"/><circle cx="260" cy="380" r="7"/><circle cx="340" cy="318" r="7"/><circle cx="420" cy="305" r="7"/></g>
+  <g fill="#d7ece7"><circle cx="100" cy="365" r="6"/><circle cx="180" cy="346" r="6"/><circle cx="260" cy="312" r="6"/><circle cx="340" cy="334" r="6"/><circle cx="420" cy="290" r="6"/></g>
+  <text x="260" y="494" text-anchor="middle" fill="#d7ece7" font-family="Arial, sans-serif" font-size="20" letter-spacing="1">REPEATED MEASURES</text>
+</svg>

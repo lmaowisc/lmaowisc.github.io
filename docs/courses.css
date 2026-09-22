@@ -1,14 +1,74 @@
-/* css styles */
-
-
-
-h3 {
-    font-size: 1.25em;
-        margin-bottom: 15px; /* Adjust space below */
+/* Course and workshop entries share an image-and-outline layout. */
+main h3 {
+  font-size: 1.25em;
+  line-height: 1.4;
+  margin-bottom: 1.1rem;
 }
 
-/* body {
-    font-size: 16px; /* Adjust size as needed */
+main h3 > a {
+  color: inherit;
 }
-*/
 
+main h3 > a:hover {
+  color: #c5050c;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.course-entry {
+  display: grid;
+  grid-template-columns: minmax(120px, 16%) minmax(0, 1fr);
+  align-items: start;
+  gap: 2rem;
+  margin-bottom: 2.6rem;
+}
+
+.course-avatar {
+  text-align: center;
+}
+
+.course-avatar p {
+  margin: 0;
+}
+
+.course-image-link {
+  display: inline-block;
+  width: 100%;
+  max-width: 170px;
+  border-radius: 0.4rem;
+}
+
+.course-image-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.course-date {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.85em;
+  color: #595959;
+}
+
+.course-outline > :last-child {
+  margin-bottom: 0;
+}
+
+.course-entry a:focus-visible,
+main h3 > a:focus-visible {
+  outline: 3px solid #c5050c;
+  outline-offset: 5px;
+}
+
+@media (max-width: 600px) {
+  .course-entry {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .course-avatar {
+    width: 150px;
+    justify-self: center;
+  }
+}
