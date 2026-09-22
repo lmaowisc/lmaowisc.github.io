@@ -14,6 +14,9 @@ css: pubs.css
 ## Radiology and diagnostic medicine
 
 ::: {style="font-size: 92%;"}
+-   Kliewer, M., Wetley, K., Schroeder, D., and **Mao, L.** (2026).
+    [Abdominal CT findings on the day of death in patients with solid organ malignancies](https://doi.org/10.1007/s00261-026-05781-x).
+    [*Abdominal Radiology*](https://link.springer.com/journal/261){target="_blank"}, 10.1007/s00261-026-05781-x. {{< ai open-access size=lg >}}
 -   Anagnostopoulos, A.A., Heidenreich, J.F., Roshanshad, A., Tamada, D.,
     Panagiotopoulos, N., **Mao, L.**, Hernando, D., Reeder, S.B., and Starekova, J. (2026).
     [Normative values for quantitative MRI biomarkers of the liver in collegiate athletes](https://doi.org/10.1016/j.mri.2026.110772).
