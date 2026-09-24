@@ -45,6 +45,25 @@ Includes 24 lectures, SAS examples, and datasets for practice
 ::::
 
 
+### [Missing Data: Theory and Methods](https://lmaowisc.github.io/missing_data/) {#missing-data}
+:::: {.course-entry}
+::: {.course-avatar}
+[![Missing Data: Foundations and Methods course site](images/missing-data-course.svg)](https://lmaowisc.github.io/missing_data/){.course-image-link}\
+[2017]{.course-date}
+:::
+
+::: {.course-outline}
+Develops statistical inference for incomplete data, connecting likelihood-based and semiparametric methods.
+
+-   Missingness mechanisms and identifiability
+-   EM algorithms, regression with missing covariates, and multiple imputation
+-   Bayesian analysis, inverse probability weighting, and doubly robust estimation
+
+Includes seven chapters and lecture slides
+:::
+::::
+
+
 ## Workshops
 
 ### [Tidy Survival Analysis: Applying R's Tidyverse to Survival Data](https://lmaowisc.github.io/tidysurv/) {#tidy-survival-analysis}

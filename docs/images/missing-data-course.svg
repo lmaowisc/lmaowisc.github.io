@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 600" role="img" aria-labelledby="title desc">
+  <title id="title">Missing Data: Foundations and Methods</title>
+  <desc id="desc">A blue and white hexagonal course badge with a data matrix of observed and missing values, matching the book website.</desc>
+  <path d="M260 8 512 154v292L260 592 8 446V154Z" fill="#ffffff" stroke="#1652cf" stroke-width="10"/>
+  <path d="M260 31 492 166v268L260 569 28 434V166Z" fill="none" stroke="#ccd8ed" stroke-width="2"/>
+  <text x="260" y="111" text-anchor="middle" fill="#1652cf" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="3">GRADUATE COURSE</text>
+  <text x="260" y="185" text-anchor="middle" fill="#152238" font-family="Georgia, serif" font-size="54">Missing Data</text>
+  <g text-anchor="middle" fill="#3e5069" font-family="Georgia, serif" font-size="30">
+    <text x="260" y="233">Foundations</text>
+    <text x="260" y="273">and Methods</text>
+  </g>
+  <g fill="#1652cf">
+    <rect x="124" y="315" width="52" height="34" rx="5"/>
+    <rect x="197" y="315" width="52" height="34" rx="5"/>
+    <rect x="343" y="315" width="52" height="34" rx="5"/>
+    <rect x="124" y="370" width="52" height="34" rx="5"/>
+    <rect x="270" y="370" width="52" height="34" rx="5"/>
+    <rect x="343" y="370" width="52" height="34" rx="5"/>
+    <rect x="197" y="425" width="52" height="34" rx="5"/>
+    <rect x="270" y="425" width="52" height="34" rx="5"/>
+  </g>
+  <g fill="#edf3ff" stroke="#1652cf" stroke-width="2.5" stroke-dasharray="5 4">
+    <rect x="270" y="315" width="52" height="34" rx="5"/>
+    <rect x="197" y="370" width="52" height="34" rx="5"/>
+    <rect x="124" y="425" width="52" height="34" rx="5"/>
+    <rect x="343" y="425" width="52" height="34" rx="5"/>
+  </g>
+  <text x="260" y="510" text-anchor="middle" fill="#3e5069" font-family="Arial, sans-serif" font-size="19" letter-spacing="2">INFERENCE</text>
+</svg>
