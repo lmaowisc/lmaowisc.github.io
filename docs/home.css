@@ -93,6 +93,27 @@
   font-size: 0.85em;
 }
 
+/* Align the fifth card with Editorial Service; the outlines link follows below. */
+@media (min-width: 801px) {
+  .home-layout { margin-bottom: 5rem; }
+  .home-main > section:last-child > ul { margin-bottom: 0; }
+  .home-highlights {
+    align-self: stretch;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .home-highlights .highlight-list { flex: 1; }
+  .home-highlights > p:last-child {
+    position: absolute;
+    top: 100%;
+    left: 1.5rem;
+    right: 0;
+    margin-bottom: 0;
+  }
+}
+
 @media (max-width: 800px) {
   .home-layout {
     grid-template-columns: 1fr;

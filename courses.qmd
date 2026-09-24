@@ -48,7 +48,7 @@ Includes 24 lectures, SAS examples, and datasets for practice
 ### [Missing Data: Theory and Methods](https://lmaowisc.github.io/missing_data/) {#missing-data}
 :::: {.course-entry}
 ::: {.course-avatar}
-[![Missing Data: Foundations and Methods course site](images/missing-data-course.svg)](https://lmaowisc.github.io/missing_data/){.course-image-link}\
+[![Missing Data: Foundations and Methods course site](images/missing-data-course.png)](https://lmaowisc.github.io/missing_data/){.course-image-link}\
 [2017]{.course-date}
 :::
 
