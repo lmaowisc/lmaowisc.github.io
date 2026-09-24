@@ -96,7 +96,7 @@ Time-to-event data \| causal inference \| clinical trials \| semiparametric theo
     <span class="highlight-copy"><span class="highlight-kind">University course</span><span class="highlight-title">Applied Longitudinal Analysis</span></span>
   </a>
   <a class="highlight-card" href="https://lmaowisc.github.io/missing_data/" target="_blank" rel="noopener noreferrer">
-    <img src="images/missing-data-course.png" alt="" width="80" height="92">
+    <img src="images/missing-data-course.png?v=3" alt="" width="80" height="92">
     <span class="highlight-copy"><span class="highlight-kind">University course</span><span class="highlight-title">Missing Data: Theory and Methods</span></span>
   </a>
   <a class="highlight-card" href="https://lmaowisc.github.io/tidysurv/" target="_blank" rel="noopener noreferrer">
