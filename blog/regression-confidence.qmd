@@ -5,6 +5,7 @@ author: "Lu Mao"
 date: "2026-09-25"
 categories: [Biostatistics, Regression, R Programming]
 description: "Use coefficient variances and covariances to derive pointwise confidence limits for a fitted line or polynomial curve, with reproducible R examples."
+hide-description: true
 image: "images/regression-confidence/quadratic-confidence.png"
 format:
   html:
@@ -365,5 +366,3 @@ If a reviewer asks for analytic confidence limits, I would report three ingredie
 ## References
 
 Hernando, D., Zhao, R., Yuan, Q., et al. (2023). Multicenter reproducibility of liver iron quantification with 1.5-T and 3.0-T MRI. *Radiology*, **306**(2), e213256. [doi:10.1148/radiol.213256](https://doi.org/10.1148/radiol.213256).
-
-R Core Team. *R documentation*: [`predict.lm`](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/predict.lm.html) and [`poly`](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/poly.html).
