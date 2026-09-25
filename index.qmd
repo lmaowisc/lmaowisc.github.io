@@ -66,7 +66,7 @@ title-block-style: default
 <h2 id="highlights">Highlights</h2>
 <div class="highlight-list">
   <a class="highlight-card" href="https://lmaowisc.github.io/BMI741/" target="_blank" rel="noopener noreferrer">
-    <img src="images/surv_hex.png" alt="" width="80" height="92">
+    <img src="images/applied-survival-course.png" alt="" width="80" height="92">
     <span class="highlight-copy"><span class="highlight-kind">University course</span><span class="highlight-title">Applied Survival Analysis</span></span>
   </a>
   <a class="highlight-card" href="https://lmaowisc.github.io/longitudinal-analysis/" target="_blank" rel="noopener noreferrer">

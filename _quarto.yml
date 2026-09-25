@@ -5,6 +5,8 @@ project:
     - home.css
     - people.css
     - research.css
+    - courses.css
+    - images/applied-survival-course.png
     - pubs/pubs.css
     - packages/packages.css
     - packages/images/wr-badge.svg
