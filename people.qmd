@@ -2,7 +2,7 @@
 title: "People"
 css:
   - styles.css?v=8
-  - people.css?v=3
+  - people.css?v=4
 toc: false
 ---
 
@@ -50,52 +50,60 @@ PhD student in Biomedical Data Science
 :::: {.alumni-entry}
 ::: {.alumni-name}
 ### [Li Ge](https://li-ge.org/){target="_blank"}
+
+[LinkedIn](https://www.linkedin.com/in/li-ge){.alumni-profile-link target="_blank" aria-label="Li Ge on LinkedIn"}
 :::
 ::: {.alumni-details}
-PhD in Biomedical Data Science, UW–Madison, 2024
+<p class="alumni-meta"><span>PhD</span> <span>Biomedical Data Science</span> <span>UW–Madison</span> <span>2024</span></p>
 
-**Dissertation:** *Addressing unmeasured confounding in randomized trials or observational studies*
+**Dissertation:** *[Addressing unmeasured confounding in randomized trials or observational studies](https://search.library.wisc.edu/digital/AOXXRBUUHVR3CC8D){target="_blank"}*
 
-**First placement:** Senior Scientist - Biostatistics | Merck | PA
+<p class="alumni-meta"><span><strong>First placement:</strong> Senior Scientist, Biostatistics</span> <span>Merck</span> <span>PA</span></p>
 :::
 ::::
 
 :::: {.alumni-entry}
 ::: {.alumni-name}
 ### [Tuo Wang](https://tuowang.rbind.io/about/){target="_blank"}
+
+[LinkedIn](https://www.linkedin.com/in/tuo-wang-0485b5133){.alumni-profile-link target="_blank" aria-label="Tuo Wang on LinkedIn"}
 :::
 ::: {.alumni-details}
-PhD in Biomedical Data Science, UW–Madison, 2023
+<p class="alumni-meta"><span>PhD</span> <span>Biomedical Data Science</span> <span>UW–Madison</span> <span>2023</span></p>
 
-**Dissertation:** *Novel statistical methods for composite endpoints*
+**Dissertation:** *[Novel statistical methods for composite endpoints](https://search.library.wisc.edu/digital/ABFXDAKI4GTKYG8F){target="_blank"}*
 
-**First placement:** Research Advisor | Eli Lilly & Company | Indianapolis, IN
+<p class="alumni-meta"><span><strong>First placement:</strong> Research Advisor</span> <span>Eli Lilly &amp; Company</span> <span>Indianapolis, IN</span></p>
 :::
 ::::
 
 :::: {.alumni-entry}
 ::: {.alumni-name}
 ### Chengning Zhang
+
+[LinkedIn](https://www.linkedin.com/in/cheng-ning-zhang){.alumni-profile-link target="_blank" aria-label="Chengning Zhang on LinkedIn"}
 :::
 ::: {.alumni-details}
-PhD in Statistics (Biostatistics Option), UW–Madison, 2021
+<p class="alumni-meta"><span>PhD</span> <span>Statistics (Biostatistics Option)</span> <span>UW–Madison</span> <span>2022</span></p>
 
-**Dissertation:** *Statistical methods for combining diagnostic tests and performance evaluation metrics*
+**Dissertation:** *[Statistical methods for combining diagnostic tests and performance evaluation metrics](https://search.library.wisc.edu/digital/AJ7UAEE7J2KVVA8X){target="_blank"}*
 
-**First placement:** Applied Scientist | Amazon | Seattle, WA
+<p class="alumni-meta"><span><strong>First placement:</strong> Applied Scientist</span> <span>Amazon</span> <span>Seattle, WA</span></p>
 :::
 ::::
 
 :::: {.alumni-entry}
 ::: {.alumni-name}
 ### Yi Li
+
+[LinkedIn](https://www.linkedin.com/in/yi-li-961809149){.alumni-profile-link target="_blank" aria-label="Yi Li on LinkedIn"}
 :::
 ::: {.alumni-details}
-PhD in Statistics (Biostatistics Option), UW–Madison, 2020
+<p class="alumni-meta"><span>PhD</span> <span>Statistics (Biostatistics Option)</span> <span>UW–Madison</span> <span>2020</span></p>
 
-**Dissertation:** *Variable selection and estimation with censored data*
+**Dissertation:** *[Variable selection and estimation with censored data](https://search.library.wisc.edu/digital/AXXA46K4JAISHO8T){target="_blank"}*
 
-**First placement:** Quantitative Associate | JP Morgan Chase & Company | Dallas, TX
+<p class="alumni-meta"><span><strong>First placement:</strong> Quantitative Associate</span> <span>JP Morgan Chase &amp; Company</span> <span>Dallas, TX</span></p>
 :::
 ::::
 

@@ -20,6 +20,16 @@
 .alumni-details strong { font-weight:600; }
 .alumni-details p { margin:0 0 .2rem; }
 .alumni-details p:last-child { margin-bottom:0; }
+.alumni-name p { margin:.25rem 0 0; }
+.alumni-name .alumni-profile-link { font-size:.76rem; color:var(--muted); }
+.alumni-details a { color:inherit; }
+.alumni-name .alumni-profile-link:hover,.alumni-name .alumni-profile-link:focus-visible,
+.alumni-details a:hover,.alumni-details a:focus-visible { color:var(--red); }
+/* Match the homepage's short, muted red separators. */
+.alumni-meta { display:flex; flex-wrap:wrap; align-items:baseline; column-gap:.65rem; row-gap:.15rem; }
+.alumni-meta > span { position:relative; max-width:100%; min-width:0; }
+.alumni-meta > span + span { padding-left:.65rem; }
+.alumni-meta > span + span::before { content:""; position:absolute; left:0; top:.725em; transform:translateY(-50%); width:2px; height:.85em; background:#c58a8f; }
 @media(max-width:1000px) {
  .student-grid { gap:1.25rem; }
  .student-profile { grid-template-columns:94px minmax(0,1fr); gap:.75rem; }
