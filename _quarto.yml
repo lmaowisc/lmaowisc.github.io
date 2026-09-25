@@ -4,6 +4,8 @@ project:
   resources:
     - home.css
     - styles.css
+    - images/google-scholar.svg
+    - images/researchgate.svg
 
 website:
   title: "Lu Mao"
@@ -54,4 +56,3 @@ format:
 
 
 editor: visual
-
