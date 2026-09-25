@@ -11,7 +11,7 @@
 .student-copy { padding-top:.4rem; }
 .student-copy p { color:var(--muted); }
 .people-page > section.alumni-section { margin-top:2.5rem; font-size:.88rem; line-height:1.45; color:var(--muted); }
-.people-page .alumni-section > h2 { font-size:1.3rem; font-weight:500; color:var(--muted); margin-bottom:.45rem; }
+.people-page .alumni-section > h2 { font-size:1.3rem; font-weight:600; color:var(--muted); margin-bottom:.45rem; }
 .alumni-entry { display:grid; grid-template-columns:10.5rem minmax(0,1fr); gap:1.5rem; padding:.8rem 0; }
 .alumni-entry + .alumni-entry { border-top:1px solid #e7e4df; }
 .people-page .alumni-name h3 { font-size:1rem; font-weight:400; color:var(--ink); margin:.05rem 0 0; }

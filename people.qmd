@@ -2,7 +2,7 @@
 title: "People"
 css:
   - styles.css?v=8
-  - people.css?v=2
+  - people.css?v=3
 toc: false
 ---
 
