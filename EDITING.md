@@ -6,6 +6,7 @@ Open `Website.Rproj` in RStudio. This is a Quarto website; edit the source files
 
 - `index.qmd`: homepage text, social links, research interests, degrees, editorial roles, course highlights, and the two recent sections. The homepage uses an HTML block inside Quarto for precise layout; edit it in RStudio's Source mode.
 - `home.css`: homepage layout, spacing, and responsive behavior.
+- `people.qmd` and `people.css`: People page entries and styling. Current students use a three-column profile grid on desktop and stacked rows on smaller screens. Alumni use smaller, muted headings and text, with aligned names and details. Preserve this visual distinction when adding entries.
 - `styles.css`: shared colors, fonts, navigation, and link styles.
 - `_quarto.yml`: site navigation and Quarto settings. `docs/` is the output directory.
 - `courses.qmd`: course and workshop listings.

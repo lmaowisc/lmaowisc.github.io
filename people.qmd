@@ -1,123 +1,102 @@
 ---
 title: "People"
+css:
+  - styles.css?v=8
+  - people.css?v=1
+toc: false
 ---
 
-## Current students
+::: {.people-page}
 
-:::::: columns
-::: {.column width="20%"}
-<!-- profile pic -->
+## Current Students
 
-![](HC.jpg){width="100%"}
+::::: {.student-grid}
+:::: {.student-profile}
+::: {.student-photo}
+![](HC.jpg){fig-alt="Portrait of Hao Chen"}
 :::
+::: {.student-copy}
+### Hao Chen
 
-::: {.column width="5%"}
-<!-- empty column to create gap -->
+PhD student in Statistics
 :::
+::::
 
-::: {.column width="75%"}
--   Hao Chen, PhD student in Statistics
+:::: {.student-profile}
+::: {.student-photo}
+![](<images/Heeyeong Jung_Profile.jpg>){fig-alt="Portrait of Heeyeong Jung"}
 :::
-::::::
+::: {.student-copy}
+### Heeyeong Jung
 
-
-:::::: columns
-::: {.column width="20%"}
-<!-- profile pic -->
-
-![](images/Heeyeong Jung_Profile.jpg){width="100%"}
+PhD student in Statistics (Biostatistics Option)
 :::
+::::
 
-::: {.column width="5%"}
-<!-- empty column to create gap -->
+:::: {.student-profile}
+::: {.student-photo}
+![](images/Jenna_Pan_Profile.jpg){fig-alt="Portrait of Jenna Pan"}
 :::
+::: {.student-copy}
+### Jenna Pan
 
-::: {.column width="75%"}
--   Heeyeong Jung, PhD student in Statistics (Biostatistics Option)
+PhD student in Biomedical Data Science
 :::
-::::::
+::::
+:::::
 
+## Alumni {.alumni-section}
 
-:::::: columns
-::: {.column width="20%"}
-<!-- profile pic -->
-
-![](images/Jenna_Pan_Profile.jpg){width="100%"}
+:::: {.alumni-entry}
+::: {.alumni-name}
+### [Li Ge](https://li-ge.org/){target="_blank"}
 :::
+::: {.alumni-details}
+PhD in Biomedical Data Science, UW–Madison, 2024
 
-::: {.column width="5%"}
-<!-- empty column to create gap -->
+Dissertation: *Addressing unmeasured confounding in randomized trials or observational studies*
+
+First placement: Senior Scientist - Biostatistics | Merck | PA
 :::
+::::
 
-::: {.column width="75%"}
--   Jenna Pan, PhD student in Biomedical Data Science
+:::: {.alumni-entry}
+::: {.alumni-name}
+### [Tuo Wang](https://tuowang.rbind.io/about/){target="_blank"}
 :::
-::::::
+::: {.alumni-details}
+PhD in Biomedical Data Science, UW–Madison, 2023
 
+Dissertation: *Novel statistical methods for composite endpoints*
 
-## Alumni
-
-
-:::::: columns
-::: {.column width="15%"}
-[Li Ge](https://li-ge.org/){target="_blank"}
+First placement: Research Advisor | Eli Lilly & Company | Indianapolis, IN
 :::
+::::
 
-::: {.column width="10%"}
-<!-- empty column to create gap -->
+:::: {.alumni-entry}
+::: {.alumni-name}
+### Chengning Zhang
 :::
+::: {.alumni-details}
+PhD in Statistics (Biostatistics Option), UW–Madison, 2021
 
-::: {.column width="70%"}
--   PhD in Biomedical Data Science, UW-Madison, 2024
-    -   Dissertation: *Addressing unmeasured confounding in randomized trials or observational studies*
-    -   First placement: Senior Scientist - Biostatistics \| Merck \| PA
-:::
-::::::
+Dissertation: *Statistical methods for combining diagnostic tests and performance evaluation metrics*
 
-:::::: columns
-::: {.column width="15%"}
-[Tuo Wang](https://tuowang.rbind.io/about/){target="_blank"}
+First placement: Applied Scientist | Amazon | Seattle, WA
 :::
+::::
 
-::: {.column width="10%"}
-<!-- empty column to create gap -->
+:::: {.alumni-entry}
+::: {.alumni-name}
+### Yi Li
 :::
+::: {.alumni-details}
+PhD in Statistics (Biostatistics Option), UW–Madison, 2020
 
-::: {.column width="70%"}
--   PhD in Biomedical Data Science, UW-Madison, 2023
-    -   Dissertation: *Novel statistical methods for composite endpoints*
-    -   First placement: Research Advisor \| Eli Lilly & Company \| Indianapolis, IN
-:::
-::::::
+Dissertation: *Variable selection and estimation with censored data*
 
-:::::: columns
-::: {.column width="15%"}
-Chengning Zhang
+First placement: Quantitative Associate | JP Morgan Chase & Company | Dallas, TX
 :::
+::::
 
-::: {.column width="10%"}
-<!-- empty column to create gap -->
 :::
-
-::: {.column width="70%"}
--   PhD in Statistics (Biostatistics Option), UW-Madison, 2021
-    -   Dissertation: *Statistical methods for combining diagnostic tests and performance evaluation metrics*
-    -   First placement: Applied Scientist \| Amazon \| Seattle, WA
-:::
-::::::
-
-:::::: columns
-::: {.column width="15%"}
-Yi Li
-:::
-
-::: {.column width="10%"}
-<!-- empty column to create gap -->
-:::
-
-::: {.column width="70%"}
--   PhD in Statistics (Biostatistics Option), UW-Madison, 2020
-    -   Dissertation: *Variable selection and estimation with censored data*
-    -   First placement: Quantitative Associate \| JP Morgan Chase & Company \| Dallas, TX
-:::
-::::::

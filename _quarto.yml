@@ -3,6 +3,7 @@ project:
   output-dir: docs
   resources:
     - home.css
+    - people.css
     - styles.css
     - images/google-scholar.svg
     - images/researchgate.svg
