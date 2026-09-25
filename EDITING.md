@@ -12,7 +12,7 @@ Open `Website.Rproj` in RStudio. This is a Quarto website; edit the source files
 - `pubs/index.qmd`, `pubs/methods.qmd`, `pubs/applications.qmd`: publication lists.
 - `images/`: course badges and other source images; `dc.jpg` is the avatar.
 
-The homepage has one recent methods paper, one recent application paper, and two blog posts. Order the two papers newest first by the publisher's first-online publication date, regardless of category. Update the short entries, displayed dates, and `data-publication-date` attributes in `index.qmd` as needed. Paper-title links should use `https://doi.org/...`. Keep editorial start dates and `present` current; keep each date's `–present` suffix in its own span so the dashes and end labels align vertically.
+The homepage has one recent methods paper, one recent application paper, and two blog posts. Select papers assigned to a journal issue with final volume and page numbers or article numbers; do not feature online-first papers awaiting those details. Order the two papers newest first by the publisher's first-online publication date, regardless of category, keeping that date only in each `data-publication-date` attribute. Under each paper title, show the journal, year, volume(issue), and page range or article number; omit category labels and full publication dates. Update these entries in `index.qmd` as needed. Paper-title links should use `https://doi.org/...`. Keep editorial start dates and `present` current; keep each date's `–present` suffix in its own span so the dashes and end labels align vertically.
 
 ## Preview and build
 
