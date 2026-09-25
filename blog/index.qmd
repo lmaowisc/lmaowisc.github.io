@@ -14,7 +14,7 @@ listing:
 ---
 
 ::: {.blog-intro}
-Thoughts on developing statistical methods, collaborating across disciplines, and practicing data science
+Thoughts from methods development, collaboration and data science practice
 :::
 
 ::: {#blog-posts}
