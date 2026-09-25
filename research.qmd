@@ -2,7 +2,7 @@
 title: "Research"
 css:
   - styles.css?v=8
-  - research.css?v=2
+  - research.css?v=3
 toc: false
 ---
 
@@ -27,14 +27,14 @@ toc: false
 
 :::: {.funding-project}
 ::: {.funding-agency}
-[![](images/nci-logo.svg){.funding-agency-logo .nci-logo fig-alt="NIH National Cancer Institute"}](https://www.cancer.gov/){target="_blank"}
+[![](images/nci-logo-vertical.png){.funding-agency-logo .nci-logo fig-alt="NIH National Cancer Institute"}](https://www.cancer.gov/){target="_blank"}
 :::
 ::: {.funding-copy}
 ### [HIV/Cervical Cancer Prevention “CASCADE” Clinical Trials Network](https://www.cascade-network.org){target="_blank"}
 
 <p class="funding-meta"><span>U24CA275417</span> <span>UW sub-award PI</span> <span>07/2022 – 06/2027</span></p>
 
-<p class="funding-description">UW Clinical Trials Program · <a href="https://dcc.wisc.edu/" target="_blank" rel="noopener noreferrer">Data Coordinating Center</a><br>Cervical cancer prevention for women living with HIV</p>
+<p class="funding-description">UW Clinical Trials Program · <a href="https://dcc.wisc.edu/" target="_blank" rel="noopener noreferrer">Data Coordinating Center</a> · Cervical cancer prevention for women living with HIV</p>
 :::
 ::::
 
