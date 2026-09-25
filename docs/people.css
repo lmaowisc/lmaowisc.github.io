@@ -5,29 +5,30 @@
 .people-page h2 { font-size:1.5rem; font-weight:600; line-height:1.15; margin:0 0 1.15rem; padding:0 0 .45rem; border-bottom:1px solid var(--line); }
 .people-page h3 { font-size:1.12rem; font-weight:500; line-height:1.25; margin:0 0 .4rem; }
 .student-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.5rem; }
-.student-profile { display:grid; grid-template-columns:120px minmax(0,1fr); gap:1rem; align-items:start; }
+.student-profile { display:grid; grid-template-columns:132px minmax(0,1fr); gap:1rem; align-items:start; }
 .student-photo p,.student-photo figure,.student-copy p { margin:0; }
-.student-photo img { display:block; width:120px; height:136px; object-fit:cover; object-position:center 35%; border-radius:4px; }
+.student-photo img { display:block; width:132px; height:150px; object-fit:cover; object-position:center 35%; border-radius:4px; }
 .student-copy { padding-top:.4rem; }
 .student-copy p { color:var(--muted); }
 .people-page > section.alumni-section { margin-top:2.5rem; font-size:.88rem; line-height:1.45; color:var(--muted); }
 .people-page .alumni-section > h2 { font-size:1.3rem; font-weight:500; color:var(--muted); margin-bottom:.45rem; }
 .alumni-entry { display:grid; grid-template-columns:10.5rem minmax(0,1fr); gap:1.5rem; padding:.8rem 0; }
 .alumni-entry + .alumni-entry { border-top:1px solid #e7e4df; }
-.people-page .alumni-name h3 { font-size:1rem; font-weight:400; color:var(--muted); margin:.05rem 0 0; }
-.alumni-name a { color:inherit; }
-.alumni-name a:hover,.alumni-name a:focus-visible { color:var(--red); }
+.people-page .alumni-name h3 { font-size:1rem; font-weight:400; color:var(--ink); margin:.05rem 0 0; }
+.student-copy h3 a,.alumni-name a { color:inherit; }
+.student-copy h3 a:hover,.student-copy h3 a:focus-visible,.alumni-name a:hover,.alumni-name a:focus-visible { color:var(--red); }
+.alumni-details strong { font-weight:600; }
 .alumni-details p { margin:0 0 .2rem; }
 .alumni-details p:last-child { margin-bottom:0; }
 @media(max-width:1000px) {
  .student-grid { gap:1.25rem; }
- .student-profile { grid-template-columns:85px minmax(0,1fr); gap:.75rem; }
- .student-photo img { width:85px; height:100px; }
+ .student-profile { grid-template-columns:94px minmax(0,1fr); gap:.75rem; }
+ .student-photo img { width:94px; height:110px; }
 }
 @media(max-width:760px) {
  .student-grid { grid-template-columns:1fr; gap:1.25rem; }
- .student-profile { grid-template-columns:90px minmax(0,1fr); gap:1rem; }
- .student-photo img { width:90px; height:100px; }
+ .student-profile { grid-template-columns:99px minmax(0,1fr); gap:1rem; }
+ .student-photo img { width:99px; height:110px; }
  .alumni-entry { grid-template-columns:1fr; gap:.4rem; }
 }
 @media(max-width:700px) {

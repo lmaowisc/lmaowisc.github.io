@@ -2,7 +2,7 @@
 title: "People"
 css:
   - styles.css?v=8
-  - people.css?v=1
+  - people.css?v=2
 toc: false
 ---
 
@@ -16,7 +16,7 @@ toc: false
 ![](HC.jpg){fig-alt="Portrait of Hao Chen"}
 :::
 ::: {.student-copy}
-### Hao Chen
+### [Hao Chen](https://stat.wisc.edu/staff/chen-hao/){target="_blank"}
 
 PhD student in Statistics
 :::
@@ -27,7 +27,7 @@ PhD student in Statistics
 ![](<images/Heeyeong Jung_Profile.jpg>){fig-alt="Portrait of Heeyeong Jung"}
 :::
 ::: {.student-copy}
-### Heeyeong Jung
+### [Heeyeong Jung](https://stat.wisc.edu/staff/jung-heeyeong/){target="_blank"}
 
 PhD student in Statistics (Biostatistics Option)
 :::
@@ -38,7 +38,7 @@ PhD student in Statistics (Biostatistics Option)
 ![](images/Jenna_Pan_Profile.jpg){fig-alt="Portrait of Jenna Pan"}
 :::
 ::: {.student-copy}
-### Jenna Pan
+### [Jenna Pan](https://www.linkedin.com/in/jnpan/){target="_blank"}
 
 PhD student in Biomedical Data Science
 :::
@@ -54,9 +54,9 @@ PhD student in Biomedical Data Science
 ::: {.alumni-details}
 PhD in Biomedical Data Science, UW–Madison, 2024
 
-Dissertation: *Addressing unmeasured confounding in randomized trials or observational studies*
+**Dissertation:** *Addressing unmeasured confounding in randomized trials or observational studies*
 
-First placement: Senior Scientist - Biostatistics | Merck | PA
+**First placement:** Senior Scientist - Biostatistics | Merck | PA
 :::
 ::::
 
@@ -67,9 +67,9 @@ First placement: Senior Scientist - Biostatistics | Merck | PA
 ::: {.alumni-details}
 PhD in Biomedical Data Science, UW–Madison, 2023
 
-Dissertation: *Novel statistical methods for composite endpoints*
+**Dissertation:** *Novel statistical methods for composite endpoints*
 
-First placement: Research Advisor | Eli Lilly & Company | Indianapolis, IN
+**First placement:** Research Advisor | Eli Lilly & Company | Indianapolis, IN
 :::
 ::::
 
@@ -80,9 +80,9 @@ First placement: Research Advisor | Eli Lilly & Company | Indianapolis, IN
 ::: {.alumni-details}
 PhD in Statistics (Biostatistics Option), UW–Madison, 2021
 
-Dissertation: *Statistical methods for combining diagnostic tests and performance evaluation metrics*
+**Dissertation:** *Statistical methods for combining diagnostic tests and performance evaluation metrics*
 
-First placement: Applied Scientist | Amazon | Seattle, WA
+**First placement:** Applied Scientist | Amazon | Seattle, WA
 :::
 ::::
 
@@ -93,9 +93,9 @@ First placement: Applied Scientist | Amazon | Seattle, WA
 ::: {.alumni-details}
 PhD in Statistics (Biostatistics Option), UW–Madison, 2020
 
-Dissertation: *Variable selection and estimation with censored data*
+**Dissertation:** *Variable selection and estimation with censored data*
 
-First placement: Quantitative Associate | JP Morgan Chase & Company | Dallas, TX
+**First placement:** Quantitative Associate | JP Morgan Chase & Company | Dallas, TX
 :::
 ::::
 
