@@ -1,91 +1,67 @@
 ---
 title: "Lu Mao"
 subtitle: "Associate Professor of Biostatistics and Medical Informatics"
+description: "Lu Mao, Associate Professor at the University of Wisconsin–Madison. Research in survival analysis, causal inference, and clinical trials; courses, methods papers, and statistical writing."
 image: dc.jpg
-css: home.css?v=4
+css: home.css?v=5
 toc: false
-about: 
-  id: heading
-  template: jolla
-  image-shape: round
-  image-width: 15em
-  links:
-    - text: Email
-      icon: envelope
-      href: mailto:lmao@biostat.wisc.edu 
-      target: _blank
-    - text: "{{< ai google-scholar size=2em >}} Google Scholar"
-      href: https://scholar.google.com/citations?user=zmeoWbUAAAAJ 
-      target: _blank
-    - text: "{{< ai researchgate size=2em >}} ResearchGate"
-      href: https://www.researchgate.net/profile/Lu-Mao-3
-      target: _blank
-    - text: GitHub
-      icon: github
-      href: https://github.com/lmaowisc
-      target: _blank
-    - text: "{{< iconify fa6-brands square-x-twitter >}} X"
-      href: https://x.com/LuMaoWisc
-      target: _blank
-    - text: LinkedIn
-      icon: linkedin
-      href: https://www.linkedin.com/in/lu-mao-63589b14
-      target: _blank
-    - text: "Youtube"
-      icon: youtube
-      href: https://www.youtube.com/@lmaowisc
-      target: _blank
-listing: 
-  - id: posts
-    sort: "date desc"
-    contents: 
-      - blog/cox_partial.qmd
-      - blog/cess.qmd
-      - blog/how_to_ba_mul.qmd
-      - blog/how_to_simulations.qmd
-    type: default
+title-block-style: default
 ---
 
-::: {#heading}
-School of Medicine and Public Health \| University of Wisconsin-Madison\
-WARF Office Building \| 610 Walnut St, Room 207A \| Madison, WI 53726
-:::
-
-::::: {.home-layout}
-:::: {.home-main}
-
-## Announcements {#annoucements}
-
--   **September 21, 2026:** The new [WR package website](https://lmaowisc.github.io/WR/) is now live.
-    -   Major updates to the WR package on the way.
-
-## Research Interests
-
-Time-to-event data \| causal inference \| clinical trials \| semiparametric theory \| statistical consulting & computing \| diagnostic radiology \| cardiovascular disease \| cancer \| behavioral health interventions
-
-[Request consultation/collaboration](https://ictr.wisc.edu/consults/biostatistics-2)
-
-## Education
-
--   PhD in Biostatistics (2016) \| The University of North Carolina at Chapel Hill
--   MS in Biostatistics (2010) \| Drexel University
--   BS in Biological Sciences (2005) \| Tsinghua University, China
-
-## Editorial Service
-
--   Co-Editor \| [*Journal of Biopharmaceutical Statistics*](https://www.tandfonline.com/journals/lbps20/about-this-journal#editorial-board){target="_blank"} \| 04/2026 -- Now
--   Associate Editor \| [*Biometrics*](https://biometrics.biometricsociety.org/home/associate-editors){target="_blank"} \| 07/2026 -- Now
--   Associate Editor \| [*Biometric Bulletin*](https://www.biometricsociety.org/publications/biometric-bulletin){target="_blank"} \| 12/2025 -- Now
--   Associate Editor \| [*Statistics in Biopharmaceutical Research*](https://www.tandfonline.com/journals/usbr20/about-this-journal#editorial-board){target="_blank"} \| 01/2023 -- Now
--   Statistical Editor \| [*JACC Journals*](https://www.jacc.org/journal/heart-failure/editorial-board){target="_blank"} \| 12/2022 -- Now
-
-::::
-
-:::: {.home-highlights role="complementary" aria-label="Teaching highlights"}
-
-## Highlights {#highlights}
-
 ```{=html}
+<section class="profile-intro" aria-labelledby="profile-name">
+<img class="profile-avatar" src="dc.jpg" alt="Lu Mao’s cat–deer avatar" width="200" height="200">
+<div class="profile-copy">
+<h1 id="profile-name">Lu Mao</h1>
+<p class="profile-role">Associate Professor of Biostatistics and Medical Informatics</p>
+<p class="profile-affiliation">School of Medicine and Public Health · University of Wisconsin–Madison</p>
+<p class="profile-focus">Research, teaching, and collaboration in biostatistics.</p>
+<nav class="social-links" aria-label="Contact and social profiles">
+<a href="mailto:lmao@biostat.wisc.edu"><i class="bi bi-envelope" aria-hidden="true"></i>Email</a>
+<a href="https://scholar.google.com/citations?user=zmeoWbUAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+<a href="https://www.researchgate.net/profile/Lu-Mao-3" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+<a href="https://github.com/lmaowisc" target="_blank" rel="noopener noreferrer"><i class="bi bi-github" aria-hidden="true"></i>GitHub</a>
+<a href="https://x.com/LuMaoWisc" target="_blank" rel="noopener noreferrer">X</a>
+<a href="https://www.linkedin.com/in/lu-mao-63589b14" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin" aria-hidden="true"></i>LinkedIn</a>
+<a href="https://www.youtube.com/@lmaowisc" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube" aria-hidden="true"></i>YouTube</a>
+</nav>
+</div>
+</section>
+<div class="home-layout">
+<div class="home-main">
+<section class="announcement" id="annoucements" aria-labelledby="announcement-title">
+<i class="bi bi-megaphone" aria-hidden="true"></i><div>
+<h2 id="announcement-title">The <a href="https://lmaowisc.github.io/WR/">WR package website</a> is now live.</h2>
+<p>Major updates to the WR package on the way.</p>
+</div></section>
+<section class="research-section" aria-labelledby="research-interests">
+<h2 id="research-interests">Research Interests</h2>
+<p>I develop statistical methods for complex outcomes, with applications in health research.</p>
+<ul class="research-themes"><li>Survival analysis</li><li>Causal inference</li><li>Clinical trials</li><li>Semiparametric theory</li><li>Statistical learning</li></ul>
+<p class="research-applications">Applications in diagnostic medicine, oncology, cardiology, and behavioral health.</p>
+<a class="quiet-link" href="research.html">Research overview →</a><span class="link-separator" aria-hidden="true">·</span><a class="quiet-link" href="https://ictr.wisc.edu/consults/biostatistics-2">Consultation &amp; collaboration →</a>
+</section>
+<section aria-labelledby="education">
+<h2 id="education">Education</h2>
+<ul class="degree-list">
+<li><span class="degree-year">2016</span><span><strong>PhD in Biostatistics</strong><span class="degree-school">The University of North Carolina at Chapel Hill</span></span></li>
+<li><span class="degree-year">2010</span><span><strong>MS in Biostatistics</strong><span class="degree-school">Drexel University</span></span></li>
+<li><span class="degree-year">2005</span><span><strong>BS in Biological Sciences</strong><span class="degree-school">Tsinghua University, China</span></span></li>
+</ul>
+</section>
+<section aria-labelledby="editorial-service">
+<h2 id="editorial-service">Editorial Service</h2>
+<ul class="editorial-list">
+<li><strong class="lead-role">Co-Editor</strong><span><a href="https://www.tandfonline.com/journals/lbps20/about-this-journal#editorial-board">Journal of Biopharmaceutical Statistics</a><small>Apr 2026–present</small></span></li>
+<li><strong>Associate Editor</strong><span><a href="https://biometrics.biometricsociety.org/home/associate-editors">Biometrics</a><small>Jul 2026–present</small></span></li>
+<li><strong>Associate Editor</strong><span><a href="https://www.biometricsociety.org/publications/biometric-bulletin">Biometric Bulletin</a><small>Dec 2025–present</small></span></li>
+<li><strong>Associate Editor</strong><span><a href="https://www.tandfonline.com/journals/usbr20/about-this-journal#editorial-board">Statistics in Biopharmaceutical Research</a><small>Jan 2023–present</small></span></li>
+<li><strong>Statistical Editor</strong><span><a href="https://www.jacc.org/journal/heart-failure/editorial-board">JACC Journals</a><small>Dec 2022–present</small></span></li>
+</ul>
+</section>
+</div>
+<aside class="home-highlights" aria-labelledby="highlights">
+<h2 id="highlights">Highlights</h2>
 <div class="highlight-list">
   <a class="highlight-card" href="https://lmaowisc.github.io/BMI741/" target="_blank" rel="noopener noreferrer">
     <img src="images/surv_hex.png" alt="" width="80" height="92">
@@ -108,14 +84,24 @@ Time-to-event data \| causal inference \| clinical trials \| semiparametric theo
     <span class="highlight-copy"><span class="highlight-kind">Biostatistics workshop</span><span class="highlight-title">Statistical Methods for Composite Endpoints</span><span class="highlight-subtitle">Win Ratio and Beyond</span></span>
   </a>
 </div>
+
+<a class="highlight-more" href="courses.html">Course and workshop outlines →</a>
+</aside></div>
+<div class="recent-grid">
+<section aria-labelledby="recent-publications">
+<div class="section-heading"><h2 id="recent-publications">Recent Publications</h2><a href="pubs/methods.html">All methods papers →</a></div>
+<ul class="recent-list">
+<li><a href="https://doi.org/10.5705/ss.202023.0321">Win ratio for partially ordered data</a><span>Statistica Sinica · 2026 · 36, 2077–2096</span></li>
+<li><a href="https://doi.org/10.1002/sim.70569">Predicting win-loss probabilities for composite time-to-event outcomes under the proportional win-fractions regression model</a><span>Statistics in Medicine · 2026 · 45, e70569</span></li>
+</ul>
+</section>
+<section aria-labelledby="recent-writing">
+<div class="section-heading"><h2 id="recent-writing">Recent Writing</h2><a href="blog/">All posts →</a></div>
+<ul class="recent-list">
+<li><a href="blog/cox_partial.html">Cox partial likelihood re-derived as normal equation of GLM</a><span>February 16, 2025</span></li>
+<li><a href="blog/cess.html">The chance of erring on the same side (CESS): A way to elicit correlation</a><span>February 10, 2025</span></li>
+</ul>
+</section>
+</div>
+<footer class="home-contact">WARF Office Building · 610 Walnut St, Room 207A · Madison, WI 53726</footer>
 ```
-
-[Course and workshop outlines →](courses.qmd){.highlight-more}
-
-::::
-:::::
-
-## Recent blog posts
-
-::: {#posts}
-:::
