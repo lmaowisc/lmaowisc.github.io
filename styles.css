@@ -2,6 +2,8 @@
 html { scrollbar-gutter:stable; }
 :root { --paper:#faf9f6; --ink:#152238; --muted:#435063; --red:#c5050c; --line:#dcdad5; --serif:Georgia,'Times New Roman',serif; }
 body { background:var(--paper); color:#263244; font-family:system-ui,-apple-system,'Segoe UI',sans-serif; }
+/* Quarto groups references and footnotes in an appendix with its own background. */
+#quarto-appendix.default { background-color:var(--paper); }
 h1,h2,h3,h4 { font-family:var(--serif); color:var(--ink); letter-spacing:-.02em; }
 a { color:var(--red); text-decoration:none; }
 a:hover { color:#93040a; text-decoration:none!important; }
