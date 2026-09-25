@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Lu Mao">
+<meta name="dcterms.date" content="2026-09-25">
+<meta name="description" content="Use coefficient variances and covariances to derive pointwise confidence limits for a fitted line or polynomial curve, with reproducible R examples.">
+
+<title>How to get analytic confidence limits for a regression line/curve – Lu Mao</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-88c25df80305eda0bc9a73d79c2a7ef5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css?v=9">
+<link rel="stylesheet" href="../blog/post.css?v=3">
+<meta property="og:title" content="How to get analytic confidence limits for a regression line/curve – Lu Mao">
+<meta property="og:description" content="Use coefficient variances and covariances to derive pointwise confidence limits for a fitted line or polynomial curve, with reproducible R examples.">
+<meta property="og:image" content="https://lmaowisc.github.io/blog/images/regression-confidence/quadratic-confidence.png">
+<meta property="og:site_name" content="Lu Mao">
+<meta property="og:image:height" content="990">
+<meta property="og:image:width" content="1620">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Lu Mao</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+<span class="menu-text">Home</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../people.html">
+<span class="menu-text">People</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../research.html">
+<span class="menu-text">Research</span></a>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-publications" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Publications</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-publications">
+        <li>
+    <a class="dropdown-item" href="../pubs/index.html">
+ <span class="dropdown-text">All</span></a>
+  </li>
+        <li>
+    <a class="dropdown-item" href="../pubs/methods.html">
+ <span class="dropdown-text">Methods</span></a>
+  </li>
+        <li>
+    <a class="dropdown-item" href="../pubs/applications.html">
+ <span class="dropdown-text">Applications</span></a>
+  </li>
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../packages/index.html">
+<span class="menu-text">R Packages</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../courses.html">
+<span class="menu-text">Courses</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../blog/index.html">
+<span class="menu-text">Blog</span></a>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+
+  <ul>
+  <li><a href="#the-idea-is-estimate-plus-or-minus-a-margin-of-error" id="toc-the-idea-is-estimate-plus-or-minus-a-margin-of-error" class="nav-link active" data-scroll-target="#the-idea-is-estimate-plus-or-minus-a-margin-of-error">The idea is estimate plus or minus a margin of error</a></li>
+  <li><a href="#now-let-the-line-bend" id="toc-now-let-the-line-bend" class="nav-link" data-scroll-target="#now-let-the-line-bend">Now let the line bend</a></li>
+  <li><a href="#the-same-recipe-works-for-any-polynomial" id="toc-the-same-recipe-works-for-any-polynomial" class="nav-link" data-scroll-target="#the-same-recipe-works-for-any-polynomial">The same recipe works for any polynomial</a></li>
+  <li><a href="#what-do-these-limits-tell-us" id="toc-what-do-these-limits-tell-us" class="nav-link" data-scroll-target="#what-do-these-limits-tell-us">What do these limits tell us?</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">How to get analytic confidence limits for a regression line/curve</h1>
+<p class="subtitle lead">From a straight line to a polynomial, with a little help from R</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Biostatistics</div>
+    <div class="quarto-category">Regression</div>
+    <div class="quarto-category">R Programming</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Use coefficient variances and covariances to derive pointwise confidence limits for a fitted line or polynomial curve, with reproducible R examples.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Lu Mao </p>
+          </div>
+  </div>
+
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 25, 2026</p>
+    </div>
+  </div>
+
+
+  </div>
+
+
+
+</header>
+
+
+<p>This question came up in a collaboration with radiologists. We were studying the relationship between two biomarkers and wanted to add confidence limits to a fitted regression line. We already had confidence intervals for the intercept and slope. Could we simply combine their lower endpoints to get the lower line, and their upper endpoints to get the upper line?</p>
+<p>It sounds reasonable at first, but the resulting region was surprisingly wide. A higher slope often comes with a lower intercept: the two estimates move together to keep the fitted line close to the observations. Combining their intervals separately loses that relationship.</p>
+<p>The practical setting was biomarker calibration. In our <a href="https://doi.org/10.1148/radiol.213256" target="_blank" rel="noopener noreferrer">multicenter liver iron study</a>, for example, we related MRI-based R2* to liver iron concentration (Hernando et al., 2023). Figure 3 shows the fitted calibration lines and their confidence limits.</p>
+<p>There was also a useful request during review: could we provide an equation for the limits, rather than just a plot? An equation would let readers calculate the uncertainty at a biomarker value of their own choosing.</p>
+<p>Let us work through that calculation, using simulated data to keep things simple. We will start with a straight line and then allow it to bend.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Reproduce the examples
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>All data are simulated here; no external data files are needed. Copy the R code blocks into a script and run them <strong>from top to bottom in a fresh R session</strong>, including the setup below. Expand the folded blocks to see the complete code.</p>
+<p>The calculations use the <strong>stats</strong> package included with R, and the figures use <strong>ggplot2</strong> (version 3.4.0 or later). The setup uses <strong>knitr</strong> for figure options; arrows use <strong>grid</strong>, which is also included with R. Install the two additional packages once:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"ggplot2"</span>, <span class="st">"knitr"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The code creates an <code>images/regression-confidence/</code> folder in your working directory and saves both figures there. Fixed random seeds reproduce the simulated examples. The code was checked with R 4.3.3, ggplot2 3.4.4, and knitr 1.52.</p>
+</div>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Show packages and plotting setup</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">warning =</span> <span class="cn">FALSE</span>, <span class="at">message =</span> <span class="cn">FALSE</span>, <span class="at">error =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">fig.width =</span> <span class="dv">9</span>, <span class="at">fig.height =</span> <span class="fl">5.5</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                     <span class="at">dpi =</span> <span class="dv">160</span>, <span class="at">dev =</span> <span class="st">"png"</span>, <span class="at">fig.path =</span> <span class="st">"images/regression-confidence/render-"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">"images/regression-confidence"</span>, <span class="at">recursive =</span> <span class="cn">TRUE</span>, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>paper <span class="ot">&lt;-</span> <span class="st">"#faf9f6"</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>) <span class="sc">+</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>            <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                  <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> paper, <span class="at">color =</span> <span class="cn">NA</span>),</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>                  <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>                  <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="dv">0</span>),</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>                  <span class="at">plot.margin =</span> <span class="fu">margin</span>(<span class="dv">12</span>, <span class="dv">16</span>, <span class="dv">12</span>, <span class="dv">12</span>)))</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>blue <span class="ot">&lt;-</span> <span class="st">"#0479A8"</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>red <span class="ot">&lt;-</span> <span class="st">"#C5050C"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="the-idea-is-estimate-plus-or-minus-a-margin-of-error" class="level2">
+<h2 class="anchored" data-anchor-id="the-idea-is-estimate-plus-or-minus-a-margin-of-error">The idea is estimate plus or minus a margin of error</h2>
+<p>The regression curve estimates the <strong>mean response</strong> at each value of <span class="math inline">\(x\)</span>. Call that mean <span class="math inline">\(m(x)\)</span> and its estimate <span class="math inline">\(\widehat m(x)\)</span>. The usual pointwise confidence limits have a familiar form:</p>
+<p><span class="math display">\[
+\widehat m(x)\ \pm\ t_*\times
+\underbrace{\operatorname{se}\{\widehat m(x)\}}_{\text{standard error of the fitted mean}}.
+\]</span></p>
+<p>For a 95% interval, <span class="math inline">\(t_*\)</span> is the appropriate multiplier from a <span class="math inline">\(t\)</span> distribution—often around 2. R gets it from <code>qt(0.975, df.residual(obj))</code>. The main task is to find the standard error of the fitted mean, rather than the standard errors of the coefficients separately.</p>
+<p>For a straight line,</p>
+<p><span class="math display">\[
+\widehat m(x)=\widehat\beta_0+\widehat\beta_1x.
+\]</span></p>
+<p>Let <span class="math inline">\(V_{00}\)</span> and <span class="math inline">\(V_{11}\)</span> be the estimated variances of the intercept and slope, and <span class="math inline">\(V_{01}\)</span> their estimated covariance. These are entries of the matrix returned by <code>vcov()</code>. The standard error is</p>
+<p><span class="math display">\[
+\operatorname{se}\{\widehat m(x)\}
+=\sqrt{V_{00}+2xV_{01}+x^2V_{11}}.
+\]</span></p>
+<p>The middle term is the important part: it accounts for how the intercept and slope vary together. Including it gives the limits</p>
+<p><span class="math display">\[
+\widehat\beta_0+\widehat\beta_1x
+\ \pm\ t_*\sqrt{V_{00}+2xV_{01}+x^2V_{11}}.
+\]</span></p>
+<p>Even for a straight fitted line, the confidence limits generally curve. They are narrowest at the mean of the observed <span class="math inline">\(x\)</span> values and widen as we move away. Near the center, uncertainty about the line’s tilt has relatively little effect. Farther out, the same change in slope makes a larger difference.</p>
+<p>The next figure illustrates this. Expand the code if you would like to reproduce the simulated data and plot.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the simulation and plotting code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2024</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>linear_dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>linear_dat<span class="sc">$</span>y <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="sc">+</span> <span class="fl">1.7</span> <span class="sc">*</span> linear_dat<span class="sc">$</span>x <span class="sc">+</span> <span class="dv">4</span> <span class="sc">*</span> <span class="fu">rnorm</span>(<span class="dv">20</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>linear_fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, <span class="at">data =</span> linear_dat)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>grid <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">20</span>, <span class="at">length.out =</span> <span class="dv">301</span>))</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>linear_ci <span class="ot">&lt;-</span> <span class="fu">cbind</span>(grid, <span class="fu">predict</span>(linear_fit, grid,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>                                <span class="at">interval =</span> <span class="st">"confidence"</span>))</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>xbar <span class="ot">&lt;-</span> <span class="fu">mean</span>(linear_dat<span class="sc">$</span>x)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>center_ci <span class="ot">&lt;-</span> <span class="fu">predict</span>(linear_fit, <span class="fu">data.frame</span>(<span class="at">x =</span> xbar),</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>                     <span class="at">interval =</span> <span class="st">"confidence"</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>linear_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(linear_ci, <span class="fu">aes</span>(x, fit)) <span class="sc">+</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> lwr, <span class="at">ymax =</span> upr), <span class="at">fill =</span> blue, <span class="at">alpha =</span> .<span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> lwr), <span class="at">color =</span> blue, <span class="at">linewidth =</span> .<span class="dv">6</span>) <span class="sc">+</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> upr), <span class="at">color =</span> blue, <span class="at">linewidth =</span> .<span class="dv">6</span>) <span class="sc">+</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> blue, <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> linear_dat, <span class="fu">aes</span>(x, y), <span class="at">color =</span> <span class="st">"#4C5359"</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> xbar, <span class="at">color =</span> <span class="st">"#85919A"</span>, <span class="at">linetype =</span> <span class="st">"dotted"</span>) <span class="sc">+</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"segment"</span>, <span class="at">x =</span> xbar, <span class="at">xend =</span> xbar,</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> center_ci[<span class="dv">1</span>, <span class="st">"lwr"</span>], <span class="at">yend =</span> center_ci[<span class="dv">1</span>, <span class="st">"upr"</span>],</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> red, <span class="at">linewidth =</span> <span class="fl">1.4</span>) <span class="sc">+</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">4.5</span>, <span class="at">y =</span> <span class="dv">35</span>, <span class="at">label =</span> <span class="st">"Narrowest at the mean of x"</span>,</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>           <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">color =</span> red, <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"curve"</span>, <span class="at">x =</span> <span class="fl">8.5</span>, <span class="at">y =</span> <span class="dv">32</span>, <span class="at">xend =</span> xbar,</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>           <span class="at">yend =</span> center_ci[<span class="dv">1</span>, <span class="st">"upr"</span>] <span class="sc">+</span> .<span class="dv">3</span>, <span class="at">curvature =</span> <span class="sc">-</span>.<span class="dv">2</span>,</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>           <span class="at">arrow =</span> grid<span class="sc">::</span><span class="fu">arrow</span>(<span class="at">length =</span> grid<span class="sc">::</span><span class="fu">unit</span>(.<span class="dv">12</span>, <span class="st">"inches"</span>)),</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> red) <span class="sc">+</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"The uncertainty depends on where you look"</span>,</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Fitted mean and pointwise 95% confidence limits"</span>,</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Predictor x"</span>, <span class="at">y =</span> <span class="st">"Response y"</span>)</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"images/regression-confidence/linear-confidence.png"</span>, linear_plot,</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>       <span class="at">width =</span> <span class="dv">9</span>, <span class="at">height =</span> <span class="fl">5.5</span>, <span class="at">dpi =</span> <span class="dv">180</span>, <span class="at">bg =</span> paper)</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>linear_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/regression-confidence/render-linear-figure-1.png" class="img-fluid figure-img" width="1440"></p>
+<figcaption>A confidence interval for the mean line has its narrowest point at the mean predictor value. The dots are simulated observations.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>We are using the usual linear-regression assumptions: independent, normally distributed errors with the same variance around a correctly specified mean curve. Under those assumptions, the <span class="math inline">\(t\)</span> calculation gives exact 95% coverage at any fixed value of <span class="math inline">\(x\)</span>.</p>
+</section>
+<section id="now-let-the-line-bend" class="level2">
+<h2 class="anchored" data-anchor-id="now-let-the-line-bend">Now let the line bend</h2>
+<p>A quadratic model adds <span class="math inline">\(x^2\)</span>, but the principle stays the same. Here is the example that first helped me work through the algebra:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>y <span class="ot">&lt;-</span> dat<span class="sc">$</span>x <span class="sc">+</span> (dat<span class="sc">$</span>x <span class="sc">-</span> <span class="dv">10</span>)<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">10</span> <span class="sc">*</span> <span class="fu">rnorm</span>(<span class="dv">20</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>obj <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x <span class="sc">+</span> <span class="fu">I</span>(x<span class="sc">^</span><span class="dv">2</span>), <span class="at">data =</span> dat)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>beta <span class="ot">&lt;-</span> <span class="fu">coef</span>(obj)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>V <span class="ot">&lt;-</span> <span class="fu">vcov</span>(obj)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>critical <span class="ot">&lt;-</span> <span class="fu">qt</span>(<span class="fl">0.975</span>, <span class="fu">df.residual</span>(obj))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The fitted mean now has three terms:</p>
+<p><span class="math display">\[
+\widehat m(x)=\widehat\beta_0+\widehat\beta_1x+\widehat\beta_2x^2.
+\]</span></p>
+<p>To find its standard error, we include the variance of each term and the covariance between every pair. It helps to give the expression under the square root a name, <span class="math inline">\(q(x)\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+q(x)={}&amp;V_{00}+2V_{01}x+(V_{11}+2V_{02})x^2\\
+&amp;+2V_{12}x^3+V_{22}x^4.
+\end{aligned}
+\]</span></p>
+<p>Then <span class="math inline">\(\operatorname{se}\{\widehat m(x)\}=\sqrt{q(x)}\)</span>. Notice the coefficient of <span class="math inline">\(x^2\)</span>: it includes the covariance between the intercept and the quadratic coefficient, as well as the variance of the slope. That is an easy term to overlook when doing the calculation by hand.</p>
+<p>The folded code below extracts these coefficients from <code>vcov()</code> and evaluates the limits on a fine grid. The mathematical subscripts start at zero; R’s matrix indices start at one.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show how to calculate and check the confidence limits</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>g <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">g0 =</span> V[<span class="dv">1</span>, <span class="dv">1</span>],</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">g1 =</span> <span class="dv">2</span> <span class="sc">*</span> V[<span class="dv">1</span>, <span class="dv">2</span>],</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">g2 =</span> V[<span class="dv">2</span>, <span class="dv">2</span>] <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> V[<span class="dv">1</span>, <span class="dv">3</span>],</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">g3 =</span> <span class="dv">2</span> <span class="sc">*</span> V[<span class="dv">2</span>, <span class="dv">3</span>],</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">g4 =</span> V[<span class="dv">3</span>, <span class="dv">3</span>])</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>grid <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">20</span>, <span class="at">length.out =</span> <span class="dv">301</span>))</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">outer</span>(grid<span class="sc">$</span>x, <span class="dv">0</span><span class="sc">:</span><span class="dv">2</span>, <span class="st">`</span><span class="at">^</span><span class="st">`</span>)  <span class="co"># Columns: 1, x, x^2</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>G <span class="ot">&lt;-</span> <span class="fu">outer</span>(grid<span class="sc">$</span>x, <span class="dv">0</span><span class="sc">:</span><span class="dv">4</span>, <span class="st">`</span><span class="at">^</span><span class="st">`</span>)  <span class="co"># Columns: 1, x, ..., x^4</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>mu <span class="ot">&lt;-</span> <span class="fu">drop</span>(A <span class="sc">%*%</span> beta)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>se <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="fu">drop</span>(G <span class="sc">%*%</span> g))</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>curve <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> grid<span class="sc">$</span>x, <span class="at">fit =</span> mu,</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>                    <span class="at">lwr =</span> mu <span class="sc">-</span> critical <span class="sc">*</span> se,</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>                    <span class="at">upr =</span> mu <span class="sc">+</span> critical <span class="sc">*</span> se)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the analytic limits against R's built-in calculation.</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>reference <span class="ot">&lt;-</span> <span class="fu">predict</span>(obj, grid, <span class="at">interval =</span> <span class="st">"confidence"</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="fu">stopifnot</span>(<span class="fu">isTRUE</span>(<span class="fu">all.equal</span>(</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unname</span>(<span class="fu">as.matrix</span>(curve[<span class="fu">c</span>(<span class="st">"fit"</span>, <span class="st">"lwr"</span>, <span class="st">"upr"</span>)])),</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unname</span>(reference), <span class="at">tolerance =</span> <span class="fl">1e-10</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>For these data, the expressions are approximately</p>
+<p><span class="math display">\[
+\widehat m(x)\approx100.36-20.40x+1.083x^2
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\begin{aligned}
+q(x)\approx{}&amp;57.25-22.32x+3.661x^2\\
+&amp;-0.2475x^3+0.005892x^4.
+\end{aligned}
+\]</span></p>
+<p>With 20 observations and three fitted coefficients, we have 17 residual degrees of freedom and <span class="math inline">\(t_*\approx2.11\)</span>. The lower and upper limits are therefore</p>
+<p><span class="math display">\[
+L(x)\approx\widehat m(x)-2.11\sqrt{q(x)},\qquad
+U(x)\approx\widehat m(x)+2.11\sqrt{q(x)}.
+\]</span></p>
+<p>These numbers are rounded for display; the calculations use the unrounded coefficients. The small coefficients of the higher powers need a few more decimal places because they multiply larger numbers.</p>
+<p>That gives us an equation for each of the three curves in the figure. The mean is quadratic, while its confidence limits involve the square root of a fourth-degree polynomial. Expand the plotting code to see how the equation labels and arrows are added.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the plotting code, including the arrows</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(curve, <span class="fu">aes</span>(x, fit)) <span class="sc">+</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> lwr, <span class="at">ymax =</span> upr), <span class="at">fill =</span> blue, <span class="at">alpha =</span> .<span class="dv">14</span>) <span class="sc">+</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"#263640"</span>, <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> lwr), <span class="at">color =</span> blue, <span class="at">linewidth =</span> .<span class="dv">8</span>) <span class="sc">+</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> upr), <span class="at">color =</span> blue, <span class="at">linewidth =</span> .<span class="dv">8</span>) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> dat, <span class="fu">aes</span>(x, y), <span class="at">size =</span> <span class="dv">2</span>, <span class="at">color =</span> <span class="st">"#59636B"</span>) <span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Predictor x"</span>, <span class="at">y =</span> <span class="st">"Response y"</span>,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"An equation for every curve"</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Simulated quadratic relationship; pointwise 95% confidence limits"</span>)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>at <span class="ot">&lt;-</span> <span class="cf">function</span>(x, column) {</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">predict</span>(obj, <span class="fu">data.frame</span>(<span class="at">x =</span> x), <span class="at">interval =</span> <span class="st">"confidence"</span>)[<span class="dv">1</span>, column]</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>arrow_tip <span class="ot">&lt;-</span> grid<span class="sc">::</span><span class="fu">arrow</span>(<span class="at">length =</span> grid<span class="sc">::</span><span class="fu">unit</span>(.<span class="dv">12</span>, <span class="st">"inches"</span>))</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> p <span class="sc">+</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"label"</span>, <span class="at">x =</span> <span class="fl">10.5</span>, <span class="at">y =</span> <span class="dv">151</span>, <span class="at">size =</span> <span class="fl">4.4</span>, <span class="at">parse =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>           <span class="at">label.size =</span> <span class="cn">NA</span>, <span class="at">fill =</span> paper,</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="st">"hat(m)(x)==100.36-20.40*x+1.083*x^2"</span>) <span class="sc">+</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"curve"</span>, <span class="at">x =</span> <span class="dv">17</span>, <span class="at">y =</span> <span class="dv">142</span>, <span class="at">xend =</span> <span class="dv">19</span>, <span class="at">yend =</span> <span class="fu">at</span>(<span class="dv">19</span>, <span class="st">"fit"</span>),</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>           <span class="at">curvature =</span> <span class="sc">-</span>.<span class="dv">18</span>, <span class="at">arrow =</span> arrow_tip, <span class="at">color =</span> <span class="st">"#263640"</span>) <span class="sc">+</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"label"</span>, <span class="at">x =</span> <span class="fl">9.5</span>, <span class="at">y =</span> <span class="dv">94</span>, <span class="at">size =</span> <span class="fl">4.2</span>, <span class="at">color =</span> blue,</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>           <span class="at">label.size =</span> <span class="cn">NA</span>, <span class="at">fill =</span> paper,</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>           <span class="at">parse =</span> <span class="cn">TRUE</span>, <span class="at">label =</span> <span class="st">"U(x)==hat(m)(x)+2.11*sqrt(q(x))"</span>) <span class="sc">+</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"curve"</span>, <span class="at">x =</span> <span class="fl">12.7</span>, <span class="at">y =</span> <span class="dv">87</span>, <span class="at">xend =</span> <span class="fl">15.5</span>,</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>           <span class="at">yend =</span> <span class="fu">at</span>(<span class="fl">15.5</span>, <span class="st">"upr"</span>), <span class="at">curvature =</span> <span class="sc">-</span>.<span class="dv">15</span>,</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>           <span class="at">arrow =</span> arrow_tip, <span class="at">color =</span> blue) <span class="sc">+</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"label"</span>, <span class="at">x =</span> <span class="fl">9.5</span>, <span class="at">y =</span> <span class="sc">-</span><span class="dv">25</span>, <span class="at">size =</span> <span class="fl">4.2</span>, <span class="at">color =</span> blue,</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>           <span class="at">label.size =</span> <span class="cn">NA</span>, <span class="at">fill =</span> paper,</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>           <span class="at">parse =</span> <span class="cn">TRUE</span>, <span class="at">label =</span> <span class="st">"L(x)==hat(m)(x)-2.11*sqrt(q(x))"</span>) <span class="sc">+</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"curve"</span>, <span class="at">x =</span> <span class="dv">8</span>, <span class="at">y =</span> <span class="sc">-</span><span class="dv">18</span>, <span class="at">xend =</span> <span class="dv">7</span>,</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>           <span class="at">yend =</span> <span class="fu">at</span>(<span class="dv">7</span>, <span class="st">"lwr"</span>), <span class="at">curvature =</span> .<span class="dv">15</span>,</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>           <span class="at">arrow =</span> arrow_tip, <span class="at">color =</span> blue) <span class="sc">+</span></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">32</span>, <span class="dv">160</span>))</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"images/regression-confidence/quadratic-confidence.png"</span>, p,</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>       <span class="at">width =</span> <span class="dv">9</span>, <span class="at">height =</span> <span class="fl">5.5</span>, <span class="at">dpi =</span> <span class="dv">180</span>, <span class="at">bg =</span> paper)</span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/regression-confidence/render-quadratic-plot-1.png" class="img-fluid figure-img" width="1440"></p>
+<figcaption>The fitted quadratic mean and its two pointwise 95% confidence curves. Arrows connect each expression to the corresponding curve; q(x) is given above. Labels are rounded; the curves use full precision.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>For example, at <span class="math inline">\(x=10.5\)</span>, the fitted mean is 5.49 and its 95% confidence interval is <span class="math inline">\([-1.72,\,12.70]\)</span>. We can also get that directly from R:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">predict</span>(obj, <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fl">10.5</span>),</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">interval =</span> <span class="st">"confidence"</span>), <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   fit   lwr  upr
+1 5.49 -1.72 12.7</code></pre>
+</div>
+</div>
+</section>
+<section id="the-same-recipe-works-for-any-polynomial" class="level2">
+<h2 class="anchored" data-anchor-id="the-same-recipe-works-for-any-polynomial">The same recipe works for any polynomial</h2>
+<p>A cubic adds another coefficient; a higher-degree polynomial adds more. We still combine the coefficient variances and covariances in exactly the same way.</p>
+<p>There is a compact way to write all of that bookkeeping. For a degree-<span class="math inline">\(p\)</span> polynomial, collect its powers in the vector</p>
+<p><span class="math display">\[
+\boldsymbol a(x)=(1,x,x^2,\ldots,x^p)^\mathsf T.
+\]</span></p>
+<p>If <span class="math inline">\(V\)</span> is the covariance matrix from <code>vcov()</code>, then</p>
+<p><span class="math display">\[
+q(x)=\boldsymbol a(x)^\mathsf T V\boldsymbol a(x),\qquad
+L(x),\ U(x)=\widehat m(x)\mp t_*\sqrt{q(x)}.
+\]</span></p>
+<p>The matrix expression is just shorthand for the expansion we did above. A product of <span class="math inline">\(x^i\)</span> and <span class="math inline">\(x^j\)</span> contributes to the power <span class="math inline">\(x^{i+j}\)</span>, so we can let R collect matching powers. The result is a variance polynomial of degree at most <span class="math inline">\(2p\)</span>.</p>
+<p>The two functions below do that work. <code>poly_cl()</code> extracts the coefficients of the mean and variance polynomials; <code>evaluate_cl()</code> calculates the fitted mean and limits at whichever values of <span class="math inline">\(x\)</span> we choose. They expect a model written with the raw powers, such as <code>y ~ x + I(x^2)</code>.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the reusable functions</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>poly_cl <span class="ot">&lt;-</span> <span class="cf">function</span>(obj, <span class="at">alpha =</span> <span class="fl">0.05</span>, <span class="at">variable =</span> <span class="st">"x"</span>) {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  beta <span class="ot">&lt;-</span> <span class="fu">coef</span>(obj)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  V <span class="ot">&lt;-</span> <span class="fu">vcov</span>(obj)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  p <span class="ot">&lt;-</span> <span class="fu">length</span>(beta) <span class="sc">-</span> <span class="dv">1</span>L</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">model.frame</span>(obj)[[variable]]</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.numeric</span>(x) <span class="sc">||</span> <span class="fu">anyNA</span>(beta) <span class="sc">||</span> <span class="fu">df.residual</span>(obj) <span class="sc">&lt;=</span> <span class="dv">0</span>) {</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"Need a full-rank fit and a numeric predictor in the model frame."</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  expected <span class="ot">&lt;-</span> <span class="fu">outer</span>(x, <span class="dv">0</span><span class="sc">:</span>p, <span class="st">`</span><span class="at">^</span><span class="st">`</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">isTRUE</span>(<span class="fu">all.equal</span>(<span class="fu">unname</span>(<span class="fu">model.matrix</span>(obj)), expected,</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>                       <span class="at">check.attributes =</span> <span class="cn">FALSE</span>))) {</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"Model columns must be 1, x, x^2, ..., x^p, in that order."</span>)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(alpha) <span class="sc">!=</span> <span class="dv">1</span>L <span class="sc">||</span> <span class="sc">!</span><span class="fu">is.finite</span>(alpha) <span class="sc">||</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>      alpha <span class="sc">&lt;=</span> <span class="dv">0</span> <span class="sc">||</span> alpha <span class="sc">&gt;=</span> <span class="dv">1</span>) <span class="fu">stop</span>(<span class="st">"alpha must lie between 0 and 1."</span>)</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  g <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">2</span>L <span class="sc">*</span> p <span class="sc">+</span> <span class="dv">1</span>L)</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">0</span><span class="sc">:</span>p) {</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">0</span><span class="sc">:</span>p) {</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>      g[i <span class="sc">+</span> j <span class="sc">+</span> <span class="dv">1</span>L] <span class="ot">&lt;-</span> g[i <span class="sc">+</span> j <span class="sc">+</span> <span class="dv">1</span>L] <span class="sc">+</span> V[i <span class="sc">+</span> <span class="dv">1</span>L, j <span class="sc">+</span> <span class="dv">1</span>L]</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">names</span>(g) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"g"</span>, <span class="dv">0</span><span class="sc">:</span>(<span class="dv">2</span>L <span class="sc">*</span> p))</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">beta =</span> beta, <span class="at">g =</span> g, <span class="at">V =</span> V,</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>       <span class="at">critical =</span> <span class="fu">qt</span>(<span class="dv">1</span> <span class="sc">-</span> alpha <span class="sc">/</span> <span class="dv">2</span>, <span class="fu">df.residual</span>(obj)))</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>evaluate_cl <span class="ot">&lt;-</span> <span class="cf">function</span>(info, x) {</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>  p <span class="ot">&lt;-</span> <span class="fu">length</span>(info<span class="sc">$</span>beta) <span class="sc">-</span> <span class="dv">1</span>L</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>  A <span class="ot">&lt;-</span> <span class="fu">outer</span>(x, <span class="dv">0</span><span class="sc">:</span>p, <span class="st">`</span><span class="at">^</span><span class="st">`</span>)</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>  mu <span class="ot">&lt;-</span> <span class="fu">drop</span>(A <span class="sc">%*%</span> info<span class="sc">$</span>beta)</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Retain the covariance form for numerical evaluation.</span></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>  variance <span class="ot">&lt;-</span> <span class="fu">rowSums</span>((A <span class="sc">%*%</span> info<span class="sc">$</span>V) <span class="sc">*</span> A)</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">any</span>(variance <span class="sc">&lt;</span> <span class="dv">0</span>)) <span class="fu">stop</span>(<span class="st">"Negative variance: check numerical stability."</span>)</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>  half_width <span class="ot">&lt;-</span> info<span class="sc">$</span>critical <span class="sc">*</span> <span class="fu">sqrt</span>(variance)</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">x =</span> x, <span class="at">fit =</span> mu,</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>             <span class="at">lwr =</span> mu <span class="sc">-</span> half_width, <span class="at">upr =</span> mu <span class="sc">+</span> half_width)</span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Once the functions are defined, using them is short:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>info <span class="ot">&lt;-</span> <span class="fu">poly_cl</span>(obj)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">evaluate_cl</span>(info, <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">15</span>)), <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   x   fit   lwr   upr
+1  5 25.41 18.76 32.06
+2 10  4.59 -2.60 11.79
+3 15 37.92 31.48 44.36</code></pre>
+</div>
+</div>
+<p>The analytic expressions are stored in <code>info$beta</code> (the mean coefficients), <code>info$g</code> (the variance coefficients), and <code>info$critical</code> (the multiplier). For a cubic, fit <code>lm(y ~ x + I(x^2) + I(x^3), data = dat)</code> and pass that fit to the same function.</p>
+<p>One small R detail: <a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/poly.html" target="_blank" rel="noopener noreferrer"><code>poly(x, p)</code></a> uses an orthogonal basis by default, so its coefficients have a different interpretation. <code>predict()</code> handles that correctly, but the helper here is designed for the explicit powers used in our examples. For high degrees or large predictor values, centering and scaling <span class="math inline">\(x\)</span> can also make calculations more stable.</p>
+</section>
+<section id="what-do-these-limits-tell-us" class="level2">
+<h2 class="anchored" data-anchor-id="what-do-these-limits-tell-us">What do these limits tell us?</h2>
+<p>These are <strong>pointwise confidence limits for the mean</strong>: they describe uncertainty about the average response at a chosen <span class="math inline">\(x\)</span>. They do not describe the range of individual observations, and joining them into a ribbon does not make it a 95% simultaneous band for the whole curve.</p>
+<p>If we want to predict one new person’s biomarker value, we also need to allow for individual variation around the mean. R supplies the wider prediction interval with one change:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">predict</span>(obj, <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fl">10.5</span>),</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">interval =</span> <span class="st">"prediction"</span>), <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   fit    lwr   upr
+1 5.49 -17.15 28.13</code></pre>
+</div>
+</div>
+<p>For coverage of the entire mean curve at once, a simultaneous band is needed instead. That is a different question from the pointwise intervals developed here.</p>
+<p>If a reviewer asks for analytic confidence limits, I would report three ingredients: the fitted mean, the expression under the square root, and the multiplier. Together with the predictor units and intended range of use, they let readers calculate the limits themselves. For everyday plotting, <a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/predict.lm.html" target="_blank" rel="noopener noreferrer"><code>predict()</code></a> already does the calculation; writing out the formula shows what is behind the ribbon.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>Hernando, D., Zhao, R., Yuan, Q., et al.&nbsp;(2023). Multicenter reproducibility of liver iron quantification with 1.5-T and 3.0-T MRI. <em>Radiology</em>, <strong>306</strong>(2), e213256. <a href="https://doi.org/10.1148/radiol.213256" target="_blank" rel="noopener noreferrer">doi:10.1148/radiol.213256</a>.</p>
+<p>R Core Team. <em>R documentation</em>: <a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/predict.lm.html" target="_blank" rel="noopener noreferrer"><code>predict.lm</code></a> and <a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/poly.html" target="_blank" rel="noopener noreferrer"><code>poly</code></a>.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button,
+        { trigger: "manual",
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/lmaowisc\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config);
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined;
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            }
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          }
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

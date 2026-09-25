@@ -1,2 +1,7 @@
 # Shared presentation for blog posts; individual .qmd files stay simple.
-css: /blog/post.css?v=2
+css: /blog/post.css?v=3
+format:
+  html:
+    html-math-method:
+      method: mathjax
+      url: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js

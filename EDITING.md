@@ -65,6 +65,8 @@ ggsave("images/your-figure.png", plot = p, bg = "transparent")
 
 This example assumes execution from the post's directory, Quarto's default. Keep an explicit seed for reproducible simulations.
 
+`blog/regression-confidence.qmd` is a complete reproducible example: its R chunks generate the two illustrations in `blog/images/regression-confidence/`, and check the analytic quadratic limits against `predict.lm()`. It needs ggplot2 plus Quarto's usual knitr/rmarkdown dependencies. Its fixed publication date is September 25, 2026. The longer code remains folded using native Quarto chunk options.
+
 ### Publish the website
 
 1. Before editing, pull the latest GitHub changes. If Git reports local changes, commit or stash those changes before pulling; do not discard them.
