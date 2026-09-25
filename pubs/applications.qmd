@@ -1,7 +1,7 @@
 ---
-title: "Applications"
+title: "Publications"
 css:
-  - pubs.css?v=2
+  - pubs.css?v=3
 toc: true
 toc-depth: 2
 ---
