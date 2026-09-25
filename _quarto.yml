@@ -6,6 +6,7 @@ project:
     - people.css
     - research.css
     - courses.css
+    - blog/blog.css
     - images/applied-survival-course.png
     - pubs/pubs.css
     - packages/packages.css

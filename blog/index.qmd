@@ -1,6 +1,21 @@
 ---
 title: "Blog"
-listing: 
-  type: default
+css: blog.css?v=1
+toc: false
+listing:
+  id: blog-posts
+  contents:
+    - "*.qmd"
+    - "!index.qmd"
+    - "!_*.qmd"
+  template: listing.ejs.md
   sort: "date desc"
+  date-format: "MMMM D, YYYY"
 ---
+
+::: {.blog-intro}
+Thoughts on developing statistical methods, collaborating across disciplines, and practicing data science
+:::
+
+::: {#blog-posts}
+:::

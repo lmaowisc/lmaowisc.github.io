@@ -1,6 +1,7 @@
 ---
 title: "The chance of erring on the same side (CESS): A way to elicit correlation"
 subtitle: "Useful for power analysis with repeated measurements"
+description: "An intuitive way to ask investigators about correlation when planning studies with repeated measurements."
 date: "2025-02-10"
 format: html
 categories: [Biostatistics, Power Analysis, Sample Size]

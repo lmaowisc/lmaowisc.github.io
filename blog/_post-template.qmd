@@ -1,0 +1,26 @@
+---
+title: "Your post title"
+description: "A short summary for the Blog page."
+date: "2026-01-01" # Replace with the original publication date; keep it fixed later.
+categories: [Biostatistics, R Programming]
+# image: images/your-figure.png # Optional thumbnail, relative to this file.
+draft: true # Change to false when ready to publish.
+format: html
+execute:
+  warning: false
+---
+
+Write a short introduction here.
+
+## Example
+
+Use ordinary Markdown, equations, images, and R code chunks.
+
+```{r}
+#| eval: false
+# Add your analysis here. Remove eval: false to run this example.
+```
+
+## Discussion
+
+Describe the result and its practical implications.

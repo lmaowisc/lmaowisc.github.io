@@ -1,6 +1,7 @@
 ---
 title: "Cox partial likelihood re-derived as normal equation of GLM"
 subtitle: "Bypassing risk-set construction and event conditioning arguments"
+description: "A GLM perspective on Cox partial likelihood, bypassing risk-set construction and event-conditioning arguments."
 date: "2025-02-16"
 categories: [Biostatistics, Generalized Linear Models, Survival Analysis, Partial Likelihood]
 format: html
@@ -75,7 +76,6 @@ $$ Plugging it back to the left-hand side of \eqref{eq:normal_cox}:
 The Cox model can be reframed as a GLM for a binary event-indicator against an exponentially linked linear predictor with a time-dependent intercept. In this view, the partial likelihood score function aligns exactly with the normal equation of the GLM. This connection offers a new perspective on the Cox model and its estimation.
 
 [^1]: **Whitehead (1980)** presented a similar derivation (Whitehead, J. “Fitting Cox’s Regression Model to Survival Data Using GLIM.” *Journal of the Royal Statistical Society Series C: Applied Statistics* 29 (3): 268. [https://doi.org/10.2307/2346901](https://doi.org/10.2307/2346901).)
-
 
 
 
