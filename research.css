@@ -6,8 +6,8 @@
 .research-page > section + section { margin-top:3.5rem; }
 .research-page h2 { font-size:1.5rem; font-weight:600; line-height:1.15; margin:0; padding:0 0 .45rem; border-bottom:1px solid var(--line); }
 .research-page h3 { font-size:1.16rem; font-weight:400; line-height:1.3; margin:0 0 .6rem; }
-.funding-project { display:grid; grid-template-columns:200px minmax(0,1fr); column-gap:1.5rem; padding:1.25rem 0; }
-.funding-project + .funding-project { border-top:1px solid #e7e4df; }
+.funding-project { display:grid; grid-template-columns:200px minmax(0,1fr); column-gap:1.5rem; padding:1.25rem 0 .65rem; }
+.funding-project + .funding-project { padding-top:.65rem; }
 .funding-project:last-child { padding-bottom:0; }
 .funding-agency { display:flex; justify-content:center; align-items:center; }
 .funding-agency p,.funding-agency figure { margin:0; }
@@ -16,7 +16,7 @@
 .funding-agency-logo { display:block; max-width:100%; height:auto; mix-blend-mode:multiply; background:transparent; }
 .nhlbi-logo,.nci-logo { width:132px; height:132px; object-fit:contain; }
 /* Match the square frame built into the NCI image. */
-.nhlbi-logo { box-sizing:border-box; border:1px solid #888; padding:12px; }
+.nhlbi-logo { box-sizing:border-box; border:1px solid #888; padding:2px; }
 .nsf-logo { width:160px; }
 .funding-meta { display:flex; flex-wrap:wrap; align-items:baseline; column-gap:.7rem; row-gap:.2rem; margin:0 0 .65rem; color:var(--muted); font-size:.85rem; font-weight:400; }
 .funding-meta > span { position:relative; min-width:0; }
