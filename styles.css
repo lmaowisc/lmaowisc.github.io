@@ -4,7 +4,8 @@ html { scrollbar-gutter:stable; }
 body { background:var(--paper); color:#263244; font-family:system-ui,-apple-system,'Segoe UI',sans-serif; }
 h1,h2,h3,h4 { font-family:var(--serif); color:var(--ink); letter-spacing:-.02em; }
 a { color:var(--red); text-decoration:none; }
-a:hover { color:#93040a; text-decoration:none; }
+a:hover { color:#93040a; text-decoration:none!important; }
+code a:hover { color:#93040a; }
 a:focus-visible,button:focus-visible { outline:2px solid var(--red); outline-offset:4px; }
 #quarto-header { border-top:4px solid var(--red); }
 #quarto-header .navbar { background:var(--paper)!important; border-bottom:1px solid var(--line); padding:.55rem 1rem; }

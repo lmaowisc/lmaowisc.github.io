@@ -18,10 +18,10 @@
 .home-main section + section { margin-top:1.15rem; }
 .home-layout h2,.recent-grid h2 { margin:0 0 .7rem; padding:0; border:0; font-size:1.5rem; font-weight:600; line-height:1.15; }
 .home-main section:not(.announcement):not(.research-section) h2 { border-bottom:1px solid var(--line); padding-bottom:.45rem; }
-.announcement { display:flex; gap:1rem; align-items:center; padding:.7rem 1rem; background:#f7eeee; border-radius:4px; }
+.announcement { margin-bottom:1.3rem; display:flex; gap:1rem; align-items:center; padding:.7rem 1rem; background:#f7eeee; border-radius:4px; }
 .announcement > i { color:var(--red); font-size:1.3rem; }
 .announcement > div { position:relative; padding-left:1rem; }
-.announcement h2 { font-size:1.02rem; font-weight:500; margin:0 0 .25rem; }
+.announcement h2 { padding:0; border:0; font-size:1.02rem; font-weight:500; line-height:1.25; margin:0 0 .25rem; }
 .announcement h2 a { color:inherit; }
 .announcement p { margin:0; color:var(--muted); font-size:.82rem; }
 .research-section p { margin:0 0 .6rem; font-size:.94rem; }
