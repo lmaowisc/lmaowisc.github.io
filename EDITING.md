@@ -12,7 +12,7 @@ Open `Website.Rproj` in RStudio. This is a Quarto website; edit the source files
 - `pubs/index.qmd`, `pubs/methods.qmd`, `pubs/applications.qmd`: publication lists.
 - `images/`: course badges and other source images; `dc.jpg` is the avatar.
 
-The homepage has two recent methods papers and two blog posts. Update the short entries in `index.qmd` as needed. Paper-title links should use `https://doi.org/...`. Keep editorial start dates and `present` current.
+The homepage has one recent methods paper, one recent application paper, and two blog posts. Order the two papers newest first by the publisher's first-online publication date, regardless of category. Update the short entries, displayed dates, and `data-publication-date` attributes in `index.qmd` as needed. Paper-title links should use `https://doi.org/...`. Keep editorial start dates and `present` current; keep each date's `–present` suffix in its own span so the dashes and end labels align vertically.
 
 ## Preview and build
 
@@ -42,4 +42,4 @@ Use RStudio's Git pane or your usual Git client. No JavaScript framework or pack
 
 When changing `home.css`, increment its version in the `css:` field of `index.qmd` if visitors continue to see a cached version.
 
-Shared desktop page widths and navigation typography are controlled in `styles.css`. External web links open in a new tab through the Quarto `link-external-newwindow` setting and `newpagelink.lua`; homepage HTML links also declare their targets explicitly. The Google Scholar and ResearchGate SVG symbols in `images/` come from the bundled Academicons icon set.
+Shared desktop page widths and navigation typography are controlled in `styles.css`. External web links open in a new tab through the Quarto `link-external-newwindow` setting and `newpagelink.lua`; homepage HTML links also declare their targets explicitly. The Google Scholar and ResearchGate SVG symbols come from the bundled Academicons icon set; the square X icon comes from Font Awesome. These three symbols are inline SVGs in `index.qmd`, using `currentColor` so their fill changes with the link text. Social links use the original gray (`#4e5862`) and outlined rectangles; icon, text, and border turn Wisconsin red together on hover or keyboard focus.
