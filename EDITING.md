@@ -51,7 +51,7 @@ quarto render blog/index.qmd
 
 There is no manual list of posts to update. Review and publish the source plus generated `docs/` files as below. Existing post filenames are their permanent URLs; retain them when updating a post.
 
-`blog/_metadata.yml` applies `blog/post.css` to posts automatically. That shared stylesheet keeps native section headings and subheadings compact and regular-weight in the site's serif font. Keep presentation out of individual post files, and increment the stylesheet version in `_metadata.yml` after CSS changes. The Blog index uses its separate listing styles.
+`blog/_metadata.yml` applies `blog/post.css` to posts automatically. That shared stylesheet keeps article titles, native section headings, and subheadings compact and regular-weight in the site's serif font, with smaller muted subtitles. Keep presentation out of individual post files, and increment the stylesheet version in `_metadata.yml` after CSS changes. The Blog index uses its separate listing styles, loaded last, including its page-title size.
 
 For new ggplot figures, a transparent background works naturally with the page color. After constructing your plot `p`, use:
 

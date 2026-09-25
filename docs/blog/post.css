@@ -1,3 +1,18 @@
+/* Modest article titles use the same serif family as the finished pages.
+   The Blog index overrides its page title in blog.css, loaded after this file. */
+#title-block-header h1.title {
+  font-family:var(--serif);
+  font-size:1.65rem;
+  font-weight:400;
+  line-height:1.2;
+  letter-spacing:-.02em;
+}
+#title-block-header .subtitle {
+  color:var(--muted);
+  font-size:1.05rem;
+  font-weight:400;
+  line-height:1.45;
+}
 /* Native Quarto section headings match the finished pages' lighter serif style.
    Direct section selectors keep the Blog listing and appendix labels separate. */
 #quarto-document-content > section > h2,
@@ -13,6 +28,7 @@
 #quarto-document-content section h3 { font-size:1.2rem; }
 #quarto-document-content section h4 { font-size:1.05rem; }
 @media(max-width:760px) {
+  #title-block-header h1.title { font-size:1.5rem; }
   #quarto-document-content > section > h2 { font-size:1.35rem; }
   #quarto-document-content section h3 { font-size:1.15rem; }
 }
