@@ -89,6 +89,10 @@
 .announcement > div::before { height:65%; }
 /* Keep the wide-screen research list together; allow wrapping on smaller screens. */
 @media(min-width:1100px) { .research-themes { flex-wrap:nowrap; } }
+@media(min-width:1200px) {
+ .research-themes { column-gap:.65rem; }
+ .research-themes li+li { padding-left:.65rem; }
+}
 @media(min-width:1400px) { .profile-intro { padding-top:1.4rem; } }
 @media(max-width:900px) {
  .profile-intro { grid-template-columns:140px minmax(0,1fr); gap:1.5rem; }
