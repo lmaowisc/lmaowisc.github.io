@@ -4,7 +4,7 @@
     "href": "research.html",
     "title": "Research",
     "section": "",
-    "text": "R01HL149875 (PI): Novel Statistical Methods for Complex Time-to-Event Data in Cardiovascular Clinical Trials (12/2019 – 07/2028; $2,781,980)\n\nHierarchical composite endpoints\nEstimand framework\nGroup sequential trials\nSemiparametric regression\nMachine learning for survival data\n\n\n\n\n\n\n\n\n\n\n\nHIV/Cervical Cancer Prevention ‘CASCADE’ Clinical Trials Network (UW sub-award PI; NIH/NCI U24CA275417; 07/2022 – 06/2027)\n\nUW Clinical Trials Program Data Coordinating Center\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDMS-2015526 (PI): Randomized Trials with Non-Compliance: Extending the Angrist-Imbens-Rubin Framework (07/2020 – 06/2024; $186,383)\n\nCausal inference\nInstrumental variables\nSensitivity analysis\nCovariate adjustment and semiparametric efficiency"
+    "text": "Statistical methods for clinical trials and biomedical research\n\n\n\n\n\n\n\n\n\n\nR01HL149875 PI 12/2019 – 07/2028 $2,781,980\n\n\n\nHierarchical composite endpoints\n\n\nEstimand framework\n\n\nGroup sequential trials\n\n\nSemiparametric regression\n\n\nMachine learning for survival data\n\n\n\n\n\n\n\n\n\n\n\nU24CA275417 UW sub-award PI 07/2022 – 06/2027\n\n\nUW Clinical Trials Program · Data Coordinating CenterCervical cancer prevention for women living with HIV\n\n\n\n\n\n\n\n\n\n\n\n\n\nDMS-2015526 PI 07/2020 – 06/2024 $186,383\n\n\n\nCausal inference\n\n\nInstrumental variables\n\n\nSensitivity analysis\n\n\nCovariate adjustment and semiparametric efficiency\n\n\n\n\n\n\n\n\n\n\n\nLead biostatistical support\n\n\nQuantitative imaging biomarkers\nAI-assisted image analysis and interpretation\nBreast imaging\nPreclinical porcine models\n\n\n\n\n\nBiostatistics Shared Resource\n\n\nClinical trials and observational studies\nAnimal experiments\nBasic science research\nMeta-analysis"
   },
   {
     "objectID": "research.html#funded-projects",
@@ -565,5 +565,26 @@
     "title": "Lu Mao",
     "section": "Highlights",
     "text": "Highlights\n\n  \n    \n    University courseApplied Survival Analysis\n  \n  \n    \n    University courseApplied Longitudinal Analysis\n  \n  \n    \n    University courseMissing Data: Theory and Methods\n  \n  \n    \n    R workshopTidy Survival AnalysisApplying R’s Tidyverse to Survival Data\n  \n  \n    \n    Biostatistics workshopStatistical Methods for Composite EndpointsWin Ratio and Beyond\n  \n\nCourse and workshop outlines →"
+  },
+  {
+    "objectID": "research.html#active-funding",
+    "href": "research.html#active-funding",
+    "title": "Research",
+    "section": "",
+    "text": "R01HL149875 PI 12/2019 – 07/2028 $2,781,980\n\n\n\nHierarchical composite endpoints\n\n\nEstimand framework\n\n\nGroup sequential trials\n\n\nSemiparametric regression\n\n\nMachine learning for survival data\n\n\n\n\n\n\n\n\n\n\n\nU24CA275417 UW sub-award PI 07/2022 – 06/2027\n\n\nUW Clinical Trials Program · Data Coordinating CenterCervical cancer prevention for women living with HIV"
+  },
+  {
+    "objectID": "research.html#past-funding",
+    "href": "research.html#past-funding",
+    "title": "Research",
+    "section": "",
+    "text": "DMS-2015526 PI 07/2020 – 06/2024 $186,383\n\n\n\nCausal inference\n\n\nInstrumental variables\n\n\nSensitivity analysis\n\n\nCovariate adjustment and semiparametric efficiency"
+  },
+  {
+    "objectID": "research.html#collaborative-research",
+    "href": "research.html#collaborative-research",
+    "title": "Research",
+    "section": "",
+    "text": "Lead biostatistical support\n\n\nQuantitative imaging biomarkers\nAI-assisted image analysis and interpretation\nBreast imaging\nPreclinical porcine models\n\n\n\n\n\nBiostatistics Shared Resource\n\n\nClinical trials and observational studies\nAnimal experiments\nBasic science research\nMeta-analysis"
   }
 ]

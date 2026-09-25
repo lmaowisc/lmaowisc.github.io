@@ -2,78 +2,81 @@
 title: "Research"
 css:
   - styles.css?v=8
-  - research.css?v=1
+  - research.css?v=2
+toc: false
 ---
 
-## Funded Projects
+::: {.research-page}
 
-### Active
+<p class="research-intro">Statistical methods for clinical trials and biomedical research</p>
 
-:::::: columns
-::: {.column width="20%"}
-<!-- NHLBI logo -->
+## Active Funding
 
-[![](nhlbi.png){.funding-agency-logo width="100%" fig-alt="NIH National Heart, Lung, and Blood Institute"}](https://www.nhlbi.nih.gov/)
+:::: {.funding-project}
+::: {.funding-agency}
+[![](nhlbi.png){.funding-agency-logo .nhlbi-logo fig-alt="NIH National Heart, Lung, and Blood Institute"}](https://www.nhlbi.nih.gov/){target="_blank"}
 :::
+::: {.funding-copy}
+### [Novel Statistical Methods for Complex Time-to-Event Data in Cardiovascular Clinical Trials](https://reporter.nih.gov/search/9aSu5u3xlE26GrjbF_4cBg/project-details/10734551){target="_blank"}
 
-::: {.column width="5%"}
-<!-- empty column to create gap -->
+<p class="funding-meta"><span><a href="https://reporter.nih.gov/search/9aSu5u3xlE26GrjbF_4cBg/project-details/10734551" target="_blank" rel="noopener noreferrer">R01HL149875</a></span> <span>PI</span> <span>12/2019 – 07/2028</span> <span>&#36;2,781,980</span></p>
+
+<ul class="funding-topics"><li>Hierarchical composite endpoints</li><li>Estimand framework</li><li>Group sequential trials</li><li>Semiparametric regression</li><li>Machine learning for survival data</li></ul>
 :::
+::::
 
-::: {.column width="75%"}
--   [R01HL149875](https://reporter.nih.gov/search/9aSu5u3xlE26GrjbF_4cBg/project-details/10734551){target="_blank"} (PI): Novel Statistical Methods for Complex Time-to-Event Data in Cardiovascular Clinical Trials (12/2019 – 07/2028; \$2,781,980)
-    -   Hierarchical composite endpoints
-    -   Estimand framework
-    -   Group sequential trials
-    -   Semiparametric regression
-    -   Machine learning for survival data
+:::: {.funding-project}
+::: {.funding-agency}
+[![](images/nci-logo.svg){.funding-agency-logo .nci-logo fig-alt="NIH National Cancer Institute"}](https://www.cancer.gov/){target="_blank"}
 :::
-::::::
+::: {.funding-copy}
+### [HIV/Cervical Cancer Prevention “CASCADE” Clinical Trials Network](https://www.cascade-network.org){target="_blank"}
 
-:::::: columns
-::: {.column width="20%"}
+<p class="funding-meta"><span>U24CA275417</span> <span>UW sub-award PI</span> <span>07/2022 – 06/2027</span></p>
+
+<p class="funding-description">UW Clinical Trials Program · <a href="https://dcc.wisc.edu/" target="_blank" rel="noopener noreferrer">Data Coordinating Center</a><br>Cervical cancer prevention for women living with HIV</p>
 :::
+::::
 
-::: {.column width="5%"}
+## Past Funding
+
+:::: {.funding-project .past-project}
+::: {.funding-agency}
+[![](nsf.png){.funding-agency-logo .nsf-logo fig-alt="National Science Foundation"}](https://new.nsf.gov/mps/dms){target="_blank"}
 :::
+::: {.funding-copy}
+### [Randomized Trials with Non-Compliance: Extending the Angrist–Imbens–Rubin Framework](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2015526){target="_blank"}
 
-::: {.column width="75%"}
--   [HIV/Cervical Cancer Prevention ‘CASCADE’ Clinical Trials Network](https://www.cascade-network.org){target="_blank"} (**UW sub-award PI**; NIH/NCI U24CA275417; 07/2022 – 06/2027)
-    -   UW Clinical Trials Program [Data Coordinating Center](https://dcc.wisc.edu/){target="_blank"}
+<p class="funding-meta"><span><a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2015526" target="_blank" rel="noopener noreferrer">DMS-2015526</a></span> <span>PI</span> <span>07/2020 – 06/2024</span> <span>&#36;186,383</span></p>
+
+<ul class="funding-topics"><li>Causal inference</li><li>Instrumental variables</li><li>Sensitivity analysis</li><li>Covariate adjustment and semiparametric efficiency</li></ul>
 :::
-::::::
+::::
 
-### Past
+## Collaborative Research
 
-:::::: columns
-::: {.column width="20%"}
-<!-- NSF logo -->
+::::: {.collaboration-grid}
+:::: {.collaboration-project}
+### [UW Radiology](https://radiology.wisc.edu/){target="_blank"}
 
-[![](nsf.png){.funding-agency-logo width="100%" fig-alt="National Science Foundation"}](https://new.nsf.gov/mps/dms)
+<p class="collaboration-role">Lead biostatistical support</p>
+
+- Quantitative imaging biomarkers
+- AI-assisted image analysis and interpretation
+- Breast imaging
+- Preclinical porcine models
+::::
+
+:::: {.collaboration-project}
+### [UW Carbone Cancer Center](https://cancer.wisc.edu/){target="_blank"}
+
+<p class="collaboration-role"><a href="https://cancer.wisc.edu/research/resources/bsr/" target="_blank" rel="noopener noreferrer">Biostatistics Shared Resource</a></p>
+
+- Clinical trials and observational studies
+- Animal experiments
+- Basic science research
+- Meta-analysis
+::::
+:::::
+
 :::
-
-::: {.column width="5%"}
-<!-- empty column to create gap -->
-:::
-
-::: {.column width="75%"}
--   [DMS-2015526](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2015526){target="_blank"} (PI): Randomized Trials with Non-Compliance: Extending the Angrist-Imbens-Rubin Framework (07/2020 -- 06/2024; \$186,383)
-    -   Causal inference
-    -   Instrumental variables
-    -   Sensitivity analysis
-    -   Covariate adjustment and semiparametric efficiency
-:::
-::::::
-
-## Other projects
-
--   Lead biostatistical support for [UW Radiology](https://radiology.wisc.edu/){target="_blank"}
-    -   Quantitative imaging biomarkers
-    -   AI-assisted image analysis/interpreation
-    -   Breast imaging
-    -   Preclinical porcine models
--   [UW Carbone Cancer Center](https://cancer.wisc.edu/){target="_blank"} [Biostatistics Shared Resource (BSR)](https://cancer.wisc.edu/research/resources/bsr/){target="_blank"}
-    -   Clinical trials & observational studies
-    -   Animal experiments
-    -   Basic science research
-    -   Meta analysis
