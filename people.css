@@ -20,10 +20,7 @@
 .alumni-details strong { font-weight:600; }
 .alumni-details p { margin:0 0 .2rem; }
 .alumni-details p:last-child { margin-bottom:0; }
-.alumni-name p { margin:.25rem 0 0; }
-.alumni-name .alumni-profile-link { font-size:.76rem; color:var(--muted); }
 .alumni-details a { color:inherit; }
-.alumni-name .alumni-profile-link:hover,.alumni-name .alumni-profile-link:focus-visible,
 .alumni-details a:hover,.alumni-details a:focus-visible { color:var(--red); }
 /* Match the homepage's short, muted red separators. */
 .alumni-meta { display:flex; flex-wrap:wrap; align-items:baseline; column-gap:.65rem; row-gap:.15rem; }

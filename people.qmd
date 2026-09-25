@@ -2,7 +2,7 @@
 title: "People"
 css:
   - styles.css?v=8
-  - people.css?v=4
+  - people.css?v=5
 toc: false
 ---
 
@@ -50,8 +50,6 @@ PhD student in Biomedical Data Science
 :::: {.alumni-entry}
 ::: {.alumni-name}
 ### [Li Ge](https://li-ge.org/){target="_blank"}
-
-[LinkedIn](https://www.linkedin.com/in/li-ge){.alumni-profile-link target="_blank" aria-label="Li Ge on LinkedIn"}
 :::
 ::: {.alumni-details}
 <p class="alumni-meta"><span>PhD</span> <span>Biomedical Data Science</span> <span>UW–Madison</span> <span>2024</span></p>
@@ -65,8 +63,6 @@ PhD student in Biomedical Data Science
 :::: {.alumni-entry}
 ::: {.alumni-name}
 ### [Tuo Wang](https://tuowang.rbind.io/about/){target="_blank"}
-
-[LinkedIn](https://www.linkedin.com/in/tuo-wang-0485b5133){.alumni-profile-link target="_blank" aria-label="Tuo Wang on LinkedIn"}
 :::
 ::: {.alumni-details}
 <p class="alumni-meta"><span>PhD</span> <span>Biomedical Data Science</span> <span>UW–Madison</span> <span>2023</span></p>
@@ -79,9 +75,7 @@ PhD student in Biomedical Data Science
 
 :::: {.alumni-entry}
 ::: {.alumni-name}
-### Chengning Zhang
-
-[LinkedIn](https://www.linkedin.com/in/cheng-ning-zhang){.alumni-profile-link target="_blank" aria-label="Chengning Zhang on LinkedIn"}
+### [Chengning Zhang](https://www.linkedin.com/in/cheng-ning-zhang){target="_blank"}
 :::
 ::: {.alumni-details}
 <p class="alumni-meta"><span>PhD</span> <span>Statistics (Biostatistics Option)</span> <span>UW–Madison</span> <span>2022</span></p>
@@ -94,9 +88,7 @@ PhD student in Biomedical Data Science
 
 :::: {.alumni-entry}
 ::: {.alumni-name}
-### Yi Li
-
-[LinkedIn](https://www.linkedin.com/in/yi-li-961809149){.alumni-profile-link target="_blank" aria-label="Yi Li on LinkedIn"}
+### [Yi Li](https://www.linkedin.com/in/yi-li-961809149){target="_blank"}
 :::
 ::: {.alumni-details}
 <p class="alumni-meta"><span>PhD</span> <span>Statistics (Biostatistics Option)</span> <span>UW–Madison</span> <span>2020</span></p>
