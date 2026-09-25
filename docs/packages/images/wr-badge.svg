@@ -3,7 +3,8 @@
   <desc id="desc">A hexagonal patch with a crimson WR wordmark above two patient timelines, using the package website's clinical-priority illustration and palette.</desc>
   <path d="M260 12 508 156v288L260 588 12 444V156Z" fill="#f8f9fb"/>
   <path d="M260 12 508 156V310H12V156Z" fill="#ac1730"/>
-  <text x="260" y="230" text-anchor="middle" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-size="146" font-weight="700" letter-spacing="-6">WR</text>
+  <!-- WR lettering: DM Serif Display Regular, outlined to preserve the approved appearance across devices. -->
+  <g fill="#fff" transform="translate(145.74660633484163 229.54751131221718) scale(0.15082956259426847 -0.15082956259426847)"><path transform="translate(0 0)" d="M236 -3 59 592Q52 615 44.0 625.5Q36 636 16 645L4 650V660H269V650L248 642Q225 633 217.0 620.0Q209 607 216 584L325 168L443 517L420 588Q413 609 407.0 620.0Q401 631 387 638L365 650V660H616V650L585 638Q565 631 562.5 617.5Q560 604 567 583L694 158L814 575Q821 599 819.0 617.0Q817 635 794 643L773 650V660H912V650L886 640Q866 633 858.0 618.0Q850 603 844 581L678 -3H609L459 467L305 -3Z"/><path transform="translate(893.0 0)" d="M22 0V10L43 17Q63 24 69.0 35.5Q75 47 75 68V591Q75 611 69.5 622.5Q64 634 45 641L22 650V660H308Q426 660 489.0 615.5Q552 571 552 492Q552 448 519.0 404.0Q486 360 415 336L554 60Q563 43 574.5 32.5Q586 22 605 14L618 9V0H439L291 315H223V68Q223 49 229.0 37.0Q235 25 254 19L278 10V0ZM223 335H271Q343 335 375.0 373.5Q407 412 407 488Q407 565 377.0 602.5Q347 640 276 640H223Z"/></g>
   <text x="260" y="279" text-anchor="middle" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="28" letter-spacing=".5">Win ratio analysis</text>
   <g fill="#20232c" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="600">
     <text x="59" y="378">A</text><text x="59" y="441">B</text>
