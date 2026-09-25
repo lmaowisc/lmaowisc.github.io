@@ -37,8 +37,10 @@
 .degree-list a { color:inherit; }
 .degree-year { position:relative; color:var(--muted); font-variant-numeric:tabular-nums; }
 .degree-list strong { font-weight:500; color:var(--ink); }
-.degree-qualification { display:grid; grid-template-columns:2.1rem .35rem minmax(0,1fr); column-gap:.3rem; align-items:baseline; }
-.degree-dot { color:var(--muted); text-align:center; font-weight:400; }
+.degree-qualification { display:grid; grid-template-columns:1.9rem .3rem minmax(0,1fr); column-gap:.2rem; align-items:baseline; }
+.degree-qualification > span:first-child { text-align:center; }
+.degree-dot { display:grid; place-items:center; align-self:center; color:var(--muted); font-size:0; }
+.degree-dot::before { content:""; width:.15rem; height:.15rem; border-radius:50%; background:currentColor; }
 .degree-school { position:relative; padding-left:.85rem; color:var(--muted); font-size:inherit; }
 .editorial-list li { display:grid; grid-template-columns:9rem minmax(0,1fr); gap:.85rem; font-size:.94rem; line-height:1.45; margin:.55rem 0; }
 .editorial-list li > span { display:grid; grid-template-columns:minmax(0,1fr) 9rem; column-gap:.85rem; align-items:baseline; }
