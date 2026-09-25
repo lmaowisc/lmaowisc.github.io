@@ -1,4 +1,5 @@
 /* Shared academic palette and typography. */
+html { scrollbar-gutter:stable; }
 :root { --paper:#faf9f6; --ink:#152238; --muted:#435063; --red:#c5050c; --line:#dcdad5; --serif:Georgia,'Times New Roman',serif; }
 body { background:var(--paper); color:#263244; font-family:system-ui,-apple-system,'Segoe UI',sans-serif; }
 h1,h2,h3,h4 { font-family:var(--serif); color:var(--ink); letter-spacing:-.02em; }
