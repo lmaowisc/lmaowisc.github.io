@@ -9,7 +9,7 @@ toc: false
   <p class="package-intro">Statistical software for clinical trials and complex outcomes</p>
   <article class="package-entry" aria-labelledby="wr-title">
     <a class="package-badge-link" href="https://lmaowisc.github.io/WR/" target="_blank" rel="noopener noreferrer" aria-label="Visit the WR package website">
-      <img class="package-badge" src="images/wr-badge.svg?v=2" width="520" height="520" alt="WR: Win ratio analysis badge with paired patient timelines">
+      <img class="package-badge" src="images/wr-badge.svg?v=3" width="520" height="600" alt="WR: Hexagonal win ratio analysis badge with paired patient timelines">
     </a>
     <div class="package-copy">
       <h2 id="wr-title"><a href="https://lmaowisc.github.io/WR/" target="_blank" rel="noopener noreferrer">WR</a></h2>
