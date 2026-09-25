@@ -71,10 +71,6 @@
 .recent-list li+li { margin-top:.9rem; }
 .recent-list a { display:block; font-family:var(--serif); font-size:1rem; color:var(--ink); line-height:1.3; }
 .recent-list span { display:block; font-size:.78rem; color:var(--muted); margin-top:.25rem; }
-/* Author lines match the Publications page's muted text and name emphasis. */
-.recent-authors { color:var(--muted); font-size:.85rem; line-height:1.35; margin-top:.15rem; overflow-wrap:anywhere; }
-.recent-authors strong { font-weight:600; color:var(--ink); }
-.recent-authors .author-icon { margin-left:.25em; font-size:.82em; }
 .home-contact { border-top:1px solid var(--line); margin-top:1.6rem; padding:.8rem 0 0; color:var(--muted); font-size:.71rem; }
 /* Consistent short, thick separators between inline pieces of information. */
 .research-themes li+li::before,
