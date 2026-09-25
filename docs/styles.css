@@ -23,18 +23,18 @@ a:focus-visible,button:focus-visible { outline:2px solid var(--red); outline-off
 .dropdown-menu .dropdown-item:hover,.dropdown-menu .dropdown-item:focus { color:var(--red); background:#f4eeee; }
 .dropdown-menu .dropdown-item.active { color:var(--red); background:#f4eeee; }
 #TOC .nav-link.active { color:var(--red)!important; border-left-color:var(--red)!important; }
-@media(min-width:992px) { .navbar-container { max-width:1290px; margin-inline:auto; width:100%; } .navbar-collapse { justify-content:flex-end; } .navbar-nav { margin-left:auto; margin-right:0!important; } }
+@media(min-width:992px) { .navbar-container { max-width:1200px; margin-inline:auto; width:100%; } .navbar-collapse { justify-content:flex-end; } .navbar-nav { margin-left:auto; margin-right:0!important; } }
 /* One desktop frame for all pages; pages without a contents sidebar use its full width. */
 @media(min-width:992px) {
  body #quarto-content.page-columns {
   grid-template-columns:[screen-start] minmax(1.5rem,1fr)
-   [screen-start-inset page-start page-start-inset body-start-outset body-start body-content-start] minmax(0,1030px)
+   [screen-start-inset page-start page-start-inset body-start-outset body-start body-content-start] minmax(0,940px)
    [body-content-end] 1.5rem [body-end body-end-outset] minmax(0,210px)
    [page-end-inset page-end screen-end-inset] minmax(1.5rem,1fr) [screen-end];
  }
  body.fullcontent #quarto-content.page-columns {
   grid-template-columns:[screen-start] minmax(1.5rem,1fr)
-   [screen-start-inset page-start page-start-inset body-start-outset body-start body-content-start] minmax(0,calc(1240px + 1.5rem))
+   [screen-start-inset page-start page-start-inset body-start-outset body-start body-content-start] minmax(0,calc(1150px + 1.5rem))
    [body-content-end body-end body-end-outset page-end-inset page-end screen-end-inset] minmax(1.5rem,1fr) [screen-end];
  }
 }

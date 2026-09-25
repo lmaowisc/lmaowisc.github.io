@@ -13,7 +13,7 @@
 .social-links a:hover { color:#93040a; }
 .social-links i { font-size:1.15em; line-height:1; }
 .social-icon { width:1.2em; height:1.2em; object-fit:contain; }
-.home-layout { display:grid; grid-template-columns:minmax(0,1fr) clamp(250px,23.5vw,318px); gap:2rem; margin-bottom:2.7rem; }
+.home-layout { display:grid; grid-template-columns:minmax(0,2.2fr) minmax(250px,.85fr); gap:2rem; margin-bottom:2.7rem; }
 .home-main,.home-highlights { min-width:0; }
 .home-main section + section { margin-top:1.15rem; }
 .home-layout h2,.recent-grid h2 { margin:0 0 .7rem; padding:0; border:0; font-size:1.5rem; font-weight:600; line-height:1.15; }
@@ -21,13 +21,13 @@
 .announcement { margin-bottom:1.3rem; display:flex; gap:1rem; align-items:center; padding:.7rem 1rem; background:#f7eeee; border-radius:4px; }
 .announcement > i { color:var(--red); font-size:1.3rem; }
 .announcement > div { position:relative; padding-left:1rem; }
-.announcement h2 { padding:0; border:0; font-size:1.02rem; font-weight:500; line-height:1.25; margin:0 0 .25rem; }
+.announcement h2 { padding:0; border:0; font-size:1.12rem; font-weight:500; line-height:1.25; margin:0 0 .25rem; }
 .announcement h2 a { color:inherit; }
-.announcement p { margin:0; color:var(--muted); font-size:.82rem; }
+.announcement p { margin:0; color:var(--muted); font-size:.9rem; }
 .research-section p { margin:0 0 .6rem; font-size:.94rem; }
-.research-themes { display:flex; flex-wrap:wrap; list-style:none; padding:0; margin:0 0 .5rem; gap:.5rem .55rem; color:var(--ink); font-family:var(--serif); font-weight:600; }
+.research-themes { display:flex; flex-wrap:wrap; list-style:none; padding:0; margin:0 0 .5rem; gap:.5rem .35rem; color:var(--ink); font-family:var(--serif); font-size:.92rem; font-weight:600; }
 .research-themes li { white-space:nowrap; }
-.research-themes li+li { position:relative; padding-left:.65rem; }
+.research-themes li+li { position:relative; padding-left:.45rem; }
 
 .quiet-link { font-size:.79rem; }
 .link-separator { padding:0 .6rem; color:var(--muted); }
@@ -118,6 +118,6 @@
  .highlight-card img { width:70px; }
  .editorial-list li { grid-template-columns:7.2rem minmax(0,1fr); gap:.65rem; }
  .editorial-list strong { font-size:.8rem; }
- .research-themes { font-size:.85rem; gap:.4rem .55rem; }
- .research-themes li+li { padding-left:.65rem; }
+ .research-themes { font-size:.85rem; gap:.4rem .35rem; }
+ .research-themes li+li { padding-left:.45rem; }
 }
