@@ -1,6 +1,6 @@
 ---
 title: "Courses"
-css: courses.css?v=2
+css: courses.css?v=3
 toc: false
 ---
 
