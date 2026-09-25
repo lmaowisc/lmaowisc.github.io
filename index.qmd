@@ -4,7 +4,7 @@ subtitle: "Associate Professor of Biostatistics and Medical Informatics"
 description: "Lu Mao, Associate Professor at the University of Wisconsin–Madison. Research in survival analysis, causal inference, and clinical trials; courses, methods papers, and statistical writing."
 image: dc.jpg
 css:
-  - home.css?v=28
+  - home.css?v=29
 toc: false
 title-block-style: default
 ---
@@ -93,8 +93,8 @@ title-block-style: default
 <section aria-labelledby="recent-publications">
 <div class="section-heading"><h2 id="recent-publications">Recent Publications</h2><a href="pubs/">All publications →</a></div>
 <ul class="recent-list">
-<li data-publication-date="2026-10"><a href="https://doi.org/10.5705/ss.202023.0321" target="_blank" rel="noopener noreferrer">Win ratio for partially ordered data</a><span>Statistica Sinica · 2026 · 36(4), 2077–2096</span></li>
-<li data-publication-date="2026-10"><a href="https://doi.org/10.1007/s00261-026-05407-2" target="_blank" rel="noopener noreferrer">Transperineal 3D vector magnetic resonance elastography of the prostate is feasible in men with benign prostatic hyperplasia and lower urinary tract symptoms</a><span>Abdominal Radiology · 2026 · 51(10), 5164–5173</span></li>
+<li data-publication-date="2026-10"><a href="https://doi.org/10.5705/ss.202023.0321" target="_blank" rel="noopener noreferrer">Win ratio for partially ordered data</a><div class="recent-authors"><strong>Mao, L.</strong> <i class="bi bi-envelope-fill author-icon" role="img" aria-label="Corresponding author" title="Corresponding author"></i></div><span>Statistica Sinica · 2026 · 36(4), 2077–2096</span></li>
+<li data-publication-date="2026-10"><a href="https://doi.org/10.1007/s00261-026-05407-2" target="_blank" rel="noopener noreferrer">Transperineal 3D vector magnetic resonance elastography of the prostate is feasible in men with benign prostatic hyperplasia and lower urinary tract symptoms</a><div class="recent-authors">Johnson, C., Gonzalez-Pereira, J.P., Grimes, M., <strong>Mao, L.</strong>, Ricke, W., Wei, J., Brace, C., and Wells, S.</div><span>Abdominal Radiology · 2026 · 51(10), 5164–5173</span></li>
 </ul>
 </section>
 <section aria-labelledby="recent-writing">
