@@ -5,6 +5,7 @@ project:
     - home.css
     - people.css
     - research.css
+    - pubs/pubs.css
     - styles.css
     - images/google-scholar.svg
     - images/researchgate.svg
@@ -43,7 +44,7 @@ website:
 format:
   html:
     theme: cosmos
-    css: styles.css?v=8
+    css: /styles.css?v=8
     toc: true
     link-external-newwindow: true
     linkcolor: "#C5050C"

@@ -1,19 +1,59 @@
-/* css styles */
-
-h2 {
-    font-size: 1.2em;
-    margin-top: 20px;  /* Adjust space above */
-    margin-bottom: 5px; /* Adjust space below */
+/* Shared publication layout: separate pages with common navigation and entries. */
+#title-block-header { margin:0 0 1rem; }
+#title-block-header h1.title { font-size:1.9rem; line-height:1.08; font-weight:400; letter-spacing:-.025em; margin:0; }
+.navbar #nav-menu-publications { color:var(--red)!important; box-shadow:inset 0 -3px var(--red); }
+.pub-nav { display:flex; flex-wrap:wrap; gap:.35rem 1.5rem; margin:0 0 .75rem; }
+.pub-nav a { color:var(--ink); font-size:.94rem; padding:0 0 .3rem; border-bottom:2px solid transparent; }
+.pub-nav a[aria-current="page"] { color:var(--red); border-bottom-color:var(--red); }
+.pub-nav a:hover,.pub-nav a:focus-visible { color:var(--red); }
+.pub-legend { color:var(--muted); font-size:.8rem; line-height:1.5; margin:0; }
+.pub-legend p { display:flex; flex-wrap:wrap; align-items:center; gap:.25rem .8rem; margin:0; }
+.pub-legend-item { display:inline-flex; align-items:center; gap:.35rem; }
+.pub-legend-item + .pub-legend-item::before { content:"·"; color:#999; margin-right:.35rem; }
+.pub-icon { display:inline-block; margin-left:.25em; white-space:nowrap; vertical-align:baseline; color:var(--muted); }
+.pub-icon .fa-envelope,.pub-legend .fa-envelope { font-size:.82em; }
+.pub-icon .ai-open-access,.pub-legend .ai-open-access { font-size:1em; }
+#quarto-document-content { padding-bottom:1.5rem; }
+#quarto-document-content > section:first-of-type { margin-top:1.9rem; }
+#quarto-document-content > section + section { margin-top:3rem; }
+#quarto-document-content > section > h2 { font-size:1.4rem; line-height:1.2; font-weight:600; margin:0 0 1rem; padding:0 0 .45rem; border-bottom:1px solid var(--line); }
+.pub-entry { margin:0 0 1.5rem; }
+.pub-entry:last-child { margin-bottom:0; }
+.pub-entry p { margin:0; }
+.pub-title { font-family:var(--serif); font-size:1.08rem; font-weight:400; line-height:1.35; color:var(--ink); margin:0 0 .25rem; }
+.pub-authors,.pub-citation { color:var(--muted); font-size:.85rem; line-height:1.5; overflow-wrap:anywhere; }
+.pub-authors { margin-bottom:.15rem; }
+.pub-authors strong { font-weight:600; color:var(--ink); }
+.pub-authors .underline { text-underline-offset:.15em; text-decoration-color:#87919c; }
+.pub-citation { margin-bottom:.15rem; }
+.pub-resources,.pub-note { color:var(--muted); font-size:.81rem; line-height:1.5; margin-top:.15rem; }
+.pub-resources p { display:flex; flex-wrap:wrap; column-gap:.65rem; row-gap:.15rem; }
+.pub-resource { position:relative; }
+.pub-resource + .pub-resource { padding-left:.7rem; }
+.pub-resource + .pub-resource::before { content:""; position:absolute; left:0; top:.75em; transform:translateY(-50%); width:2px; height:.85em; background:#c58a8f; }
+.pub-entry a { color:inherit; }
+.pub-entry a:hover,.pub-entry a:focus-visible { color:var(--red); }
+.pub-resources code { font-family:inherit; font-size:inherit; color:inherit; padding:0; background:none; }
+#quarto-margin-sidebar #TOC { font-size:.83rem; padding-left:1rem; border-left:1px solid var(--line); }
+#quarto-margin-sidebar #toc-title { font-family:inherit; font-size:.85rem; font-weight:500; color:var(--ink); margin-bottom:.5rem; }
+#TOC a { color:var(--muted); line-height:1.4; }
+#TOC a:hover,#TOC a:focus-visible { color:var(--red); }
+.pub-mobile-toc { display:none; }
+@media(max-width:991px) {
+ #quarto-margin-sidebar { display:none!important; }
+ .pub-mobile-toc { display:block; margin-top:1rem; font-size:.85rem; color:var(--muted); }
+ .pub-mobile-toc summary { cursor:pointer; width:fit-content; }
+ .pub-mobile-toc summary:hover { color:var(--red); }
+ .pub-mobile-toc nav { display:flex; flex-wrap:wrap; gap:.5rem 1rem; padding-top:.6rem; }
+ .pub-mobile-toc a { color:var(--ink); }
+ .pub-mobile-toc a:hover,.pub-mobile-toc a:focus-visible { color:var(--red); }
+ #quarto-document-content > section:first-of-type { margin-top:1.5rem; }
 }
-
-
-
-h3 {
-    font-size: 1.0em;
+@media(max-width:560px) {
+ #title-block-header h1.title { font-size:1.85rem; }
+ .pub-nav { column-gap:1.2rem; }
+ #quarto-document-content > section + section { margin-top:2.4rem; }
+ .pub-title { font-size:1.04rem; }
+ .pub-authors,.pub-citation { font-size:.84rem; }
+ .pub-legend p { column-gap:.6rem; }
 }
-
-/* body {
-    font-size: 16px; /* Adjust size as needed */
-}
-*/
-

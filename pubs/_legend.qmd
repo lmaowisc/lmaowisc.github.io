@@ -1,0 +1,3 @@
+::: {.pub-legend aria-label="Publication symbols"}
+[{{< fa envelope >}} Corresponding author]{.pub-legend-item} [† Student/supervisee]{.pub-legend-item} [{{< ai open-access >}} Open access]{.pub-legend-item}
+:::
