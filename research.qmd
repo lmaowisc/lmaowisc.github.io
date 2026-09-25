@@ -1,5 +1,8 @@
 ---
 title: "Research"
+css:
+  - styles.css?v=8
+  - research.css?v=1
 ---
 
 ## Funded Projects
@@ -10,7 +13,7 @@ title: "Research"
 ::: {.column width="20%"}
 <!-- NHLBI logo -->
 
-[![](nhlbi.png){width="100%"}](https://www.nhlbi.nih.gov/)
+[![](nhlbi.png){.funding-agency-logo width="100%" fig-alt="NIH National Heart, Lung, and Blood Institute"}](https://www.nhlbi.nih.gov/)
 :::
 
 ::: {.column width="5%"}
@@ -27,13 +30,26 @@ title: "Research"
 :::
 ::::::
 
+:::::: columns
+::: {.column width="20%"}
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="75%"}
+-   [HIV/Cervical Cancer Prevention ‘CASCADE’ Clinical Trials Network](https://www.cascade-network.org){target="_blank"} (**UW sub-award PI**; NIH/NCI U24CA275417; 07/2022 – 06/2027)
+    -   UW Clinical Trials Program [Data Coordinating Center](https://dcc.wisc.edu/){target="_blank"}
+:::
+::::::
+
 ### Past
 
 :::::: columns
 ::: {.column width="20%"}
 <!-- NSF logo -->
 
-[![](nsf.png){width="100%"}](https://new.nsf.gov/mps/dms)
+[![](nsf.png){.funding-agency-logo width="100%" fig-alt="National Science Foundation"}](https://new.nsf.gov/mps/dms)
 :::
 
 ::: {.column width="5%"}
@@ -51,8 +67,6 @@ title: "Research"
 
 ## Other projects
 
--   UW Clinical Trials Program [Data Coordinating Center](https://dcc.wisc.edu/){target="_blank"}
-    -   [HIV/Cervical Cancer Prevention ‘CASCADE’ Clinical Trials Network](https://www.cascade-network.org){target="_blank"} (U24 07/2022 -- 06/2027)
 -   Lead biostatistical support for [UW Radiology](https://radiology.wisc.edu/){target="_blank"}
     -   Quantitative imaging biomarkers
     -   AI-assisted image analysis/interpreation

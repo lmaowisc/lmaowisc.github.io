@@ -1,0 +1,2 @@
+/* Blend the agency artwork's white background into the site's paper color. */
+.funding-agency-logo { mix-blend-mode:multiply; background:transparent; }

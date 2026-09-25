@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-4b876e1d3b3d45c7275e6ea6e4aeae49.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-2757a3ad6a0c4af0e6632064aa8a2553.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,15 +69,13 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="research.css?v=1">
 <meta property="og:title" content="Research – Lu Mao">
 <meta property="og:image" content="https://lmaowisc.github.io/nhlbi.png">
 <meta property="og:site_name" content="Lu Mao">
+<meta property="og:image:alt" content="NIH National Heart, Lung, and Blood Institute">
 <meta property="og:image:height" content="155">
 <meta property="og:image:width" content="225">
-<meta name="twitter:title" content="Research – Lu Mao">
-<meta name="twitter:image" content="https://lmaowisc.github.io/dc.jpg">
-<meta name="twitter:creator" content="@lmaowisc">
-<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
@@ -194,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="columns">
 <div class="column" style="width:20%;">
 <!-- NHLBI logo -->
-<p><a href="https://www.nhlbi.nih.gov/" target="_blank" rel="noopener noreferrer"><img src="nhlbi.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="https://www.nhlbi.nih.gov/" target="_blank" rel="noopener noreferrer"><img src="nhlbi.png" class="funding-agency-logo img-fluid" style="width:100.0%" alt="NIH National Heart, Lung, and Blood Institute"></a></p>
 </div><div class="column" style="width:5%;">
 <!-- empty column to create gap -->
 </div><div class="column" style="width:75%;">
@@ -210,13 +208,27 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </div>
 </div>
+<div class="columns">
+<div class="column" style="width:20%;">
+
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:75%;">
+<ul>
+<li><a href="https://www.cascade-network.org" target="_blank" rel="noopener noreferrer">HIV/Cervical Cancer Prevention ‘CASCADE’ Clinical Trials Network</a> (<strong>UW sub-award PI</strong>; NIH/NCI U24CA275417; 07/2022 – 06/2027)
+<ul>
+<li>UW Clinical Trials Program <a href="https://dcc.wisc.edu/" target="_blank" rel="noopener noreferrer">Data Coordinating Center</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
 </section>
 <section id="past" class="level3">
 <h3 class="anchored" data-anchor-id="past">Past</h3>
 <div class="columns">
 <div class="column" style="width:20%;">
 <!-- NSF logo -->
-<p><a href="https://new.nsf.gov/mps/dms" target="_blank" rel="noopener noreferrer"><img src="nsf.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="https://new.nsf.gov/mps/dms" target="_blank" rel="noopener noreferrer"><img src="nsf.png" class="funding-agency-logo img-fluid" style="width:100.0%" alt="National Science Foundation"></a></p>
 </div><div class="column" style="width:5%;">
 <!-- empty column to create gap -->
 </div><div class="column" style="width:75%;">
@@ -236,10 +248,6 @@ ul.task-list li input[type="checkbox"] {
 <section id="other-projects" class="level2">
 <h2 class="anchored" data-anchor-id="other-projects">Other projects</h2>
 <ul>
-<li>UW Clinical Trials Program <a href="https://dcc.wisc.edu/" target="_blank" rel="noopener noreferrer">Data Coordinating Center</a>
-<ul>
-<li><a href="https://www.cascade-network.org" target="_blank" rel="noopener noreferrer">HIV/Cervical Cancer Prevention ‘CASCADE’ Clinical Trials Network</a> (U24 07/2022 – 06/2027)</li>
-</ul></li>
 <li>Lead biostatistical support for <a href="https://radiology.wisc.edu/" target="_blank" rel="noopener noreferrer">UW Radiology</a>
 <ul>
 <li>Quantitative imaging biomarkers</li>
@@ -364,6 +372,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
