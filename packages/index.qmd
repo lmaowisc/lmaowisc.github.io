@@ -4,6 +4,7 @@ css: packages.css?v=2
 toc: false
 ---
 
+```{=html}
 <div class="package-page">
   <article class="package-entry" aria-labelledby="wr-title">
     <a class="package-badge-link" href="https://lmaowisc.github.io/WR/" target="_blank" rel="noopener noreferrer" aria-label="Visit the WR package website">
@@ -37,3 +38,4 @@ toc: false
     </div>
   </article>
 </div>
+```
