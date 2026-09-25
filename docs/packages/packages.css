@@ -1,4 +1,30 @@
-/* css styles */
-
-/* Ensure images in listings have a maximum height */
-/* Limit the maximum height of images in the grid */
+/* Package entries follow the site's academic typography and badge-led layout. */
+#title-block-header { margin:0 0 2.1rem; }
+#title-block-header h1.title { font-size:1.9rem; line-height:1.08; font-weight:400; letter-spacing:-.025em; margin:0; }
+.package-page { padding-bottom:1.5rem; }
+.package-entry { display:grid; grid-template-columns:190px minmax(0,1fr); align-items:center; column-gap:2.5rem; }
+.package-entry + .package-entry { margin-top:2.4rem; }
+.package-badge-link { display:block; width:190px; border-radius:.2rem; }
+.package-badge { display:block; width:100%; height:auto; }
+.package-copy { max-width:850px; min-width:0; }
+.package-copy h2 { font-size:1.65rem; line-height:1.12; font-weight:600; margin:0 0 .45rem; padding:0; border:0; }
+.package-subtitle { font-family:var(--serif); color:var(--ink); font-size:1.12rem; line-height:1.35; margin:0 0 .65rem; }
+.package-description { color:var(--muted); font-size:.94rem; line-height:1.6; margin:0 0 .9rem; }
+.package-links { display:flex; flex-wrap:wrap; align-items:center; gap:.3rem .8rem; color:var(--muted); font-size:.9rem; line-height:1.5; }
+.package-links a + a { position:relative; padding-left:.8rem; }
+.package-links a + a::before { content:""; position:absolute; left:0; top:.75em; transform:translateY(-50%); width:2px; height:.85em; background:#c58a8f; }
+.package-page a { color:inherit; }
+.package-page a:hover,.package-page a:focus-visible { color:var(--red); }
+@media(max-width:760px) {
+ .package-entry { grid-template-columns:150px minmax(0,1fr); column-gap:1.5rem; }
+ .package-badge-link { width:150px; }
+}
+@media(max-width:560px) {
+ #title-block-header { margin-bottom:1.6rem; }
+ #title-block-header h1.title { font-size:1.85rem; }
+ .package-entry { grid-template-columns:1fr; row-gap:1.2rem; }
+ .package-badge-link { width:155px; justify-self:center; }
+ .package-entry + .package-entry { margin-top:2rem; }
+ .package-copy h2 { font-size:1.5rem; }
+ .package-subtitle { font-size:1.06rem; }
+}

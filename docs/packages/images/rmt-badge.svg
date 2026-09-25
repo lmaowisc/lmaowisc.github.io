@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 600" role="img" aria-labelledby="title desc">
+  <title id="title">rmt: Restricted mean time</title>
+  <desc id="desc">An ivory and teal R package badge with two step curves and a shaded region suggesting accumulated time gained.</desc>
+  <path d="M260 12 508 156v288L260 588 12 444V156Z" fill="#fffaf6" stroke="#14575b" stroke-width="12"/>
+  <path d="M260 34 489 168v264L260 566 31 432V168Z" fill="none" stroke="#14575b" stroke-width="1.7"/>
+  <text x="260" y="135" text-anchor="middle" fill="#14575b" font-family="Arial,sans-serif" font-size="28" font-weight="700" letter-spacing="2">R PACKAGE</text>
+  <g fill="#152238" text-anchor="middle" font-family="Georgia,'Times New Roman',serif">
+    <text x="260" y="259" font-size="140" font-weight="700">rmt</text>
+    <text x="260" y="303" font-size="27">RESTRICTED MEAN TIME</text>
+  </g>
+  <path d="M90 348H145V372H205V388H265V408H325V428H385V448H400V478H382V474H330V460H275V443H220V419H170V387H120V348Z" fill="#cce0dc" fill-opacity=".7"/>
+  <path d="M90 348H145V372H205V388H265V408H325V428H385V448H400" fill="none" stroke="#14575b" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M90 348H120V387H170V419H220V443H275V460H330V474H382V478H400" fill="none" stroke="#43878a" stroke-width="5" stroke-dasharray="13 8" stroke-linejoin="round"/>
+</svg>

@@ -6,6 +6,7 @@ project:
     - people.css
     - research.css
     - pubs/pubs.css
+    - packages/packages.css
     - styles.css
     - images/google-scholar.svg
     - images/researchgate.svg
