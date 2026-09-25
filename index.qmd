@@ -4,7 +4,7 @@ subtitle: "Associate Professor of Biostatistics and Medical Informatics"
 description: "Lu Mao, Associate Professor at the University of Wisconsin–Madison. Research in survival analysis, causal inference, and clinical trials; courses, methods papers, and statistical writing."
 image: dc.jpg
 css:
-  - home.css?v=6
+  - home.css?v=7
 toc: false
 title-block-style: default
 ---

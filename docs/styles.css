@@ -4,7 +4,7 @@ html { scrollbar-gutter:stable; }
 body { background:var(--paper); color:#263244; font-family:system-ui,-apple-system,'Segoe UI',sans-serif; }
 h1,h2,h3,h4 { font-family:var(--serif); color:var(--ink); letter-spacing:-.02em; }
 a { color:var(--red); text-decoration:none; }
-a:hover { color:#93040a; text-decoration:underline; text-underline-offset:3px; }
+a:hover { color:#93040a; text-decoration:none; }
 a:focus-visible,button:focus-visible { outline:2px solid var(--red); outline-offset:4px; }
 #quarto-header { border-top:4px solid var(--red); }
 #quarto-header .navbar { background:var(--paper)!important; border-bottom:1px solid var(--line); padding:.55rem 1rem; }
@@ -12,7 +12,7 @@ a:focus-visible,button:focus-visible { outline:2px solid var(--red); outline-off
 .navbar .navbar-brand { font:400 1.6rem var(--serif); letter-spacing:-.04em; }
 .navbar .nav-link { font-family:var(--serif); font-size:1.05rem; font-weight:500; padding:.65rem .85rem!important; }
 .navbar .nav-link.active { color:var(--red)!important; box-shadow:inset 0 -3px var(--red); }
-.navbar .nav-link:hover { color:var(--red)!important; }
+.navbar .nav-link:hover,.navbar .navbar-brand:hover { color:var(--red)!important; }
 .navbar .navbar-toggler { color:var(--ink); border-color:var(--line); }
 .navbar .navbar-toggler-icon { filter:brightness(.2); }
 #quarto-search .aa-DetachedSearchButton { color:var(--ink)!important; }
