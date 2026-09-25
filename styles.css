@@ -15,7 +15,7 @@ a:focus-visible,button:focus-visible { outline:2px solid var(--red); outline-off
 .navbar .navbar-toggler { color:var(--ink); border-color:var(--line); }
 .navbar .navbar-toggler-icon { filter:brightness(.2); }
 #quarto-search .aa-DetachedSearchButton { color:var(--ink)!important; }
-#quarto-search svg { color:var(--ink); }
+#quarto-header #quarto-search svg, #quarto-header #quarto-search svg path { fill:var(--ink)!important; color:var(--ink)!important; }
 .dropdown-menu { background:var(--paper); border:1px solid var(--line); box-shadow:0 6px 18px #1522380c; }
 .dropdown-menu .dropdown-item { color:var(--ink); font-family:system-ui,sans-serif; font-size:.88rem; }
 .dropdown-menu .dropdown-item:hover,.dropdown-menu .dropdown-item:focus { color:var(--red); background:#f4eeee; }

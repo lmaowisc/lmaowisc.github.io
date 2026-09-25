@@ -5,7 +5,7 @@ description: "Lu Mao, Associate Professor at the University of Wisconsin–Madis
 image: dc.jpg
 css:
   - home.css?v=5
-  - styles.css?v=2
+  - styles.css?v=3
 toc: false
 title-block-style: default
 ---
@@ -62,7 +62,7 @@ title-block-style: default
 </ul>
 </section>
 </div>
-<aside class="home-highlights" aria-labelledby="highlights">
+<div role="complementary" class="home-highlights" aria-labelledby="highlights">
 <h2 id="highlights">Highlights</h2>
 <div class="highlight-list">
   <a class="highlight-card" href="https://lmaowisc.github.io/BMI741/" target="_blank" rel="noopener noreferrer">
@@ -88,7 +88,7 @@ title-block-style: default
 </div>
 
 <a class="highlight-more" href="courses.html">Course and workshop outlines →</a>
-</aside></div>
+</div></div>
 <div class="recent-grid">
 <section aria-labelledby="recent-publications">
 <div class="section-heading"><h2 id="recent-publications">Recent Publications</h2><a href="pubs/methods.html">All methods papers →</a></div>
