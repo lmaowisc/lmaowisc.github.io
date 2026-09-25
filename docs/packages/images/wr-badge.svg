@@ -1,20 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 600" role="img" aria-labelledby="title desc">
-  <title id="title">WR: Win ratio</title>
-  <desc id="desc">An ivory and burgundy R package badge with three ranked outcome levels.</desc>
-  <path d="M260 12 508 156v288L260 588 12 444V156Z" fill="#fffaf6" stroke="#922c42" stroke-width="12"/>
-  <path d="M260 34 489 168v264L260 566 31 432V168Z" fill="none" stroke="#922c42" stroke-width="1.7"/>
-  <text x="260" y="135" text-anchor="middle" fill="#922c42" font-family="Arial,sans-serif" font-size="28" font-weight="700" letter-spacing="2">R PACKAGE</text>
-  <g fill="#152238" text-anchor="middle" font-family="Georgia,'Times New Roman',serif">
-    <text x="260" y="259" font-size="140" font-weight="700">WR</text>
-    <text x="260" y="303" font-size="33">WIN RATIO</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img" aria-labelledby="title desc">
+  <title id="title">WR: Win ratio analysis</title>
+  <desc id="desc">A crimson WR wordmark above two patient timelines, using the package website's clinical-priority illustration and palette.</desc>
+  <rect x="9" y="9" width="502" height="502" rx="24" fill="#f8f9fb" stroke="#dde1e7" stroke-width="3"/>
+  <path d="M33 9H487Q511 9 511 33V267H9V33Q9 9 33 9Z" fill="#ac1730"/>
+  <text x="260" y="190" text-anchor="middle" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-size="176" font-weight="700" letter-spacing="-6">WR</text>
+  <text x="260" y="236" text-anchor="middle" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="28" letter-spacing=".5">Win ratio analysis</text>
+  <g fill="#20232c" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="600">
+    <text x="49" y="345">A</text><text x="49" y="414">B</text>
   </g>
-  <g font-family="Arial,sans-serif" font-size="25" font-weight="700" text-anchor="middle">
-    <circle cx="136" cy="354" r="21" fill="#922c42"/>
-    <circle cx="136" cy="410" r="21" fill="#b9687a"/>
-    <circle cx="136" cy="466" r="21" fill="#cc8e9b"/>
-    <g fill="#fffaf6"><text x="136" y="363">1</text><text x="136" y="419">2</text><text x="136" y="475">3</text></g>
+  <path d="M104 336H451" fill="none" stroke="#ac1730" stroke-width="5"/>
+  <path d="M104 405H340" fill="none" stroke="#68727e" stroke-width="5"/>
+  <g fill="#f8f9fb" stroke="#ac1730" stroke-width="5">
+    <circle cx="199" cy="336" r="11"/><circle cx="296" cy="336" r="11"/>
   </g>
-  <rect x="178" y="338" width="222" height="32" rx="2" fill="#922c42"/>
-  <rect x="178" y="394" width="154" height="32" rx="2" fill="#c88f9c"/>
-  <rect x="178" y="450" width="94" height="32" rx="2" fill="#e1bac3"/>
+  <circle cx="253" cy="405" r="11" fill="#f8f9fb" stroke="#68727e" stroke-width="5"/>
+  <path d="M451 324v24" stroke="#ac1730" stroke-width="5"/>
+  <path d="M330 395l20 20m0-20-20 20" stroke="#343a45" stroke-width="5"/>
+  <text x="260" y="478" text-anchor="middle" fill="#616773" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="600" letter-spacing="1">CLINICAL PRIORITIES FIRST</text>
 </svg>

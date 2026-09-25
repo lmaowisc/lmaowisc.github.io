@@ -60,7 +60,7 @@
     "href": "packages/index.html",
     "title": "R Packages",
     "section": "",
-    "text": "WR\n      Win ratio methods\n      Tools for win ratio analysis of prioritized outcomes, including two-sample comparisons, regression, model diagnostics and prediction, sample size calculation, and custom win functions.\n      \n        Website\n        CRAN\n        GitHub\n      \n    \n  \n\n  \n    \n      \n    \n    \n      rmt\n      Restricted mean time in favor of treatment\n      Estimation and inference for the net average time gained in a more favorable outcome state over a specified follow-up period, with sample size calculation tools.\n      \n        Website\n        CRAN\n        GitHub"
+    "text": "Statistical software for clinical trials and complex outcomes\n  \n    \n      \n    \n    \n      WR\n      Win ratio methods\n      Tools for win ratio analysis of prioritized outcomes, including two-sample comparisons, regression, model diagnostics and prediction, sample size calculation, and custom win functions.\n      \n        Website\n        CRAN\n        GitHub\n      \n    \n  \n\n  \n    \n      \n    \n    \n      rmt\n      Restricted mean time in favor of treatment\n      Estimation and inference for the net average time gained in a more favorable outcome state over a specified follow-up period, with sample size calculation tools.\n      \n        Website\n        CRAN\n        GitHub"
   },
   {
     "objectID": "index.html",

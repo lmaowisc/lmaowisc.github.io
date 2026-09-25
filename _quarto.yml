@@ -7,6 +7,7 @@ project:
     - research.css
     - pubs/pubs.css
     - packages/packages.css
+    - packages/images/wr-badge.svg
     - styles.css
     - images/google-scholar.svg
     - images/researchgate.svg
