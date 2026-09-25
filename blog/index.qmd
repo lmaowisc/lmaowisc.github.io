@@ -1,6 +1,6 @@
 ---
 title: "Blog"
-css: blog.css?v=3
+css: blog.css?v=4
 toc: false
 listing:
   id: blog-posts

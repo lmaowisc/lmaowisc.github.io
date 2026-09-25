@@ -4,9 +4,9 @@
   <% if (!item.title || !item.date) throw new Error('Every published blog post needs a title and an explicit publication date: ' + item.path); %>
   <article class="blog-entry<%= item.image ? '' : ' blog-entry-no-image' %>">
     <% if (item.image) { %>
-    <div class="blog-thumbnail">
+    <a class="blog-thumbnail" href="<%- item.path %>" aria-label="Read post: <%= item.title %>">
       <img src="<%- item.image %>" alt="" loading="lazy" decoding="async">
-    </div>
+    </a>
     <% } %>
     <div class="blog-copy">
       <h2 class="no-anchor"><a href="<%- item.path %>"><%- item.title %></a></h2>

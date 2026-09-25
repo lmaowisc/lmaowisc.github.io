@@ -6,7 +6,9 @@
 .blog-list { border-top:1px solid var(--line); padding-bottom:1rem; }
 .blog-entry { display:grid; grid-template-columns:242px minmax(0,1fr); column-gap:4rem; align-items:center; padding:1.8rem .75rem; }
 .blog-entry + .blog-entry { border-top:1px solid var(--line); }
-.blog-thumbnail { width:242px; height:170px; padding:7px; border:1px solid var(--line); border-radius:2px; background:var(--paper); isolation:isolate; overflow:hidden; }
+.blog-thumbnail { display:block; width:242px; height:170px; padding:7px; border:1px solid var(--line); border-radius:2px; background:var(--paper); isolation:isolate; overflow:hidden; }
+.blog-thumbnail:hover { border-color:var(--red); }
+.blog-thumbnail:focus-visible { outline:2px solid var(--red); outline-offset:4px; }
 /* Blend white pixels into the page without changing the original figure files. */
 .blog-thumbnail img { display:block; width:100%; height:100%; object-fit:contain; mix-blend-mode:darken; }
 /* Focus the regression thumbnail on the curve and its confidence limits. */
