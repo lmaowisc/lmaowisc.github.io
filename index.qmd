@@ -4,7 +4,7 @@ subtitle: "Associate Professor of Biostatistics and Medical Informatics"
 description: "Lu Mao, Associate Professor at the University of Wisconsin–Madison. Research in survival analysis, causal inference, and clinical trials; courses, methods papers, and statistical writing."
 image: dc.jpg
 css:
-  - home.css?v=12
+  - home.css?v=13
 toc: false
 title-block-style: default
 ---
@@ -54,11 +54,11 @@ title-block-style: default
 <section aria-labelledby="editorial-service">
 <h2 id="editorial-service">Editorial Service</h2>
 <ul class="editorial-list">
-<li><strong class="lead-role">Co-Editor</strong><span><a href="https://www.tandfonline.com/journals/lbps20/about-this-journal#editorial-board" target="_blank" rel="noopener noreferrer">Journal of Biopharmaceutical Statistics</a><small>Apr 2026–present</small></span></li>
-<li><strong>Associate Editor</strong><span><a href="https://biometrics.biometricsociety.org/home/associate-editors" target="_blank" rel="noopener noreferrer">Biometrics</a><small>Jul 2026–present</small></span></li>
-<li><strong>Associate Editor</strong><span><a href="https://www.biometricsociety.org/publications/biometric-bulletin" target="_blank" rel="noopener noreferrer">Biometric Bulletin</a><small>Dec 2025–present</small></span></li>
-<li><strong>Associate Editor</strong><span><a href="https://www.tandfonline.com/journals/usbr20/about-this-journal#editorial-board" target="_blank" rel="noopener noreferrer">Statistics in Biopharmaceutical Research</a><small>Jan 2023–present</small></span></li>
-<li><strong>Statistical Editor</strong><span><a href="https://www.jacc.org/journal/heart-failure/editorial-board" target="_blank" rel="noopener noreferrer">JACC Journals</a><small>Dec 2022–present</small></span></li>
+<li><strong class="lead-role"><a href="https://www.tandfonline.com/journals/lbps20/about-this-journal#editorial-board" target="_blank" rel="noopener noreferrer" aria-label="Co-Editor — Journal of Biopharmaceutical Statistics editorial board">Co-Editor</a></strong><span><a href="https://www.tandfonline.com/journals/lbps20" target="_blank" rel="noopener noreferrer">Journal of Biopharmaceutical Statistics</a><small>Apr 2026–present</small></span></li>
+<li><strong><a href="https://biometrics.biometricsociety.org/home/associate-editors" target="_blank" rel="noopener noreferrer" aria-label="Associate Editor — Biometrics editorial board">Associate Editor</a></strong><span><a href="https://academic.oup.com/biometrics" target="_blank" rel="noopener noreferrer">Biometrics</a><small>Jul 2026–present</small></span></li>
+<li><strong><a href="https://www.biometricsociety.org/publications/biometric-bulletin#:~:text=Associate%20Editor%3A%20Lu%20Mao" target="_blank" rel="noopener noreferrer" aria-label="Associate Editor — Biometric Bulletin editors">Associate Editor</a></strong><span><a href="https://www.biometricsociety.org/publications/biometric-bulletin" target="_blank" rel="noopener noreferrer">Biometric Bulletin</a><small>Dec 2025–present</small></span></li>
+<li><strong><a href="https://www.tandfonline.com/journals/usbr20/about-this-journal#editorial-board" target="_blank" rel="noopener noreferrer" aria-label="Associate Editor — Statistics in Biopharmaceutical Research editorial board">Associate Editor</a></strong><span><a href="https://www.tandfonline.com/journals/usbr20" target="_blank" rel="noopener noreferrer">Statistics in Biopharmaceutical Research</a><small>Jan 2023–present</small></span></li>
+<li><strong><a href="https://www.jacc.org/journal/heart-failure/editorial-board" target="_blank" rel="noopener noreferrer" aria-label="Statistical Editor — JACC: Heart Failure editorial board">Statistical Editor</a></strong><span><a href="https://www.jacc.org/" target="_blank" rel="noopener noreferrer">JACC Journals</a><small>Dec 2022–present</small></span></li>
 </ul>
 </section>
 </div>
