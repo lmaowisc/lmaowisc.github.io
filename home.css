@@ -37,8 +37,7 @@
 .degree-list a { color:inherit; }
 .degree-year { position:relative; color:var(--muted); font-variant-numeric:tabular-nums; }
 .degree-list strong { font-weight:500; color:var(--ink); }
-.degree-school { display:inline; color:var(--muted); font-size:inherit; }
-.degree-school::before { content:" — "; }
+.degree-school { position:relative; padding-left:.85rem; color:var(--muted); font-size:inherit; }
 .editorial-list li { display:grid; grid-template-columns:9rem minmax(0,1fr); gap:.85rem; font-size:.94rem; line-height:1.45; margin:.55rem 0; }
 .editorial-list li > span { display:grid; grid-template-columns:minmax(0,1fr) 9rem; column-gap:.85rem; align-items:baseline; }
 .editorial-list strong { position:relative; font-family:var(--serif); font-size:.94rem; color:var(--ink); font-weight:400; }
@@ -70,13 +69,14 @@
 .home-contact { border-top:1px solid var(--line); margin-top:1.6rem; padding:.8rem 0 0; color:var(--muted); font-size:.71rem; }
 /* Consistent short, thick separators between inline pieces of information. */
 .social-links a + a::before,.research-themes li+li::before,
-.degree-year::after,.editorial-list strong::after,.editorial-list small::before,
+.degree-year::after,.degree-school::before,.editorial-list strong::after,.editorial-list small::before,
 .announcement > div::before {
  content:""; position:absolute; top:50%; transform:translateY(-50%);
  width:2px; height:.85em; background:#c58a8f;
 }
 .social-links a + a::before,.research-themes li+li::before,
-.editorial-list small::before,.announcement > div::before { left:0; }
+.degree-school::before,.editorial-list small::before,.announcement > div::before { left:0; }
+.degree-school::before { top:.725em; }
 .degree-year::after,.editorial-list strong::after { right:0; top:.725em; }
 .announcement > div::before { height:65%; }
 /* Keep the wide-screen research list together; allow wrapping on smaller screens. */
@@ -97,7 +97,7 @@
 }
 @media(max-width:700px) {
  .degree-list li > span:last-child { grid-template-columns:1fr; row-gap:.1rem; }
- .degree-school { display:block; }
+ .degree-school { display:block; padding-left:0; }
  .degree-school::before { content:none; }
  .profile-intro { grid-template-columns:96px minmax(0,1fr); gap:1.1rem; padding:1.5rem 0; align-items:start; }
  .profile-avatar { width:96px; height:96px; }
