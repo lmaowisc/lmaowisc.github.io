@@ -1,17 +1,18 @@
 /* Homepage: ivory, navy, and Wisconsin red. */
 #title-block-header { display:none; }
 #quarto-document-content { padding-top: 0; }
-.profile-intro { display:grid; grid-template-columns:180px minmax(0,1fr); gap:2.25rem; align-items:center; padding:2rem 0 2.1rem; }
+.profile-intro { display:grid; grid-template-columns:180px minmax(0,1fr); gap:2.25rem; align-items:center; padding:1.15rem 0 1.3rem; }
 .profile-avatar { width:180px; height:180px; object-fit:cover; border-radius:50%; }
-.profile-copy h1 { font-size:3.2rem; line-height:1.05; margin:0 0 .4rem; font-weight:600; letter-spacing:-.04em; }
+.profile-copy h1 { font-size:3.2rem; line-height:1.05; margin:0 0 .4rem; font-weight:400; letter-spacing:-.025em; }
 .profile-role { font-family:var(--serif); font-size:1.24rem; line-height:1.3; color:var(--ink); margin:0 0 .3rem; }
 .profile-affiliation { color:var(--muted); font-size:.91rem; margin:0; }
 .profile-focus { font-family:var(--serif); font-size:1.08rem; margin:1rem 0 .9rem; }
-.social-links { display:flex; flex-wrap:wrap; gap:.5rem 1.05rem; font-size:.83rem; }
+.social-links { display:flex; flex-wrap:wrap; gap:.5rem 1.05rem; font-size:.88rem; }
 .social-links a { display:inline-flex; align-items:center; gap:.4rem; white-space:nowrap; }
-.home-layout { display:grid; grid-template-columns:minmax(0,1.85fr) minmax(250px,.85fr); gap:2rem; margin-bottom:3.5rem; }
+.social-icon { width:1.1em; height:1.1em; object-fit:contain; }
+.home-layout { display:grid; grid-template-columns:minmax(0,1.85fr) minmax(250px,.85fr); gap:2rem; margin-bottom:2.7rem; }
 .home-main,.home-highlights { min-width:0; }
-.home-main section + section { margin-top:1.4rem; }
+.home-main section + section { margin-top:1.15rem; }
 .home-layout h2,.recent-grid h2 { margin:0 0 .7rem; padding:0; border:0; font-size:1.5rem; font-weight:600; line-height:1.15; }
 .home-main section:not(.announcement):not(.research-section) h2 { border-bottom:1px solid var(--line); padding-bottom:.45rem; }
 .announcement { display:flex; gap:1rem; align-items:center; padding:1rem 1.1rem; background:#f7eeee; border-radius:4px; }
@@ -29,21 +30,22 @@
 .degree-list li { display:grid; grid-template-columns:3.7rem minmax(0,1fr); gap:.8rem; margin:.5rem 0; font-size:.87rem; line-height:1.4; }
 .degree-year { color:var(--muted); border-right:1px solid #d6a5a8; font-variant-numeric:tabular-nums; }
 .degree-list strong { font-weight:500; color:var(--ink); }
-.degree-school { display:block; color:var(--muted); font-size:.82rem; }
+.degree-school { display:inline; color:var(--muted); font-size:.85rem; }
+.degree-school::before { content:" — "; }
 .editorial-list li { display:grid; grid-template-columns:8.2rem minmax(0,1fr); gap:.85rem; font-size:.84rem; line-height:1.35; margin:.48rem 0; }
 .editorial-list strong { font-family:var(--serif); font-size:.9rem; color:var(--ink); border-right:1px solid #d6a5a8; font-weight:600; }
 .editorial-list .lead-role { color:var(--red); }
 .editorial-list a { color:var(--ink); }
-.editorial-list small { color:var(--muted); font-size:.69rem; margin-left:.5rem; white-space:nowrap; }
+.editorial-list small { color:var(--muted); font-size:.76rem; margin-left:.5rem; white-space:nowrap; }
 .editorial-list li:last-child { margin-bottom:0; }
 .home-highlights { border-left:1px solid var(--line); padding-left:1.7rem; display:flex; flex-direction:column; position:relative; }
 .highlight-list { flex:1; display:grid; grid-template-rows:repeat(5,1fr); }
 .highlight-card { display:grid; grid-template-columns:74px minmax(0,1fr); gap:1rem; align-items:center; padding:.45rem 0; color:var(--ink); border-bottom:1px solid #e7e4df; }
 .highlight-card img { display:block; width:74px; height:auto; }
 .highlight-copy > span { display:block; }
-.highlight-kind { color:var(--muted); text-transform:uppercase; font-size:.59rem; letter-spacing:.09em; font-weight:600; margin-bottom:.3rem; }
+.highlight-kind { color:var(--muted); text-transform:uppercase; font-size:.67rem; letter-spacing:.07em; font-weight:600; margin-bottom:.3rem; }
 .highlight-title { font-family:var(--serif); font-size:1.03rem; line-height:1.27; font-weight:500; }
-.highlight-subtitle { font-size:.72rem; color:var(--muted); line-height:1.3; margin-top:.25rem; }
+.highlight-subtitle { font-size:.78rem; color:var(--muted); line-height:1.3; margin-top:.25rem; }
 .highlight-card:hover { text-decoration:none; }
 .highlight-card:hover .highlight-title { color:var(--red); }
 .highlight-more { position:absolute; top:100%; left:1.7rem; padding-top:.8rem; font-size:.79rem; }
@@ -51,12 +53,12 @@
 .recent-grid > section+section { border-left:1px solid var(--line); padding-left:2rem; }
 .section-heading { display:flex; align-items:baseline; justify-content:space-between; gap:.7rem; }
 .recent-grid h2 { font-size:1.35rem; }
-.section-heading > a { font-size:.72rem; white-space:nowrap; }
+.section-heading > a { font-size:.78rem; white-space:nowrap; }
 .recent-list li+li { margin-top:.9rem; }
-.recent-list a { display:block; font-family:var(--serif); font-size:.96rem; color:var(--ink); line-height:1.3; }
-.recent-list span { display:block; font-size:.72rem; color:var(--muted); margin-top:.25rem; }
+.recent-list a { display:block; font-family:var(--serif); font-size:1rem; color:var(--ink); line-height:1.3; }
+.recent-list span { display:block; font-size:.78rem; color:var(--muted); margin-top:.25rem; }
 .home-contact { border-top:1px solid var(--line); margin-top:1.6rem; padding:.8rem 0 0; color:var(--muted); font-size:.71rem; }
-@media(min-width:1400px) { .profile-intro { padding-top:2.4rem; } }
+@media(min-width:1400px) { .profile-intro { padding-top:1.4rem; } }
 @media(max-width:900px) {
  .profile-intro { grid-template-columns:140px minmax(0,1fr); gap:1.5rem; }
  .profile-avatar { width:140px; height:140px; }
@@ -69,6 +71,8 @@
  .editorial-list small { display:block; margin-left:0; }
 }
 @media(max-width:700px) {
+ .degree-school { display:block; }
+ .degree-school::before { content:none; }
  .profile-intro { grid-template-columns:96px minmax(0,1fr); gap:1.1rem; padding:1.5rem 0; align-items:start; }
  .profile-avatar { width:96px; height:96px; }
  .profile-copy h1 { font-size:2.3rem; }

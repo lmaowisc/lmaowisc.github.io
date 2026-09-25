@@ -41,3 +41,5 @@ The `resources` setting ensures that `home.css` is copied to `docs/`, including 
 Use RStudio's Git pane or your usual Git client. No JavaScript framework or package installation is required for the homepage. The design uses system fonts and the existing badge files.
 
 When changing `home.css`, increment its version in the `css:` field of `index.qmd` if visitors continue to see a cached version.
+
+Shared desktop page widths and navigation typography are controlled in `styles.css`. External web links open in a new tab through the Quarto `link-external-newwindow` setting and `newpagelink.lua`; homepage HTML links also declare their targets explicitly. The Google Scholar and ResearchGate SVG symbols in `images/` come from the bundled Academicons icon set.

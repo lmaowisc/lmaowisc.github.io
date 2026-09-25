@@ -3,6 +3,7 @@ project:
   output-dir: docs
   resources:
     - home.css
+    - styles.css
 
 website:
   title: "Lu Mao"
@@ -38,8 +39,9 @@ website:
 format:
   html:
     theme: cosmos
-    css: styles.css
+    css: styles.css?v=4
     toc: true
+    link-external-newwindow: true
     linkcolor: "#C5050C"
     backgroundcolor: "#FFFFFF"
     grid:
