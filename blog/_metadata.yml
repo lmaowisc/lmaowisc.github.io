@@ -1,0 +1,2 @@
+# Shared presentation for blog posts; individual .qmd files stay simple.
+css: /blog/post.css?v=1

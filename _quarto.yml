@@ -7,6 +7,7 @@ project:
     - research.css
     - courses.css
     - blog/blog.css
+    - blog/post.css
     - images/applied-survival-course.png
     - pubs/pubs.css
     - packages/packages.css

@@ -1,0 +1,18 @@
+/* Native Quarto section headings match the finished pages' lighter serif style.
+   Direct section selectors keep the Blog listing and appendix labels separate. */
+#quarto-document-content > section > h2,
+#quarto-document-content section h3,
+#quarto-document-content section h4 {
+  font-family:var(--serif);
+  color:var(--ink);
+  font-weight:400;
+  letter-spacing:-.02em;
+  line-height:1.25;
+}
+#quarto-document-content > section > h2 { font-size:1.45rem; }
+#quarto-document-content section h3 { font-size:1.2rem; }
+#quarto-document-content section h4 { font-size:1.05rem; }
+@media(max-width:760px) {
+  #quarto-document-content > section > h2 { font-size:1.35rem; }
+  #quarto-document-content section h3 { font-size:1.15rem; }
+}
