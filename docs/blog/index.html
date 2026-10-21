@@ -78,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-website','listing-format','listing-editor','listing-language','listing-css','listing-title','listing-subtitle','listing-description','listing-date','listing-categories','listing-image','listing-open-graph','listing-execute','listing-bibliography','listing-path','listing-outputHref','listing-date-modified','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-hide-description','listing-draft','listing-references','listing-twitter',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: ['listing-project','listing-website','listing-format','listing-editor','listing-language','listing-css','listing-title','listing-subtitle','listing-description','listing-date','listing-categories','listing-image','listing-open-graph','listing-execute','listing-bibliography','listing-path','listing-outputHref','listing-date-modified','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-hide-description','listing-image-alt','listing-draft','listing-references','listing-twitter',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-website","listing-format","listing-editor","listing-language","listing-css","listing-title","listing-subtitle","listing-description","listing-date","listing-categories","listing-image","listing-open-graph","listing-execute","listing-bibliography","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-hide-description","listing-draft","listing-references","listing-twitter"],
+      searchColumns: ["listing-project","listing-website","listing-format","listing-editor","listing-language","listing-css","listing-title","listing-subtitle","listing-description","listing-date","listing-categories","listing-image","listing-open-graph","listing-execute","listing-bibliography","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-hide-description","listing-image-alt","listing-draft","listing-references","listing-twitter"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -132,11 +132,11 @@ window.Quarto = {
 <link rel="stylesheet" href="../blog/post.css?v=3">
 <link rel="stylesheet" href="blog.css?v=4">
 <meta property="og:title" content="Blog – Lu Mao">
-<meta property="og:image" content="https://lmaowisc.github.io/blog/images/regression-confidence/quadratic-confidence.png">
+<meta property="og:image" content="https://lmaowisc.github.io/blog/images/combining-estimators/combining-estimators.png">
 <meta property="og:site_name" content="Lu Mao">
 <meta property="og:image:alt" content="">
-<meta property="og:image:height" content="990">
-<meta property="og:image:width" content="1620">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:width" content="2160">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -240,7 +240,11 @@ window.Quarto = {
 <div class="blog-list">
 
   
-  <article class="blog-entry blog-entry-no-image">
+  <article class="blog-entry">
+    
+    <a class="blog-thumbnail" href="../blog/combining-estimators.html" aria-label="Read post: How can we combine multiple estimators of the same estimand to minimize variance?">
+      <img src="../blog/images/combining-estimators/combining-estimators.png" alt="" loading="lazy" decoding="async">
+    </a>
     
     <div class="blog-copy">
       <h2 class="no-anchor"><a href="../blog/combining-estimators.html">How can we combine multiple estimators of the same estimand to minimize variance?</a></h2>
