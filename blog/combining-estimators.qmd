@@ -1,0 +1,197 @@
+---
+title: "How can we combine multiple estimators of the same estimand to minimize variance?"
+subtitle: "A direct derivation of the optimal matrix weights"
+author: "Lu Mao"
+date: "2026-10-21"
+description: "A short derivation of the best linear combination of correlated estimators, including the case of a vector parameter."
+hide-description: true
+categories: [Biostatistics, Estimation, Statistical Theory]
+draft: false
+format:
+  html:
+    toc: true
+    code-copy: true
+    embed-resources: true
+references:
+  - id: lavancier2016
+    type: article-journal
+    author:
+      - family: Lavancier
+        given: Frédéric
+      - family: Rochet
+        given: Paul
+    title: "A general procedure to combine estimators"
+    container-title: "Computational Statistics & Data Analysis"
+    volume: 94
+    page: 175-192
+    issued:
+      year: 2016
+    DOI: 10.1016/j.csda.2015.08.001
+  - id: bates1969
+    type: article-journal
+    author:
+      - family: Bates
+        given: J. M.
+      - family: Granger
+        given: C. W. J.
+    title: "The combination of forecasts"
+    container-title: "Journal of the Operational Research Society"
+    volume: 20
+    issue: 4
+    page: 451-468
+    issued:
+      year: 1969
+    DOI: 10.1057/jors.1969.103
+---
+
+Suppose we have several estimators of the same parameter. Perhaps they use different estimating equations, or different parts of the data. Each has something going for it. Which one should we use?
+
+An obvious thought is to average them. But how much weight should each get? And what if they are correlated because they use the same observations?
+
+The question is simple: **how do we combine them to get the smallest variance?** Even when the parameter is a vector, the setup is fairly intuitive. The part that takes a little work is finding the optimal weights. That is where a bit of matrix algebra helps.
+
+## Scalar weights are a start
+
+For a scalar parameter $\theta$, let $\hat{\boldsymbol z}=(\hat\theta^{(1)},\ldots,\hat\theta^{(m)})^\mathrm{T}$ collect $m$ unbiased estimators, with known positive-definite covariance matrix $\Sigma$. Collect the weights in an $m\times1$ matrix $W$. The weighted average $\hat\theta_W=W^\mathrm{T}\hat{\boldsymbol z}$ is unbiased whenever $\mathbf 1^\mathrm{T}W=1$, where $\mathbf 1$ is the vector of ones.
+
+Minimizing its variance $W^\mathrm{T}\Sigma W$ subject to that constraint gives
+
+$$
+W_* = \frac{\Sigma^{-1}\mathbf 1}
+{\mathbf 1^\mathrm{T}\Sigma^{-1}\mathbf 1},
+\qquad
+\operatorname{var}(\hat\theta_{W_*})
+=\frac{1}{\mathbf 1^\mathrm{T}\Sigma^{-1}\mathbf 1}.
+$$
+
+If the estimators are independent, this is the familiar inverse-variance average. With correlation, we need the whole covariance matrix. The weights may be negative; we are considering general linear combinations, not just convex ones.
+
+Now suppose each estimator is a vector. We could still use one scalar weight per estimator,
+
+$$
+\hat{\boldsymbol\theta}_{\alpha}=\sum_{k=1}^m \alpha_k\hat{\boldsymbol\theta}^{(k)},
+\qquad \sum_{k=1}^m \alpha_k=1.
+$$
+
+But that applies the same weight to every coordinate. One estimator might be good at estimating the first coefficient and less good at estimating the second. **There is no need to constrain the weights to be scalars.** Let us give each estimator a matrix weight and work out the best combination.
+
+## The general setup
+
+Let $\hat{\boldsymbol\theta}^{(1)},\ldots,\hat{\boldsymbol\theta}^{(m)}$ be unbiased estimators of the same $p$-vector $\boldsymbol\theta$. Consider
+
+$$
+\hat{\boldsymbol\theta}_W=\sum_{k=1}^m W_k^\mathrm{T}\hat{\boldsymbol\theta}^{(k)},
+\qquad \sum_{k=1}^m W_k=I_p,
+$$
+
+Here and below, vectors are bold and matrices use capital letters. Each $W_k$ is $p\times p$. The constraint keeps the combination unbiased. Scalar weights are the special case $W_k=\alpha_k I_p$.
+
+This is all we need to preserve the target. To find the best weights, it helps to stack the estimators, identity matrices, and weights:
+
+$$
+\hat{\boldsymbol z}=\begin{pmatrix}\hat{\boldsymbol\theta}^{(1)}\\\vdots\\\hat{\boldsymbol\theta}^{(m)}\end{pmatrix},
+\qquad
+A=\begin{pmatrix}I_p\\\vdots\\I_p\end{pmatrix},
+\qquad
+W=\begin{pmatrix}W_1\\\vdots\\W_m\end{pmatrix}.
+$$
+
+Then $E(\hat{\boldsymbol z})=A\boldsymbol\theta$. Write $\Sigma=\operatorname{var}(\hat{\boldsymbol z})$, assumed known and positive definite, including covariances both within and between estimators. The combined estimator and its covariance are simply
+
+$$
+\hat{\boldsymbol\theta}_W=W^\mathrm{T}\hat{\boldsymbol z},
+\qquad
+\operatorname{var}(\hat{\boldsymbol\theta}_W)=W^\mathrm{T}\Sigma W,
+$$
+
+with $W^\mathrm{T}A=I_p$ ensuring unbiasedness. No normality assumption is needed.
+
+We want the covariance to be as small as possible: for every $\boldsymbol b\in\mathbb R^p$, the contrast $\boldsymbol b^\mathrm{T}\hat{\boldsymbol\theta}_W$ should have the smallest variance among the allowed combinations. This includes each coordinate and every difference or other linear combination of coordinates.
+
+So far, this is mostly bookkeeping. **How do we actually find the matrix weights that do the job?**
+
+## Work out the weights
+
+Fix $\boldsymbol b$ and put $\boldsymbol g=W \boldsymbol b$. Then $\boldsymbol b^\mathrm{T}\hat{\boldsymbol\theta}_W=\boldsymbol g^\mathrm{T}\hat{\boldsymbol z}$, and the constraint implies $A^\mathrm{T}\boldsymbol g=\boldsymbol b$. We are led to the quadratic problem
+
+$$
+\min_{\boldsymbol g}\ \tfrac12\boldsymbol g^\mathrm{T}\Sigma \boldsymbol g
+\quad\text{subject to}\quad A^\mathrm{T}\boldsymbol g=\boldsymbol b.
+$$
+
+Introduce a vector of Lagrange multipliers $\boldsymbol\lambda$:
+
+$$
+L(\boldsymbol g,\boldsymbol\lambda)=\tfrac12\boldsymbol g^\mathrm{T}\Sigma \boldsymbol g
+-\boldsymbol\lambda^\mathrm{T}(A^\mathrm{T}\boldsymbol g-\boldsymbol b).
+$$
+
+Differentiating with respect to $\boldsymbol g$ gives $\Sigma \boldsymbol g-A\boldsymbol\lambda=\boldsymbol 0$. Combining this with the constraint,
+
+$$
+\boldsymbol g=\Sigma^{-1}A\boldsymbol\lambda,
+\qquad
+\boldsymbol b=A^\mathrm{T}\Sigma^{-1}A\boldsymbol\lambda.
+$$
+
+Therefore,
+
+$$
+\boldsymbol g_*=W_*\boldsymbol b,
+\qquad
+\boxed{W_*=\Sigma^{-1}A(A^\mathrm{T}\Sigma^{-1}A)^{-1}.}
+$$
+
+Because $\Sigma$ is positive definite, this is the unique minimizer. And here is the useful part: $W_*$ does not depend on $\boldsymbol b$. It also satisfies $W_*^\mathrm{T}A=I_p$, so it is an admissible weight matrix and solves every contrast problem at once. The resulting estimator is
+
+$$
+\boxed{\hat{\boldsymbol\theta}_*=(A^\mathrm{T}\Sigma^{-1}A)^{-1}
+A^\mathrm{T}\Sigma^{-1}\hat{\boldsymbol z}.}
+$$
+
+Its covariance matrix is
+
+$$
+\operatorname{var}(\hat{\boldsymbol\theta}_*)=(A^\mathrm{T}\Sigma^{-1}A)^{-1}.
+$$
+
+## A quick check
+
+The optimality claim is also easy to check directly. For any other admissible $W$, write $D=W-W_*$. Since $D^\mathrm{T}A=0$, the cross terms vanish, leaving
+
+$$
+W^\mathrm{T}\Sigma W
+-W_*^\mathrm{T}\Sigma W_*
+=D^\mathrm{T}\Sigma D\succeq0.
+$$
+
+That last inequality means the difference is positive semidefinite: every contrast has at least as much variance under the alternative combination. In particular, selecting any one of the original estimators cannot do better.
+
+If the vector estimators are independent, let $\Sigma_{kk}=\operatorname{var}\{\hat{\boldsymbol\theta}^{(k)}\}$. The result reduces to
+
+$$
+\hat{\boldsymbol\theta}_*=
+\left(\sum_{k=1}^m\Sigma_{kk}^{-1}\right)^{-1}
+\sum_{k=1}^m\Sigma_{kk}^{-1}\hat{\boldsymbol\theta}^{(k)}.
+$$
+
+This is inverse-variance weighting with matrices in place of scalars. The order of multiplication matters.
+
+## This is generalized least squares
+
+The stacked model is simply $\hat{\boldsymbol z}=A\boldsymbol\theta+\boldsymbol\varepsilon$, with mean-zero error and covariance $\Sigma$. Our answer is **generalized least squares**, applied to the estimators themselves.
+
+The averaging idea has a long history, including forecast combination [@bates1969]. A directly relevant treatment is @lavancier2016, who study combinations of scalar and vector estimators and what happens when the required covariance or mean squared error matrix must be estimated. The calculation here is a useful way to arrive at the result from scratch.
+
+## What changes in practice?
+
+In practice, estimate $\Sigma$ using joint influence functions or a bootstrap that recomputes all estimators on the same resampled data. We need their covariances, not just their individual variances.
+
+For fixed $m$ and $p$, consistent covariance estimation preserves the optimal combination's first-order efficiency under standard regularity conditions. This is an asymptotic result; exact finite-sample optimality is not guaranteed. Nearly singular covariance estimates and biased estimators need more care.
+
+## References
+
+::: {#refs}
+:::
+
+

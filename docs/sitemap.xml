@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://lmaowisc.github.io/index.html</loc>
-    <lastmod>2026-10-14T05:33:50.382Z</lastmod>
+    <lastmod>2026-10-21T07:06:45.371Z</lastmod>
   </url>
   <url>
     <loc>https://lmaowisc.github.io/construction/how_to_simulations.html</loc>
@@ -34,7 +34,7 @@
   </url>
   <url>
     <loc>https://lmaowisc.github.io/blog/index.html</loc>
-    <lastmod>2026-09-25T13:05:27.684Z</lastmod>
+    <lastmod>2026-10-21T07:05:59.822Z</lastmod>
   </url>
   <url>
     <loc>https://lmaowisc.github.io/courses.html</loc>
@@ -67,5 +67,9 @@
   <url>
     <loc>https://lmaowisc.github.io/blog/regression-confidence.html</loc>
     <lastmod>2026-09-25T12:58:10.375Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lmaowisc.github.io/blog/combining-estimators.html</loc>
+    <lastmod>2026-10-21T07:06:45.369Z</lastmod>
   </url>
 </urlset>

@@ -15,6 +15,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/combining-estimators.html",
       "/blog/regression-confidence.html",
       "/blog/cox_partial.html",
       "/blog/cess.html",

@@ -100,8 +100,8 @@ title-block-style: default
 <section aria-labelledby="recent-writing">
 <div class="section-heading"><h2 id="recent-writing">Recent Writing</h2><a href="blog/">All posts →</a></div>
 <ul class="recent-list">
+<li><a href="blog/combining-estimators.html">How can we combine multiple estimators of the same estimand to minimize variance?</a><span>October 21, 2026</span></li>
 <li><a href="blog/regression-confidence.html">How to get analytic confidence limits for a regression line/curve</a><span>September 25, 2026</span></li>
-<li><a href="blog/cess.html">The chance of erring on the same side (CESS): A way to elicit correlation</a><span>February 10, 2025</span></li>
 </ul>
 </section>
 </div>

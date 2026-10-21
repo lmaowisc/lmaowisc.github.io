@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-2757a3ad6a0c4af0e6632064aa8a2553.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1aa735ca165496859929ed9648e9ba41.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,13 +74,13 @@ ul.task-list li input[type="checkbox"] {
     const listingTargetEl = window.document.querySelector('#listing-blog-posts .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
-      return;
+      return; 
     }
 
     const options = {
-      valueNames: ['listing-project','listing-website','listing-format','listing-editor','listing-language','listing-css','listing-title','listing-subtitle','listing-description','listing-date','listing-categories','listing-image','listing-open-graph','listing-execute','listing-bibliography','listing-path','listing-outputHref','listing-date-modified','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-twitter','listing-hide-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
-
-      searchColumns: ["listing-project","listing-website","listing-format","listing-editor","listing-language","listing-css","listing-title","listing-subtitle","listing-description","listing-date","listing-categories","listing-image","listing-open-graph","listing-execute","listing-bibliography","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-twitter","listing-hide-description"],
+      valueNames: ['listing-project','listing-website','listing-format','listing-editor','listing-language','listing-css','listing-title','listing-subtitle','listing-description','listing-date','listing-categories','listing-image','listing-open-graph','listing-execute','listing-bibliography','listing-path','listing-outputHref','listing-date-modified','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-hide-description','listing-draft','listing-references','listing-twitter',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-website","listing-format","listing-editor","listing-language","listing-css","listing-title","listing-subtitle","listing-description","listing-date","listing-categories","listing-image","listing-open-graph","listing-execute","listing-bibliography","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-hide-description","listing-draft","listing-references","listing-twitter"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -157,48 +157,48 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html">
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
-  </li>
+  </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../people.html">
+    <a class="nav-link" href="../people.html"> 
 <span class="menu-text">People</span></a>
-  </li>
+  </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../research.html">
+    <a class="nav-link" href="../research.html"> 
 <span class="menu-text">Research</span></a>
-  </li>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-publications" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Publications</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-publications">
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-publications">    
         <li>
     <a class="dropdown-item" href="../pubs/index.html">
  <span class="dropdown-text">All</span></a>
-  </li>
+  </li>  
         <li>
     <a class="dropdown-item" href="../pubs/methods.html">
  <span class="dropdown-text">Methods</span></a>
-  </li>
+  </li>  
         <li>
     <a class="dropdown-item" href="../pubs/applications.html">
  <span class="dropdown-text">Applications</span></a>
-  </li>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../packages/index.html">
+    <a class="nav-link" href="../packages/index.html"> 
 <span class="menu-text">R Packages</span></a>
-  </li>
+  </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../courses.html">
+    <a class="nav-link" href="../courses.html"> 
 <span class="menu-text">Courses</span></a>
-  </li>
+  </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/index.html" aria-current="page">
+    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
 <span class="menu-text">Blog</span></a>
-  </li>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -210,7 +210,7 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -223,11 +223,11 @@ window.Quarto = {
 
 <div class="quarto-title-meta">
 
-
-
-
+    
+  
+    
   </div>
-
+  
 
 
 </header>
@@ -239,144 +239,168 @@ window.Quarto = {
 <div id="listing-blog-posts" class="quarto-listing quarto-listing-container-custom">
 <div class="blog-list">
 
+  
+  <article class="blog-entry blog-entry-no-image">
+    
+    <div class="blog-copy">
+      <h2 class="no-anchor"><a href="../blog/combining-estimators.html">How can we combine multiple estimators of the same estimand to minimize variance?</a></h2>
+      <p class="blog-date">October 21, 2026</p>
+      
+      <div class="blog-description">A short derivation of the best linear combination of correlated estimators, including the case of a vector parameter.</div>
+      
+      
+      <ul class="blog-topics" aria-label="Topics">
+        
+        <li>Biostatistics</li>
+        
+        <li>Estimation</li>
+        
+        <li>Statistical Theory</li>
+        
+      </ul>
+      
+      <a class="blog-read" href="../blog/combining-estimators.html">Read post <span aria-hidden="true">→</span><span class="visually-hidden">: How can we combine multiple estimators of the same estimand to minimize variance?</span></a>
+    </div>
+  </article>
 
+  
   <article class="blog-entry">
-
+    
     <a class="blog-thumbnail" href="../blog/regression-confidence.html" aria-label="Read post: How to get analytic confidence limits for a regression line/curve">
       <img src="../blog/images/regression-confidence/quadratic-confidence.png" alt="" loading="lazy" decoding="async">
     </a>
-
+    
     <div class="blog-copy">
       <h2 class="no-anchor"><a href="../blog/regression-confidence.html">How to get analytic confidence limits for a regression line/curve</a></h2>
       <p class="blog-date">September 25, 2026</p>
-
+      
       <div class="blog-description">Use coefficient variances and covariances to derive pointwise confidence limits for a fitted line or polynomial curve, with reproducible R examples.</div>
-
-
+      
+      
       <ul class="blog-topics" aria-label="Topics">
-
+        
         <li>Biostatistics</li>
-
+        
         <li>Regression</li>
-
+        
         <li>R Programming</li>
-
+        
       </ul>
-
+      
       <a class="blog-read" href="../blog/regression-confidence.html">Read post <span aria-hidden="true">→</span><span class="visually-hidden">: How to get analytic confidence limits for a regression line/curve</span></a>
     </div>
   </article>
 
-
+  
   <article class="blog-entry">
-
+    
     <a class="blog-thumbnail" href="../blog/cox_partial.html" aria-label="Read post: Cox partial likelihood re-derived as normal equation of GLM">
       <img src="../blog/images/cox_normal.png" alt="" loading="lazy" decoding="async">
     </a>
-
+    
     <div class="blog-copy">
       <h2 class="no-anchor"><a href="../blog/cox_partial.html">Cox partial likelihood re-derived as normal equation of GLM</a></h2>
       <p class="blog-date">February 16, 2025</p>
-
+      
       <div class="blog-description">A GLM perspective on Cox partial likelihood, bypassing risk-set construction and event-conditioning arguments.</div>
-
-
+      
+      
       <ul class="blog-topics" aria-label="Topics">
-
+        
         <li>Biostatistics</li>
-
+        
         <li>Generalized Linear Models</li>
-
+        
         <li>Survival Analysis</li>
-
+        
         <li>Partial Likelihood</li>
-
+        
       </ul>
-
+      
       <a class="blog-read" href="../blog/cox_partial.html">Read post <span aria-hidden="true">→</span><span class="visually-hidden">: Cox partial likelihood re-derived as normal equation of GLM</span></a>
     </div>
   </article>
 
-
+  
   <article class="blog-entry">
-
+    
     <a class="blog-thumbnail" href="../blog/cess.html" aria-label="Read post: The chance of erring on the same side (CESS): A way to elicit correlation">
       <img src="../blog/images/cess_visual.png" alt="" loading="lazy" decoding="async">
     </a>
-
+    
     <div class="blog-copy">
       <h2 class="no-anchor"><a href="../blog/cess.html">The chance of erring on the same side (CESS): A way to elicit correlation</a></h2>
       <p class="blog-date">February 10, 2025</p>
-
+      
       <div class="blog-description">An intuitive way to ask investigators about correlation when planning studies with repeated measurements.</div>
-
-
+      
+      
       <ul class="blog-topics" aria-label="Topics">
-
+        
         <li>Biostatistics</li>
-
+        
         <li>Power Analysis</li>
-
+        
         <li>Sample Size</li>
-
+        
       </ul>
-
+      
       <a class="blog-read" href="../blog/cess.html">Read post <span aria-hidden="true">→</span><span class="visually-hidden">: The chance of erring on the same side (CESS): A way to elicit correlation</span></a>
     </div>
   </article>
 
-
+  
   <article class="blog-entry">
-
+    
     <a class="blog-thumbnail" href="../blog/how_to_ba_mul.html" aria-label="Read post: How to create Bland-Altman analysis for multiple biomarkers">
       <img src="../blog/images/ba_mul.png" alt="" loading="lazy" decoding="async">
     </a>
-
+    
     <div class="blog-copy">
       <h2 class="no-anchor"><a href="../blog/how_to_ba_mul.html">How to create Bland-Altman analysis for multiple biomarkers</a></h2>
       <p class="blog-date">January 16, 2025</p>
-
+      
       <div class="blog-description">Calculate agreement statistics and create faceted Bland–Altman plots for multiple biomarkers using tidyverse tools.</div>
-
-
+      
+      
       <ul class="blog-topics" aria-label="Topics">
-
+        
         <li>Biostatistics</li>
-
+        
         <li>Data Visualization</li>
-
+        
         <li>R Programming</li>
-
+        
       </ul>
-
+      
       <a class="blog-read" href="../blog/how_to_ba_mul.html">Read post <span aria-hidden="true">→</span><span class="visually-hidden">: How to create Bland-Altman analysis for multiple biomarkers</span></a>
     </div>
   </article>
 
-
+  
   <article class="blog-entry">
-
+    
     <a class="blog-thumbnail" href="../blog/how_to_simulations.html" aria-label="Read post: How to perform efficient simulations in Tidyverse">
       <img src="../blog/images/beta1_estimates.png" alt="" loading="lazy" decoding="async">
     </a>
-
+    
     <div class="blog-copy">
       <h2 class="no-anchor"><a href="../blog/how_to_simulations.html">How to perform efficient simulations in Tidyverse</a></h2>
       <p class="blog-date">December 20, 2024</p>
-
+      
       <div class="blog-description">Use list-columns and purrr::map() to generate datasets, fit models, and summarize simulation results.</div>
-
-
+      
+      
       <ul class="blog-topics" aria-label="Topics">
-
+        
         <li>R Programming</li>
-
+        
         <li>Tidyverse</li>
-
+        
         <li>Simulations</li>
-
+        
       </ul>
-
+      
       <a class="blog-read" href="../blog/how_to_simulations.html">Read post <span aria-hidden="true">→</span><span class="visually-hidden">: How to perform efficient simulations in Tidyverse</span></a>
     </div>
   </article>
@@ -410,7 +434,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       toggleBodyColorMode(bsSheetEl);
     }
   }
-  toggleBodyColorPrimary();
+  toggleBodyColorPrimary();  
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -420,7 +444,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {
+      if (clz.startsWith('code-annotation-')) {                     
         return true;
       }
     }
@@ -440,11 +464,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
       button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button,
-        { trigger: "manual",
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
           offset: [0, -8]});
-      tooltip.show();
+      tooltip.show();    
     }
     setTimeout(function() {
       if (tooltip) {
@@ -525,7 +549,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     if (onUntriggerFn) {
       config.onUntrigger = onUntriggerFn;
     }
-    window.tippy(el, config);
+    window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
   for (var i=0; i<noterefs.length; i++) {
@@ -600,7 +624,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     tippyHover(xref, undefined, function(instance) {
       instance.disable();
       let url = xref.getAttribute('href');
-      let hash = undefined;
+      let hash = undefined; 
       if (url.startsWith('#')) {
         hash = url;
       } else {
@@ -628,7 +652,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             if (note !== null) {
               const html = processXRef(id, note);
               instance.setContent(html);
-            }
+            } 
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -652,7 +676,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             const html = processXRef(null, note);
             instance.setContent(html);
-          }
+          } 
         }).finally(() => {
           instance.enable();
           instance.show();
@@ -692,7 +716,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             height = bottom - top;
           }
           if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it
+            // cook up a div (if necessary) and position it 
             let div = window.document.getElementById("code-annotation-line-highlight");
             if (div === null) {
               div = window.document.createElement("div");
