@@ -5128,7 +5128,10 @@ W_*^\mathrm{T}\Sigma W_*\preceq W^\mathrm{T}\Sigma W
 </section>
 <section id="finding-the-optimal-weights" class="level2">
 <h2 class="anchored" data-anchor-id="finding-the-optimal-weights">Finding the optimal weights</h2>
-<p>Consider one contrast <span class="math inline">\(\boldsymbol b^\mathrm{T}\boldsymbol\theta\)</span> at a time. Its combined estimate is $ b^_W =(Wb)^. $ Thus <span class="math inline">\(\boldsymbol g=W\boldsymbol b\)</span> is the weight vector for this contrast. Its variance is <span class="math inline">\(\boldsymbol g^\mathrm{T}\Sigma\boldsymbol g\)</span>, and <span class="math inline">\(W^\mathrm{T}A=I_p\)</span> implies <span class="math inline">\(A^\mathrm{T}\boldsymbol g=\boldsymbol b\)</span>.</p>
+<p>Consider one contrast <span class="math inline">\(\boldsymbol b^\mathrm{T}\boldsymbol\theta\)</span> at a time. Its combined estimate is <span class="math display">\[
+\boldsymbol b^\mathrm{T}\hat{\boldsymbol\theta}_W
+=(W\boldsymbol b)^\mathrm{T}\hat{\boldsymbol z}.
+\]</span> Thus <span class="math inline">\(\boldsymbol g=W\boldsymbol b\)</span> is the weight vector for this contrast. Its variance is <span class="math inline">\(\boldsymbol g^\mathrm{T}\Sigma\boldsymbol g\)</span>, and <span class="math inline">\(W^\mathrm{T}A=I_p\)</span> implies <span class="math inline">\(A^\mathrm{T}\boldsymbol g=\boldsymbol b\)</span>.</p>
 <p>We first minimize over all weight vectors satisfying this constraint:</p>
 <p><span class="math display">\[
 \min_{\boldsymbol g}\ \frac12\boldsymbol g^\mathrm{T}\Sigma\boldsymbol g
@@ -5137,14 +5140,30 @@ W_*^\mathrm{T}\Sigma W_*\preceq W^\mathrm{T}\Sigma W
 L(\boldsymbol g,\boldsymbol\lambda)
 =\frac12\boldsymbol g^\mathrm{T}\Sigma\boldsymbol g
 -\boldsymbol\lambda^\mathrm{T}(A^\mathrm{T}\boldsymbol g-\boldsymbol b).
-\]</span> Differentiating with respect to <span class="math inline">\(\boldsymbol g\)</span> gives $ g-A= g=^{-1}A. $ Substitute this into <span class="math inline">\(A^\mathrm{T}\boldsymbol g=\boldsymbol b\)</span>: $ A<sup></sup>{-1}A=b =(A<sup></sup>{-1}A)^{-1}b. $ Substituting back, we obtain <span class="math display">\[
+\]</span> Differentiating with respect to <span class="math inline">\(\boldsymbol g\)</span> gives <span class="math display">\[
+\Sigma\boldsymbol g-A\boldsymbol\lambda=\boldsymbol 0
+\quad\Longrightarrow\quad
+\boldsymbol g=\Sigma^{-1}A\boldsymbol\lambda.
+\]</span> Substitute this into <span class="math inline">\(A^\mathrm{T}\boldsymbol g=\boldsymbol b\)</span>: <span class="math display">\[
+A^\mathrm{T}\Sigma^{-1}A\boldsymbol\lambda=\boldsymbol b
+\quad\Longrightarrow\quad
+\boldsymbol\lambda=(A^\mathrm{T}\Sigma^{-1}A)^{-1}\boldsymbol b.
+\]</span> Substituting back, we obtain <span class="math display">\[
 \boldsymbol g_*=
 \Sigma^{-1}A(A^\mathrm{T}\Sigma^{-1}A)^{-1}\boldsymbol b
 =W_*\boldsymbol b,
 \]</span> where <span class="math display">\[
 \boxed{W_*=\Sigma^{-1}A(A^\mathrm{T}\Sigma^{-1}A)^{-1}.}
 \]</span> Since <span class="math inline">\(\Sigma\)</span> is positive definite, <span class="math inline">\(\boldsymbol g_*\)</span> is the unique minimizer. Now check that these optimal contrast weights come from a valid combination of the original estimators. The matrix <span class="math inline">\(W_*\)</span> does not depend on <span class="math inline">\(\boldsymbol b\)</span> and satisfies <span class="math inline">\(W_*^\mathrm{T}A=I_p\)</span>. It therefore attains the minimum variance for every contrast simultaneously.</p>
-<p>The combined estimator is $ $ Substituting <span class="math inline">\(W_*\)</span> into <span class="math inline">\(W^\mathrm{T}\Sigma W\)</span> gives its covariance: $ (_*) =(A<sup></sup>{-1}A)^{-1}. $</p>
+<p>The combined estimator is <span class="math display">\[
+\boxed{
+\hat{\boldsymbol\theta}_*
+=(A^\mathrm{T}\Sigma^{-1}A)^{-1}A^\mathrm{T}\Sigma^{-1}\hat{\boldsymbol z}.
+}
+\]</span> Substituting <span class="math inline">\(W_*\)</span> into <span class="math inline">\(W^\mathrm{T}\Sigma W\)</span> gives its covariance: <span class="math display">\[
+\operatorname{var}(\hat{\boldsymbol\theta}_*)
+=(A^\mathrm{T}\Sigma^{-1}A)^{-1}.
+\]</span></p>
 <p>For any other admissible <span class="math inline">\(W\)</span>, let <span class="math inline">\(D=W-W_*\)</span>. Then <span class="math inline">\(D^\mathrm{T}A=0\)</span>. Since <span class="math inline">\(\Sigma W_*=A(A^\mathrm{T}\Sigma^{-1}A)^{-1}\)</span>, we also have <span class="math inline">\(D^\mathrm{T}\Sigma W_*=0\)</span>. Expanding the covariance of <span class="math inline">\(W=W_*+D\)</span> therefore gives <span class="math display">\[
 W^\mathrm{T}\Sigma W-W_*^\mathrm{T}\Sigma W_*
 =D^\mathrm{T}\Sigma D\succeq0.
