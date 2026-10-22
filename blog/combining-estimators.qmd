@@ -48,8 +48,6 @@ references:
 
 Suppose we have several (asymptotically) unbiased estimators of the same parameter. How should we combine them to get the smallest variance? The estimators may be correlated, so their individual variances alone are not enough to determine the optimal weights.
 
-For the derivation, start with unbiased estimators and their covariance matrix. The same calculation applies to asymptotic covariance matrices when the scaled estimation errors have a joint, centered limiting distribution.
-
 ## Scalar weights
 
 For a scalar parameter $\theta$, consider

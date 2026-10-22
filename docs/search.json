@@ -725,7 +725,7 @@
     "href": "blog/combining-estimators.html",
     "title": "How can we combine multiple estimators of the same estimand to minimize variance?",
     "section": "",
-    "text": "Suppose we have several (asymptotically) unbiased estimators of the same parameter. How should we combine them to get the smallest variance? The estimators may be correlated, so their individual variances alone are not enough to determine the optimal weights.\nFor the derivation, start with unbiased estimators and their covariance matrix. The same calculation applies to asymptotic covariance matrices when the scaled estimation errors have a joint, centered limiting distribution."
+    "text": "Suppose we have several (asymptotically) unbiased estimators of the same parameter. How should we combine them to get the smallest variance? The estimators may be correlated, so their individual variances alone are not enough to determine the optimal weights."
   },
   {
     "objectID": "blog/combining-estimators.html#references",
