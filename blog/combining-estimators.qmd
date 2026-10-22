@@ -46,38 +46,63 @@ references:
     DOI: 10.1057/jors.1969.103
 ---
 
-Suppose we have several unbiased estimators of the same parameter. How should we combine them to get the smallest variance? The estimators may be correlated, so their individual variances alone are not enough to determine the weights.
+Suppose we have several (asymptotically) unbiased estimators of the same parameter. How should we combine them to get the smallest variance? The estimators may be correlated, so their individual variances alone are not enough to determine the optimal weights.
+
+For the derivation, start with unbiased estimators and their covariance matrix. The same calculation applies to asymptotic covariance matrices when the scaled estimation errors have a joint, centered limiting distribution.
 
 ## Scalar weights
 
 For a scalar parameter $\theta$, consider
+
 $$
 \hat\theta_{\boldsymbol w}=\sum_{k=1}^m w_k\hat\theta^{(k)},
 \qquad \sum_{k=1}^m w_k=1.
 $$
-The constraint makes the combined estimator unbiased. Write $\boldsymbol w=(w_1,\ldots,w_m)^\mathrm{T}$ for the weight vector and $\Sigma$ for the covariance matrix of the estimators. If $\Sigma$ is positive definite, minimizing $\boldsymbol w^\mathrm{T}\Sigma\boldsymbol w$ gives
+
+The constraint makes the combined estimator unbiased. Write $\boldsymbol w=(w_1,\ldots,w_m)^\mathrm{T}$ for the weight vector and $\Sigma$ for the covariance matrix of the estimators. If $\Sigma$ is positive definite, we minimize $\boldsymbol w^\mathrm{T}\Sigma\boldsymbol w$ subject to $\mathbf 1^\mathrm{T}\boldsymbol w=1$, where $\mathbf 1$ is the vector of ones. With a scalar Lagrange multiplier $\lambda$, write
+
+$$
+L(\boldsymbol w,\lambda)
+=\frac12\boldsymbol w^\mathrm{T}\Sigma\boldsymbol w
+-\lambda(\mathbf 1^\mathrm{T}\boldsymbol w-1).
+$$
+
+Differentiating with respect to $\boldsymbol w$ gives
+
+$$
+\Sigma\boldsymbol w-\lambda\mathbf 1=\boldsymbol 0
+\quad\Longrightarrow\quad
+\boldsymbol w=\lambda\Sigma^{-1}\mathbf 1.
+$$
+
+The constraint on $\boldsymbol w$ then gives $\lambda=(\mathbf 1^\mathrm{T}\Sigma^{-1}\mathbf 1)^{-1}$. Thus
+
 $$
 \boldsymbol w_*=
 \frac{\Sigma^{-1}\mathbf 1}{\mathbf 1^\mathrm{T}\Sigma^{-1}\mathbf 1},
 \qquad
 \operatorname{var}(\hat\theta_{\boldsymbol w_*})
-=\frac{1}{\mathbf 1^\mathrm{T}\Sigma^{-1}\mathbf 1},
+=\frac{1}{\mathbf 1^\mathrm{T}\Sigma^{-1}\mathbf 1}.
 $$
-where $\mathbf 1$ is the vector of ones. For independent estimators, this reduces to inverse-variance weighting. The weights need not be nonnegative: we are considering general linear combinations, not just convex ones.
 
-Now suppose the parameter is a vector. Assigning one scalar weight to each estimator would give all its coordinates the same weight. There is no need to impose that restriction. We can use matrix weights, provided the combination still estimates the same parameter.
+For independent estimators, this reduces to inverse-variance weighting. The weights need not be nonnegative: we are considering general linear combinations, not just convex ones.
+
+Now suppose the parameter is a vector. Assigning one scalar weight to each estimator would give all its coordinates the same weight. There is no need to impose that restriction. We can use matrix weights, provided they add up to the identity matrix, so the combination still estimates the same parameter.
 
 ## A vector parameter
 
 Let $\hat{\boldsymbol\theta}^{(1)},\ldots,\hat{\boldsymbol\theta}^{(m)}$ be unbiased estimators of $\boldsymbol\theta\in\mathbb R^p$. Consider
+
 $$
 \hat{\boldsymbol\theta}_W
 =\sum_{k=1}^m W_k^\mathrm{T}\hat{\boldsymbol\theta}^{(k)},
 \qquad \sum_{k=1}^m W_k=I_p,
 $$
+
 where each $W_k$ is a $p\times p$ matrix. The expectation of this combination is $(\sum_k W_k)^\mathrm{T}\boldsymbol\theta$, so the constraint again ensures unbiasedness. Scalar weights correspond to $W_k=w_k I_p$.
 
 To write its covariance compactly, stack the estimators and weight matrices:
+
 $$
 \hat{\boldsymbol z}=
 \begin{pmatrix}
@@ -90,7 +115,9 @@ W=\begin{pmatrix}W_1\\\vdots\\W_m\end{pmatrix},
 \qquad
 A=\begin{pmatrix}I_p\\\vdots\\I_p\end{pmatrix}.
 $$
+
 Then $E(\hat{\boldsymbol z})=A\boldsymbol\theta$. With $\Sigma=\operatorname{var}(\hat{\boldsymbol z})$, we have
+
 $$
 \hat{\boldsymbol\theta}_W=W^\mathrm{T}\hat{\boldsymbol z},
 \qquad
@@ -98,19 +125,24 @@ $$
 \qquad
 W^\mathrm{T}A=I_p.
 $$
+
 Assume $\Sigma$ is known and positive definite. We want a single $W_*$ such that
+
 $$
 W_*^\mathrm{T}\Sigma W_*\preceq W^\mathrm{T}\Sigma W
 $$
+
 for every $W$ satisfying the constraint. In other words, every linear contrast $\boldsymbol b^\mathrm{T}\hat{\boldsymbol\theta}_{W_*}$ should have the smallest variance. No normality assumption is needed.
 
 ## Finding the optimal weights
 
 Consider one contrast $\boldsymbol b^\mathrm{T}\boldsymbol\theta$ at a time. Its combined estimate is
+
 $$
 \boldsymbol b^\mathrm{T}\hat{\boldsymbol\theta}_W
 =(W\boldsymbol b)^\mathrm{T}\hat{\boldsymbol z}.
 $$
+
 Thus $\boldsymbol g=W\boldsymbol b$ is the weight vector for this contrast. Its variance is $\boldsymbol g^\mathrm{T}\Sigma\boldsymbol g$, and $W^\mathrm{T}A=I_p$ implies $A^\mathrm{T}\boldsymbol g=\boldsymbol b$.
 
 We first minimize over all weight vectors satisfying this constraint:
@@ -119,62 +151,80 @@ $$
 \min_{\boldsymbol g}\ \frac12\boldsymbol g^\mathrm{T}\Sigma\boldsymbol g
 \quad\text{subject to}\quad A^\mathrm{T}\boldsymbol g=\boldsymbol b.
 $$
+
 Using a vector of Lagrange multipliers $\boldsymbol\lambda$, write
+
 $$
 L(\boldsymbol g,\boldsymbol\lambda)
 =\frac12\boldsymbol g^\mathrm{T}\Sigma\boldsymbol g
 -\boldsymbol\lambda^\mathrm{T}(A^\mathrm{T}\boldsymbol g-\boldsymbol b).
 $$
+
 Differentiating with respect to $\boldsymbol g$ gives
+
 $$
 \Sigma\boldsymbol g-A\boldsymbol\lambda=\boldsymbol 0
 \quad\Longrightarrow\quad
 \boldsymbol g=\Sigma^{-1}A\boldsymbol\lambda.
 $$
+
 Substitute this into $A^\mathrm{T}\boldsymbol g=\boldsymbol b$:
+
 $$
 A^\mathrm{T}\Sigma^{-1}A\boldsymbol\lambda=\boldsymbol b
 \quad\Longrightarrow\quad
 \boldsymbol\lambda=(A^\mathrm{T}\Sigma^{-1}A)^{-1}\boldsymbol b.
 $$
+
 Substituting back, we obtain
+
 $$
 \boldsymbol g_*=
 \Sigma^{-1}A(A^\mathrm{T}\Sigma^{-1}A)^{-1}\boldsymbol b
 =W_*\boldsymbol b,
 $$
+
 where
+
 $$
 \boxed{W_*=\Sigma^{-1}A(A^\mathrm{T}\Sigma^{-1}A)^{-1}.}
 $$
+
 Since $\Sigma$ is positive definite, $\boldsymbol g_*$ is the unique minimizer. Now check that these optimal contrast weights come from a valid combination of the original estimators. The matrix $W_*$ does not depend on $\boldsymbol b$ and satisfies $W_*^\mathrm{T}A=I_p$. It therefore attains the minimum variance for every contrast simultaneously.
 
 The combined estimator is
+
 $$
 \boxed{
 \hat{\boldsymbol\theta}_*
 =(A^\mathrm{T}\Sigma^{-1}A)^{-1}A^\mathrm{T}\Sigma^{-1}\hat{\boldsymbol z}.
 }
 $$
+
 Substituting $W_*$ into $W^\mathrm{T}\Sigma W$ gives its covariance:
+
 $$
 \operatorname{var}(\hat{\boldsymbol\theta}_*)
 =(A^\mathrm{T}\Sigma^{-1}A)^{-1}.
 $$
 
 For any other admissible $W$, let $D=W-W_*$. Then $D^\mathrm{T}A=0$. Since $\Sigma W_*=A(A^\mathrm{T}\Sigma^{-1}A)^{-1}$, we also have $D^\mathrm{T}\Sigma W_*=0$. Expanding the covariance of $W=W_*+D$ therefore gives
+
 $$
 W^\mathrm{T}\Sigma W-W_*^\mathrm{T}\Sigma W_*
 =D^\mathrm{T}\Sigma D\succeq0.
 $$
+
 In particular, the combined estimator has no larger variance for any contrast than any one of the original estimators.
 
 When the estimators are independent, $\Sigma$ is block diagonal. Writing $\Sigma_{kk}=\operatorname{var}\{\hat{\boldsymbol\theta}^{(k)}\}$, the result reduces to
+
 $$
 \hat{\boldsymbol\theta}_*
 =\left(\sum_{k=1}^m\Sigma_{kk}^{-1}\right)^{-1}
 \sum_{k=1}^m\Sigma_{kk}^{-1}\hat{\boldsymbol\theta}^{(k)}.
 $$
+
 This is the matrix version of inverse-variance weighting. The figure illustrates how the combination uses the different strengths of two estimators.
 
 ![Sampling distributions of two independent normal vector estimators, shown by their 95% probability contours. Each is more precise in a different direction. Their optimal combination has a smaller contour, centered at the same target. Both panels use the same scale.](images/combining-estimators/combining-estimators.png){#fig-combination fig-alt="A horizontal blue ellipse and a vertical orange ellipse on the left; a smaller circular contour for the optimal combination on the right."}
@@ -183,11 +233,13 @@ The general result is also generalized least squares for the model $E(\hat{\bold
 
 ## In practice
 
-Estimate $\Sigma$ using joint influence functions or a bootstrap that recomputes all estimators on the same resampled data. We need their covariances as well as their individual variances.
+Estimate $\Sigma$ using joint influence functions or a bootstrap that recomputes all estimators on the same resampled data. We need their (asymptotic) covariances as well as their individual variances.
 
-For fixed $m$ and $p$, consistent covariance estimation preserves first-order efficiency under standard regularity conditions. Exact finite-sample optimality is no longer guaranteed. Nearly singular covariance estimates and biased estimators need more care.
+For fixed $m$ and $p$, consistent estimation of the joint asymptotic covariance matrix gives the same first-order variance as the optimal fixed weights under standard regularity conditions. Exact finite-sample optimality is not guaranteed, especially for large $m$ or $p$ relative to the sample size. More care is needed when the covariance matrix of the stacked estimator is nearly singular (as can happen when two estimators are both nearly efficient), or when some estimators are biased.
 
 ## References
 
 ::: {#refs}
 :::
+
+
