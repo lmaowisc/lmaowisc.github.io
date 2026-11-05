@@ -9,6 +9,7 @@ project:
     - blog/blog.css
     - blog/post.css
     - images/applied-survival-course.png
+    - images/applied-survival-analysis-cover.jpg
     - pubs/pubs.css
     - packages/packages.css
     - packages/images/wr-badge.svg
