@@ -15,8 +15,9 @@ toc-depth: 2
 {{< include _legend.qmd >}}
 
 <details class="pub-mobile-toc">
-<summary>Jump to year</summary>
+<summary>Jump to section</summary>
 <nav aria-label="Publication sections">
+<a href="#working-manuscript">Working Manuscript</a>
 <a href="#section">2027</a>
 <a href="#section-1">2026</a>
 <a href="#section-2">2025</a>
@@ -32,6 +33,24 @@ toc-depth: 2
 <a href="#and-before">2015 and before</a>
 </nav>
 </details>
+
+## Working Manuscript {#working-manuscript}
+
+:::: {.pub-entry role="article"}
+
+::: {.pub-title}
+[Conformal prediction for censored life history data](https://arxiv.org/abs/2611.15724){target="_blank"}
+:::
+
+::: {.pub-authors}
+**Mao, L.** [{{< fa envelope >}}]{.pub-icon role="img" aria-label="Corresponding author" title="Corresponding author"}
+:::
+
+::: {.pub-citation}
+arXiv:2611.15724, 2026. [{{< ai open-access >}}]{.pub-icon role="img" aria-label="Open access" title="Open access"}
+:::
+
+::::
 
 ## 2027 {#section}
 
