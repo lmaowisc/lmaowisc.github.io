@@ -17,7 +17,7 @@ toc-depth: 2
 <details class="pub-mobile-toc">
 <summary>Jump to section</summary>
 <nav aria-label="Publication sections">
-<a href="#working-manuscript">Working Manuscript</a>
+<a href="#working-manuscript">Working Manuscripts</a>
 <a href="#section">2027</a>
 <a href="#section-1">2026</a>
 <a href="#section-2">2025</a>
@@ -34,7 +34,7 @@ toc-depth: 2
 </nav>
 </details>
 
-## Working Manuscript {#working-manuscript}
+## Working Manuscripts {#working-manuscript}
 
 :::: {.pub-entry role="article"}
 
@@ -48,6 +48,10 @@ toc-depth: 2
 
 ::: {.pub-citation}
 arXiv:2611.15724, 2026. [{{< ai open-access >}}]{.pub-icon role="img" aria-label="Open access" title="Open access"}
+:::
+
+::: {.pub-resources}
+[R package: [`lifeconformal`](https://github.com/lmaowisc/lifeconformal){target="_blank"}]{.pub-resource}
 :::
 
 ::::
