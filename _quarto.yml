@@ -3,6 +3,7 @@ project:
   output-dir: docs
   resources:
     - home.css
+    - slides/conformal-life-history.pdf
     - people.css
     - research.css
     - courses.css

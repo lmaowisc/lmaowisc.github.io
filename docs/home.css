@@ -83,7 +83,7 @@
 .degree-list a:hover,.degree-list a:focus-visible,.editorial-list a:hover,.editorial-list a:focus-visible,.recent-list a:hover { color:var(--red); text-decoration:none; }
 .editorial-list .lead-role a:hover,.editorial-list .lead-role a:focus-visible { color:#93040a; }
 .recent-list li+li { margin-top:.9rem; }
-.recent-list a { display:block; font-family:var(--serif); font-size:1rem; color:var(--ink); line-height:1.3; }
+.recent-list li > a { display:block; font-family:var(--serif); font-size:1rem; color:var(--ink); line-height:1.3; }
 .recent-list span { display:block; font-size:.78rem; color:var(--muted); margin-top:.25rem; }
 .home-contact { border-top:1px solid var(--line); margin-top:1.6rem; padding:.8rem 0 0; color:var(--muted); font-size:.71rem; }
 /* Consistent short, thick separators between inline pieces of information. */

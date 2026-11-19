@@ -51,7 +51,7 @@ arXiv:2611.15724, 2026. [{{< ai open-access >}}]{.pub-icon role="img" aria-label
 :::
 
 ::: {.pub-resources}
-[R package: [`lifeconformal`](https://github.com/lmaowisc/lifeconformal){target="_blank"}]{.pub-resource}
+[[Presentation](../slides/conformal-life-history.pdf){target="_blank" rel="noopener noreferrer"}]{.pub-resource} [R package: [`lifeconformal`](https://github.com/lmaowisc/lifeconformal){target="_blank"}]{.pub-resource}
 :::
 
 ::::
