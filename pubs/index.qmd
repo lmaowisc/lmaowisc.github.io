@@ -39,6 +39,22 @@ toc-depth: 2
 :::: {.pub-entry role="article"}
 
 ::: {.pub-title}
+[Aalen-Johansen as an augmented IPCW estimator](https://arxiv.org/abs/2611.32026){target="_blank"}
+:::
+
+::: {.pub-authors}
+**Mao, L.** [{{< fa envelope >}}]{.pub-icon role="img" aria-label="Corresponding author" title="Corresponding author"}
+:::
+
+::: {.pub-citation}
+arXiv:2611.32026, 2026. [{{< ai open-access >}}]{.pub-icon role="img" aria-label="Open access" title="Open access"}
+:::
+
+::::
+
+:::: {.pub-entry role="article"}
+
+::: {.pub-title}
 [Conformal prediction for censored life history data](https://arxiv.org/abs/2611.15724){target="_blank"}
 :::
 
